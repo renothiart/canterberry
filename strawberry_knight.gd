@@ -9,7 +9,8 @@ func _physics_process(delta):
 	
 	if _input_axis < 0.0:
 		_animated_sprite.set_frame(0)
-	else:
+	
+	if _input_axis > 0.0:
 		_animated_sprite.set_frame(1)
 	
 	move_and_slide()
