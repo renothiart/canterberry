@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ueg8ih3v8uu4" path="res://level_scenes/level_1_bg.tscn" id="1_wmcsk"]
 [ext_resource type="PackedScene" uid="uid://cni74uo7dalfa" path="res://level_scenes/level_1_mg.tscn" id="2_j6750"]
 [ext_resource type="PackedScene" uid="uid://dgx5y0qvnu1vu" path="res://level_scenes/level_1_fg.tscn" id="3_er2pa"]
-[ext_resource type="PackedScene" uid="uid://dmmbnwf7ybw2" path="res://strawberry_knight.tscn" id="4_jxhbq"]
+[ext_resource type="PackedScene" path="res://strawberry_knight.tscn" id="4_jxhbq"]
 
 [node name="Level1" type="Node2D"]
 

@@ -26,8 +26,7 @@ directories/dch_directory={
 "Strawberry": "res://dialogue/characters/Strawberry.dch"
 }
 directories/dtl_directory={
-"skyrim": "res://dialogue/timelines/skyrim.dtl",
-"timeline": "res://dialogue/timelines/timeline.dtl"
+"skyrim": "res://dialogue/timelines/skyrim.dtl"
 }
 glossary/default_case_sensitive=true
 variables={}
