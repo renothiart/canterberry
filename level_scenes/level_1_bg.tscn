@@ -10,5 +10,6 @@ position = Vector2(477, 272)
 texture = ExtResource("1_seco1")
 
 [node name="Background-front" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(476, 283)
 texture = ExtResource("2_1pydv")
