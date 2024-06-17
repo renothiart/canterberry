@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cni74uo7dalfa"]
+
+[ext_resource type="Texture2D" uid="uid://l0o0sec3h1vt" path="res://assets/settings/forest/midground.png" id="1_qlao0"]
+
+[node name="Level1_mg" type="Node2D"]
+
+[node name="Midground" type="Sprite2D" parent="."]
+position = Vector2(478, 270)
+texture = ExtResource("1_qlao0")
