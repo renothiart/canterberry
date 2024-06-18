@@ -22,8 +22,11 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Banana": "res://dialogue/characters/Banana.dch",
+"Pear": "res://dialogue/characters/Pear.dch",
 "Pineapple": "res://dialogue/characters/Pineapple.dch",
-"Strawberry": "res://dialogue/characters/Strawberry.dch"
+"Strawberry": "res://dialogue/characters/Strawberry.dch",
+"Tomato": "res://dialogue/characters/Tomato.dch"
 }
 directories/dtl_directory={
 "skyrim": "res://dialogue/timelines/skyrim.dtl"
