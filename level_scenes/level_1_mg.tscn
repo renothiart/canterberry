@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cni74uo7dalfa"]
+[gd_scene load_steps=3 format=3 uid="uid://cni74uo7dalfa"]
 
 [ext_resource type="Texture2D" uid="uid://l0o0sec3h1vt" path="res://assets/settings/forest/midground.png" id="1_qlao0"]
+[ext_resource type="Texture2D" uid="uid://m8q7h62w8fvd" path="res://assets/settings/forest/midground2.png" id="2_3hasa"]
 
 [node name="Level1_mg" type="Node2D"]
 
 [node name="Midground" type="Sprite2D" parent="."]
 position = Vector2(478, 270)
 texture = ExtResource("1_qlao0")
+
+[node name="Midground2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(478, 270)
+texture = ExtResource("2_3hasa")

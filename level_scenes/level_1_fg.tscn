@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgx5y0qvnu1vu"]
+[gd_scene load_steps=3 format=3 uid="uid://dgx5y0qvnu1vu"]
 
 [ext_resource type="Texture2D" uid="uid://bopbjkhwps3ay" path="res://assets/settings/forest/foreground.png" id="1_yvsub"]
+[ext_resource type="Texture2D" uid="uid://b0bsor483kciw" path="res://assets/settings/forest/ground-lines.png" id="2_8t4lh"]
 
 [node name="Level1_fg" type="Node2D"]
 position = Vector2(44, 129)
@@ -8,3 +9,8 @@ position = Vector2(44, 129)
 [node name="Foreground" type="Sprite2D" parent="."]
 position = Vector2(436, 139)
 texture = ExtResource("1_yvsub")
+
+[node name="Ground Lines" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(438, 143)
+texture = ExtResource("2_8t4lh")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ueg8ih3v8uu4"]
+[gd_scene load_steps=4 format=3 uid="uid://ueg8ih3v8uu4"]
 
 [ext_resource type="Texture2D" uid="uid://cf8xo7q3lnbt" path="res://assets/settings/forest/background-back.png" id="1_seco1"]
 [ext_resource type="Texture2D" uid="uid://ci4r1t6ogyeix" path="res://assets/settings/forest/background-front.png" id="2_1pydv"]
+[ext_resource type="Texture2D" uid="uid://b0bsor483kciw" path="res://assets/settings/forest/ground-lines.png" id="3_c4scq"]
 
 [node name="Level1_bg" type="Node2D"]
 
@@ -13,3 +14,8 @@ texture = ExtResource("1_seco1")
 visible = false
 position = Vector2(476, 283)
 texture = ExtResource("2_1pydv")
+
+[node name="Ground Lines" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(477, 273)
+texture = ExtResource("3_c4scq")
