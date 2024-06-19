@@ -2,14 +2,25 @@ extends Node
 
 var portkey_map
 
+@export var fg_left_portkey: Area2D
+@export var fg_right_portkey: Area2D
+@export var mg_left_portkey: Area2D
+@export var mg_right_portkey: Area2D
+@export var bg_left_portkey: Area2D
+@export var bg_right_portkey: Area2D
+
 # required variables enabling teleporting
 var teleport_buffer_time: float = 0.05
 var teleport_buffer_time_remaining: float = 0
 
 func _ready():
 	portkey_map = {
-		Global.PortkeyLocation.HUB_LEFT: %LeftPortkey,
-		Global.PortkeyLocation.HUB_RIGHT: %RightPortkey
+		Global.PortkeyLocation.FG_LEFT: fg_left_portkey,
+		Global.PortkeyLocation.FG_RIGHT: fg_right_portkey,
+		Global.PortkeyLocation.MG_LEFT: mg_left_portkey,
+		Global.PortkeyLocation.MG_RIGHT: mg_right_portkey,
+		Global.PortkeyLocation.BG_LEFT: bg_left_portkey,
+		Global.PortkeyLocation.BG_RIGHT: bg_right_portkey,
 	}
 	load_portkey()
 
@@ -31,8 +42,9 @@ func load_portkey():
 	if Global.current_portkey_location != Global.PortkeyLocation.UNDEFINED:
 		var portkey = portkey_map[Global.current_portkey_location]
 		
-		%LeftPortkey.start_teleport_buffer()
-		%RightPortkey.start_teleport_buffer()
+		var all_portkeys = portkey_map.values().filter(func(n): return n != null)
+		for port in all_portkeys:
+			port.start_teleport_buffer()
 		
 		get_tree().paused = true
 		
