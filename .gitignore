@@ -15,5 +15,5 @@ data_*/
 mono_crash.*.json
 
 # Mac trash
-.DS_Store
+**/.DS_Store
 
