@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvc1hqpk5swtw"]
+
+[ext_resource type="Script" path="res://nodes/activatable_teleporters/activatable_teleporter.gd" id="1_i7w18"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivpkj"]
+size = Vector2(200, 100)
+
+[node name="ForwardMGActivatableTeleporter" type="Area2D"]
+position = Vector2(480, 280)
+script = ExtResource("1_i7w18")
+action = "move_down"
+newScale = 0.6
+layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ivpkj")
+debug_color = Color(0.222235, 0.63875, 2.8436e-07, 0.42)
