@@ -24,8 +24,15 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 directories/dch_directory={
 "Banana": "res://dialogue/characters/Banana.dch",
+"Chili": "res://dialogue/characters/Chili.dch",
+"Dragonfruit": "res://dialogue/characters/Dragonfruit.dch",
+"Grape": "res://dialogue/characters/Grape.dch",
 "Pear": "res://dialogue/characters/Pear.dch",
 "Pineapple": "res://dialogue/characters/Pineapple.dch",
+"Princess": "res://dialogue/characters/Princess.dch",
+"Raisin": "res://dialogue/characters/Raisin.dch",
+"Raspberry": "res://dialogue/characters/Raspberry.dch",
+"Strawbaby": "res://dialogue/characters/Strawbaby.dch",
 "Strawberry": "res://dialogue/characters/Strawberry.dch",
 "Tomato": "res://dialogue/characters/Tomato.dch"
 }
