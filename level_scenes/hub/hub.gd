@@ -30,15 +30,12 @@ func start_teleport_buffer():
 func load_portkey():
 	if Global.current_portkey_location != Global.PortkeyLocation.UNDEFINED:
 		var portkey = portkey_map[Global.current_portkey_location]
+		
 		%LeftPortkey.start_teleport_buffer()
 		%RightPortkey.start_teleport_buffer()
-		#%LeftPortkey.disable()
-		#%RightPortkey.disable()
-		#start_teleport_buffer()
-		#%StrawberryKnight.start_teleport_buffer(portkey.layer)
-	#
+		
 		get_tree().paused = true
-		#%StrawberryKnight.remove_current_layer()
+		
 		%StrawberryKnight.set_new_layer(portkey.layer)
 		%StrawberryKnight.global_position = portkey.global_position
 		%StrawberryKnight.global_scale = Vector2(portkey.new_scale, portkey.new_scale)

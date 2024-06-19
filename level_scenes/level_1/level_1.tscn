@@ -36,20 +36,19 @@ pairedTeleporter = NodePath("../RightMGTele")
 newScale = 0.35
 layer = 6
 
-[node name="RightBGTele" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("6_lee54")]
-visible = false
-position = Vector2(1045, 180)
-collision_layer = 0
-collision_mask = 0
-pairedTeleporter = NodePath("../LeftFGTele")
-newScale = 0.35
-layer = 6
-
 [node name="LeftMGTele" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("6_lee54")]
 position = Vector2(-100, 280)
 collision_layer = 0
 collision_mask = 0
 pairedTeleporter = NodePath("../RightFGTele")
+newScale = 0.6
+layer = 4
+
+[node name="MiddleMGTele" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("6_lee54")]
+position = Vector2(500, 280)
+collision_layer = 0
+collision_mask = 0
+pairedTeleporter = NodePath("../MiddleFGTele")
 newScale = 0.6
 layer = 4
 
@@ -61,19 +60,18 @@ pairedTeleporter = NodePath("../LeftBGTele")
 newScale = 0.6
 layer = 4
 
-[node name="LeftFGTele" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("6_lee54")]
-visible = false
-position = Vector2(-100, 300)
-collision_layer = 0
-collision_mask = 0
-pairedTeleporter = NodePath("../RightBGTele")
-newScale = 0.9
-
 [node name="RightFGTele" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("6_lee54")]
 position = Vector2(1045, 300)
 collision_layer = 0
 collision_mask = 0
 pairedTeleporter = NodePath("../LeftMGTele")
+newScale = 0.9
+
+[node name="MiddleFGTele" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("6_lee54")]
+position = Vector2(500, 300)
+collision_layer = 0
+collision_mask = 0
+pairedTeleporter = NodePath("../MiddleMGTele")
 newScale = 0.9
 
 [node name="LeftFGPortkey" parent="." instance=ExtResource("7_m04h0")]
@@ -95,16 +93,16 @@ layer = 6
 
 [connection signal="body_entered" from="LeftBGTele" to="LeftBGTele" method="_on_body_entered"]
 [connection signal="body_exited" from="LeftBGTele" to="LeftBGTele" method="_on_body_exited"]
-[connection signal="body_entered" from="RightBGTele" to="RightBGTele" method="_on_body_entered"]
-[connection signal="body_exited" from="RightBGTele" to="RightBGTele" method="_on_body_exited"]
 [connection signal="body_entered" from="LeftMGTele" to="LeftMGTele" method="_on_body_entered"]
 [connection signal="body_exited" from="LeftMGTele" to="LeftMGTele" method="_on_body_exited"]
+[connection signal="body_entered" from="MiddleMGTele" to="MiddleMGTele" method="_on_body_entered"]
+[connection signal="body_exited" from="MiddleMGTele" to="MiddleMGTele" method="_on_body_exited"]
 [connection signal="body_entered" from="RightMGTele" to="RightMGTele" method="_on_body_entered"]
 [connection signal="body_exited" from="RightMGTele" to="RightMGTele" method="_on_body_exited"]
-[connection signal="body_entered" from="LeftFGTele" to="LeftFGTele" method="_on_body_entered"]
-[connection signal="body_exited" from="LeftFGTele" to="LeftFGTele" method="_on_body_exited"]
 [connection signal="body_entered" from="RightFGTele" to="RightFGTele" method="_on_body_entered"]
 [connection signal="body_exited" from="RightFGTele" to="RightFGTele" method="_on_body_exited"]
+[connection signal="body_entered" from="MiddleFGTele" to="MiddleFGTele" method="_on_body_entered"]
+[connection signal="body_exited" from="MiddleFGTele" to="MiddleFGTele" method="_on_body_exited"]
 [connection signal="body_entered" from="LeftFGPortkey" to="LeftFGPortkey" method="_on_body_entered"]
 [connection signal="body_exited" from="LeftFGPortkey" to="LeftFGPortkey" method="_on_body_exited"]
 [connection signal="body_entered" from="RightBGPortkey" to="RightBGPortkey" method="_on_body_entered"]

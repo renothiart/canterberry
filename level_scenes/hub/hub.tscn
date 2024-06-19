@@ -24,7 +24,7 @@ layer = 2
 unique_name_in_owner = true
 position = Vector2(-100, 300)
 portkey_location = 1
-paired_portkey_location = 3
+paired_portkey_location = 4
 linked_level_name = "res://level_scenes/level_1/level_1.tscn"
 new_scale = 0.9
 
@@ -32,7 +32,7 @@ new_scale = 0.9
 unique_name_in_owner = true
 position = Vector2(1045, 300)
 portkey_location = 2
-paired_portkey_location = 4
+paired_portkey_location = 3
 linked_level_name = "res://level_scenes/level_1/level_1.tscn"
 new_scale = 0.9
 

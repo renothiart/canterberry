@@ -44,11 +44,6 @@ func start_teleport_buffer():
 
 func _on_body_entered(_body):
 	if not disabled:
-		print("portkey: " + Global.PortkeyLocation.keys()[portkey_location])
-		print("portkey position: " + str(global_position))
-		print("portkey layer: " + str(layer))
-		print("player position: " + str(%StrawberryKnight.global_position))
-		print("player layer: " + str(%StrawberryKnight.layer) + "\n")
 		Global.current_portkey_location = paired_portkey_location
 		call_deferred("change_level")
 
@@ -56,11 +51,9 @@ func _on_body_exited(_body):
 	enable()
 
 func disable():
-	print(Global.PortkeyLocation.keys()[portkey_location] + " disabled")
 	disabled = true
 
 func enable():
-	print(Global.PortkeyLocation.keys()[portkey_location] + " enabled")
 	disabled = false
 
 func change_level():
