@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4w3p2lx5tycb"]
+
+[ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/strawberry_knight.tscn" id="1_45yye"]
+[ext_resource type="PackedScene" uid="uid://b7bdpgkh2wxym" path="res://scenes/characters/pear_monk.tscn" id="2_rubrm"]
+
+[node name="interaction_test" type="Node2D"]
+
+[node name="StrawberryKnight" parent="." instance=ExtResource("1_45yye")]
+position = Vector2(7, 278)
+
+[node name="pear_monk" parent="." instance=ExtResource("2_rubrm")]
+position = Vector2(832, 405)

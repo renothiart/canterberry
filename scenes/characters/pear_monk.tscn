@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7bdpgkh2wxym"]
+
+[ext_resource type="Texture2D" uid="uid://dy00iptxe7uwu" path="res://assets/chars/pear_monk.png" id="1_5ivih"]
+[ext_resource type="Script" path="res://scenes/characters/pear_monk.gd" id="1_nd7ff"]
+[ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="2_xwb4c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m1ndv"]
+radius = 109.0
+height = 324.0
+
+[node name="pear_monk" type="CharacterBody2D"]
+script = ExtResource("1_nd7ff")
+
+[node name="PearMonk" type="Sprite2D" parent="."]
+position = Vector2(-5, -4)
+texture = ExtResource("1_5ivih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_m1ndv")
+
+[node name="InteractionManager" parent="." instance=ExtResource("2_xwb4c")]
+scale = Vector2(2.04, 0.8)

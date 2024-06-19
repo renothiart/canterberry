@@ -1,0 +1,55 @@
+[gd_scene load_steps=12 format=3 uid="uid://coa7scc8su58"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_v4p7s"]
+[ext_resource type="PackedScene" uid="uid://jyex1sgcegu4" path="res://scenes/levels/forest/forest_bg.tscn" id="2_ojkfk"]
+[ext_resource type="PackedScene" uid="uid://ddbldmopp760f" path="res://scenes/levels/forest/forest_mg.tscn" id="3_bi0hd"]
+[ext_resource type="PackedScene" uid="uid://ssqh3mjaovrg" path="res://scenes/levels/forest/forest_fg.tscn" id="4_04mh3"]
+[ext_resource type="PackedScene" uid="uid://dqgk4tayohoec" path="res://nodes/portkeys/right_bg_portkey.tscn" id="5_1w70w"]
+[ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/strawberry_knight.tscn" id="5_4h6mg"]
+[ext_resource type="PackedScene" uid="uid://dkws4vdscausy" path="res://nodes/teleporters/left_bg_teleporter.tscn" id="6_caj26"]
+[ext_resource type="PackedScene" uid="uid://cg8x70jqjcvc1" path="res://nodes/teleporters/right_mg_teleporter.tscn" id="7_cxxnm"]
+[ext_resource type="PackedScene" uid="uid://dxuu4hoqmwca" path="res://nodes/teleporters/left_mg_teleporter.tscn" id="8_mierw"]
+[ext_resource type="PackedScene" uid="uid://djtlnw17sk01" path="res://nodes/teleporters/right_fg_teleporter.tscn" id="9_2xd6f"]
+[ext_resource type="PackedScene" uid="uid://c1wxtrftkrfyl" path="res://nodes/portkeys/left_fg_portkey.tscn" id="10_hqs6p"]
+
+[node name="Forest" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "bg_right_portkey")]
+script = ExtResource("1_v4p7s")
+fg_left_portkey = NodePath("LeftFGPortkey")
+bg_right_portkey = NodePath("RightBGPortkey")
+
+[node name="Forest_bg" parent="." instance=ExtResource("2_ojkfk")]
+
+[node name="Forest_mg" parent="." instance=ExtResource("3_bi0hd")]
+
+[node name="Forest_fg" parent="." instance=ExtResource("4_04mh3")]
+
+[node name="Player" parent="." instance=ExtResource("5_4h6mg")]
+unique_name_in_owner = true
+z_index = -4
+position = Vector2(5, 300)
+scale = Vector2(0.9, 0.9)
+collision_layer = 0
+collision_mask = 0
+layer = 2
+
+[node name="RightBGPortkey" parent="." instance=ExtResource("5_1w70w")]
+portkey_location = 10
+paired_portkey_location = 5
+linked_level_name = "res://scenes/levels/hub/hub.tscn"
+
+[node name="LeftBGTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("6_caj26")]
+pairedTeleporter = NodePath("../RightMGTeleporter")
+
+[node name="RightMGTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("7_cxxnm")]
+pairedTeleporter = NodePath("../LeftBGTeleporter")
+
+[node name="LeftMGTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("8_mierw")]
+pairedTeleporter = NodePath("../RightFGTeleporter")
+
+[node name="RightFGTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("9_2xd6f")]
+pairedTeleporter = NodePath("../LeftMGTeleporter")
+
+[node name="LeftFGPortkey" parent="." instance=ExtResource("10_hqs6p")]
+portkey_location = 5
+paired_portkey_location = 10
+linked_level_name = "res://scenes/levels/level_1/level_1.tscn"
