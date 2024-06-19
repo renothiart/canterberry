@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://w0eswg4cvckf"]
+
+[ext_resource type="PackedScene" uid="uid://2ivd6qp010dp" path="res://level_scenes/hub/hub_bg.tscn" id="1_3r8ij"]
+[ext_resource type="Script" path="res://level_scenes/hub/hub.gd" id="1_f2os3"]
+[ext_resource type="PackedScene" uid="uid://cpn4yc2sasibl" path="res://portkey.tscn" id="4_fxi3g"]
+[ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://strawberry_knight.tscn" id="4_gkdv7"]
+
+[node name="Hub" type="Node2D"]
+script = ExtResource("1_f2os3")
+
+[node name="Hub_bg" parent="." instance=ExtResource("1_3r8ij")]
+z_index = -7
+
+[node name="StrawberryKnight" parent="." instance=ExtResource("4_gkdv7")]
+unique_name_in_owner = true
+z_index = -4
+position = Vector2(5, 300)
+scale = Vector2(0.9, 0.9)
+collision_layer = 0
+collision_mask = 0
+layer = 2
+
+[node name="LeftPortkey" parent="." instance=ExtResource("4_fxi3g")]
+unique_name_in_owner = true
+position = Vector2(-100, 300)
+portkey_location = 1
+paired_portkey_location = 3
+linked_level_name = "res://level_scenes/level_1/level_1.tscn"
+new_scale = 0.9
+
+[node name="RightPortkey" parent="." instance=ExtResource("4_fxi3g")]
+unique_name_in_owner = true
+position = Vector2(1045, 300)
+portkey_location = 2
+paired_portkey_location = 4
+linked_level_name = "res://level_scenes/level_1/level_1.tscn"
+new_scale = 0.9
+
+[connection signal="body_entered" from="LeftPortkey" to="LeftPortkey" method="_on_body_entered"]
+[connection signal="body_exited" from="LeftPortkey" to="LeftPortkey" method="_on_body_exited"]
+[connection signal="body_entered" from="RightPortkey" to="RightPortkey" method="_on_body_entered"]
+[connection signal="body_exited" from="RightPortkey" to="RightPortkey" method="_on_body_exited"]
