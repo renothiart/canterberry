@@ -6,7 +6,7 @@
 [node name="interaction_test" type="Node2D"]
 
 [node name="StrawberryKnight" parent="." instance=ExtResource("1_45yye")]
-position = Vector2(7, 278)
+position = Vector2(-45, 275)
 
 [node name="pear_monk" parent="." instance=ExtResource("2_rubrm")]
 position = Vector2(832, 405)

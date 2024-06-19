@@ -19,4 +19,4 @@ texture = ExtResource("1_5ivih")
 shape = SubResource("CapsuleShape2D_m1ndv")
 
 [node name="InteractionManager" parent="." instance=ExtResource("2_xwb4c")]
-scale = Vector2(2.04, 0.8)
+scale = Vector2(2.2, 0.8)

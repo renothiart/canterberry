@@ -18,6 +18,7 @@ func _ready():
 func _unhandled_input(_event_) -> void:
 	# interact
 	if Input.is_action_just_pressed("interact"):
+		#print("interact button") <- works
 		_interaction_manager.attempt_interaction()
 		
 	# test
