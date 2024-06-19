@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxee3yi14tdxm"]
+
+[ext_resource type="Script" path="res://nodes/interaction/interactable.gd" id="1_35d6y"]
+[ext_resource type="Texture2D" uid="uid://b5f5sglf4570e" path="res://assets/chars/banana_jester.png" id="2_5buan"]
+[ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="3_68bts"]
+[ext_resource type="Script" path="res://nodes/interaction/interaction_manager_banana_jester.gd" id="4_qbpq8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_isd44"]
+radius = 65.0
+height = 452.0
+
+[node name="banana_jester" type="CharacterBody2D"]
+script = ExtResource("1_35d6y")
+
+[node name="BananaJester" type="Sprite2D" parent="."]
+position = Vector2(-9, 2)
+texture = ExtResource("2_5buan")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-14, 2)
+shape = SubResource("CapsuleShape2D_isd44")
+
+[node name="InteractionManager" parent="." instance=ExtResource("3_68bts")]
+script = ExtResource("4_qbpq8")

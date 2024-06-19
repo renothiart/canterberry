@@ -1,9 +1,7 @@
 extends Area2D
 
-
 class_name InteractionManager
 var interaction_partner: InteractionManager
-
 
 # call this on interaction controller input
 func attempt_interaction() -> void:
@@ -14,7 +12,7 @@ func attempt_interaction() -> void:
 # overwrite with interaction behavior for each interactable object
 func interact() -> void:
 	print("No behavior defined for this interaction")
-	
+
 
 # connected to InteractionManager on_enter signal
 func _on_Interaction_Manager_area_entered(area):

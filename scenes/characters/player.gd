@@ -1,12 +1,10 @@
 extends CharacterBody2D
 
-
 # required variables enabling teleporting
 @export var layer: int = 4
 var teleport_buffer_time: float = 0.02
 var teleport_buffer_time_remaining: float = 0
 var buffered_layer = 0
-
 
 @onready var _animated_sprite = $AnimatedSprite2D
 @onready var _interaction_manager = $InteractionManager
