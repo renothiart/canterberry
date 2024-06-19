@@ -2,7 +2,7 @@ extends Area2D
 
 @export var portkey_location: Global.PortkeyLocation
 @export var paired_portkey_location: Global.PortkeyLocation
-@export var linked_level_name: String
+@export_multiline var linked_level_name: String
 @export var new_scale: float = 1.0
 @export var layer: int = 2
 

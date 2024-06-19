@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://jyex1sgcegu4"]
+
+[ext_resource type="Texture2D" uid="uid://cf8xo7q3lnbt" path="res://assets/settings/forest/background-back.png" id="1_gj36e"]
+[ext_resource type="Texture2D" uid="uid://csdh6obueuu1e" path="res://assets/settings/forest/background2.png" id="2_phdxq"]
+[ext_resource type="Texture2D" uid="uid://bpkvhkaagu0mh" path="res://assets/settings/forest/background3.png" id="3_rsujs"]
+
+[node name="ForestBackground" type="Node2D"]
+z_index = -7
+
+[node name="Background" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(477, 272)
+texture = ExtResource("1_gj36e")
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(477, 272)
+texture = ExtResource("2_phdxq")
+
+[node name="Background3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(477, 272)
+texture = ExtResource("3_rsujs")
