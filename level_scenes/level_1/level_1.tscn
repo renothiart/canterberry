@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://c4wihxbegbm0i" path="res://nodes/teleporters/teleporter.tscn" id="6_lee54"]
 [ext_resource type="PackedScene" uid="uid://cpn4yc2sasibl" path="res://nodes/portkeys/portkey.tscn" id="7_m04h0"]
 [ext_resource type="PackedScene" uid="uid://dmshb3ep1l0gp" path="res://nodes/activatable_teleporters/fg_activatable_teleporter.tscn" id="8_8gmxs"]
-[ext_resource type="PackedScene" uid="uid://c2rjvyky3g53k" path="res://nodes/activatable_teleporters/backward_mg_activatable_teleporter.tscn" id="10_qkjeb"]
+[ext_resource type="PackedScene" uid="uid://c2rjvyky3g53k" path="res://nodes/activatable_teleporters/mg_to_bg_activatable_teleporter.tscn" id="10_qkjeb"]
 [ext_resource type="PackedScene" uid="uid://bjofqpqrlv024" path="res://nodes/activatable_teleporters/bg_activatable_teleporter.tscn" id="10_tdt87"]
-[ext_resource type="PackedScene" uid="uid://cvc1hqpk5swtw" path="res://nodes/activatable_teleporters/forward_mg_activatable_teleporter.tscn" id="11_1cj2f"]
+[ext_resource type="PackedScene" uid="uid://cvc1hqpk5swtw" path="res://nodes/activatable_teleporters/mg_to_fg_activatable_teleporter.tscn" id="11_1cj2f"]
 
 [node name="Level1" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "bg_right_portkey")]
 script = ExtResource("1_i3ntw")
@@ -83,15 +83,15 @@ new_scale = 0.35
 layer = 6
 
 [node name="FGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("8_8gmxs")]
-pairedTeleporter = NodePath("../ForwardMGActivatableTeleporter")
+pairedTeleporter = NodePath("../MGToFGActivatableTeleporter")
 
 [node name="BGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("10_tdt87")]
-pairedTeleporter = NodePath("../BackwardMGActivatableTeleporter")
+pairedTeleporter = NodePath("../MGToBGActivatableTeleporter")
 
-[node name="BackwardMGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("10_qkjeb")]
+[node name="MGToBGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("10_qkjeb")]
 pairedTeleporter = NodePath("../BGActivatableTeleporter")
 
-[node name="ForwardMGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("11_1cj2f")]
+[node name="MGToFGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("11_1cj2f")]
 pairedTeleporter = NodePath("../FGActivatableTeleporter")
 
 [connection signal="body_entered" from="LeftBGTele" to="LeftBGTele" method="_on_body_entered"]
