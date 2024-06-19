@@ -1,8 +1,6 @@
 extends Node
 
-var test = 5
 var current_portkey_location: PortkeyLocation = PortkeyLocation.UNDEFINED
-
 enum PortkeyLocation {
 	UNDEFINED,
 	
@@ -19,4 +17,11 @@ enum PortkeyLocation {
 	MG_RIGHT,
 	BG_LEFT,
 	BG_RIGHT,
+}
+
+var playerType: PlayerType = PlayerType.STRAWBERRY
+enum PlayerType {
+	STRAWBERRY,
+	TOMATO,
+	RASPBERRY,
 }
