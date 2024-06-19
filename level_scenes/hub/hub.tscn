@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://2ivd6qp010dp" path="res://level_scenes/hub/hub_bg.tscn" id="1_3r8ij"]
 [ext_resource type="Script" path="res://level_scenes/hub/hub.gd" id="1_f2os3"]
-[ext_resource type="PackedScene" uid="uid://cpn4yc2sasibl" path="res://portkey.tscn" id="4_fxi3g"]
+[ext_resource type="PackedScene" uid="uid://cpn4yc2sasibl" path="res://nodes/portkeys/portkey.tscn" id="4_fxi3g"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://strawberry_knight.tscn" id="4_gkdv7"]
 
 [node name="Hub" type="Node2D"]

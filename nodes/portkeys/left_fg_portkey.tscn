@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1wxtrftkrfyl"]
+
+[ext_resource type="Script" path="res://nodes/portkeys/portkey.gd" id="1_vrcl2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivpkj"]
+size = Vector2(50, 100)
+
+[node name="Portkey" type="Area2D"]
+position = Vector2(-100, 300)
+script = ExtResource("1_vrcl2")
+new_scale = 0.9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ivpkj")
+debug_color = Color(0.796037, 0.193176, 0.916855, 0.42)

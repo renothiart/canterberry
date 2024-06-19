@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpn4yc2sasibl"]
+[gd_scene load_steps=3 format=3 uid="uid://cmvhnfu3ousn3"]
 
-[ext_resource type="Script" path="res://portkey.gd" id="1_ugvkg"]
+[ext_resource type="Script" path="res://nodes/portkeys/portkey.gd" id="1_rva3g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivpkj"]
 size = Vector2(50, 100)
 
 [node name="Portkey" type="Area2D"]
-script = ExtResource("1_ugvkg")
+position = Vector2(1045, 280)
+script = ExtResource("1_rva3g")
+new_scale = 0.6
+layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ivpkj")
