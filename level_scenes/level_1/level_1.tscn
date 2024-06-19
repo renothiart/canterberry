@@ -26,7 +26,7 @@ z_index = -5
 [node name="Level1_fg" parent="." instance=ExtResource("4_h30l7")]
 z_index = -3
 
-[node name="StrawberryKnight" parent="." instance=ExtResource("5_elnum")]
+[node name="Player" parent="." instance=ExtResource("5_elnum")]
 unique_name_in_owner = true
 z_index = -4
 position = Vector2(5, 280)

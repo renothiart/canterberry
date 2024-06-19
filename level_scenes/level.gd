@@ -48,8 +48,8 @@ func load_portkey():
 		
 		get_tree().paused = true
 		
-		%StrawberryKnight.set_new_layer(portkey.layer)
-		%StrawberryKnight.global_position = portkey.global_position
-		%StrawberryKnight.global_scale = Vector2(portkey.new_scale, portkey.new_scale)
+		%Player.set_new_layer(portkey.layer)
+		%Player.global_position = portkey.global_position
+		%Player.global_scale = Vector2(portkey.new_scale, portkey.new_scale)
 		
 		get_tree().paused = false

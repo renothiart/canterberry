@@ -13,7 +13,7 @@ fg_right_portkey = NodePath("RightPortkey")
 [node name="Hub_bg" parent="." instance=ExtResource("1_3r8ij")]
 z_index = -7
 
-[node name="StrawberryKnight" parent="." instance=ExtResource("4_gkdv7")]
+[node name="Player" parent="." instance=ExtResource("4_gkdv7")]
 unique_name_in_owner = true
 z_index = -4
 position = Vector2(5, 300)

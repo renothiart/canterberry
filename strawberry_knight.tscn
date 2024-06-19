@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ce2riagpagvsl"]
 
 [ext_resource type="Texture2D" uid="uid://i32u1qvfh2ty" path="res://assets/chars/strawb_knight_r.png" id="1_d17wa"]
-[ext_resource type="Script" path="res://strawberry_knight.gd" id="1_l2kgp"]
+[ext_resource type="Script" path="res://player.gd" id="1_ljexa"]
 [ext_resource type="Texture2D" uid="uid://c5p655t75e4nl" path="res://assets/chars/strawb_knight_l.png" id="2_72ufe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eq4ts"]
@@ -22,7 +22,7 @@ animations = [{
 size = Vector2(166, 250)
 
 [node name="StrawberryKnight" type="CharacterBody2D"]
-script = ExtResource("1_l2kgp")
+script = ExtResource("1_ljexa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(82, 88)

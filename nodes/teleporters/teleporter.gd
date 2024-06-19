@@ -11,11 +11,11 @@ func _ready():
 
 func teleport_player():
 	disabled = true
-	%StrawberryKnight.start_teleport_buffer(layer)
+	%Player.start_teleport_buffer(layer)
 	
-	%StrawberryKnight.remove_current_layer()
-	%StrawberryKnight.global_position = global_position
-	%StrawberryKnight.global_scale = Vector2(newScale, newScale)
+	%Player.remove_current_layer()
+	%Player.global_position = global_position
+	%Player.global_scale = Vector2(newScale, newScale)
 
 # Sets the layer for both rendering and collision
 func set_layer(new_layer: int):
