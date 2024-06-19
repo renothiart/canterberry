@@ -1,6 +1,8 @@
 extends Area2D
 
-@export var pairedTeleporter: Area2D
+@export var portkeyLocation: Global.PortkeyLocation
+@export var pairedPortkeyLocation: Global.PortkeyLocation
+@export var linkedLevelName: String
 @export var newScale: float = 1.0
 @export var layer: int = 2
 
@@ -8,14 +10,6 @@ var disabled = false
 
 func _ready():
 	set_layer(layer)
-
-func teleport_player():
-	disabled = true
-	%StrawberryKnight.start_teleport_buffer(layer)
-	
-	%StrawberryKnight.remove_current_layer()
-	%StrawberryKnight.global_position = global_position
-	%StrawberryKnight.global_scale = Vector2(newScale, newScale)
 
 # Sets the layer for both rendering and collision
 func set_layer(new_layer: int):
@@ -28,7 +22,8 @@ func set_layer(new_layer: int):
 
 func _on_body_entered(_body):
 	if not disabled:
-		pairedTeleporter.teleport_player()
+		Global.currentPortkeyLocation = pairedPortkeyLocation
+		get_tree().change_scene_to_file(linkedLevelName)
 
 func _on_body_exited(_body):
 	disabled = false
