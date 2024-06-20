@@ -8,6 +8,7 @@ size = Vector2(50, 100)
 [node name="RightBGPortkey" type="Area2D"]
 position = Vector2(1045, 180)
 script = ExtResource("1_nqf7c")
+portkey_location = 10
 new_scale = 0.35
 layer = 6
 

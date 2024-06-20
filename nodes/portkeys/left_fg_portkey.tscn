@@ -8,6 +8,7 @@ size = Vector2(50, 100)
 [node name="LeftFGPortkey" type="Area2D"]
 position = Vector2(-100, 300)
 script = ExtResource("1_vrcl2")
+portkey_location = 5
 new_scale = 0.9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

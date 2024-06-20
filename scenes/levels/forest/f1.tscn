@@ -1,13 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://clgmd1n0v43nk"]
+[gd_scene load_steps=10 format=3 uid="uid://clgmd1n0v43nk"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_52763"]
 [ext_resource type="Texture2D" uid="uid://ckbvxjkiemsh2" path="res://assets/settings/forest/f1-mg.png" id="2_m88a4"]
 [ext_resource type="Texture2D" uid="uid://cevgq1fandxxb" path="res://assets/settings/forest/f1-fg.png" id="3_2srqe"]
+[ext_resource type="PackedScene" uid="uid://5mxadhwg1gtb" path="res://nodes/portkeys/left_mg_portkey.tscn" id="4_i81ct"]
+[ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="5_labnm"]
+[ext_resource type="PackedScene" uid="uid://c1wxtrftkrfyl" path="res://nodes/portkeys/left_fg_portkey.tscn" id="6_2s5ig"]
+[ext_resource type="PackedScene" uid="uid://cvc1hqpk5swtw" path="res://nodes/activatable_teleporters/mg_to_fg_activatable_teleporter.tscn" id="7_ekmpt"]
+[ext_resource type="PackedScene" uid="uid://dmshb3ep1l0gp" path="res://nodes/activatable_teleporters/fg_activatable_teleporter.tscn" id="8_lssgc"]
+[ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="9_64pg5"]
 
-[node name="Forest1" type="Node2D"]
+[node name="Forest1" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey", "mg_left_portkey")]
 script = ExtResource("1_52763")
+fg_left_portkey = NodePath("LeftFGPortkey")
+fg_right_portkey = NodePath("RightFGPortkey")
+mg_left_portkey = NodePath("LeftMGPortkey")
 
 [node name="Background" type="Sprite2D" parent="."]
+visible = false
 
 [node name="Midground" type="Sprite2D" parent="."]
 z_index = -5
@@ -18,3 +28,30 @@ centered = false
 z_index = -3
 texture = ExtResource("3_2srqe")
 centered = false
+
+[node name="LeftMGPortkey" parent="." instance=ExtResource("4_i81ct")]
+paired_portkey_location = 8
+linked_level_name = "res://scenes/levels/forest/f2.tscn"
+
+[node name="RightFGPortkey" parent="." instance=ExtResource("5_labnm")]
+paired_portkey_location = 5
+linked_level_name = "res://scenes/levels/hub/hub.tscn"
+
+[node name="LeftFGPortkey" parent="." instance=ExtResource("6_2s5ig")]
+paired_portkey_location = 6
+linked_level_name = "res://scenes/levels/forest/f2.tscn"
+
+[node name="MGToFGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("7_ekmpt")]
+pairedTeleporter = NodePath("../FGActivatableTeleporter")
+
+[node name="FGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("8_lssgc")]
+pairedTeleporter = NodePath("../MGToFGActivatableTeleporter")
+
+[node name="Player" parent="." instance=ExtResource("9_64pg5")]
+unique_name_in_owner = true
+z_index = -4
+position = Vector2(5, 300)
+scale = Vector2(0.9, 0.9)
+collision_layer = 0
+collision_mask = 0
+layer = 2

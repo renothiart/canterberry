@@ -8,6 +8,7 @@ size = Vector2(50, 100)
 [node name="RightMGPortkey" type="Area2D"]
 position = Vector2(1045, 280)
 script = ExtResource("1_rva3g")
+portkey_location = 8
 new_scale = 0.6
 layer = 4
 
