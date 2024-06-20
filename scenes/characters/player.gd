@@ -10,12 +10,15 @@ var buffered_layer = 0
 @onready var _animated_sprite = $AnimatedSprite2D
 @onready var _interaction_manager = $InteractionManager
 
+# key for current PC sprite, start as strawberry knight
+var key = "SK"
+
 
 # render player into scene
 func _ready():
 	set_new_layer(layer)
 	set_process(false)
-	_animated_sprite.set_animation("SK")
+	set_key(key)
 
 
 # define all input behaviors
@@ -32,9 +35,8 @@ func _unhandled_input(_event_) -> void:
 
 # define echo interaction behaviors
 # expects key to be a string, initials of target PC (SK, TT, RM)
-func echo(key) -> void:
-	#print("player.gd echo, key = ")
-	#print(key)
+func set_key(newKey) -> void:
+	key = newKey
 	_animated_sprite.set_animation(key)
 
 

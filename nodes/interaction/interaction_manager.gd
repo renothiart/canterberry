@@ -1,7 +1,9 @@
 extends Area2D
 
+# interaction managers interact with each other
 class_name InteractionManager
 var interaction_partner: InteractionManager
+
 
 # call this on interaction controller input
 func attempt_interaction() -> void:

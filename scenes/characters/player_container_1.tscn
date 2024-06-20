@@ -4,11 +4,19 @@
 [ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="1_87vs1"]
 [ext_resource type="Script" path="res://scenes/characters/player_container.gd" id="1_yn3n4"]
 [ext_resource type="Texture2D" uid="uid://c5p655t75e4nl" path="res://assets/chars/strawb_knight_l.png" id="2_7hrvi"]
-[ext_resource type="Script" path="res://nodes/interaction/interaction_manager_PCC1.gd" id="2_ewyaw"]
+[ext_resource type="Script" path="res://nodes/interaction/IM_PCC1.gd" id="2_ewyaw"]
 [ext_resource type="Texture2D" uid="uid://bdwgjgti3uhsg" path="res://assets/chars/tomato_thief.png" id="3_e4ihr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3q81y"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"NULL",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_8nqpg")
@@ -37,7 +45,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ok13"]
 size = Vector2(166, 250)
 
-[node name="player_container_1" type="RigidBody2D"]
+[node name="player_container_1" type="CharacterBody2D"]
 script = ExtResource("1_yn3n4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -48,6 +56,8 @@ animation = &"RM"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(85, 125)
 shape = SubResource("RectangleShape2D_3ok13")
+disabled = true
 
 [node name="InteractionManager" parent="." instance=ExtResource("1_87vs1")]
+position = Vector2(85, 124)
 script = ExtResource("2_ewyaw")
