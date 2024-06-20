@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckrqyejhcxt3c"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_wd5g3"]
+[ext_resource type="Texture2D" uid="uid://bci60xr5crg7n" path="res://assets/settings/forest/f3-bg.png" id="2_0qvp4"]
+[ext_resource type="Texture2D" uid="uid://cki7enx6p5c1o" path="res://assets/settings/forest/f3-mg.png" id="3_kwijc"]
+[ext_resource type="Texture2D" uid="uid://bdfjbhmhw6qat" path="res://assets/settings/forest/f3-fg.png" id="4_dsajv"]
+
+[node name="Forest3" type="Node2D"]
+script = ExtResource("1_wd5g3")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -7
+texture = ExtResource("2_0qvp4")
+centered = false
+
+[node name="Midground" type="Sprite2D" parent="."]
+z_index = -5
+texture = ExtResource("3_kwijc")
+centered = false
+
+[node name="Foreground" type="Sprite2D" parent="."]
+z_index = -3
+texture = ExtResource("4_dsajv")
+centered = false

@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://creb1xia03wtb"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_0idor"]
+[ext_resource type="Texture2D" uid="uid://c6pw6k5rlgim6" path="res://assets/settings/village/v5.png" id="2_ify30"]
+[ext_resource type="Texture2D" uid="uid://cdilkt4f5up50" path="res://assets/settings/village/v4-mg.png" id="3_452yu"]
+[ext_resource type="Texture2D" uid="uid://bpl8wlmjd57tg" path="res://assets/settings/village/v4-fg.png" id="4_eiaeq"]
+[ext_resource type="Texture2D" uid="uid://dq7o4ea22ao8" path="res://assets/settings/village/v3-fg-f.png" id="5_cdt1n"]
+
+[node name="Village5" type="Node2D"]
+script = ExtResource("1_0idor")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -7
+texture = ExtResource("2_ify30")
+centered = false
+
+[node name="Midground" type="Sprite2D" parent="."]
+visible = false
+z_index = -5
+texture = ExtResource("3_452yu")
+centered = false
+
+[node name="Foreground" type="Sprite2D" parent="."]
+visible = false
+z_index = -3
+texture = ExtResource("4_eiaeq")
+centered = false
+
+[node name="Pre-foreground" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+texture = ExtResource("5_cdt1n")
+centered = false

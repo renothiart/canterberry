@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5hwiemgafafo"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_rbt4f"]
+[ext_resource type="Texture2D" uid="uid://bpshetp42jl8j" path="res://assets/settings/redforest/rf2-bg.png" id="2_ex1qc"]
+[ext_resource type="Texture2D" uid="uid://11ig30h4k1e3" path="res://assets/settings/redforest/rf3-mg.png" id="3_cskcc"]
+[ext_resource type="Texture2D" uid="uid://du0y7hh8j1lcm" path="res://assets/settings/redforest/rf3-fg.png" id="4_3rudp"]
+
+[node name="RedForest3" type="Node2D"]
+script = ExtResource("1_rbt4f")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -7
+texture = ExtResource("2_ex1qc")
+centered = false
+
+[node name="Midground" type="Sprite2D" parent="."]
+z_index = -5
+texture = ExtResource("3_cskcc")
+centered = false
+
+[node name="Foreground" type="Sprite2D" parent="."]
+z_index = -3
+texture = ExtResource("4_3rudp")
+centered = false
