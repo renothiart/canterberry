@@ -37,6 +37,7 @@ directories/dch_directory={
 "Tomato": "res://dialogue/characters/Tomato.dch"
 }
 directories/dtl_directory={
+"pineapple_strawberry": "res://dialogue/timelines/pineapple/pineapple_strawberry.dtl",
 "skyrim": "res://dialogue/timelines/skyrim.dtl"
 }
 glossary/default_case_sensitive=true
