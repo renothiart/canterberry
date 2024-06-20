@@ -34,12 +34,17 @@ centered = false
 
 [node name="RightMGPortkey" parent="." instance=ExtResource("5_dlhn6")]
 paired_portkey_location = 5
+linked_level_name = "res://scenes/levels/redforest/rf2.tscn"
 
-[node name="MGToFGActivatableTeleporter" parent="." instance=ExtResource("6_156m0")]
+[node name="MGToFGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("6_156m0")]
+pairedTeleporter = NodePath("../FGActivatableTeleporter")
 
 [node name="RightFGPortkey" parent="." instance=ExtResource("7_1vfxe")]
+paired_portkey_location = 9
+linked_level_name = "res://scenes/levels/village/v1.tscn"
 
-[node name="FGActivatableTeleporter" parent="." instance=ExtResource("8_tb1f1")]
+[node name="FGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("8_tb1f1")]
+pairedTeleporter = NodePath("../MGToFGActivatableTeleporter")
 
 [node name="LeftFGPortkey" parent="." instance=ExtResource("9_hpjxs")]
 paired_portkey_location = 6

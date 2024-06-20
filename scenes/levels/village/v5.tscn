@@ -1,13 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://creb1xia03wtb"]
+[gd_scene load_steps=8 format=3 uid="uid://creb1xia03wtb"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_0idor"]
 [ext_resource type="Texture2D" uid="uid://b1yp80fm2luia" path="res://assets/settings/village/v5.png" id="2_ify30"]
 [ext_resource type="Texture2D" uid="uid://d0vi8opnt1mu2" path="res://assets/settings/village/v4-mg.png" id="3_452yu"]
 [ext_resource type="Texture2D" uid="uid://dgltka2wrfobt" path="res://assets/settings/village/v4-fg.png" id="4_eiaeq"]
 [ext_resource type="Texture2D" uid="uid://cxvjio4dmmi4g" path="res://assets/settings/village/v3-fg-f.png" id="5_cdt1n"]
+[ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_vb15s"]
+[ext_resource type="PackedScene" uid="uid://c1wxtrftkrfyl" path="res://nodes/portkeys/left_fg_portkey.tscn" id="7_myl88"]
 
-[node name="Village5" type="Node2D"]
+[node name="Village5" type="Node2D" node_paths=PackedStringArray("fg_left_portkey")]
 script = ExtResource("1_0idor")
+fg_left_portkey = NodePath("LeftFGPortkey")
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -7
@@ -31,3 +34,16 @@ visible = false
 z_index = -1
 texture = ExtResource("5_cdt1n")
 centered = false
+
+[node name="Player" parent="." instance=ExtResource("6_vb15s")]
+unique_name_in_owner = true
+z_index = -4
+position = Vector2(5, 300)
+scale = Vector2(0.9, 0.9)
+collision_layer = 0
+collision_mask = 0
+layer = 2
+
+[node name="LeftFGPortkey" parent="." instance=ExtResource("7_myl88")]
+paired_portkey_location = 8
+linked_level_name = "res://scenes/levels/village/v4.tscn"

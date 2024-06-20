@@ -1,12 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2foorvh672y7"]
+[gd_scene load_steps=12 format=3 uid="uid://c2foorvh672y7"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_xkr85"]
 [ext_resource type="Texture2D" uid="uid://fk7tbtp7vcut" path="res://assets/settings/redforest/rf2-bg.png" id="2_nsgn4"]
 [ext_resource type="Texture2D" uid="uid://p8aieo5cvkw6" path="res://assets/settings/redforest/rf2-mg.png" id="3_mtf1l"]
 [ext_resource type="Texture2D" uid="uid://88i06u2jdsut" path="res://assets/settings/redforest/rf2-fg.png" id="4_txkxl"]
+[ext_resource type="PackedScene" uid="uid://dqgk4tayohoec" path="res://nodes/portkeys/right_bg_portkey.tscn" id="5_uycrt"]
+[ext_resource type="PackedScene" uid="uid://dkws4vdscausy" path="res://nodes/teleporters/left_bg_teleporter.tscn" id="6_3pr7t"]
+[ext_resource type="PackedScene" uid="uid://cg8x70jqjcvc1" path="res://nodes/teleporters/right_mg_teleporter.tscn" id="7_7nocj"]
+[ext_resource type="PackedScene" uid="uid://dxuu4hoqmwca" path="res://nodes/teleporters/left_mg_teleporter.tscn" id="8_ncj0b"]
+[ext_resource type="PackedScene" uid="uid://djtlnw17sk01" path="res://nodes/teleporters/right_fg_teleporter.tscn" id="9_pv0oo"]
+[ext_resource type="PackedScene" uid="uid://c1wxtrftkrfyl" path="res://nodes/portkeys/left_fg_portkey.tscn" id="10_kgu0s"]
+[ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="11_r3v73"]
 
-[node name="RedForest2" type="Node2D"]
+[node name="RedForest2" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "bg_right_portkey")]
 script = ExtResource("1_xkr85")
+fg_left_portkey = NodePath("LeftFGPortkey")
+bg_right_portkey = NodePath("RightBGPortkey")
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -7
@@ -22,3 +31,32 @@ centered = false
 z_index = -3
 texture = ExtResource("4_txkxl")
 centered = false
+
+[node name="RightBGPortkey" parent="." instance=ExtResource("5_uycrt")]
+paired_portkey_location = 5
+linked_level_name = "res://scenes/levels/redforest/rf3.tscn"
+
+[node name="LeftBGTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("6_3pr7t")]
+pairedTeleporter = NodePath("../RightMGTeleporter")
+
+[node name="RightMGTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("7_7nocj")]
+pairedTeleporter = NodePath("../LeftBGTeleporter")
+
+[node name="LeftMGTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("8_ncj0b")]
+pairedTeleporter = NodePath("../RightFGTeleporter")
+
+[node name="RightFGTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("9_pv0oo")]
+pairedTeleporter = NodePath("../LeftMGTeleporter")
+
+[node name="LeftFGPortkey" parent="." instance=ExtResource("10_kgu0s")]
+paired_portkey_location = 8
+linked_level_name = "res://scenes/levels/redforest/rf1.tscn"
+
+[node name="Player" parent="." instance=ExtResource("11_r3v73")]
+unique_name_in_owner = true
+z_index = -4
+position = Vector2(5, 300)
+scale = Vector2(0.9, 0.9)
+collision_layer = 0
+collision_mask = 0
+layer = 2
