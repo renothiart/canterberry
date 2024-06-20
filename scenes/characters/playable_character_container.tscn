@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://ccwnjw11r2gkn"]
+
+[ext_resource type="Script" path="res://scenes/characters/playable_character_container.gd" id="1_8iu5t"]
+[ext_resource type="Texture2D" uid="uid://d12asd8ehk8w7" path="res://assets/chars/raspberry_messenger.png" id="2_ih5xq"]
+[ext_resource type="Texture2D" uid="uid://c5p655t75e4nl" path="res://assets/chars/strawb_knight_l.png" id="3_fhv6r"]
+[ext_resource type="Texture2D" uid="uid://bdwgjgti3uhsg" path="res://assets/chars/tomato_thief.png" id="4_syllo"]
+[ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="5_b1gjb"]
+[ext_resource type="Script" path="res://nodes/interaction/IM_playable_character_container.gd" id="6_wbsjh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3q81y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"NULL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ih5xq")
+}],
+"loop": true,
+"name": &"RM",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fhv6r")
+}],
+"loop": true,
+"name": &"SK",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_syllo")
+}],
+"loop": true,
+"name": &"TT",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ok13"]
+size = Vector2(166, 250)
+
+[node name="PCC1" type="CharacterBody2D"]
+script = ExtResource("1_8iu5t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(82, 88)
+sprite_frames = SubResource("SpriteFrames_3q81y")
+animation = &"NULL"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(85, 125)
+shape = SubResource("RectangleShape2D_3ok13")
+disabled = true
+
+[node name="InteractionManager" parent="." instance=ExtResource("5_b1gjb")]
+position = Vector2(85, 124)
+script = ExtResource("6_wbsjh")

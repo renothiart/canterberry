@@ -25,12 +25,6 @@ func _ready():
 func _unhandled_input(_event_) -> void:
 	if Input.is_action_just_pressed("interact"):
 		_interaction_manager.attempt_interaction()
-	
-	if Input.is_action_just_pressed("move_left"):
-		_animated_sprite.flip_h = false
-	
-	if Input.is_action_just_pressed("move_right"):
-		_animated_sprite.flip_h = true
 
 
 # define echo interaction behaviors
@@ -45,6 +39,10 @@ func _physics_process(_delta):
 	var _input_axis = Input.get_axis("move_left", "move_right")
 	var direction = Vector2(_input_axis, 0.0)
 	velocity = direction * 600.0
+	if _input_axis > 0.0:
+		_animated_sprite.flip_h = true
+	else: if _input_axis < 0.0:
+		_animated_sprite.flip_h = false
 	move_and_slide()
 
 

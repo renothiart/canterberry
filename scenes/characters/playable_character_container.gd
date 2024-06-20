@@ -5,7 +5,7 @@ extends CharacterBody2D # PCC (PLAYABLE CHARACTER CONTAINER)
 @onready var _interaction_manager = $InteractionManager
 
 # track contained PC
-var key = "RM"
+@export var key:String = "NULL"
 
 
 # render PCC into scene

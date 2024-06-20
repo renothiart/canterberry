@@ -1,12 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4w3p2lx5tycb"]
 
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="1_45yye"]
-[ext_resource type="PackedScene" uid="uid://ccwnjw11r2gkn" path="res://scenes/characters/player_container_1.tscn" id="4_dotg2"]
+[ext_resource type="PackedScene" uid="uid://ccwnjw11r2gkn" path="res://scenes/characters/playable_character_container.tscn" id="4_dotg2"]
 
 [node name="interaction_test" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_45yye")]
 position = Vector2(341, 284)
 
-[node name="player_container_1" parent="." instance=ExtResource("4_dotg2")]
-position = Vector2(772, 292)
+[node name="PCC1" parent="." instance=ExtResource("4_dotg2")]
+position = Vector2(8, 287)
+key = "RM"
+
+[node name="PCC2" parent="." instance=ExtResource("4_dotg2")]
+position = Vector2(802, 289)
+key = "TT"
