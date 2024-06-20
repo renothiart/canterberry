@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends RigidBody2D
 
 # this script can be attached to any interactable NPC or scene object
 # add InteractionManager.tscn as a node, and detach the default script
