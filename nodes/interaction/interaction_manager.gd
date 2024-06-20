@@ -14,6 +14,11 @@ func interact() -> void:
 	print("No behavior defined for this interaction")
 
 
+# overwrite only when applicable
+func interact_echo(key) -> void:
+	print("No echo behavior defined for this interaction")
+
+
 # connected to InteractionManager on_enter signal
 func _on_Interaction_Manager_area_entered(area):
 	interaction_partner = area

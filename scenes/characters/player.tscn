@@ -1,33 +1,49 @@
-[gd_scene load_steps=7 format=3 uid="uid://ce2riagpagvsl"]
+[gd_scene load_steps=9 format=3 uid="uid://ce2riagpagvsl"]
 
-[ext_resource type="Texture2D" uid="uid://i32u1qvfh2ty" path="res://assets/chars/strawb_knight_r.png" id="1_d17wa"]
 [ext_resource type="Script" path="res://scenes/characters/player.gd" id="1_ljexa"]
 [ext_resource type="Texture2D" uid="uid://c5p655t75e4nl" path="res://assets/chars/strawb_knight_l.png" id="2_72ufe"]
+[ext_resource type="Texture2D" uid="uid://bdwgjgti3uhsg" path="res://assets/chars/tomato_thief.png" id="3_nhhfi"]
 [ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="4_21hvw"]
+[ext_resource type="Texture2D" uid="uid://d12asd8ehk8w7" path="res://assets/chars/raspberry_messenger.png" id="4_r2tv7"]
+[ext_resource type="Script" path="res://nodes/interaction/interaction_manager_player.gd" id="5_1gnvn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eq4ts"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_72ufe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_d17wa")
+"texture": ExtResource("4_r2tv7")
 }],
 "loop": true,
-"name": &"default",
+"name": &"RM",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_72ufe")
+}],
+"loop": true,
+"name": &"SK",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nhhfi")
+}],
+"loop": true,
+"name": &"TT",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nh834"]
 size = Vector2(166, 250)
 
-[node name="StrawberryKnight" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ljexa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(82, 88)
 sprite_frames = SubResource("SpriteFrames_eq4ts")
+animation = &"RM"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(85, 125)
@@ -36,3 +52,4 @@ shape = SubResource("RectangleShape2D_nh834")
 [node name="InteractionManager" parent="." instance=ExtResource("4_21hvw")]
 position = Vector2(85, 129)
 scale = Vector2(2, 1)
+script = ExtResource("5_1gnvn")

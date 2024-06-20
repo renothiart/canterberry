@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ddbldmopp760f" path="res://scenes/levels/forest/forest_mg.tscn" id="3_bi0hd"]
 [ext_resource type="PackedScene" uid="uid://ssqh3mjaovrg" path="res://scenes/levels/forest/forest_fg.tscn" id="4_04mh3"]
 [ext_resource type="PackedScene" uid="uid://dqgk4tayohoec" path="res://nodes/portkeys/right_bg_portkey.tscn" id="5_1w70w"]
-[ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/strawberry_knight.tscn" id="5_4h6mg"]
+[ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="5_4h6mg"]
 [ext_resource type="PackedScene" uid="uid://dkws4vdscausy" path="res://nodes/teleporters/left_bg_teleporter.tscn" id="6_caj26"]
 [ext_resource type="PackedScene" uid="uid://cg8x70jqjcvc1" path="res://nodes/teleporters/right_mg_teleporter.tscn" id="7_cxxnm"]
 [ext_resource type="PackedScene" uid="uid://dxuu4hoqmwca" path="res://nodes/teleporters/left_mg_teleporter.tscn" id="8_mierw"]

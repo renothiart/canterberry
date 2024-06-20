@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://2ivd6qp010dp" path="res://scenes/levels/hub/hub_bg.tscn" id="1_3r8ij"]
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_f5ypn"]
 [ext_resource type="PackedScene" uid="uid://cpn4yc2sasibl" path="res://nodes/portkeys/portkey.tscn" id="4_fxi3g"]
-[ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/strawberry_knight.tscn" id="4_gkdv7"]
+[ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="4_gkdv7"]
 
 [node name="Hub" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey")]
 script = ExtResource("1_f5ypn")
