@@ -6,18 +6,18 @@ var interaction_partner: InteractionManager
 
 
 # call this on interaction controller input
-func attempt_interaction() -> void:
+func attempt_interaction(input: String) -> void:
 	if interaction_partner != null:
-		interaction_partner.interact()
+		interaction_partner.interact(input)
 
 
 # overwrite with interaction behavior for each interactable object
-func interact() -> void:
+func interact(input: String) -> void:
 	print("No behavior defined for this interaction")
 
 
 # overwrite only when applicable
-func interact_echo(key) -> void:
+func interact_echo(key: String) -> void:
 	print("No echo behavior defined for this interaction")
 
 

@@ -43,7 +43,7 @@ script = ExtResource("1_ljexa")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2.08165e-12, 88)
 sprite_frames = SubResource("SpriteFrames_eq4ts")
-animation = &"RM"
+animation = &"SK"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.08165e-12, 125)

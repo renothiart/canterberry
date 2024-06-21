@@ -11,26 +11,31 @@ var buffered_layer = 0
 @onready var _interaction_manager = $InteractionManager
 
 # key for current PC sprite, start as strawberry knight
-var key = "SK"
+@export var key: String
 
 
 # render player into scene
 func _ready():
 	set_new_layer(layer)
 	set_process(false)
-	set_key(key)
+	var player_type = Global.get_animation_name(Global.current_player_type)
+	set_key(player_type)
 
 
 # define all input behaviors
 func _unhandled_input(_event_) -> void:
 	if Input.is_action_just_pressed("interact"):
-		_interaction_manager.attempt_interaction()
+		_interaction_manager.attempt_interaction("e")
+	
+	if Input.is_action_just_pressed("swap_characters"):
+		_interaction_manager.attempt_interaction("q")
 
 
 # define echo interaction behaviors
 # expects key to be a string, initials of target PC (SK, TT, RM)
-func set_key(newKey) -> void:
-	key = newKey
+func set_key(new_key: String) -> void:
+	key = new_key
+	Global.current_player_type = Global.get_player_type(key)
 	_animated_sprite.set_animation(key)
 
 

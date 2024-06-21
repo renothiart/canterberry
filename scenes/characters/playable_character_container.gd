@@ -5,15 +5,17 @@ extends CharacterBody2D # PCC (PLAYABLE CHARACTER CONTAINER)
 @onready var _interaction_manager = $InteractionManager
 
 # track contained PC
-@export var key:String = "NULL"
+@export var key:String
 
 
 # render PCC into scene
 func _ready():
-	set_key(key)
+	var player_type = Global.get_animation_name(Global.pcc1_player_type)
+	set_key(player_type)
 
 
 # swap characters with the player
-func set_key(newKey):
-	key = newKey
+func set_key(new_key: String):
+	key = new_key
+	Global.pcc1_player_type = Global.get_player_type(key)
 	_animated_sprite.set_animation(key)
