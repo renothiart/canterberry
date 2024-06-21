@@ -1,17 +1,42 @@
-[gd_scene load_steps=5 format=3 uid="uid://w0eswg4cvckf"]
+[gd_scene load_steps=8 format=3 uid="uid://w0eswg4cvckf"]
 
-[ext_resource type="PackedScene" uid="uid://2ivd6qp010dp" path="res://scenes/levels/hub/hub_bg.tscn" id="1_3r8ij"]
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_f5ypn"]
+[ext_resource type="Texture2D" uid="uid://dresoebhn6oql" path="res://assets/settings/hub/background.png" id="2_7lqle"]
+[ext_resource type="Texture2D" uid="uid://bgjlbhd5j851r" path="res://assets/settings/hub/campfire_1.png" id="3_42hv8"]
+[ext_resource type="Texture2D" uid="uid://kd20uc2ky57v" path="res://assets/settings/hub/campfire_2.png" id="4_87u8c"]
 [ext_resource type="PackedScene" uid="uid://cpn4yc2sasibl" path="res://nodes/portkeys/portkey.tscn" id="4_fxi3g"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="4_gkdv7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kw6cc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_42hv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_87u8c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="Hub" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey")]
 script = ExtResource("1_f5ypn")
 fg_left_portkey = NodePath("LeftPortkey")
 fg_right_portkey = NodePath("RightPortkey")
 
-[node name="Hub_bg" parent="." instance=ExtResource("1_3r8ij")]
+[node name="Background" type="Sprite2D" parent="."]
 z_index = -7
+texture = ExtResource("2_7lqle")
+centered = false
+
+[node name="Campfire" type="AnimatedSprite2D" parent="."]
+z_index = -7
+position = Vector2(471, 400)
+sprite_frames = SubResource("SpriteFrames_kw6cc")
+autoplay = "default"
+frame_progress = 0.936414
 
 [node name="Player" parent="." instance=ExtResource("4_gkdv7")]
 unique_name_in_owner = true

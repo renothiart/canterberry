@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://2ivd6qp010dp"]
-
-[ext_resource type="Texture2D" uid="uid://byli6lyta5ewu" path="res://assets/settings/hub/combined.png" id="1_77l3r"]
-
-[node name="Hub_bg" type="Node2D"]
-
-[node name="Background" type="Sprite2D" parent="."]
-texture = ExtResource("1_77l3r")
-centered = false
