@@ -17,3 +17,5 @@ mono_crash.*.json
 # Mac trash
 **/.DS_Store
 
+# Exported game files
+export/

@@ -19,9 +19,20 @@ enum PortkeyLocation {
 	BG_RIGHT,
 }
 
-var playerType: PlayerType = PlayerType.STRAWBERRY
+var current_player_type: PlayerType = PlayerType.KNIGHT
 enum PlayerType {
-	STRAWBERRY,
-	TOMATO,
-	RASPBERRY,
+	NULL,
+	KNIGHT,
+	THIEF,
+	MESSENGER,
 }
+
+var player_type_to_animation = {
+	PlayerType.NULL: "NULL",
+	PlayerType.KNIGHT: "SK",
+	PlayerType.THIEF: "TT",
+	PlayerType.MESSENGER: "RM",
+}
+
+func getAnimationName(player_type: PlayerType):
+	return player_type_to_animation[player_type]
