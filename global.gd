@@ -34,5 +34,5 @@ var player_type_to_animation = {
 	PlayerType.MESSENGER: "RM",
 }
 
-func getAnimationName(player_type: PlayerType):
+func get_animation_name(player_type: PlayerType):
 	return player_type_to_animation[player_type]
