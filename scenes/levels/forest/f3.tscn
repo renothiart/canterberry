@@ -50,7 +50,7 @@ pairedTeleporter = NodePath("../RightFGTeleporter")
 pairedTeleporter = NodePath("../LeftMGTeleporter")
 
 [node name="LeftFGPortkey" parent="." instance=ExtResource("10_ulrkw")]
-paired_portkey_location = 6
+paired_portkey_location = 8
 linked_level_name = "res://scenes/levels/witchhut/wh1.tscn"
 
 [node name="Player" parent="." instance=ExtResource("11_6g7rj")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c065ekyvhgbg"]
+[gd_scene load_steps=8 format=3 uid="uid://c065ekyvhgbg"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_vvlys"]
 [ext_resource type="Texture2D" uid="uid://bbqpnvjotpcj6" path="res://assets/settings/village/v7.png" id="2_dvnj7"]
@@ -6,9 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://dgltka2wrfobt" path="res://assets/settings/village/v4-fg.png" id="4_d015g"]
 [ext_resource type="Texture2D" uid="uid://cxvjio4dmmi4g" path="res://assets/settings/village/v3-fg-f.png" id="5_nh6ft"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="6_7ltvj"]
+[ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="7_w8d7h"]
 
 [node name="WitchHut2" type="Node2D"]
 script = ExtResource("1_vvlys")
+
+[node name="OuterBounds" parent="." instance=ExtResource("6_7ltvj")]
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -7
@@ -33,4 +36,11 @@ z_index = -1
 texture = ExtResource("5_nh6ft")
 centered = false
 
-[node name="OuterBounds" parent="." instance=ExtResource("6_7ltvj")]
+[node name="Player" parent="." instance=ExtResource("7_w8d7h")]
+unique_name_in_owner = true
+z_index = -4
+position = Vector2(5, 300)
+scale = Vector2(0.9, 0.9)
+collision_layer = 0
+collision_mask = 0
+layer = 2

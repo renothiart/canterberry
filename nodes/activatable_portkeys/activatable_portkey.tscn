@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://tgiartixcei4"]
+
+[ext_resource type="Script" path="res://nodes/activatable_portkeys/activatable_portkey.gd" id="1_jkj1a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivpkj"]
+size = Vector2(200, 100)
+
+[node name="ActivatablePortkey" type="Area2D"]
+script = ExtResource("1_jkj1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ivpkj")
+debug_color = Color(0.62126, 0.533901, 4.73577e-07, 0.42)

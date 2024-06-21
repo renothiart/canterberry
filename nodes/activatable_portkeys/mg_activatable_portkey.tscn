@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://y0yo253hd1cx"]
+
+[ext_resource type="Script" path="res://nodes/activatable_portkeys/activatable_portkey.gd" id="1_5a7yb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivpkj"]
+size = Vector2(200, 100)
+
+[node name="MGActivatablePortkey" type="Area2D"]
+position = Vector2(480, 280)
+script = ExtResource("1_5a7yb")
+portkey_location = 7
+new_scale = 0.6
+layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ivpkj")
+debug_color = Color(0.62126, 0.533901, 4.73577e-07, 0.42)

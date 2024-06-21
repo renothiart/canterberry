@@ -7,7 +7,7 @@ extends Area2D
 var disabled = false
 
 # required variables enabling teleporting
-var teleport_buffer_time: float = 1.5
+var teleport_buffer_time: float = 0.2
 var teleport_buffer_time_remaining: float = 0
 
 func _ready():

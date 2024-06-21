@@ -56,7 +56,7 @@ layer = 2
 
 [node name="RightBGPortkey" parent="." instance=ExtResource("7_tk11p")]
 position = Vector2(1045, 70)
-paired_portkey_location = 5
+paired_portkey_location = 7
 linked_level_name = "res://scenes/levels/castle/c1.tscn"
 new_scale = 0.25
 

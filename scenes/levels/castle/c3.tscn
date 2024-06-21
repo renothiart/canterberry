@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://cjsa7y8ux4uoe"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_1xfxx"]
+[ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="2_mrep4"]
+[ext_resource type="Texture2D" uid="uid://cv660lpw1p705" path="res://assets/settings/castle/c3-bg.png" id="3_co213"]
+[ext_resource type="Texture2D" uid="uid://8dwd1xxcyfd" path="res://assets/settings/castle/c3-mg.png" id="4_3n6l6"]
+[ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="5_dk657"]
+[ext_resource type="PackedScene" uid="uid://5mxadhwg1gtb" path="res://nodes/portkeys/left_mg_portkey.tscn" id="6_ev31x"]
+
+[node name="Castle3" type="Node2D" node_paths=PackedStringArray("fg_right_portkey", "mg_left_portkey")]
+script = ExtResource("1_1xfxx")
+fg_right_portkey = NodePath("")
+mg_left_portkey = NodePath("LeftMGPortkey")
+
+[node name="OuterBounds" parent="." instance=ExtResource("2_mrep4")]
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -7
+texture = ExtResource("3_co213")
+centered = false
+
+[node name="Midground" type="Sprite2D" parent="."]
+z_index = -5
+texture = ExtResource("4_3n6l6")
+centered = false
+
+[node name="Foreground" type="Sprite2D" parent="."]
+visible = false
+z_index = -3
+texture = ExtResource("4_3n6l6")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("5_dk657")]
+unique_name_in_owner = true
+z_index = -4
+position = Vector2(5, 300)
+scale = Vector2(0.9, 0.9)
+collision_layer = 0
+collision_mask = 0
+layer = 2
+
+[node name="LeftMGPortkey" parent="." instance=ExtResource("6_ev31x")]
+paired_portkey_location = 6
+linked_level_name = "res://scenes/levels/castle/c2.tscn"

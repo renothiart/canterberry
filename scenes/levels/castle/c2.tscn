@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://dbou05i4apvny"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_k8bp2"]
+[ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="2_36v6d"]
+[ext_resource type="Texture2D" uid="uid://bmobhd8bs6685" path="res://assets/settings/castle/c2.png" id="3_2mo5d"]
+[ext_resource type="Texture2D" uid="uid://ctu8emnawblmp" path="res://assets/settings/castle/c1-fg.png" id="4_kboec"]
+[ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="5_a0s0c"]
+[ext_resource type="PackedScene" uid="uid://c1wxtrftkrfyl" path="res://nodes/portkeys/left_fg_portkey.tscn" id="6_k7xo6"]
+[ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="7_ucdip"]
+[ext_resource type="PackedScene" uid="uid://n40ubmic6oeb" path="res://nodes/activatable_portkeys/fg_activatable_portkey.tscn" id="8_2s5ca"]
+
+[node name="Castle2" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey", "mg_right_portkey")]
+script = ExtResource("1_k8bp2")
+fg_left_portkey = NodePath("LeftFGPortkey")
+fg_right_portkey = NodePath("RightFGPortkey")
+mg_right_portkey = NodePath("FGActivatablePortkey")
+
+[node name="OuterBounds" parent="." instance=ExtResource("2_36v6d")]
+
+[node name="Background" type="Sprite2D" parent="."]
+visible = false
+
+[node name="Midground" type="Sprite2D" parent="."]
+z_index = -5
+texture = ExtResource("3_2mo5d")
+centered = false
+
+[node name="Foreground" type="Sprite2D" parent="."]
+visible = false
+z_index = -3
+texture = ExtResource("4_kboec")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("5_a0s0c")]
+unique_name_in_owner = true
+z_index = -4
+position = Vector2(5, 300)
+scale = Vector2(0.9, 0.9)
+collision_layer = 0
+collision_mask = 0
+layer = 2
+
+[node name="LeftFGPortkey" parent="." instance=ExtResource("6_k7xo6")]
+paired_portkey_location = 8
+linked_level_name = "res://scenes/levels/castle/c1.tscn"
+
+[node name="RightFGPortkey" parent="." instance=ExtResource("7_ucdip")]
+paired_portkey_location = 7
+linked_level_name = "res://scenes/levels/castle/c3.tscn"
+
+[node name="FGActivatablePortkey" parent="." instance=ExtResource("8_2s5ca")]
+position = Vector2(510, 300)
+portkey_location = 8
+paired_portkey_location = 6
+linked_level_name = "res://scenes/levels/castle/c4.tscn"

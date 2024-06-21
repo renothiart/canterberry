@@ -5,8 +5,6 @@ extends Area2D
 @export var newScale: float = 1.0
 @export var layer: int = 2
 
-var disabled = false
-
 func _ready():
 	set_layer(layer)
 
