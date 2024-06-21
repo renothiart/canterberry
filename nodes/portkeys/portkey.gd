@@ -42,6 +42,9 @@ func start_teleport_buffer():
 	set_physics_process(false)
 	teleport_buffer_time_remaining = teleport_buffer_time
 
+func has_overlapping_player():
+	return get_overlapping_bodies().filter(func(n): return n.has_method("start_teleport_buffer"))
+
 func _on_body_entered(_body):
 	if not disabled:
 		Global.current_portkey_location = paired_portkey_location
