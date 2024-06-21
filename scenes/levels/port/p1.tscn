@@ -1,19 +1,28 @@
-[gd_scene load_steps=8 format=3 uid="uid://co5ii2behri37"]
+[gd_scene load_steps=13 format=3 uid="uid://co5ii2behri37"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_h5bpv"]
-[ext_resource type="Texture2D" uid="uid://bbqpnvjotpcj6" path="res://assets/settings/village/v7.png" id="2_h1npr"]
+[ext_resource type="Texture2D" uid="uid://bbg4iw8rpbbah" path="res://assets/settings/port/p1.png" id="3_g71gm"]
 [ext_resource type="Texture2D" uid="uid://d0vi8opnt1mu2" path="res://assets/settings/village/v4-mg.png" id="3_xxgy8"]
 [ext_resource type="Texture2D" uid="uid://dgltka2wrfobt" path="res://assets/settings/village/v4-fg.png" id="4_b34o5"]
 [ext_resource type="Texture2D" uid="uid://cxvjio4dmmi4g" path="res://assets/settings/village/v3-fg-f.png" id="5_iv8n8"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_q4k2q"]
+[ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="7_a5w6c"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="7_y2onc"]
+[ext_resource type="PackedScene" uid="uid://cvc1hqpk5swtw" path="res://nodes/activatable_teleporters/mg_to_fg_activatable_teleporter.tscn" id="9_kvpcl"]
+[ext_resource type="PackedScene" uid="uid://dmshb3ep1l0gp" path="res://nodes/activatable_teleporters/fg_activatable_teleporter.tscn" id="10_oupe7"]
+[ext_resource type="PackedScene" uid="uid://c1wxtrftkrfyl" path="res://nodes/portkeys/left_fg_portkey.tscn" id="11_sdkus"]
+[ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="12_nexsb"]
 
-[node name="Port1" type="Node2D"]
+[node name="Port1" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey")]
 script = ExtResource("1_h5bpv")
+fg_left_portkey = NodePath("LeftFGPortkey")
+fg_right_portkey = NodePath("RightFGPortkey")
+
+[node name="OuterBounds" parent="." instance=ExtResource("7_y2onc")]
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -7
-texture = ExtResource("2_h1npr")
+texture = ExtResource("3_g71gm")
 centered = false
 
 [node name="Midground" type="Sprite2D" parent="."]
@@ -34,6 +43,14 @@ z_index = -1
 texture = ExtResource("5_iv8n8")
 centered = false
 
+[node name="LeftWall" parent="." instance=ExtResource("7_a5w6c")]
+position = Vector2(336, 300)
+layer = 4
+
+[node name="RightWall" parent="." instance=ExtResource("7_a5w6c")]
+position = Vector2(729, 304)
+layer = 4
+
 [node name="Player" parent="." instance=ExtResource("6_q4k2q")]
 unique_name_in_owner = true
 z_index = -4
@@ -43,4 +60,19 @@ collision_layer = 0
 collision_mask = 0
 layer = 2
 
-[node name="OuterBounds" parent="." instance=ExtResource("7_y2onc")]
+[node name="MGToFGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("9_kvpcl")]
+position = Vector2(530, 280)
+pairedTeleporter = NodePath("../FGActivatableTeleporter")
+newScale = 0.45
+
+[node name="FGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("10_oupe7")]
+position = Vector2(530, 299)
+pairedTeleporter = NodePath("../MGToFGActivatableTeleporter")
+
+[node name="LeftFGPortkey" parent="." instance=ExtResource("11_sdkus")]
+paired_portkey_location = 6
+linked_level_name = "res://scenes/levels/port/p2.tscn"
+
+[node name="RightFGPortkey" parent="." instance=ExtResource("12_nexsb")]
+paired_portkey_location = 9
+linked_level_name = "res://scenes/levels/forest/f2.tscn"

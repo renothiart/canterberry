@@ -1,19 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://bgpsyuchqhk33"]
+[gd_scene load_steps=10 format=3 uid="uid://bgpsyuchqhk33"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_sh4d2"]
-[ext_resource type="Texture2D" uid="uid://bbqpnvjotpcj6" path="res://assets/settings/village/v7.png" id="2_nqrkb"]
+[ext_resource type="Texture2D" uid="uid://dvf6jhbs2s2vu" path="res://assets/settings/port/p2.png" id="3_uljre"]
 [ext_resource type="Texture2D" uid="uid://d0vi8opnt1mu2" path="res://assets/settings/village/v4-mg.png" id="3_x3nph"]
 [ext_resource type="Texture2D" uid="uid://dgltka2wrfobt" path="res://assets/settings/village/v4-fg.png" id="4_im617"]
 [ext_resource type="Texture2D" uid="uid://cxvjio4dmmi4g" path="res://assets/settings/village/v3-fg-f.png" id="5_2qap6"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_eicvg"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="7_oqivh"]
+[ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="7_tinwy"]
+[ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="9_cjd7c"]
 
-[node name="Port2" type="Node2D"]
+[node name="Port2" type="Node2D" node_paths=PackedStringArray("fg_right_portkey")]
 script = ExtResource("1_sh4d2")
+fg_right_portkey = NodePath("RightFGPortkey")
+
+[node name="OuterBounds" parent="." instance=ExtResource("7_oqivh")]
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -7
-texture = ExtResource("2_nqrkb")
+texture = ExtResource("3_uljre")
 centered = false
 
 [node name="Midground" type="Sprite2D" parent="."]
@@ -34,6 +39,9 @@ z_index = -1
 texture = ExtResource("5_2qap6")
 centered = false
 
+[node name="Wall" parent="." instance=ExtResource("7_tinwy")]
+position = Vector2(96, 452)
+
 [node name="Player" parent="." instance=ExtResource("6_eicvg")]
 unique_name_in_owner = true
 z_index = -4
@@ -43,4 +51,6 @@ collision_layer = 0
 collision_mask = 0
 layer = 2
 
-[node name="OuterBounds" parent="." instance=ExtResource("7_oqivh")]
+[node name="RightFGPortkey" parent="." instance=ExtResource("9_cjd7c")]
+paired_portkey_location = 5
+linked_level_name = "res://scenes/levels/port/p1.tscn"
