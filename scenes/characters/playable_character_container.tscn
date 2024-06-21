@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ccwnjw11r2gkn"]
+[gd_scene load_steps=10 format=3 uid="uid://ccwnjw11r2gkn"]
 
 [ext_resource type="Script" path="res://scenes/characters/playable_character_container.gd" id="1_8iu5t"]
 [ext_resource type="Texture2D" uid="uid://d12asd8ehk8w7" path="res://assets/chars/raspberry_messenger.png" id="2_ih5xq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bdwgjgti3uhsg" path="res://assets/chars/tomato_thief.png" id="4_syllo"]
 [ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="5_b1gjb"]
 [ext_resource type="Script" path="res://nodes/interaction/IM_playable_character_container.gd" id="6_wbsjh"]
+[ext_resource type="PackedScene" uid="uid://7pve3wlgqwcx" path="res://nodes/UX/action_cue.tscn" id="7_86qsa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3q81y"]
 animations = [{
@@ -61,3 +62,7 @@ disabled = true
 [node name="InteractionManager" parent="." instance=ExtResource("5_b1gjb")]
 position = Vector2(85, 124)
 script = ExtResource("6_wbsjh")
+
+[node name="action_cue" parent="." instance=ExtResource("7_86qsa")]
+position = Vector2(86, -37)
+animation = &"NULL"

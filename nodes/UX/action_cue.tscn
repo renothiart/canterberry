@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://7pve3wlgqwcx"]
+
+[ext_resource type="Texture2D" uid="uid://4tvlqrpv8a20" path="res://assets/ui/interact-both-new.png" id="1_gqp0q"]
+[ext_resource type="Texture2D" uid="uid://br14j764iuepu" path="res://assets/ui/interact-new.png" id="2_lxpy3"]
+[ext_resource type="Texture2D" uid="uid://cq635hur0oer8" path="res://assets/ui/interact-changechar.png" id="3_r1w6w"]
+[ext_resource type="Script" path="res://nodes/UX/action_cue.gd" id="4_mbgxp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2kp0b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gqp0q")
+}],
+"loop": true,
+"name": &"BOTH",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lxpy3")
+}],
+"loop": true,
+"name": &"INTERACT",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"NULL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_r1w6w")
+}],
+"loop": true,
+"name": &"SWAP",
+"speed": 5.0
+}]
+
+[node name="action_cue" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_2kp0b")
+animation = &"BOTH"
+script = ExtResource("4_mbgxp")

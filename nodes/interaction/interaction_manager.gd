@@ -4,6 +4,10 @@ extends Area2D
 class_name InteractionManager
 var interaction_partner: InteractionManager
 
+# interaction managers signal to other nodes
+signal enter_interaction
+signal exit_interaction
+
 
 # call this on interaction controller input
 func attempt_interaction(input: String) -> void:
@@ -23,10 +27,12 @@ func interact_echo(key: String) -> void:
 
 # connected to InteractionManager on_enter signal
 func _on_Interaction_Manager_area_entered(area):
+	enter_interaction.emit()
 	interaction_partner = area
 
 
 # connected to InteractionManager on_exit signal
 func _on_Interaction_Manager_area_exited(area):
+	exit_interaction.emit()
 	if interaction_partner == area:
 		interaction_partner = null
