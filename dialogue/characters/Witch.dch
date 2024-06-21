@@ -2,7 +2,7 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 "_translation_id": "",
-"color": Color(0.744591, 0.998047, 0.269005, 1),
+"color": Color(0.880859, 0.0533333, 0.402446, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
@@ -10,9 +10,9 @@
 },
 "default_portrait": "",
 "description": "",
-"display_name": "Pear",
+"display_name": "Witch",
 "mirror": false,
-"nicknames": ["Monk", "Friar"],
+"nicknames": ["Dragonfruit", "Dragon"],
 "offset": Vector2(0, 0),
 "portraits": {},
 "scale": 1.0

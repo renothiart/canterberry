@@ -1,0 +1,10 @@
+if {Knight.MetTomato} == false:
+	Pineapple: <Empty Text Event>
+elif {Knight.MetTomato} == true:
+	Pineapple: Ah, you've met my daughter. The family resemblance is uncanny, no?
+	[wait time="2.0" hide_text="false"]
+	What?
+elif {Knight.ReceivedQuest} == true:
+elif {Knight.MetWitch} == true:
+else:
+[end_timeline]

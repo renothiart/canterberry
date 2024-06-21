@@ -23,26 +23,32 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"Banana": "res://dialogue/characters/Banana.dch",
-"Chili": "res://dialogue/characters/Chili.dch",
-"Dragonfruit": "res://dialogue/characters/Dragonfruit.dch",
-"Grape": "res://dialogue/characters/Grape.dch",
-"Pear": "res://dialogue/characters/Pear.dch",
-"Pineapple": "res://dialogue/characters/Pineapple.dch",
+"Baby": "res://dialogue/characters/Baby.dch",
+"Bandit": "res://dialogue/characters/Bandit.dch",
+"Bard": "res://dialogue/characters/Bard.dch",
+"Jester": "res://dialogue/characters/Jester.dch",
+"King": "res://dialogue/characters/King.dch",
+"Knight": "res://dialogue/characters/Knight.dch",
+"Messenger": "res://dialogue/characters/Messenger.dch",
+"Monk": "res://dialogue/characters/Monk.dch",
 "Princess": "res://dialogue/characters/Princess.dch",
-"Raisin": "res://dialogue/characters/Raisin.dch",
-"Raspberry": "res://dialogue/characters/Raspberry.dch",
-"Strawbaby": "res://dialogue/characters/Strawbaby.dch",
-"Strawberry": "res://dialogue/characters/Strawberry.dch",
-"Tomato": "res://dialogue/characters/Tomato.dch"
+"Squire": "res://dialogue/characters/Squire.dch",
+"Thief": "res://dialogue/characters/Thief.dch",
+"Townsfolk1": "res://dialogue/characters/Townsfolk1.dch",
+"Townsfolk2": "res://dialogue/characters/Townsfolk2.dch",
+"Townsfolk3": "res://dialogue/characters/Townsfolk3.dch",
+"Witch": "res://dialogue/characters/Witch.dch"
 }
 directories/dtl_directory={
+"Knight-Bard": "res://dialogue/timelines/knight/Knight-Bard.dtl",
+"Knight-King": "res://dialogue/timelines/knight/Knight-King.dtl",
 "pineapple_strawberry": "res://dialogue/timelines/pineapple/pineapple_strawberry.dtl",
 "skyrim": "res://dialogue/timelines/skyrim.dtl"
 }
 glossary/default_case_sensitive=true
 variables={
 "Knight": {
+"MetBard": false,
 "MetTomato": false,
 "MetWitch": false,
 "ReceivedQuest": false

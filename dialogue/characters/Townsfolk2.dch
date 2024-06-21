@@ -2,7 +2,7 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 "_translation_id": "",
-"color": Color(1, 0.574219, 0, 1),
+"color": Color(0.169525, 0.517305, 0.986328, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
@@ -10,9 +10,9 @@
 },
 "default_portrait": "",
 "description": "",
-"display_name": "Pineapple",
+"display_name": "Townsfolk",
 "mirror": false,
-"nicknames": ["King"],
+"nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {},
 "scale": 1.0

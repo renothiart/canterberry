@@ -2,7 +2,7 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 "_translation_id": "",
-"color": Color(0.992157, 0.00392157, 0.00392157, 1),
+"color": Color(0.744591, 0.998047, 0.269005, 1),
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
@@ -10,9 +10,9 @@
 },
 "default_portrait": "",
 "description": "",
-"display_name": "Princess",
+"display_name": "Monk",
 "mirror": false,
-"nicknames": ["Tomato"],
+"nicknames": ["Pear", "Friar"],
 "offset": Vector2(0, 0),
 "portraits": {},
 "scale": 1.0
