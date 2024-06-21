@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://w0eswg4cvckf"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_f5ypn"]
-[ext_resource type="Texture2D" uid="uid://dresoebhn6oql" path="res://assets/settings/hub/background.png" id="2_7lqle"]
+[ext_resource type="Texture2D" uid="uid://dhjjaxaf6c6lk" path="res://assets/settings/hub/daytime.png" id="2_cw5oh"]
 [ext_resource type="Texture2D" uid="uid://bgjlbhd5j851r" path="res://assets/settings/hub/campfire_1.png" id="3_42hv8"]
 [ext_resource type="Texture2D" uid="uid://kd20uc2ky57v" path="res://assets/settings/hub/campfire_2.png" id="4_87u8c"]
 [ext_resource type="PackedScene" uid="uid://cpn4yc2sasibl" path="res://nodes/portkeys/portkey.tscn" id="4_fxi3g"]
@@ -29,7 +29,7 @@ fg_right_portkey = NodePath("RightPortkey")
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -7
-texture = ExtResource("2_7lqle")
+texture = ExtResource("2_cw5oh")
 centered = false
 
 [node name="Campfire" type="AnimatedSprite2D" parent="."]
