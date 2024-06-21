@@ -68,6 +68,7 @@ func start_teleport_buffer(new_layer):
 
 func remove_current_layer():
 	set_collision_layer_value(self.layer, false)
+	set_collision_mask_value(self.layer, false)
 
 
 func set_new_layer(new_layer: int):
@@ -75,5 +76,6 @@ func set_new_layer(new_layer: int):
 	
 	remove_current_layer()
 	set_collision_layer_value(new_layer, true)
+	set_collision_mask_value(new_layer, true)
 	
 	self.layer = new_layer

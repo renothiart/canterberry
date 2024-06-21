@@ -38,6 +38,11 @@ func start_teleport_buffer():
 	set_physics_process(false)
 	teleport_buffer_time_remaining = teleport_buffer_time
 
+func is_teleporter(child):
+	return child != null \
+		and child.has_method("teleport_player") \
+		and child.has_method("start_teleport_buffer")
+
 func load_portkey():
 	if Global.current_portkey_location != Global.PortkeyLocation.UNDEFINED:
 		var portkey = portkey_map[Global.current_portkey_location]
@@ -45,6 +50,9 @@ func load_portkey():
 		var all_portkeys = portkey_map.values().filter(func(n): return n != null)
 		for port in all_portkeys:
 			port.start_teleport_buffer()
+		
+		for teleporter in get_children().filter(is_teleporter):
+			teleporter.start_teleport_buffer()
 		
 		get_tree().paused = true
 		

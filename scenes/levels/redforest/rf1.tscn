@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dawtgtqrk0gp3"]
+[gd_scene load_steps=12 format=3 uid="uid://dawtgtqrk0gp3"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_jsawm"]
 [ext_resource type="Texture2D" uid="uid://bci60xr5crg7n" path="res://assets/settings/forest/f3-bg.png" id="2_7a367"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dmshb3ep1l0gp" path="res://nodes/activatable_teleporters/fg_activatable_teleporter.tscn" id="8_tb1f1"]
 [ext_resource type="PackedScene" uid="uid://c1wxtrftkrfyl" path="res://nodes/portkeys/left_fg_portkey.tscn" id="9_hpjxs"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="10_7ey74"]
+[ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="11_38orh"]
 
 [node name="RedForest1" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey", "mg_right_portkey")]
 script = ExtResource("1_jsawm")
@@ -58,3 +59,5 @@ scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 0
 layer = 2
+
+[node name="OuterBounds" parent="." instance=ExtResource("11_38orh")]

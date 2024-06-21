@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://3yng5ny7ixxd"]
+[gd_scene load_steps=10 format=3 uid="uid://3yng5ny7ixxd"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_cbea1"]
 [ext_resource type="Texture2D" uid="uid://bbqpnvjotpcj6" path="res://assets/settings/village/v7.png" id="2_30wal"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://cxvjio4dmmi4g" path="res://assets/settings/village/v3-fg-f.png" id="5_v33n3"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_3w51d"]
 [ext_resource type="PackedScene" uid="uid://5mxadhwg1gtb" path="res://nodes/portkeys/left_mg_portkey.tscn" id="8_fn5gu"]
+[ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="8_rhwaa"]
+[ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="9_thhhe"]
 
 [node name="Village7" type="Node2D" node_paths=PackedStringArray("mg_left_portkey")]
 script = ExtResource("1_cbea1")
@@ -49,3 +51,9 @@ position = Vector2(-100, 270)
 paired_portkey_location = 10
 linked_level_name = "res://scenes/levels/village/v1.tscn"
 new_scale = 0.4
+
+[node name="OuterBounds" parent="." instance=ExtResource("8_rhwaa")]
+
+[node name="Wall" parent="." instance=ExtResource("9_thhhe")]
+position = Vector2(836, 318)
+layer = 4

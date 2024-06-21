@@ -6,11 +6,33 @@ extends Area2D
 
 var disabled = false
 
+# required variables enabling teleporting
+var teleport_buffer_time: float = 1.5
+var teleport_buffer_time_remaining: float = 0
+
 func _ready():
 	set_layer(layer)
 
+# Teleporting doesn't mesh well with the physics engine.
+# To circumvent this, we insert a small delay without physics processing.
+# see: https://forum.godotengine.org/t/what-is-the-proper-way-to-teleport-rigidbody2d/27752/2
+func _process(delta):
+	teleport_buffer_time_remaining -= delta
+	if (teleport_buffer_time_remaining <= 0):
+		set_process(false)
+		set_physics_process(true)
+		if not has_overlapping_bodies():
+			enable()
+
+# Starts a disabled physics buffer to allow teleporting
+func start_teleport_buffer():
+	disable()
+	set_process(true)
+	set_physics_process(false)
+	teleport_buffer_time_remaining = teleport_buffer_time
+
 func teleport_player():
-	disabled = true
+	disable()
 	%Player.start_teleport_buffer(layer)
 	
 	%Player.remove_current_layer()
@@ -31,4 +53,10 @@ func _on_body_entered(_body):
 		pairedTeleporter.teleport_player()
 
 func _on_body_exited(_body):
+	enable()
+
+func disable():
+	disabled = true
+
+func enable():
 	disabled = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bsh87yusuapvi"]
+[gd_scene load_steps=12 format=3 uid="uid://bsh87yusuapvi"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_0f1f2"]
 [ext_resource type="Texture2D" uid="uid://cg6a3qrtrwh0v" path="res://assets/settings/village/v1-bg.png" id="2_i6m0x"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bjofqpqrlv024" path="res://nodes/activatable_teleporters/bg_activatable_teleporter.tscn" id="7_eub1b"]
 [ext_resource type="PackedScene" uid="uid://cddw37o31e2ff" path="res://nodes/portkeys/left_bg_portkey.tscn" id="8_u20vl"]
 [ext_resource type="PackedScene" uid="uid://dmshb3ep1l0gp" path="res://nodes/activatable_teleporters/fg_activatable_teleporter.tscn" id="10_p7ktv"]
+[ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="11_r4ajw"]
 [ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="11_uk28s"]
 
 [node name="Village1" type="Node2D" node_paths=PackedStringArray("fg_right_portkey", "bg_left_portkey", "bg_right_portkey")]
@@ -66,3 +67,5 @@ linked_level_name = "res://scenes/levels/village/v2.tscn"
 [node name="FGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("10_p7ktv")]
 position = Vector2(300, 300)
 pairedTeleporter = NodePath("../BGActivatableTeleporter")
+
+[node name="OuterBounds" parent="." instance=ExtResource("11_r4ajw")]

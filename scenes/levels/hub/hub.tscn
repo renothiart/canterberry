@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://w0eswg4cvckf"]
+[gd_scene load_steps=9 format=3 uid="uid://w0eswg4cvckf"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_f5ypn"]
 [ext_resource type="Texture2D" uid="uid://dresoebhn6oql" path="res://assets/settings/hub/background.png" id="2_7lqle"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://kd20uc2ky57v" path="res://assets/settings/hub/campfire_2.png" id="4_87u8c"]
 [ext_resource type="PackedScene" uid="uid://cpn4yc2sasibl" path="res://nodes/portkeys/portkey.tscn" id="4_fxi3g"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="4_gkdv7"]
+[ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="7_wqinb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kw6cc"]
 animations = [{
@@ -49,7 +50,7 @@ layer = 2
 
 [node name="LeftPortkey" parent="." instance=ExtResource("4_fxi3g")]
 unique_name_in_owner = true
-position = Vector2(-100, 300)
+position = Vector2(-85, 300)
 portkey_location = 5
 paired_portkey_location = 6
 linked_level_name = "res://scenes/levels/forest/f1.tscn"
@@ -62,6 +63,8 @@ portkey_location = 6
 paired_portkey_location = 5
 linked_level_name = "res://scenes/levels/redforest/rf1.tscn"
 new_scale = 0.9
+
+[node name="OuterBounds" parent="." instance=ExtResource("7_wqinb")]
 
 [connection signal="body_entered" from="LeftPortkey" to="LeftPortkey" method="_on_body_entered"]
 [connection signal="body_exited" from="LeftPortkey" to="LeftPortkey" method="_on_body_exited"]

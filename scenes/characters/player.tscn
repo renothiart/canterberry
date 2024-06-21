@@ -41,15 +41,15 @@ size = Vector2(166, 250)
 script = ExtResource("1_ljexa")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(82, 88)
+position = Vector2(2.08165e-12, 88)
 sprite_frames = SubResource("SpriteFrames_eq4ts")
 animation = &"RM"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(85, 125)
+position = Vector2(2.08165e-12, 125)
 shape = SubResource("RectangleShape2D_nh834")
 
 [node name="InteractionManager" parent="." instance=ExtResource("4_21hvw")]
-position = Vector2(85, 129)
+position = Vector2(2.08165e-12, 129)
 scale = Vector2(2, 1)
 script = ExtResource("6_a3q3m")

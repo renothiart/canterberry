@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://de2pmccst1hl1"]
+[gd_scene load_steps=9 format=3 uid="uid://de2pmccst1hl1"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_kj16y"]
 [ext_resource type="Texture2D" uid="uid://fk7tbtp7vcut" path="res://assets/settings/redforest/rf2-bg.png" id="2_ttoow"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="5_bk867"]
 [ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="6_mppgu"]
 [ext_resource type="PackedScene" uid="uid://cmvhnfu3ousn3" path="res://nodes/portkeys/right_mg_portkey.tscn" id="7_7ibqk"]
+[ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="8_e7x75"]
 
 [node name="RedForest4" type="Node2D" node_paths=PackedStringArray("fg_right_portkey", "mg_right_portkey")]
 script = ExtResource("1_kj16y")
@@ -44,3 +45,5 @@ linked_level_name = "res://scenes/levels/redforest/rf5.tscn"
 [node name="RightMGPortkey" parent="." instance=ExtResource("7_7ibqk")]
 paired_portkey_location = 7
 linked_level_name = "res://scenes/levels/redforest/rf5.tscn"
+
+[node name="OuterBounds" parent="." instance=ExtResource("8_e7x75")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://co5ii2behri37"]
+[gd_scene load_steps=8 format=3 uid="uid://co5ii2behri37"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_h5bpv"]
 [ext_resource type="Texture2D" uid="uid://bbqpnvjotpcj6" path="res://assets/settings/village/v7.png" id="2_h1npr"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dgltka2wrfobt" path="res://assets/settings/village/v4-fg.png" id="4_b34o5"]
 [ext_resource type="Texture2D" uid="uid://cxvjio4dmmi4g" path="res://assets/settings/village/v3-fg-f.png" id="5_iv8n8"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_q4k2q"]
+[ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="7_y2onc"]
 
 [node name="Port1" type="Node2D"]
 script = ExtResource("1_h5bpv")
@@ -41,3 +42,5 @@ scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 0
 layer = 2
+
+[node name="OuterBounds" parent="." instance=ExtResource("7_y2onc")]

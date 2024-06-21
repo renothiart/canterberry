@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dq52n3qu6u2kb"]
+[gd_scene load_steps=11 format=3 uid="uid://dq52n3qu6u2kb"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_wrraj"]
 [ext_resource type="Texture2D" uid="uid://fg8tidcuh1gj" path="res://assets/settings/village/v2-bg.png" id="2_15ueh"]
@@ -7,10 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="5_sn1re"]
 [ext_resource type="PackedScene" uid="uid://c0x08ov2i5si8" path="res://nodes/teleporters/right_bg_teleporter.tscn" id="6_q6txy"]
 [ext_resource type="PackedScene" uid="uid://cddw37o31e2ff" path="res://nodes/portkeys/left_bg_portkey.tscn" id="7_vpqvs"]
-[ext_resource type="PackedScene" uid="uid://cmvhnfu3ousn3" path="res://nodes/portkeys/right_mg_portkey.tscn" id="8_y6weo"]
-[ext_resource type="PackedScene" uid="uid://dxuu4hoqmwca" path="res://nodes/teleporters/left_mg_teleporter.tscn" id="9_6f6q2"]
 [ext_resource type="PackedScene" uid="uid://dkeqaoqgqwag7" path="res://nodes/teleporters/left_fg_teleporter.tscn" id="10_w33vj"]
 [ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="11_1xx1v"]
+[ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="12_ey2ae"]
 
 [node name="Village2" type="Node2D" node_paths=PackedStringArray("fg_right_portkey", "bg_left_portkey")]
 script = ExtResource("1_wrraj")
@@ -43,26 +42,22 @@ collision_mask = 0
 layer = 2
 
 [node name="RightBGTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("6_q6txy")]
-position = Vector2(1045, 230)
+position = Vector2(1030, 230)
 pairedTeleporter = NodePath("../LeftFGTeleporter")
 newScale = 0.45
 
 [node name="LeftBGPortkey" parent="." instance=ExtResource("7_vpqvs")]
-position = Vector2(-100, 230)
+position = Vector2(-85, 230)
 paired_portkey_location = 6
 linked_level_name = "res://scenes/levels/village/v1.tscn"
 new_scale = 0.45
-
-[node name="RightMGPortkey" parent="." instance=ExtResource("8_y6weo")]
-paired_portkey_location = 7
-linked_level_name = "res://scenes/levels/village/v3.tscn"
-
-[node name="LeftMGTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("9_6f6q2")]
-pairedTeleporter = NodePath("../RightBGTeleporter")
 
 [node name="LeftFGTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("10_w33vj")]
 pairedTeleporter = NodePath("../RightBGTeleporter")
 
 [node name="RightFGPortkey" parent="." instance=ExtResource("11_1xx1v")]
+position = Vector2(1030, 300)
 paired_portkey_location = 7
 linked_level_name = "res://scenes/levels/village/v3.tscn"
+
+[node name="OuterBounds" parent="." instance=ExtResource("12_ey2ae")]

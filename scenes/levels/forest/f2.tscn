@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c12eh0dptk1po"]
+[gd_scene load_steps=13 format=3 uid="uid://c12eh0dptk1po"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_nmc7n"]
 [ext_resource type="Texture2D" uid="uid://bdvlb83fa3hex" path="res://assets/settings/forest/f2-bg.png" id="2_auq61"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="9_fw3qn"]
 [ext_resource type="PackedScene" uid="uid://c1wxtrftkrfyl" path="res://nodes/portkeys/left_fg_portkey.tscn" id="10_6l1e1"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="11_gqtbe"]
+[ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="12_lvgpw"]
 
 [node name="Forest2" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey", "mg_right_portkey", "bg_left_portkey")]
 script = ExtResource("1_nmc7n")
@@ -63,3 +64,5 @@ scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 0
 layer = 2
+
+[node name="OuterBounds" parent="." instance=ExtResource("12_lvgpw")]

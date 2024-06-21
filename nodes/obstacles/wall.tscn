@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2vtwm0r7i8h7"]
+
+[ext_resource type="Script" path="res://nodes/obstacles/wall.gd" id="1_i3c86"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhu1q"]
+size = Vector2(100, 200)
+
+[node name="Wall" type="StaticBody2D"]
+script = ExtResource("1_i3c86")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dhu1q")
+debug_color = Color(0.950759, 0.205029, 0.22964, 0.42)

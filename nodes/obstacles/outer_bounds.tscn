@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://3ordhnsjb3ip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uyi0c"]
+size = Vector2(100, 600)
+
+[node name="OuterBounds" type="Node2D"]
+
+[node name="Left Wall" type="StaticBody2D" parent="."]
+collision_layer = 42
+collision_mask = 42
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Wall"]
+position = Vector2(-200, 270)
+shape = SubResource("RectangleShape2D_uyi0c")
+debug_color = Color(0.899935, 0.28887, 0.314425, 0.42)
+
+[node name="Right Wall" type="StaticBody2D" parent="."]
+collision_layer = 42
+collision_mask = 42
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Wall"]
+position = Vector2(1160, 270)
+shape = SubResource("RectangleShape2D_uyi0c")
+debug_color = Color(0.899935, 0.28887, 0.314425, 0.42)
