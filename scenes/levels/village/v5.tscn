@@ -6,11 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://dgltka2wrfobt" path="res://assets/settings/village/v4-fg.png" id="4_eiaeq"]
 [ext_resource type="Texture2D" uid="uid://cxvjio4dmmi4g" path="res://assets/settings/village/v3-fg-f.png" id="5_cdt1n"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_vb15s"]
-[ext_resource type="PackedScene" uid="uid://c1wxtrftkrfyl" path="res://nodes/portkeys/left_fg_portkey.tscn" id="7_myl88"]
+[ext_resource type="PackedScene" uid="uid://5mxadhwg1gtb" path="res://nodes/portkeys/left_mg_portkey.tscn" id="8_dlo0c"]
 
-[node name="Village5" type="Node2D" node_paths=PackedStringArray("fg_left_portkey")]
+[node name="Village5" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "mg_left_portkey")]
 script = ExtResource("1_0idor")
-fg_left_portkey = NodePath("LeftFGPortkey")
+fg_left_portkey = NodePath("")
+mg_left_portkey = NodePath("LeftMGPortkey")
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -7
@@ -44,6 +45,7 @@ collision_layer = 0
 collision_mask = 0
 layer = 2
 
-[node name="LeftFGPortkey" parent="." instance=ExtResource("7_myl88")]
+[node name="LeftMGPortkey" parent="." instance=ExtResource("8_dlo0c")]
+position = Vector2(-100, 300)
 paired_portkey_location = 8
 linked_level_name = "res://scenes/levels/village/v4.tscn"

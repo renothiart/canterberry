@@ -50,22 +50,32 @@ collision_mask = 0
 layer = 2
 
 [node name="RightBGPortkey" parent="." instance=ExtResource("7_cse6q")]
+position = Vector2(1045, 140)
 paired_portkey_location = 9
 linked_level_name = "res://scenes/levels/village/v4.tscn"
+new_scale = 0.3
 
 [node name="BGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("8_ntj0i")]
+position = Vector2(480, 140)
 pairedTeleporter = NodePath("../MGToBGActivatableTeleporter")
+newScale = 0.3
 
 [node name="RightMGPortkey" parent="." instance=ExtResource("9_iet0v")]
+position = Vector2(1045, 200)
 paired_portkey_location = 7
 linked_level_name = "res://scenes/levels/village/v4.tscn"
+new_scale = 0.55
 
 [node name="MGToBGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("10_ejc0y")]
+position = Vector2(480, 200)
 pairedTeleporter = NodePath("../BGActivatableTeleporter")
+newScale = 0.55
 
 [node name="LeftMGPortkey" parent="." instance=ExtResource("11_g80f0")]
-paired_portkey_location = 8
+position = Vector2(-100, 200)
+paired_portkey_location = 6
 linked_level_name = "res://scenes/levels/village/v2.tscn"
+new_scale = 0.55
 
 [node name="RightFGPortkey" parent="." instance=ExtResource("12_ebwkg")]
 paired_portkey_location = 5
