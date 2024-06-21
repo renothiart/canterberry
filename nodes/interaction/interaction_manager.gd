@@ -8,6 +8,9 @@ var interaction_partner: InteractionManager
 signal enter_interaction
 signal exit_interaction
 
+# is this interactable object a PCC?
+var is_pcc = false
+
 
 # call this on interaction controller input
 func attempt_interaction(input: String) -> void:

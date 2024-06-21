@@ -10,7 +10,6 @@ position = Vector2(341, 284)
 
 [node name="PCC1" parent="." instance=ExtResource("4_dotg2")]
 position = Vector2(8, 287)
-key = "RM"
 
 [node name="PCC2" parent="." instance=ExtResource("4_dotg2")]
 position = Vector2(802, 289)
