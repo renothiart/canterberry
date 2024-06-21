@@ -1,24 +1,51 @@
-[gd_scene load_steps=2 format=3 uid="uid://3ordhnsjb3ip"]
+[gd_scene load_steps=4 format=3 uid="uid://3ordhnsjb3ip"]
+
+[ext_resource type="Script" path="res://nodes/obstacles/outer_bounds.gd" id="1_7j2iq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b102x"]
+size = Vector2(120, 600)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uyi0c"]
 size = Vector2(100, 600)
 
 [node name="OuterBounds" type="Node2D"]
+script = ExtResource("1_7j2iq")
 
-[node name="Left Wall" type="StaticBody2D" parent="."]
+[node name="LeftWall" type="StaticBody2D" parent="."]
 collision_layer = 42
 collision_mask = 42
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Wall"]
-position = Vector2(-200, 270)
-shape = SubResource("RectangleShape2D_uyi0c")
-debug_color = Color(0.899935, 0.28887, 0.314425, 0.42)
-
-[node name="Right Wall" type="StaticBody2D" parent="."]
+[node name="LeftResetArea" type="Area2D" parent="LeftWall"]
 collision_layer = 42
 collision_mask = 42
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Wall"]
-position = Vector2(1160, 270)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall/LeftResetArea"]
+position = Vector2(-220, 270)
+shape = SubResource("RectangleShape2D_b102x")
+debug_color = Color(0.517647, 0.545098, 0.505882, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2(-220, 270)
 shape = SubResource("RectangleShape2D_uyi0c")
 debug_color = Color(0.899935, 0.28887, 0.314425, 0.42)
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+collision_layer = 42
+collision_mask = 42
+
+[node name="RightResetArea" type="Area2D" parent="RightWall"]
+collision_layer = 42
+collision_mask = 42
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall/RightResetArea"]
+position = Vector2(1180, 270)
+shape = SubResource("RectangleShape2D_b102x")
+debug_color = Color(0.517647, 0.545098, 0.505882, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2(1180, 270)
+shape = SubResource("RectangleShape2D_uyi0c")
+debug_color = Color(0.899935, 0.28887, 0.314425, 0.42)
+
+[connection signal="body_entered" from="LeftWall/LeftResetArea" to="." method="_on_reset_area_body_entered"]
+[connection signal="body_entered" from="RightWall/RightResetArea" to="." method="_on_reset_area_body_entered"]

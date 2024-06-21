@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://de2pmccst1hl1"]
+[gd_scene load_steps=10 format=3 uid="uid://de2pmccst1hl1"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_kj16y"]
 [ext_resource type="Texture2D" uid="uid://fk7tbtp7vcut" path="res://assets/settings/redforest/rf2-bg.png" id="2_ttoow"]
 [ext_resource type="Texture2D" uid="uid://dhfh8vhgmi5jn" path="res://assets/settings/redforest/rf4-mg.png" id="3_y4gyq"]
 [ext_resource type="Texture2D" uid="uid://dgnjir82sorjb" path="res://assets/settings/redforest/rf4-fg.png" id="4_4trnv"]
+[ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="5_24sfr"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="5_bk867"]
 [ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="6_mppgu"]
 [ext_resource type="PackedScene" uid="uid://cmvhnfu3ousn3" path="res://nodes/portkeys/right_mg_portkey.tscn" id="7_7ibqk"]
@@ -28,6 +29,13 @@ centered = false
 z_index = -3
 texture = ExtResource("4_4trnv")
 centered = false
+
+[node name="MGWall" parent="." instance=ExtResource("5_24sfr")]
+position = Vector2(56, 310)
+layer = 4
+
+[node name="FGWall" parent="." instance=ExtResource("5_24sfr")]
+position = Vector2(-58, 432)
 
 [node name="Player" parent="." instance=ExtResource("5_bk867")]
 unique_name_in_owner = true

@@ -43,6 +43,13 @@ func is_teleporter(child):
 		and child.has_method("teleport_player") \
 		and child.has_method("start_teleport_buffer")
 
+func enable_portkeys():
+	var all_portkeys = portkey_map.values().filter(func(n): return n != null)
+	for portkey in all_portkeys:
+		if portkey.has_overlapping_bodies():
+			portkey.enable()
+			portkey._on_body_entered(%Player)
+
 func load_portkey():
 	if Global.current_portkey_location != Global.PortkeyLocation.UNDEFINED:
 		var portkey = portkey_map[Global.current_portkey_location]

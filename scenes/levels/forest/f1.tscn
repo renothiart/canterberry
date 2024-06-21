@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://clgmd1n0v43nk"]
+[gd_scene load_steps=12 format=3 uid="uid://clgmd1n0v43nk"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_52763"]
 [ext_resource type="Texture2D" uid="uid://ckbvxjkiemsh2" path="res://assets/settings/forest/f1-mg.png" id="2_m88a4"]
 [ext_resource type="Texture2D" uid="uid://cevgq1fandxxb" path="res://assets/settings/forest/f1-fg.png" id="3_2srqe"]
+[ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="4_bcj3a"]
 [ext_resource type="PackedScene" uid="uid://5mxadhwg1gtb" path="res://nodes/portkeys/left_mg_portkey.tscn" id="4_i81ct"]
 [ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="5_labnm"]
 [ext_resource type="PackedScene" uid="uid://c1wxtrftkrfyl" path="res://nodes/portkeys/left_fg_portkey.tscn" id="6_2s5ig"]
@@ -29,6 +30,10 @@ centered = false
 z_index = -3
 texture = ExtResource("3_2srqe")
 centered = false
+
+[node name="Wall" parent="." instance=ExtResource("4_bcj3a")]
+position = Vector2(870, 286)
+layer = 4
 
 [node name="LeftMGPortkey" parent="." instance=ExtResource("4_i81ct")]
 paired_portkey_location = 8
