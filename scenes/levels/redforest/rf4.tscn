@@ -38,7 +38,7 @@ position = Vector2(56, 310)
 layer = 4
 
 [node name="FGWall" parent="." instance=ExtResource("5_24sfr")]
-position = Vector2(-58, 432)
+position = Vector2(114, 440)
 
 [node name="mushroom" parent="." instance=ExtResource("10_2y0nf")]
 position = Vector2(165, 473)
