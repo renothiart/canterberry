@@ -5,11 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://d0vi8opnt1mu2" path="res://assets/settings/village/v4-mg.png" id="3_452yu"]
 [ext_resource type="Texture2D" uid="uid://dgltka2wrfobt" path="res://assets/settings/village/v4-fg.png" id="4_eiaeq"]
 [ext_resource type="Texture2D" uid="uid://cxvjio4dmmi4g" path="res://assets/settings/village/v3-fg-f.png" id="5_cdt1n"]
-[ext_resource type="PackedScene" uid="uid://143w66h5r3ef" path="res://scenes/characters/townsfolk.tscn" id="6_5lbgi"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_vb15s"]
 [ext_resource type="PackedScene" uid="uid://5mxadhwg1gtb" path="res://nodes/portkeys/left_mg_portkey.tscn" id="8_dlo0c"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="8_u708a"]
 [ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="9_i2iqy"]
+[ext_resource type="PackedScene" uid="uid://x0xthheioxpb" path="res://scenes/characters/squire.tscn" id="10_q25ky"]
 
 [node name="Village5" type="Node2D" node_paths=PackedStringArray("mg_left_portkey")]
 script = ExtResource("1_0idor")
@@ -38,19 +38,22 @@ z_index = -1
 texture = ExtResource("5_cdt1n")
 centered = false
 
-[node name="Townsfolk" parent="." instance=ExtResource("6_5lbgi")]
-position = Vector2(552, 350)
+[node name="Wall" parent="." instance=ExtResource("9_i2iqy")]
+position = Vector2(790, 372)
+layer = 4
+
+[node name="Squire" parent="." instance=ExtResource("10_q25ky")]
+position = Vector2(502, 390)
 layer = 4
 new_scale = 0.6
 
 [node name="Player" parent="." instance=ExtResource("6_vb15s")]
 unique_name_in_owner = true
 z_index = -4
-position = Vector2(5, 300)
+position = Vector2(59, 270)
 scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 0
-layer = 2
 
 [node name="LeftMGPortkey" parent="." instance=ExtResource("8_dlo0c")]
 position = Vector2(-100, 300)
@@ -58,7 +61,3 @@ paired_portkey_location = 8
 linked_level_name = "res://scenes/levels/village/v4.tscn"
 
 [node name="OuterBounds" parent="." instance=ExtResource("8_u708a")]
-
-[node name="Wall" parent="." instance=ExtResource("9_i2iqy")]
-position = Vector2(790, 372)
-layer = 4

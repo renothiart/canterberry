@@ -2,6 +2,7 @@ extends InteractionManager # NPC
 
 # so the action cue knows it lives in a PCC
 func _ready():
+	super()
 	is_pcc = false
 
 # overwrite with interaction behavior for each interactable object

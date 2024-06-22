@@ -39,18 +39,17 @@ texture = ExtResource("5_v33n3")
 centered = false
 
 [node name="Monk" parent="." instance=ExtResource("6_4j61v")]
-position = Vector2(660, 306)
+position = Vector2(660, 300)
 layer = 4
 new_scale = 0.5
 
 [node name="Player" parent="." instance=ExtResource("6_3w51d")]
 unique_name_in_owner = true
 z_index = -4
-position = Vector2(5, 300)
+position = Vector2(127, 226)
 scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 0
-layer = 2
 
 [node name="LeftMGPortkey" parent="." instance=ExtResource("8_fn5gu")]
 position = Vector2(-100, 270)

@@ -42,7 +42,8 @@ autoplay = "default"
 frame_progress = 0.936414
 
 [node name="Bard" parent="." instance=ExtResource("9_axg1r")]
-position = Vector2(175, 369)
+position = Vector2(175, 380)
+new_scale = 0.9
 
 [node name="PCC1" parent="." instance=ExtResource("5_tpysb")]
 position = Vector2(610, 288)

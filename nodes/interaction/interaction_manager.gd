@@ -12,6 +12,11 @@ signal exit_interaction
 var is_pcc = false
 
 @export var layer: int = 12
+@export var is_wide: bool = false
+
+func _ready():
+	if is_wide:
+		$CollisionShape2D.shape.radius *= 1.25
 
 # call this on interaction controller input
 func attempt_interaction(input: String) -> void:

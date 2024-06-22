@@ -52,11 +52,10 @@ new_scale = 0.6
 [node name="Player" parent="." instance=ExtResource("6_804tv")]
 unique_name_in_owner = true
 z_index = -4
-position = Vector2(5, 300)
+position = Vector2(787, 254)
 scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 0
-layer = 2
 
 [node name="RightMGPortkey" parent="." instance=ExtResource("9_5obik")]
 position = Vector2(1045, 310)
