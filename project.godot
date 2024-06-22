@@ -91,6 +91,11 @@ directories/dtl_directory={
 glossary/default_case_sensitive=true
 variables={
 "Knight": {
+"CollectedBread": false,
+"CollectedEgg": false,
+"CollectedMushroom": false,
+"CollectedPotion": false,
+"CollectedToy": false,
 "MetBard": false,
 "MetTomato": false,
 "MetWitch": false,

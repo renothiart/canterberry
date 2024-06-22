@@ -1,0 +1,3 @@
+Witch: Oh do you like it? I dabble in knitting when I’m not brushing up on my spellwork. You can have it if you’d like! I’ve got too many anyway.
+[wait_input]
+[signal arg="collect_toy"]
