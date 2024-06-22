@@ -30,3 +30,17 @@ func change_level():
 # dummy function, buffering not needed due to activation
 func start_teleport_buffer():
 	pass
+
+func is_forward_movement():
+	if action == "move_up":
+		return true
+	else:
+		return false
+
+func _on_body_entered(body):
+	if body.has_method("enable_arrow"):
+		body.enable_arrow(is_forward_movement())
+
+func _on_body_exited(body):
+	if body.has_method("disable_arrow"):
+		body.disable_arrow(is_forward_movement())

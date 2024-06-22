@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ce2riagpagvsl"]
+[gd_scene load_steps=26 format=3 uid="uid://ce2riagpagvsl"]
 
 [ext_resource type="Script" path="res://scenes/characters/player.gd" id="1_ljexa"]
 [ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="4_21hvw"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://mk8tupkb6v0w" path="res://assets/chars/thief_walk/walk3.png" id="17_7ug6w"]
 [ext_resource type="Texture2D" uid="uid://bj5aenb3h61ir" path="res://assets/chars/thief_walk/walk4.png" id="18_r1wlq"]
 [ext_resource type="Texture2D" uid="uid://ciess8hc8p1xj" path="res://assets/chars/thief_walk/walk5.png" id="19_4a8ah"]
+[ext_resource type="PackedScene" uid="uid://dqwjugvtshbv6" path="res://nodes/UX/arrow.tscn" id="21_ve0bv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nh834"]
 size = Vector2(166, 256)
@@ -138,3 +139,10 @@ visible = false
 position = Vector2(0, 87)
 sprite_frames = SubResource("SpriteFrames_um127")
 animation = &"IDLE"
+
+[node name="ForwardArrow" parent="." instance=ExtResource("21_ve0bv")]
+position = Vector2(2.08165e-12, -100)
+
+[node name="BackwardArrow" parent="." instance=ExtResource("21_ve0bv")]
+position = Vector2(2.08165e-12, 300)
+is_forward = false

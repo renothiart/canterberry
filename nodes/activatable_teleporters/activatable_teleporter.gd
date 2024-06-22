@@ -27,3 +27,17 @@ func set_layer(new_layer: int):
 func _input(event):
 	if event.is_action_pressed(action) and has_overlapping_bodies():
 		pairedTeleporter.teleport_player()
+
+func is_forward_movement():
+	if action == "move_up":
+		return true
+	else:
+		return false
+
+func _on_body_entered(body):
+	if body.has_method("enable_arrow"):
+		body.enable_arrow(is_forward_movement())
+
+func _on_body_exited(body):
+	if body.has_method("disable_arrow"):
+		body.disable_arrow(is_forward_movement())

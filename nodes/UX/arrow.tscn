@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqwjugvtshbv6"]
+
+[ext_resource type="Texture2D" uid="uid://uouod1qpa7s2" path="res://assets/ui/up.png" id="1_0usx2"]
+[ext_resource type="Texture2D" uid="uid://dk1ckxblvonmw" path="res://assets/ui/down.png" id="1_qb5y0"]
+[ext_resource type="Script" path="res://nodes/UX/arrow.gd" id="2_srtw5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_innuf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qb5y0")
+}],
+"loop": true,
+"name": &"BACKWARD",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0usx2")
+}],
+"loop": true,
+"name": &"FORWARD",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"NULL",
+"speed": 5.0
+}]
+
+[node name="Arrow" type="AnimatedSprite2D"]
+z_as_relative = false
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_innuf")
+animation = &"NULL"
+script = ExtResource("2_srtw5")

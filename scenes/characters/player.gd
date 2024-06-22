@@ -115,7 +115,7 @@ func start_teleport_buffer(new_layer):
 	teleport_buffer_time_remaining = teleport_buffer_time
 	buffered_layer = new_layer
 
-
+# Layer functionality
 func remove_current_layer():
 	_interaction_manager.remove_current_layer()
 	set_collision_layer_value(self.layer, false)
@@ -131,3 +131,16 @@ func set_new_layer(new_layer: int):
 	set_collision_mask_value(new_layer, true)
 	
 	self.layer = new_layer
+
+# Arrow functionality
+func enable_arrow(is_forward: bool):
+	if is_forward:
+		$ForwardArrow.enable_forward_arrow()
+	else:
+		$BackwardArrow.enable_backward_arrow()
+
+func disable_arrow(is_forward: bool):
+	if is_forward:
+		$ForwardArrow.disable_arrow()
+	else:
+		$BackwardArrow.disable_arrow()
