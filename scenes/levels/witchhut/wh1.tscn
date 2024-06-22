@@ -6,13 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://dgltka2wrfobt" path="res://assets/settings/village/v4-fg.png" id="4_bbuly"]
 [ext_resource type="Texture2D" uid="uid://cxvjio4dmmi4g" path="res://assets/settings/village/v3-fg-f.png" id="5_qno10"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_804tv"]
-[ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="7_qq5pd"]
+[ext_resource type="PackedScene" uid="uid://lid65yvyhrja" path="res://nodes/obstacles/bound.tscn" id="7_qaskj"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="8_362f1"]
 [ext_resource type="PackedScene" uid="uid://cmvhnfu3ousn3" path="res://nodes/portkeys/right_mg_portkey.tscn" id="9_5obik"]
-[ext_resource type="PackedScene" uid="uid://pl47x4a3o1qs" path="res://scenes/characters/witch.tscn" id="10_tvd3e"]
+[ext_resource type="PackedScene" uid="uid://5mxadhwg1gtb" path="res://nodes/portkeys/left_mg_portkey.tscn" id="10_shr27"]
 
-[node name="WitchHut1" type="Node2D" node_paths=PackedStringArray("mg_right_portkey")]
+[node name="WitchHut1" type="Node2D" node_paths=PackedStringArray("mg_left_portkey", "mg_right_portkey")]
 script = ExtResource("1_a5e8k")
+mg_left_portkey = NodePath("LeftMGPortkey")
 mg_right_portkey = NodePath("RightMGPortkey")
 
 [node name="OuterBounds" parent="." instance=ExtResource("8_362f1")]
@@ -40,14 +41,8 @@ z_index = -1
 texture = ExtResource("5_qno10")
 centered = false
 
-[node name="Wall" parent="." instance=ExtResource("7_qq5pd")]
-position = Vector2(260, 368)
-layer = 4
-
-[node name="Witch" parent="." instance=ExtResource("10_tvd3e")]
-position = Vector2(452, 304)
-layer = 4
-new_scale = 0.6
+[node name="Bound" parent="." instance=ExtResource("7_qaskj")]
+position = Vector2(142, 369)
 
 [node name="Player" parent="." instance=ExtResource("6_804tv")]
 unique_name_in_owner = true
@@ -56,6 +51,12 @@ position = Vector2(787, 254)
 scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 0
+
+[node name="LeftMGPortkey" parent="." instance=ExtResource("10_shr27")]
+position = Vector2(250, 310)
+paired_portkey_location = 6
+linked_level_name = "res://scenes/levels/witchhut/wh2.tscn"
+new_scale = 0.5
 
 [node name="RightMGPortkey" parent="." instance=ExtResource("9_5obik")]
 position = Vector2(1045, 310)
