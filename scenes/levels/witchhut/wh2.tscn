@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c065ekyvhgbg"]
+[gd_scene load_steps=12 format=3 uid="uid://c065ekyvhgbg"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_vvlys"]
 [ext_resource type="Texture2D" uid="uid://bbqpnvjotpcj6" path="res://assets/settings/village/v7.png" id="2_dvnj7"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="7_w8d7h"]
 [ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="8_af6k6"]
 [ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="8_yv0vd"]
+[ext_resource type="PackedScene" uid="uid://csh0m8s75ve7c" path="res://scenes/items/toy.tscn" id="11_w607f"]
 
 [node name="WitchHut2" type="Node2D" node_paths=PackedStringArray("fg_right_portkey")]
 script = ExtResource("1_vvlys")
@@ -58,3 +59,6 @@ layer = 2
 [node name="RightFGPortkey" parent="." instance=ExtResource("8_af6k6")]
 paired_portkey_location = 7
 linked_level_name = "res://scenes/levels/witchhut/wh1.tscn"
+
+[node name="toy" parent="." instance=ExtResource("11_w607f")]
+position = Vector2(639, 184)

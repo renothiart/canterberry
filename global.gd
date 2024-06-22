@@ -135,8 +135,11 @@ var item_type_to_dialogue_name = {
 	ItemType.FLYER: "Flyer",
 }
 
+func get_dialogue_name_from_player(player_type: PlayerType):
+	return player_type_to_dialogue_name[player_type]
+
 func get_dialogue_name_from_npc(character_type: CharacterType):
 	return character_type_to_dialogue_name[character_type]
 
-func get_dialogue_name_from_player(player_type: PlayerType):
-	return player_type_to_dialogue_name[player_type]
+func get_dialogue_name_from_item(item_type: ItemType):
+	return item_type_to_dialogue_name[item_type]

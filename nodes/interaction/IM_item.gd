@@ -14,7 +14,7 @@ func interact(input: String) -> void:
 	if input == "interact":
 		if Dialogic.current_timeline == null:
 			var player_name = Global.get_dialogue_name_from_player(player_type)
-			var item_name = Global.get_dialogue_name_from_npc(item_type)
+			var item_name = Global.get_dialogue_name_from_item(item_type)
 			Dialogic.start(player_name + "-" + item_name)
 	
 	# interaction type: undefined
