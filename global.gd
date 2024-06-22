@@ -61,6 +61,7 @@ enum CharacterType {
 
 # item functionality
 enum ItemType {
+	NULL,
 	POTION,
 	MUSHROOM,
 	BREAD,
@@ -124,6 +125,7 @@ var character_type_to_dialogue_name = {
 
 # item dialogue names
 var item_type_to_dialogue_name = {
+	ItemType.NULL: "Null",
 	ItemType.POTION: "Potion",
 	ItemType.MUSHROOM: "Mushroom",
 	ItemType.BREAD: "Bread",
