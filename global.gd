@@ -28,7 +28,7 @@ enum PortkeyLocation {
 	BG_RIGHT,
 }
 
-# Player type functionality
+# player type functionality
 var current_player_type: PlayerType = PlayerType.KNIGHT
 var pcc1_player_type: PlayerType = PlayerType.THIEF
 var pcc2_player_type: PlayerType = PlayerType.NULL
@@ -38,26 +38,6 @@ enum PlayerType {
 	THIEF,
 	MESSENGER,
 }
-
-var player_type_to_animation = {
-	PlayerType.NULL: "NULL",
-	PlayerType.KNIGHT: "SK",
-	PlayerType.THIEF: "TT",
-	PlayerType.MESSENGER: "RM",
-}
-
-var animation_to_player_type = {
-	"NULL": PlayerType.NULL,
-	"SK": PlayerType.KNIGHT,
-	"TT": PlayerType.THIEF,
-	"RM": PlayerType.MESSENGER,
-}
-
-func get_animation_name(player_type: PlayerType):
-	return player_type_to_animation[player_type]
-
-func get_player_type(animation: String):
-	return animation_to_player_type[animation]
 
 # NPC functionality
 enum CharacterType {
@@ -79,6 +59,50 @@ enum CharacterType {
 	MAID,
 }
 
+# item functionality
+enum ItemType {
+	POTION,
+	MUSHROOM,
+	BREAD,
+	EGG,
+	TOY,
+	TREASURE,
+	FLYER,
+}
+
+
+# player animation names
+var player_type_to_animation = {
+	PlayerType.NULL: "NULL",
+	PlayerType.KNIGHT: "SK",
+	PlayerType.THIEF: "TT",
+	PlayerType.MESSENGER: "RM",
+}
+
+# player animation names reverse
+var animation_to_player_type = {
+	"NULL": PlayerType.NULL,
+	"SK": PlayerType.KNIGHT,
+	"TT": PlayerType.THIEF,
+	"RM": PlayerType.MESSENGER,
+}
+
+func get_animation_name(player_type: PlayerType):
+	return player_type_to_animation[player_type]
+
+func get_player_type(animation: String):
+	return animation_to_player_type[animation]
+
+
+# player dialogue names
+var player_type_to_dialogue_name = {
+	PlayerType.NULL: "Null",
+	PlayerType.KNIGHT: "Knight",
+	PlayerType.THIEF: "Thief",
+	PlayerType.MESSENGER: "Messenger",
+}
+
+# NPC dialogue names
 var character_type_to_dialogue_name = {
 	CharacterType.NULL: "Null",
 	CharacterType.KNIGHT: "Knight",
@@ -98,11 +122,15 @@ var character_type_to_dialogue_name = {
 	CharacterType.MAID: "Maid",
 }
 
-var player_type_to_dialogue_name = {
-	PlayerType.NULL: "Null",
-	PlayerType.KNIGHT: "Knight",
-	PlayerType.THIEF: "Thief",
-	PlayerType.MESSENGER: "Messenger",
+# item dialogue names
+var item_type_to_dialogue_name = {
+	ItemType.POTION: "Potion",
+	ItemType.MUSHROOM: "Mushroom",
+	ItemType.BREAD: "Bread",
+	ItemType.EGG: "Egg",
+	ItemType.TOY: "Toy",
+	ItemType.TREASURE: "Treasure",
+	ItemType.FLYER: "Flyer",
 }
 
 func get_dialogue_name_from_npc(character_type: CharacterType):

@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://csh0m8s75ve7c"]
+
+[ext_resource type="Script" path="res://scenes/characters/npc.gd" id="1_qu1dt"]
+[ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="2_ggvj0"]
+[ext_resource type="Texture2D" uid="uid://d35r23rwyye5r" path="res://assets/inventory/strawberry-toy.png" id="2_uj3sf"]
+[ext_resource type="Script" path="res://nodes/interaction/IM_toy.gd" id="3_k0ogn"]
+[ext_resource type="PackedScene" uid="uid://7pve3wlgqwcx" path="res://nodes/UX/action_cue.tscn" id="4_03738"]
+
+[node name="toy" type="Node2D"]
+script = ExtResource("1_qu1dt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_uj3sf")
+
+[node name="InteractionManager" parent="." instance=ExtResource("2_ggvj0")]
+unique_name_in_owner = true
+script = ExtResource("3_k0ogn")
+
+[node name="action_cue" parent="." instance=ExtResource("4_03738")]
+unique_name_in_owner = true
+position = Vector2(0, -113)
+animation = &"NULL"

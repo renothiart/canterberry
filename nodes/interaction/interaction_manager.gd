@@ -14,13 +14,16 @@ var is_pcc = false
 @export var layer: int = 12
 @export var width_scale: float = 1
 
+
 func _ready():
 	$CollisionShape2D.shape.radius *= width_scale
+
 
 # call this on interaction controller input
 func attempt_interaction(input: String) -> void:
 	if interaction_partner != null:
 		interaction_partner.interact(input)
+
 
 # overwrite with interaction behavior for each interactable object
 func interact(input: String) -> void:
