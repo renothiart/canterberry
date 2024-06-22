@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ccwnjw11r2gkn"]
+[gd_scene load_steps=21 format=3 uid="uid://ccwnjw11r2gkn"]
 
 [ext_resource type="Script" path="res://scenes/characters/playable_character_container.gd" id="1_8iu5t"]
 [ext_resource type="Texture2D" uid="uid://d12asd8ehk8w7" path="res://assets/chars/raspberry_messenger.png" id="2_ih5xq"]
@@ -97,6 +97,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_33run"]
+
 [node name="PCC1" type="CharacterBody2D"]
 script = ExtResource("1_8iu5t")
 
@@ -117,7 +119,7 @@ animation = &"NULL"
 visible = false
 position = Vector2(82, 88)
 sprite_frames = SubResource("SpriteFrames_k6ebq")
-animation = &"IDLE"
+animation = &"WALK"
 
 [node name="TT" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -130,3 +132,6 @@ visible = false
 position = Vector2(82, 88)
 sprite_frames = SubResource("SpriteFrames_stw0w")
 animation = &"IDLE"
+
+[node name="NULL" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_33run")

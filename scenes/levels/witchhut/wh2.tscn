@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_vvlys"]
 [ext_resource type="Texture2D" uid="uid://bbqpnvjotpcj6" path="res://assets/settings/village/v7.png" id="2_dvnj7"]
 [ext_resource type="Texture2D" uid="uid://cv3l4offpbfy6" path="res://assets/settings/forest/witchhut_int-mg.png" id="4_xtvc4"]
-[ext_resource type="Texture2D" uid="uid://cxvjio4dmmi4g" path="res://assets/settings/village/v3-fg-f.png" id="5_nh6ft"]
 [ext_resource type="Texture2D" uid="uid://b3j37hguom3eb" path="res://assets/settings/forest/witchhut_int-fg.png" id="5_xy2d3"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="6_7ltvj"]
 [ext_resource type="PackedScene" uid="uid://pl47x4a3o1qs" path="res://scenes/characters/witch.tscn" id="7_0w7ej"]
@@ -37,7 +36,7 @@ centered = false
 [node name="Pre-foreground" type="Sprite2D" parent="."]
 visible = false
 z_index = -1
-texture = ExtResource("5_nh6ft")
+texture = ExtResource("5_xy2d3")
 centered = false
 
 [node name="Witch" parent="." instance=ExtResource("7_0w7ej")]

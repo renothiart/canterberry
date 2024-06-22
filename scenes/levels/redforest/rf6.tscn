@@ -13,6 +13,8 @@
 script = ExtResource("1_1d3fe")
 fg_right_portkey = NodePath("RightFGPortkey")
 
+[node name="OuterBounds" parent="." instance=ExtResource("7_f0vnx")]
+
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -7
 texture = ExtResource("2_xlmci")
@@ -39,10 +41,8 @@ linked_level_name = "res://scenes/levels/redforest/rf3.tscn"
 [node name="Player" parent="." instance=ExtResource("6_75w0w")]
 unique_name_in_owner = true
 z_index = -4
-position = Vector2(5, 300)
+position = Vector2(790, 286)
 scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 0
 layer = 2
-
-[node name="OuterBounds" parent="." instance=ExtResource("7_f0vnx")]

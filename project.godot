@@ -33,6 +33,7 @@ directories/dch_directory={
 "Maid": "res://dialogue/characters/Maid.dch",
 "Messenger": "res://dialogue/characters/Messenger.dch",
 "Monk": "res://dialogue/characters/Monk.dch",
+"Narrator": "res://dialogue/characters/Narrator.dch",
 "Princess": "res://dialogue/characters/Princess.dch",
 "Squire": "res://dialogue/characters/Squire.dch",
 "Thief": "res://dialogue/characters/Thief.dch",

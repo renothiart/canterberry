@@ -2,16 +2,26 @@ extends InteractionManager # PLAYER CONTAINER 1
 
 # so the action cue knows it lives in a PCC
 func _ready():
+	super()
 	is_pcc = true
 
 # overwrite with interaction behavior for each interactable object
 func interact(input: String) -> void:
 	# interaction type: dialogue
 	if input == "interact":
-		print("Dialogue hook missing")
+		var player_type = Global.current_player_type
+		var pcc_type = get_parent().get_player_type()
+		if player_type == Global.PlayerType.NULL \
+				or pcc_type == Global.PlayerType.NULL:
+			print("Error: null player or character")
+			return
+		elif Dialogic.current_timeline == null:
+			var player_name = Global.get_dialogue_name_from_player(player_type)
+			var npc_name = Global.get_dialogue_name_from_player(pcc_type)
+			Dialogic.start(player_name + "-" + npc_name)
 	
 	# interaction type: player character swap
-	else: if input == "swap_characters":
+	elif input == "swap_characters":
 		var key = get_parent().key
 		
 		# PCC is null, cannot swap

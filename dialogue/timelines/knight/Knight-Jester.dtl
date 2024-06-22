@@ -1,2 +1,5 @@
 Jester: Test
 Knight: What is that supposed to mean?
+Baby: Hello
+if {Knight.MetBard} == false:
+	Bard: Hey!

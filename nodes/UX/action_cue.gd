@@ -14,7 +14,8 @@ func _ready():
 # show action cues when player enters interaction partner range
 func on_enter_interaction():
 	if _is_pcc:
-		set_animation("BOTH")
+		if get_parent().get_player_type() != Global.PlayerType.NULL:
+			set_animation("BOTH")
 	else:
 		set_animation("INTERACT")
 

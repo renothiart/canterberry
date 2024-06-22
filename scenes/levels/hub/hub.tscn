@@ -46,8 +46,15 @@ position = Vector2(175, 380)
 new_scale = 0.9
 
 [node name="PCC1" parent="." instance=ExtResource("5_tpysb")]
-position = Vector2(610, 288)
+position = Vector2(668, 300)
 layer = 2
+new_scale = 0.9
+
+[node name="PCC2" parent="." instance=ExtResource("5_tpysb")]
+position = Vector2(395, 300)
+layer = 2
+new_scale = 0.9
+pcc_number = 1
 
 [node name="Player" parent="." instance=ExtResource("4_gkdv7")]
 unique_name_in_owner = true

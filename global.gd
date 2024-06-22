@@ -8,6 +8,12 @@ var knight_inventory = []
 var thief_has_treasure = false
 var messenger_has_flyer = false
 
+# PCC Number
+enum PCCNumber {
+	PCC_1,
+	PCC_2,
+}
+
 # Portkey locations
 var current_portkey_location: PortkeyLocation = PortkeyLocation.UNDEFINED
 enum PortkeyLocation {
@@ -31,7 +37,7 @@ enum PortkeyLocation {
 # player type functionality
 var current_player_type: PlayerType = PlayerType.KNIGHT
 var pcc1_player_type: PlayerType = PlayerType.THIEF
-var pcc2_player_type: PlayerType = PlayerType.NULL
+var pcc2_player_type: PlayerType = PlayerType.MESSENGER
 enum PlayerType {
 	NULL,
 	KNIGHT,
