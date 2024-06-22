@@ -8,12 +8,10 @@ func _ready():
 func interact(input: String) -> void:
 	# interaction type: dialogue
 	if input == "e":
-		print("We're talking")
+		print("Dialogue hook missing")
 	
 	# interaction type: player character swap
 	else: if input == "q":
-		print("We're swapping")
-		
 		var key = get_parent().key
 		
 		# PCC is null, cannot swap
@@ -22,7 +20,6 @@ func interact(input: String) -> void:
 		
 		# PCC is not null, swap characters
 		else:
-			print("PCC: let's swap characters")
 			var new_key = interaction_partner.get_parent().key
 			interaction_partner.interact_echo(key)
 			get_parent().set_key(new_key)
