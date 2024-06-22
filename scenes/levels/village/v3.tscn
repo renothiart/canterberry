@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://2ff548bssu6o"]
+[gd_scene load_steps=16 format=3 uid="uid://2ff548bssu6o"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_uwwrt"]
 [ext_resource type="Texture2D" uid="uid://dt0asmelt4a8s" path="res://assets/settings/village/v3-bg.png" id="2_2g37s"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dbi1skikywsem" path="res://assets/settings/village/v3-fg-b.png" id="4_ejqnp"]
 [ext_resource type="Texture2D" uid="uid://cxvjio4dmmi4g" path="res://assets/settings/village/v3-fg-f.png" id="5_vwtxo"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_2ri80"]
+[ext_resource type="PackedScene" uid="uid://c8b2b6ya47tli" path="res://scenes/characters/baker.tscn" id="6_psabi"]
 [ext_resource type="PackedScene" uid="uid://dqgk4tayohoec" path="res://nodes/portkeys/right_bg_portkey.tscn" id="7_cse6q"]
 [ext_resource type="PackedScene" uid="uid://bjofqpqrlv024" path="res://nodes/activatable_teleporters/bg_activatable_teleporter.tscn" id="8_ntj0i"]
 [ext_resource type="PackedScene" uid="uid://cmvhnfu3ousn3" path="res://nodes/portkeys/right_mg_portkey.tscn" id="9_iet0v"]
@@ -41,6 +42,10 @@ centered = false
 z_index = -1
 texture = ExtResource("5_vwtxo")
 centered = false
+
+[node name="Baker" parent="." instance=ExtResource("6_psabi")]
+position = Vector2(236, 384)
+new_scale = 0.9
 
 [node name="Player" parent="." instance=ExtResource("6_2ri80")]
 unique_name_in_owner = true

@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://c8sjs5in8l20h"]
+[gd_scene load_steps=11 format=3 uid="uid://c8sjs5in8l20h"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_h337s"]
 [ext_resource type="Texture2D" uid="uid://dmnm8kaociy60" path="res://assets/settings/village/v6.png" id="2_tawkr"]
 [ext_resource type="Texture2D" uid="uid://d0vi8opnt1mu2" path="res://assets/settings/village/v4-mg.png" id="3_1gawh"]
 [ext_resource type="Texture2D" uid="uid://dgltka2wrfobt" path="res://assets/settings/village/v4-fg.png" id="4_57wp7"]
 [ext_resource type="Texture2D" uid="uid://cxvjio4dmmi4g" path="res://assets/settings/village/v3-fg-f.png" id="5_x7i62"]
+[ext_resource type="PackedScene" uid="uid://x0xthheioxpb" path="res://scenes/characters/squire.tscn" id="6_72244"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_xy740"]
 [ext_resource type="PackedScene" uid="uid://5mxadhwg1gtb" path="res://nodes/portkeys/left_mg_portkey.tscn" id="8_p6xsc"]
 [ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="9_a4bi2"]
@@ -36,6 +37,11 @@ visible = false
 z_index = -1
 texture = ExtResource("5_x7i62")
 centered = false
+
+[node name="Squire" parent="." instance=ExtResource("6_72244")]
+position = Vector2(502, 320)
+layer = 4
+new_scale = 0.5
 
 [node name="Player" parent="." instance=ExtResource("6_xy740")]
 unique_name_in_owner = true

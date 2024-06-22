@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bgpsyuchqhk33"]
+[gd_scene load_steps=11 format=3 uid="uid://bgpsyuchqhk33"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_sh4d2"]
 [ext_resource type="Texture2D" uid="uid://dvf6jhbs2s2vu" path="res://assets/settings/port/p2.png" id="3_uljre"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dgltka2wrfobt" path="res://assets/settings/village/v4-fg.png" id="4_im617"]
 [ext_resource type="Texture2D" uid="uid://cxvjio4dmmi4g" path="res://assets/settings/village/v3-fg-f.png" id="5_2qap6"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_eicvg"]
+[ext_resource type="PackedScene" uid="uid://dcf7istcch6b7" path="res://scenes/characters/bandit.tscn" id="7_2hihj"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="7_oqivh"]
 [ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="7_tinwy"]
 [ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="9_cjd7c"]
@@ -38,6 +39,9 @@ visible = false
 z_index = -1
 texture = ExtResource("5_2qap6")
 centered = false
+
+[node name="Bandit" parent="." instance=ExtResource("7_2hihj")]
+position = Vector2(352, 342)
 
 [node name="Wall" parent="." instance=ExtResource("7_tinwy")]
 position = Vector2(96, 452)

@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://dcf7istcch6b7"]
+
+[ext_resource type="Script" path="res://scenes/characters/npc.gd" id="1_q36ff"]
+[ext_resource type="Texture2D" uid="uid://b0fq5gu64upuh" path="res://assets/chars/chilipepper_bandit.png" id="2_mextn"]
+[ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="2_nvxbj"]
+[ext_resource type="Script" path="res://nodes/interaction/IM_npc.gd" id="3_lh788"]
+[ext_resource type="PackedScene" uid="uid://7pve3wlgqwcx" path="res://nodes/UX/action_cue.tscn" id="4_dx3rx"]
+
+[node name="Bandit" type="Node2D"]
+script = ExtResource("1_q36ff")
+character_type = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mextn")
+flip_h = true
+
+[node name="InteractionManager" parent="." instance=ExtResource("2_nvxbj")]
+unique_name_in_owner = true
+script = ExtResource("3_lh788")
+
+[node name="action_cue" parent="." instance=ExtResource("4_dx3rx")]
+unique_name_in_owner = true
+position = Vector2(2.08165e-12, -200)
+animation = &"NULL"

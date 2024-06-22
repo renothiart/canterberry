@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://w0eswg4cvckf"]
+[gd_scene load_steps=11 format=3 uid="uid://w0eswg4cvckf"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_f5ypn"]
 [ext_resource type="Texture2D" uid="uid://dhjjaxaf6c6lk" path="res://assets/settings/hub/daytime.png" id="2_cw5oh"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="4_gkdv7"]
 [ext_resource type="PackedScene" uid="uid://ccwnjw11r2gkn" path="res://scenes/characters/playable_character_container.tscn" id="5_tpysb"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="7_wqinb"]
+[ext_resource type="PackedScene" uid="uid://dxk07tnsm1436" path="res://scenes/characters/bard.tscn" id="9_axg1r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kw6cc"]
 animations = [{
@@ -40,8 +41,12 @@ sprite_frames = SubResource("SpriteFrames_kw6cc")
 autoplay = "default"
 frame_progress = 0.936414
 
+[node name="Bard" parent="." instance=ExtResource("9_axg1r")]
+position = Vector2(175, 369)
+
 [node name="PCC1" parent="." instance=ExtResource("5_tpysb")]
 position = Vector2(610, 288)
+layer = 2
 
 [node name="Player" parent="." instance=ExtResource("4_gkdv7")]
 unique_name_in_owner = true

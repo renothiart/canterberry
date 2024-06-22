@@ -1,7 +1,7 @@
 if {Knight.MetTomato} == false:
-	Pineapple: <Empty Text Event>
+	King: Test
 elif {Knight.MetTomato} == true:
-	Pineapple: Ah, you've met my daughter. The family resemblance is uncanny, no?
+	Ah, you've met my daughter. The family resemblance is uncanny, no?
 	[wait time="2.0" hide_text="false"]
 	What?
 elif {Knight.ReceivedQuest} == true:

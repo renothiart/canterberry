@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://x0xthheioxpb"]
+
+[ext_resource type="Script" path="res://scenes/characters/npc.gd" id="1_hgt06"]
+[ext_resource type="Texture2D" uid="uid://b0loo8qw66cfy" path="res://assets/chars/strawberry_squire.png" id="2_d14yd"]
+[ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="2_ggoxo"]
+[ext_resource type="Script" path="res://nodes/interaction/IM_npc.gd" id="3_7r2lm"]
+[ext_resource type="PackedScene" uid="uid://7pve3wlgqwcx" path="res://nodes/UX/action_cue.tscn" id="4_mnufm"]
+
+[node name="Squire" type="Node2D"]
+script = ExtResource("1_hgt06")
+character_type = 11
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_d14yd")
+
+[node name="InteractionManager" parent="." instance=ExtResource("2_ggoxo")]
+unique_name_in_owner = true
+script = ExtResource("3_7r2lm")
+
+[node name="action_cue" parent="." instance=ExtResource("4_mnufm")]
+unique_name_in_owner = true
+position = Vector2(2.08165e-12, -125)
+animation = &"NULL"

@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://dxk07tnsm1436"]
+
+[ext_resource type="Script" path="res://scenes/characters/npc.gd" id="1_e4og0"]
+[ext_resource type="Texture2D" uid="uid://bk766gx7ysxwq" path="res://assets/chars/raisin_bard.png" id="2_bs80k"]
+[ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="2_scdja"]
+[ext_resource type="Script" path="res://nodes/interaction/IM_npc.gd" id="3_ll01v"]
+[ext_resource type="PackedScene" uid="uid://7pve3wlgqwcx" path="res://nodes/UX/action_cue.tscn" id="4_j0158"]
+
+[node name="Bard" type="Node2D"]
+script = ExtResource("1_e4og0")
+character_type = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_bs80k")
+flip_h = true
+
+[node name="InteractionManager" parent="." instance=ExtResource("2_scdja")]
+unique_name_in_owner = true
+script = ExtResource("3_ll01v")
+
+[node name="action_cue" parent="." instance=ExtResource("4_j0158")]
+unique_name_in_owner = true
+position = Vector2(2.08165e-12, -200)
+animation = &"NULL"

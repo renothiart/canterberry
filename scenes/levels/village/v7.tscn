@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://3yng5ny7ixxd"]
+[gd_scene load_steps=11 format=3 uid="uid://3yng5ny7ixxd"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_cbea1"]
 [ext_resource type="Texture2D" uid="uid://bbqpnvjotpcj6" path="res://assets/settings/village/v7.png" id="2_30wal"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dgltka2wrfobt" path="res://assets/settings/village/v4-fg.png" id="4_pjq8c"]
 [ext_resource type="Texture2D" uid="uid://cxvjio4dmmi4g" path="res://assets/settings/village/v3-fg-f.png" id="5_v33n3"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_3w51d"]
+[ext_resource type="PackedScene" uid="uid://b4awsdc28ml05" path="res://scenes/characters/monk.tscn" id="6_4j61v"]
 [ext_resource type="PackedScene" uid="uid://5mxadhwg1gtb" path="res://nodes/portkeys/left_mg_portkey.tscn" id="8_fn5gu"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="8_rhwaa"]
 [ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="9_thhhe"]
@@ -36,6 +37,11 @@ visible = false
 z_index = -1
 texture = ExtResource("5_v33n3")
 centered = false
+
+[node name="Monk" parent="." instance=ExtResource("6_4j61v")]
+position = Vector2(660, 306)
+layer = 4
+new_scale = 0.5
 
 [node name="Player" parent="." instance=ExtResource("6_3w51d")]
 unique_name_in_owner = true

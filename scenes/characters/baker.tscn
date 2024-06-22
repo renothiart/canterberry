@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8b2b6ya47tli"]
+
+[ext_resource type="Script" path="res://scenes/characters/npc.gd" id="1_h42l6"]
+[ext_resource type="Texture2D" uid="uid://def8axyb4f0oi" path="res://assets/chars/apple_tp2.png" id="2_foqaa"]
+[ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="2_w1y5e"]
+[ext_resource type="Script" path="res://nodes/interaction/IM_npc.gd" id="3_qv68c"]
+[ext_resource type="PackedScene" uid="uid://7pve3wlgqwcx" path="res://nodes/UX/action_cue.tscn" id="4_ap62e"]
+
+[node name="Baker" type="Node2D"]
+script = ExtResource("1_h42l6")
+character_type = 14
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_foqaa")
+flip_h = true
+
+[node name="InteractionManager" parent="." instance=ExtResource("2_w1y5e")]
+unique_name_in_owner = true
+script = ExtResource("3_qv68c")
+
+[node name="action_cue" parent="." instance=ExtResource("4_ap62e")]
+unique_name_in_owner = true
+position = Vector2(2.08165e-12, -150)
+animation = &"NULL"

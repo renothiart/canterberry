@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://enrqwqfh10jp"]
+[gd_scene load_steps=11 format=3 uid="uid://enrqwqfh10jp"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_a5e8k"]
 [ext_resource type="Texture2D" uid="uid://daumtsr64p7cy" path="res://assets/settings/forest/witchhut_ext.png" id="2_31xfj"]
@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="7_qq5pd"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="8_362f1"]
 [ext_resource type="PackedScene" uid="uid://cmvhnfu3ousn3" path="res://nodes/portkeys/right_mg_portkey.tscn" id="9_5obik"]
+[ext_resource type="PackedScene" uid="uid://pl47x4a3o1qs" path="res://scenes/characters/witch.tscn" id="10_tvd3e"]
 
-[node name="WitchHut1" type="Node2D" node_paths=PackedStringArray("fg_right_portkey", "mg_right_portkey")]
+[node name="WitchHut1" type="Node2D" node_paths=PackedStringArray("mg_right_portkey")]
 script = ExtResource("1_a5e8k")
-fg_right_portkey = NodePath("")
 mg_right_portkey = NodePath("RightMGPortkey")
 
 [node name="OuterBounds" parent="." instance=ExtResource("8_362f1")]
@@ -43,6 +43,11 @@ centered = false
 [node name="Wall" parent="." instance=ExtResource("7_qq5pd")]
 position = Vector2(260, 368)
 layer = 4
+
+[node name="Witch" parent="." instance=ExtResource("10_tvd3e")]
+position = Vector2(452, 304)
+layer = 4
+new_scale = 0.6
 
 [node name="Player" parent="." instance=ExtResource("6_804tv")]
 unique_name_in_owner = true

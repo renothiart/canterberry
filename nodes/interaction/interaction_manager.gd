@@ -11,12 +11,12 @@ signal exit_interaction
 # is this interactable object a PCC?
 var is_pcc = false
 
+@export var layer: int = 12
 
 # call this on interaction controller input
 func attempt_interaction(input: String) -> void:
 	if interaction_partner != null:
 		interaction_partner.interact(input)
-
 
 # overwrite with interaction behavior for each interactable object
 func interact(input: String) -> void:
@@ -39,3 +39,14 @@ func _on_Interaction_Manager_area_exited(area):
 	exit_interaction.emit()
 	if interaction_partner == area:
 		interaction_partner = null
+
+func remove_current_layer():
+	set_collision_layer_value(self.layer, false)
+	set_collision_mask_value(self.layer, false)
+
+func set_new_layer(new_layer: int):
+	remove_current_layer()
+	set_collision_layer_value(new_layer, true)
+	set_collision_mask_value(new_layer, true)
+	
+	self.layer = new_layer

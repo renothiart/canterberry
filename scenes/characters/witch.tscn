@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://pl47x4a3o1qs"]
+
+[ext_resource type="Script" path="res://scenes/characters/npc.gd" id="1_lt7su"]
+[ext_resource type="Texture2D" uid="uid://68c0od2u1k4h" path="res://assets/chars/dragonfruit_witch.png" id="2_8recy"]
+[ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="2_t6bss"]
+[ext_resource type="Script" path="res://nodes/interaction/IM_npc.gd" id="3_as6qq"]
+[ext_resource type="PackedScene" uid="uid://7pve3wlgqwcx" path="res://nodes/UX/action_cue.tscn" id="4_4lmyd"]
+
+[node name="Witch" type="Node2D"]
+script = ExtResource("1_lt7su")
+character_type = 6
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_8recy")
+flip_h = true
+
+[node name="InteractionManager" parent="." instance=ExtResource("2_t6bss")]
+unique_name_in_owner = true
+script = ExtResource("3_as6qq")
+
+[node name="action_cue" parent="." instance=ExtResource("4_4lmyd")]
+unique_name_in_owner = true
+position = Vector2(2.08165e-12, -220)
+animation = &"NULL"

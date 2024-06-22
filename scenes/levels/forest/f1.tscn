@@ -18,6 +18,8 @@ fg_left_portkey = NodePath("LeftFGPortkey")
 fg_right_portkey = NodePath("RightFGPortkey")
 mg_left_portkey = NodePath("LeftMGPortkey")
 
+[node name="OuterBounds" parent="." instance=ExtResource("10_gca3g")]
+
 [node name="Background" type="Sprite2D" parent="."]
 visible = false
 
@@ -34,6 +36,15 @@ centered = false
 [node name="Wall" parent="." instance=ExtResource("4_bcj3a")]
 position = Vector2(870, 286)
 layer = 4
+
+[node name="Player" parent="." instance=ExtResource("9_64pg5")]
+unique_name_in_owner = true
+z_index = -4
+position = Vector2(5, 300)
+scale = Vector2(0.9, 0.9)
+collision_layer = 0
+collision_mask = 0
+layer = 2
 
 [node name="LeftMGPortkey" parent="." instance=ExtResource("4_i81ct")]
 paired_portkey_location = 8
@@ -52,14 +63,3 @@ pairedTeleporter = NodePath("../FGActivatableTeleporter")
 
 [node name="FGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("8_lssgc")]
 pairedTeleporter = NodePath("../MGToFGActivatableTeleporter")
-
-[node name="Player" parent="." instance=ExtResource("9_64pg5")]
-unique_name_in_owner = true
-z_index = -4
-position = Vector2(5, 300)
-scale = Vector2(0.9, 0.9)
-collision_layer = 0
-collision_mask = 0
-layer = 2
-
-[node name="OuterBounds" parent="." instance=ExtResource("10_gca3g")]

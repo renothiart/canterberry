@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://7pve3wlgqwcx"]
 
-[ext_resource type="Texture2D" uid="uid://4tvlqrpv8a20" path="res://assets/ui/interact-both-new.png" id="1_gqp0q"]
+[ext_resource type="Texture2D" uid="uid://bplgvv0sbeapm" path="res://assets/ui/interact-both-new.png" id="1_gqp0q"]
 [ext_resource type="Texture2D" uid="uid://br14j764iuepu" path="res://assets/ui/interact-new.png" id="2_lxpy3"]
 [ext_resource type="Texture2D" uid="uid://cq635hur0oer8" path="res://assets/ui/interact-changechar.png" id="3_r1w6w"]
 [ext_resource type="Script" path="res://nodes/UX/action_cue.gd" id="4_mbgxp"]
@@ -41,6 +41,7 @@ animations = [{
 }]
 
 [node name="action_cue" type="AnimatedSprite2D"]
+z_as_relative = false
 sprite_frames = SubResource("SpriteFrames_2kp0b")
 animation = &"BOTH"
 script = ExtResource("4_mbgxp")

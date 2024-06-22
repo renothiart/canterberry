@@ -7,11 +7,11 @@ func _ready():
 # overwrite with interaction behavior for each interactable object
 func interact(input: String) -> void:
 	# interaction type: dialogue
-	if input == "e":
+	if input == "interact":
 		print("Dialogue hook missing")
 	
 	# interaction type: player character swap
-	else: if input == "q":
+	else: if input == "swap_characters":
 		var key = get_parent().key
 		
 		# PCC is null, cannot swap
@@ -26,5 +26,4 @@ func interact(input: String) -> void:
 	
 	# interaction type: undefined
 	else:
-		print("Undefinted Input:")
-		print(input)
+		print("Undefined Input: " + input)

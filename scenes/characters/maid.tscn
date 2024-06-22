@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://e0vornp8uxl"]
+
+[ext_resource type="Script" path="res://scenes/characters/npc.gd" id="1_vg2b4"]
+[ext_resource type="Texture2D" uid="uid://cipxddur47u14" path="res://assets/chars/orange_tp3.png" id="2_b03rr"]
+[ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="2_sl6ds"]
+[ext_resource type="Script" path="res://nodes/interaction/IM_npc.gd" id="3_5j2ol"]
+[ext_resource type="PackedScene" uid="uid://7pve3wlgqwcx" path="res://nodes/UX/action_cue.tscn" id="4_gm1vy"]
+
+[node name="Maid" type="Node2D"]
+script = ExtResource("1_vg2b4")
+character_type = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_b03rr")
+flip_h = true
+
+[node name="InteractionManager" parent="." instance=ExtResource("2_sl6ds")]
+unique_name_in_owner = true
+script = ExtResource("3_5j2ol")
+
+[node name="action_cue" parent="." instance=ExtResource("4_gm1vy")]
+unique_name_in_owner = true
+position = Vector2(2.08165e-12, -140)
+animation = &"NULL"

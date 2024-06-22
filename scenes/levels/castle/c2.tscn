@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dbou05i4apvny"]
+[gd_scene load_steps=10 format=3 uid="uid://dbou05i4apvny"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_k8bp2"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="2_36v6d"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c1wxtrftkrfyl" path="res://nodes/portkeys/left_fg_portkey.tscn" id="6_k7xo6"]
 [ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="7_ucdip"]
 [ext_resource type="PackedScene" uid="uid://n40ubmic6oeb" path="res://nodes/activatable_portkeys/fg_activatable_portkey.tscn" id="8_2s5ca"]
+[ext_resource type="PackedScene" uid="uid://dt3itm06p1s0h" path="res://scenes/characters/princess.tscn" id="9_uxxx2"]
 
 [node name="Castle2" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey", "mg_right_portkey")]
 script = ExtResource("1_k8bp2")
@@ -30,6 +31,10 @@ visible = false
 z_index = -3
 texture = ExtResource("4_kboec")
 centered = false
+
+[node name="Princess" parent="." instance=ExtResource("9_uxxx2")]
+position = Vector2(754, 406)
+new_scale = 0.9
 
 [node name="Player" parent="." instance=ExtResource("5_a0s0c")]
 unique_name_in_owner = true

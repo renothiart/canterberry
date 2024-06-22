@@ -25,10 +25,10 @@ func _ready():
 # define all input behaviors
 func _unhandled_input(_event_) -> void:
 	if Input.is_action_just_pressed("interact"):
-		_interaction_manager.attempt_interaction("e")
+		_interaction_manager.attempt_interaction("interact")
 	
 	if Input.is_action_just_pressed("swap_characters"):
-		_interaction_manager.attempt_interaction("q")
+		_interaction_manager.attempt_interaction("swap_characters")
 
 
 # define echo interaction behaviors
@@ -72,6 +72,7 @@ func start_teleport_buffer(new_layer):
 
 
 func remove_current_layer():
+	_interaction_manager.remove_current_layer()
 	set_collision_layer_value(self.layer, false)
 	set_collision_mask_value(self.layer, false)
 
@@ -80,6 +81,7 @@ func set_new_layer(new_layer: int):
 	z_index = -1 * new_layer
 	
 	remove_current_layer()
+	_interaction_manager.set_new_layer(new_layer + 10)
 	set_collision_layer_value(new_layer, true)
 	set_collision_mask_value(new_layer, true)
 	

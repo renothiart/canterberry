@@ -1,2 +1,3 @@
+Bard: Test
 if {Knight.MetBard} == false:
 	Well hello sir! Haven’t seen you in this part of town before. I think I heard our King up in the Castle was in need of some assistance, maybe he could use some help from a brave knight such as you.
