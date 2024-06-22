@@ -19,3 +19,7 @@ mono_crash.*.json
 
 # Exported game files
 exports/
+
+# PSD Local files
+psds_local/
+
