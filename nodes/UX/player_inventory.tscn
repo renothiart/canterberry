@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=3 uid="uid://c5imx8y7j0sno"]
+
+[ext_resource type="Script" path="res://nodes/UX/player_inventory.gd" id="1_34mix"]
+[ext_resource type="Texture2D" uid="uid://dln2pysc57bit" path="res://assets/inventory/bread.png" id="1_qexdr"]
+[ext_resource type="Texture2D" uid="uid://d1gl15jjg8iep" path="res://assets/inventory/egg.png" id="2_wunq7"]
+[ext_resource type="Texture2D" uid="uid://yqeu2yifw6br" path="res://assets/inventory/bard-flyer.png" id="3_ennah"]
+[ext_resource type="Texture2D" uid="uid://b62sqsvv4fk58" path="res://assets/inventory/mushroom.png" id="4_da5ue"]
+[ext_resource type="Texture2D" uid="uid://w1vlack5wg20" path="res://assets/inventory/witch-potion.png" id="5_uuqtt"]
+[ext_resource type="Texture2D" uid="uid://d35r23rwyye5r" path="res://assets/inventory/strawberry-toy.png" id="6_563am"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e4fae"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qexdr")
+}],
+"loop": true,
+"name": &"BREAD",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wunq7")
+}],
+"loop": true,
+"name": &"EGG",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ennah")
+}],
+"loop": true,
+"name": &"FLYER",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_da5ue")
+}],
+"loop": true,
+"name": &"MUSHROOM",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"NULL",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_uuqtt")
+}],
+"loop": true,
+"name": &"POTION",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_563am")
+}],
+"loop": true,
+"name": &"TOY",
+"speed": 5.0
+}]
+
+[node name="player_inventory" type="CanvasLayer"]
+script = ExtResource("1_34mix")
+
+[node name="slot_0" type="AnimatedSprite2D" parent="."]
+position = Vector2(575, 55)
+sprite_frames = SubResource("SpriteFrames_e4fae")
+animation = &"TOY"
+
+[node name="slot_1" type="AnimatedSprite2D" parent="."]
+position = Vector2(795, 55)
+sprite_frames = SubResource("SpriteFrames_e4fae")
+animation = &"EGG"
+
+[node name="slot_2" type="AnimatedSprite2D" parent="."]
+position = Vector2(685, 55)
+sprite_frames = SubResource("SpriteFrames_e4fae")
+animation = &"BREAD"
+
+[node name="slot_3" type="AnimatedSprite2D" parent="."]
+position = Vector2(905, 55)
+sprite_frames = SubResource("SpriteFrames_e4fae")
+animation = &"MUSHROOM"

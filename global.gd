@@ -1,5 +1,13 @@
 extends Node
 
+# required for treasure room entry bug
+var player_facing_right = true
+
+# player inventory
+var knight_inventory = []
+var thief_has_treasure = false
+var messenger_has_flyer = false
+
 # Portkey locations
 var current_portkey_location: PortkeyLocation = PortkeyLocation.UNDEFINED
 enum PortkeyLocation {
@@ -102,5 +110,3 @@ func get_dialogue_name_from_npc(character_type: CharacterType):
 
 func get_dialogue_name_from_player(player_type: PlayerType):
 	return player_type_to_dialogue_name[player_type]
-
-var player_facing_right = true
