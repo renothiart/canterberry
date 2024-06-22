@@ -1,28 +1,71 @@
-[gd_scene load_steps=9 format=3 uid="uid://ce2riagpagvsl"]
+[gd_scene load_steps=19 format=3 uid="uid://ce2riagpagvsl"]
 
 [ext_resource type="Script" path="res://scenes/characters/player.gd" id="1_ljexa"]
-[ext_resource type="Texture2D" uid="uid://c5p655t75e4nl" path="res://assets/chars/strawb_knight_l.png" id="2_72ufe"]
 [ext_resource type="Texture2D" uid="uid://bdwgjgti3uhsg" path="res://assets/chars/tomato_thief.png" id="3_nhhfi"]
 [ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="4_21hvw"]
 [ext_resource type="Texture2D" uid="uid://d12asd8ehk8w7" path="res://assets/chars/raspberry_messenger.png" id="4_r2tv7"]
 [ext_resource type="Script" path="res://nodes/interaction/IM_player.gd" id="6_a3q3m"]
+[ext_resource type="Texture2D" uid="uid://56lbyq3p03i1" path="res://assets/chars/knight_idle/idle1.png" id="7_p4qbi"]
+[ext_resource type="Texture2D" uid="uid://c3wmm1nsak8tn" path="res://assets/chars/knight_idle/idle2.png" id="8_7c6go"]
+[ext_resource type="Texture2D" uid="uid://de7pgf3cn5dq7" path="res://assets/chars/knight_walk/walk1.png" id="9_ls5mt"]
+[ext_resource type="Texture2D" uid="uid://cctla5pviqfam" path="res://assets/chars/knight_walk/walk2.png" id="10_j0g1e"]
+[ext_resource type="Texture2D" uid="uid://bsi4ceapcxxib" path="res://assets/chars/knight_walk/walk3.png" id="11_sxkue"]
+[ext_resource type="Texture2D" uid="uid://cwjtyymoyp212" path="res://assets/chars/knight_walk/walk4.png" id="12_fcusq"]
+[ext_resource type="Texture2D" uid="uid://bpl5tqh8c52qm" path="res://assets/chars/knight_walk/walk5.png" id="13_7al6e"]
+[ext_resource type="Texture2D" uid="uid://lyci4jat1se7" path="res://assets/chars/knight_walk/walk6.png" id="14_5474i"]
+[ext_resource type="Texture2D" uid="uid://b2aid7e3kcplh" path="res://assets/chars/knight_walk/walk7.png" id="15_0dwdy"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_eq4ts"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nh834"]
+size = Vector2(166, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bcslk"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_r2tv7")
+"texture": ExtResource("7_p4qbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7c6go")
 }],
 "loop": true,
-"name": &"RM",
+"name": &"IDLE",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_72ufe")
+"texture": ExtResource("9_ls5mt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j0g1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sxkue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fcusq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7al6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5474i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0dwdy")
 }],
 "loop": true,
-"name": &"SK",
+"name": &"WALK",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6754t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nhhfi")
+}],
+"loop": true,
+"name": &"IDLE",
 "speed": 5.0
 }, {
 "frames": [{
@@ -30,26 +73,55 @@ animations = [{
 "texture": ExtResource("3_nhhfi")
 }],
 "loop": true,
-"name": &"TT",
+"name": &"WALK",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nh834"]
-size = Vector2(166, 250)
+[sub_resource type="SpriteFrames" id="SpriteFrames_um127"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_r2tv7")
+}],
+"loop": true,
+"name": &"IDLE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_r2tv7")
+}],
+"loop": true,
+"name": &"WALK",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ljexa")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(2.08165e-12, 88)
-sprite_frames = SubResource("SpriteFrames_eq4ts")
-animation = &"SK"
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.08165e-12, 125)
+position = Vector2(0, 128)
 shape = SubResource("RectangleShape2D_nh834")
 
 [node name="InteractionManager" parent="." instance=ExtResource("4_21hvw")]
-position = Vector2(2.08165e-12, 129)
-scale = Vector2(2, 1)
+position = Vector2(0, 105)
+scale = Vector2(1.6, 0.6)
 script = ExtResource("6_a3q3m")
+
+[node name="SK" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, 87)
+sprite_frames = SubResource("SpriteFrames_bcslk")
+animation = &"IDLE"
+
+[node name="TT" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, 87)
+sprite_frames = SubResource("SpriteFrames_6754t")
+animation = &"IDLE"
+
+[node name="RM" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, 87)
+sprite_frames = SubResource("SpriteFrames_um127")
+animation = &"IDLE"

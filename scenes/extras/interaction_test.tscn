@@ -6,7 +6,7 @@
 [node name="interaction_test" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_45yye")]
-position = Vector2(341, 284)
+position = Vector2(430, 283)
 
 [node name="PCC1" parent="." instance=ExtResource("4_dotg2")]
 position = Vector2(-502, 216)

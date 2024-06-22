@@ -7,18 +7,25 @@ var buffered_layer = 0
 
 # connect scene nodes
 @export var layer: int = 4
-@onready var _animated_sprite = $AnimatedSprite2D
 @onready var _interaction_manager = $InteractionManager
+
+# stupid variables for a very lazy, hacky solution
+@onready var _SK = $SK
+@onready var _TT = $TT
+@onready var _RM = $RM
 
 # key for current PC sprite, start as strawberry knight
 @export var key: String
+@export var active_sprite: AnimatedSprite2D
 
 
 # render player into scene
 func _ready():
 	set_new_layer(layer)
 	set_process(false)
+	
 	var player_type = Global.get_animation_name(Global.current_player_type)
+	active_sprite = get_node(player_type)
 	set_key(player_type)
 
 
@@ -34,9 +41,17 @@ func _unhandled_input(_event_) -> void:
 # define echo interaction behaviors
 # expects key to be a string, initials of target PC (SK, TT, RM)
 func set_key(new_key: String) -> void:
+	# save the new key locally and in Global
 	key = new_key
 	Global.current_player_type = Global.get_player_type(key)
-	_animated_sprite.set_animation(key)
+	
+	# stop and disable the old sprite
+	active_sprite.stop()
+	active_sprite.visible = false
+	
+	# enable the new sprite
+	active_sprite = get_node(key)
+	active_sprite.visible = true
 
 
 # basic physics movement, x-axis only
@@ -44,11 +59,25 @@ func _physics_process(_delta):
 	var _input_axis = Input.get_axis("move_left", "move_right")
 	var direction = Vector2(_input_axis, 0.0)
 	velocity = direction * 600.0
-	if _input_axis > 0.0:
-		_animated_sprite.flip_h = true
-	else: if _input_axis < 0.0:
-		_animated_sprite.flip_h = false
+	
+	if _input_axis == 0.0:
+		active_sprite.set_animation("IDLE")
+	
+	else: # the very lazy, hacky solution I meantioned earlier
+		active_sprite.set_animation("WALK")
+		
+		if _input_axis > 0.0:
+			_SK.flip_h = true
+			_TT.flip_h = true
+			_RM.flip_h = true
+		
+		if _input_axis < 0.0:
+			_SK.flip_h = false
+			_TT.flip_h = false
+			_RM.flip_h = false
+	
 	move_and_slide()
+	active_sprite.play()
 
 
 # Teleporting doesn't mesh well with the physics engine.
