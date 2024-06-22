@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var item_type: Global.ItemType = Global.ItemType.NULL
+@export var character_type: Global.CharacterType = Global.CharacterType.NULL
 @export var layer: int = 2
 @export var new_scale: float = 1
 
