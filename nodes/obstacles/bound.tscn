@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://lid65yvyhrja"]
+
+[ext_resource type="Script" path="res://nodes/obstacles/outer_bounds.gd" id="1_iprtb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b102x"]
+size = Vector2(120, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uyi0c"]
+size = Vector2(100, 200)
+
+[node name="Bound" type="Node2D"]
+script = ExtResource("1_iprtb")
+
+[node name="Wall" type="StaticBody2D" parent="."]
+collision_layer = 42
+collision_mask = 42
+
+[node name="ResetArea" type="Area2D" parent="Wall"]
+collision_layer = 42
+collision_mask = 42
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/ResetArea"]
+shape = SubResource("RectangleShape2D_b102x")
+debug_color = Color(0.517647, 0.545098, 0.505882, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+shape = SubResource("RectangleShape2D_uyi0c")
+debug_color = Color(0.899935, 0.28887, 0.314425, 0.42)
+
+[connection signal="body_entered" from="Wall/ResetArea" to="." method="_on_reset_area_body_entered"]

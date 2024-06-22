@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://2ff548bssu6o"]
+[gd_scene load_steps=17 format=3 uid="uid://2ff548bssu6o"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_uwwrt"]
 [ext_resource type="Texture2D" uid="uid://dt0asmelt4a8s" path="res://assets/settings/village/v3-bg.png" id="2_2g37s"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_2ri80"]
 [ext_resource type="PackedScene" uid="uid://c8b2b6ya47tli" path="res://scenes/characters/baker.tscn" id="6_psabi"]
 [ext_resource type="PackedScene" uid="uid://dqgk4tayohoec" path="res://nodes/portkeys/right_bg_portkey.tscn" id="7_cse6q"]
+[ext_resource type="PackedScene" uid="uid://lid65yvyhrja" path="res://nodes/obstacles/bound.tscn" id="7_ct6xu"]
 [ext_resource type="PackedScene" uid="uid://bjofqpqrlv024" path="res://nodes/activatable_teleporters/bg_activatable_teleporter.tscn" id="8_ntj0i"]
 [ext_resource type="PackedScene" uid="uid://cmvhnfu3ousn3" path="res://nodes/portkeys/right_mg_portkey.tscn" id="9_iet0v"]
 [ext_resource type="PackedScene" uid="uid://c2rjvyky3g53k" path="res://nodes/activatable_teleporters/mg_to_bg_activatable_teleporter.tscn" id="10_ejc0y"]
@@ -43,6 +44,16 @@ z_index = -1
 texture = ExtResource("5_vwtxo")
 centered = false
 
+[node name="Wall" parent="." instance=ExtResource("14_se6o4")]
+position = Vector2(59, 444)
+
+[node name="Wall2" parent="." instance=ExtResource("14_se6o4")]
+position = Vector2(106, 118)
+layer = 6
+
+[node name="Bound" parent="." instance=ExtResource("7_ct6xu")]
+position = Vector2(1052, 49)
+
 [node name="Baker" parent="." instance=ExtResource("6_psabi")]
 position = Vector2(236, 384)
 new_scale = 0.9
@@ -50,14 +61,13 @@ new_scale = 0.9
 [node name="Player" parent="." instance=ExtResource("6_2ri80")]
 unique_name_in_owner = true
 z_index = -4
-position = Vector2(5, 300)
+position = Vector2(100, 200)
 scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 0
-layer = 2
 
 [node name="RightBGPortkey" parent="." instance=ExtResource("7_cse6q")]
-position = Vector2(1045, 140)
+position = Vector2(950, 140)
 paired_portkey_location = 9
 linked_level_name = "res://scenes/levels/village/v4.tscn"
 new_scale = 0.3
@@ -89,6 +99,3 @@ paired_portkey_location = 5
 linked_level_name = "res://scenes/levels/village/v4.tscn"
 
 [node name="OuterBounds" parent="." instance=ExtResource("13_a3q5d")]
-
-[node name="Wall" parent="." instance=ExtResource("14_se6o4")]
-position = Vector2(59, 444)

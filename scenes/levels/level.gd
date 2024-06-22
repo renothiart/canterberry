@@ -46,7 +46,8 @@ func is_teleporter(child):
 func enable_portkeys():
 	var all_portkeys = portkey_map.values().filter(func(n): return n != null)
 	for portkey in all_portkeys:
-		if portkey.has_overlapping_player():
+		if portkey.has_method("has_overlapping_player") \
+				and portkey.has_overlapping_player():
 			portkey.enable()
 			portkey._on_body_entered(%Player)
 
