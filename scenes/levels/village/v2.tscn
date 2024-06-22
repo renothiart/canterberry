@@ -20,11 +20,13 @@ bg_left_portkey = NodePath("LeftBGPortkey")
 z_index = -7
 texture = ExtResource("2_15ueh")
 centered = false
+flip_h = true
 
 [node name="Midground" type="Sprite2D" parent="."]
 z_index = -5
 texture = ExtResource("3_ehop4")
 centered = false
+flip_h = true
 
 [node name="Foreground" type="Sprite2D" parent="."]
 visible = false
