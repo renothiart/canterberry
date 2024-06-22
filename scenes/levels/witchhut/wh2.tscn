@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c065ekyvhgbg"]
+[gd_scene load_steps=11 format=3 uid="uid://c065ekyvhgbg"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_vvlys"]
 [ext_resource type="Texture2D" uid="uid://bbqpnvjotpcj6" path="res://assets/settings/village/v7.png" id="2_dvnj7"]
@@ -43,6 +43,9 @@ centered = false
 position = Vector2(141, 314)
 new_scale = 1.1
 
+[node name="toy" parent="." instance=ExtResource("11_w607f")]
+position = Vector2(639, 184)
+
 [node name="Wall" parent="." instance=ExtResource("8_yv0vd")]
 position = Vector2(171, 422)
 
@@ -58,6 +61,3 @@ layer = 2
 [node name="RightFGPortkey" parent="." instance=ExtResource("8_af6k6")]
 paired_portkey_location = 7
 linked_level_name = "res://scenes/levels/witchhut/wh1.tscn"
-
-[node name="toy" parent="." instance=ExtResource("11_w607f")]
-position = Vector2(639, 184)

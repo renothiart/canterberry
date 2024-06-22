@@ -16,6 +16,8 @@ script = ExtResource("1_kj16y")
 fg_right_portkey = NodePath("RightFGPortkey")
 mg_right_portkey = NodePath("RightMGPortkey")
 
+[node name="OuterBounds" parent="." instance=ExtResource("8_e7x75")]
+
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -7
 texture = ExtResource("2_ttoow")
@@ -38,6 +40,10 @@ layer = 4
 [node name="FGWall" parent="." instance=ExtResource("5_24sfr")]
 position = Vector2(-58, 432)
 
+[node name="mushroom" parent="." instance=ExtResource("10_2y0nf")]
+position = Vector2(165, 473)
+scale = Vector2(1.6, 1.6)
+
 [node name="Player" parent="." instance=ExtResource("5_bk867")]
 unique_name_in_owner = true
 z_index = -4
@@ -54,9 +60,3 @@ linked_level_name = "res://scenes/levels/redforest/rf5.tscn"
 [node name="RightMGPortkey" parent="." instance=ExtResource("7_7ibqk")]
 paired_portkey_location = 7
 linked_level_name = "res://scenes/levels/redforest/rf5.tscn"
-
-[node name="OuterBounds" parent="." instance=ExtResource("8_e7x75")]
-
-[node name="mushroom" parent="." instance=ExtResource("10_2y0nf")]
-position = Vector2(165, 473)
-scale = Vector2(1.6, 1.6)
