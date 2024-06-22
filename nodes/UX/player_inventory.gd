@@ -39,8 +39,9 @@ func inventory_knight():
 	# render the knight's inventory
 	var knight_inventory = Global.knight_inventory
 	for slot in inventory_slots:
-		if slot < knight_inventory.length:
-			set_slot(slot, knight_inventory[slot])
+		var slot_index = slot.get_index()
+		if slot_index < knight_inventory.size():
+			set_slot(slot, knight_inventory[slot_index])
 
 
 # thief's inventory
@@ -48,7 +49,7 @@ func inventory_thief():
 	# render treasure if player has it
 	var thief_has_treasure = Global.thief_has_treasure
 	if thief_has_treasure:
-		set_slot(_slot_1, "TREASURE")
+		set_slot(_slot_0, "TREASURE")
 
 
 # messenger's inventory
@@ -56,7 +57,7 @@ func inventory_messenger():
 	# render flyer if player has it
 	var messenger_has_flyer = Global.messenger_has_flyer
 	if messenger_has_flyer:
-		set_slot(_slot_1, "FLYER")
+		set_slot(_slot_0, "FLYER")
 
 
 # null inventory
@@ -66,6 +67,5 @@ func inventory_null():
 
 
 # actually set the sprites
-func set_slot(slot:int, sprite:String):
-	var target_slot = inventory_slots[slot]
-	target_slot.set_animation(sprite)
+func set_slot(slot: AnimatedSprite2D, sprite: String):
+	slot.set_animation(sprite)

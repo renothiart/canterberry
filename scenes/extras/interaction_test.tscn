@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4w3p2lx5tycb"]
+[gd_scene load_steps=4 format=3 uid="uid://b4w3p2lx5tycb"]
 
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="1_45yye"]
+[ext_resource type="PackedScene" uid="uid://c5imx8y7j0sno" path="res://nodes/UX/player_inventory.tscn" id="3_vt3lc"]
 [ext_resource type="PackedScene" uid="uid://ccwnjw11r2gkn" path="res://scenes/characters/playable_character_container.tscn" id="4_dotg2"]
 
 [node name="interaction_test" type="Node2D"]
@@ -14,3 +15,5 @@ position = Vector2(-502, 216)
 [node name="PCC2" parent="." instance=ExtResource("4_dotg2")]
 position = Vector2(802, 289)
 key = "TT"
+
+[node name="player_inventory" parent="." instance=ExtResource("3_vt3lc")]
