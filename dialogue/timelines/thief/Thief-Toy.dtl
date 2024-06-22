@@ -1,0 +1,3 @@
+if {Knight.CollectedToy} == false:
+	Narrator: A cute toy on the shelf catches the Thief's eye.
+	Narrator: Stealing such a toy wouldn't help anyone, so she leaves it as she found it.

@@ -1,0 +1,5 @@
+if {Knight.CollectedToy} == false:
+	Messenger: Hey little girl, do you -
+	Messenger: Wait a minute ...
+	Messenger: You're just a toy!
+	Messenger: Unbelievable!

@@ -1,0 +1,5 @@
+if {Knight.CollectedMushroom} == false:
+	Narrator: The Knight picks the large red mushroom from the forest floor. He stashes it away in his infinite pockets.
+	[wait_input]
+	[signal arg="collect_mushroom"]
+	set {Knight.CollectedMushroom} = true

@@ -1,0 +1,3 @@
+if {Knight.CollectedMushroom} == false:
+	Narrator: The Thief spies a curious little fungus.
+	Narrator: She doesn't need it, so she leaves it undisturbed.

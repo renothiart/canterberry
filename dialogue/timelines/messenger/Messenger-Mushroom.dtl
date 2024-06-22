@@ -1,3 +1,5 @@
-Narrator: The Knight picks the large red mushroom from the forest floor. He stashes it away in his infinite pockets
-[wait_input]
-[signal arg="collect_mushroom"]
+if {Knight.CollectedMushroom} == false:
+	Narrator: The Messenger spots a peculiar little mushroom.
+	Messenger: Ha! Why would you want to go to a concert?
+	Messenger: You're just a mushroom! You can't even talk!
+	Narrator: The Messenger laughs to himself as he imagines a world where mushrooms could talk.
