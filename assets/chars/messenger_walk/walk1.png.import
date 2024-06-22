@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i32u1qvfh2ty"
-path="res://.godot/imported/strawb_knight_r.png-ce9b478b2a32489ecc38e48cbac5d396.ctex"
+uid="uid://bd4gnfj8hq5xc"
+path="res://.godot/imported/walk1.png-ab19f39897cadaa6f12ea707be3f1a82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/chars/strawb_knight_r.png"
-dest_files=["res://.godot/imported/strawb_knight_r.png-ce9b478b2a32489ecc38e48cbac5d396.ctex"]
+source_file="res://assets/chars/messenger_walk/walk1.png"
+dest_files=["res://.godot/imported/walk1.png-ab19f39897cadaa6f12ea707be3f1a82.ctex"]
 
 [params]
 
