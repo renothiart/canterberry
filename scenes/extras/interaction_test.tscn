@@ -13,7 +13,7 @@ position = Vector2(430, 283)
 position = Vector2(-502, 216)
 
 [node name="PCC2" parent="." instance=ExtResource("4_dotg2")]
-position = Vector2(802, 289)
+position = Vector2(792, 325)
 key = "TT"
 
 [node name="player_inventory" parent="." instance=ExtResource("3_vt3lc")]

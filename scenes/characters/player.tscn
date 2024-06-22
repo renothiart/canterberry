@@ -1,7 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://ce2riagpagvsl"]
+[gd_scene load_steps=25 format=3 uid="uid://ce2riagpagvsl"]
 
 [ext_resource type="Script" path="res://scenes/characters/player.gd" id="1_ljexa"]
-[ext_resource type="Texture2D" uid="uid://bdwgjgti3uhsg" path="res://assets/chars/tomato_thief.png" id="3_nhhfi"]
 [ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="4_21hvw"]
 [ext_resource type="Texture2D" uid="uid://d12asd8ehk8w7" path="res://assets/chars/raspberry_messenger.png" id="4_r2tv7"]
 [ext_resource type="Script" path="res://nodes/interaction/IM_player.gd" id="6_a3q3m"]
@@ -12,8 +11,15 @@
 [ext_resource type="Texture2D" uid="uid://bsi4ceapcxxib" path="res://assets/chars/knight_walk/walk3.png" id="11_sxkue"]
 [ext_resource type="Texture2D" uid="uid://cwjtyymoyp212" path="res://assets/chars/knight_walk/walk4.png" id="12_fcusq"]
 [ext_resource type="Texture2D" uid="uid://bpl5tqh8c52qm" path="res://assets/chars/knight_walk/walk5.png" id="13_7al6e"]
+[ext_resource type="Texture2D" uid="uid://pccnhs2vtaac" path="res://assets/chars/thief_idle/idle1.png" id="13_l0msw"]
 [ext_resource type="Texture2D" uid="uid://lyci4jat1se7" path="res://assets/chars/knight_walk/walk6.png" id="14_5474i"]
+[ext_resource type="Texture2D" uid="uid://dv4p0qxilt6sp" path="res://assets/chars/thief_idle/idle2.png" id="14_iauav"]
 [ext_resource type="Texture2D" uid="uid://b2aid7e3kcplh" path="res://assets/chars/knight_walk/walk7.png" id="15_0dwdy"]
+[ext_resource type="Texture2D" uid="uid://btlqls6bqhd7o" path="res://assets/chars/thief_walk/walk1.png" id="15_ntu61"]
+[ext_resource type="Texture2D" uid="uid://eimpxm0kpn58" path="res://assets/chars/thief_walk/walk2.png" id="16_kb71c"]
+[ext_resource type="Texture2D" uid="uid://mk8tupkb6v0w" path="res://assets/chars/thief_walk/walk3.png" id="17_7ug6w"]
+[ext_resource type="Texture2D" uid="uid://bj5aenb3h61ir" path="res://assets/chars/thief_walk/walk4.png" id="18_r1wlq"]
+[ext_resource type="Texture2D" uid="uid://ciess8hc8p1xj" path="res://assets/chars/thief_walk/walk5.png" id="19_4a8ah"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nh834"]
 size = Vector2(166, 256)
@@ -62,7 +68,10 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_nhhfi")
+"texture": ExtResource("13_l0msw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_iauav")
 }],
 "loop": true,
 "name": &"IDLE",
@@ -70,7 +79,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_nhhfi")
+"texture": ExtResource("15_ntu61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_kb71c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7ug6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_r1wlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4a8ah")
 }],
 "loop": true,
 "name": &"WALK",
@@ -118,7 +139,7 @@ animation = &"WALK"
 visible = false
 position = Vector2(0, 87)
 sprite_frames = SubResource("SpriteFrames_6754t")
-animation = &"IDLE"
+animation = &"WALK"
 
 [node name="RM" type="AnimatedSprite2D" parent="."]
 visible = false
