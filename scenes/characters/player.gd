@@ -13,6 +13,7 @@ var buffered_layer = 0
 @onready var _SK = $SK
 @onready var _TT = $TT
 @onready var _RM = $RM
+var is_facing_right
 
 # key for current PC sprite, start as strawberry knight
 @export var key: String
@@ -27,6 +28,9 @@ func _ready():
 	var player_type = Global.get_animation_name(Global.current_player_type)
 	active_sprite = get_node(player_type)
 	set_key(player_type)
+	
+	is_facing_right = Global.player_facing_right
+	set_direction(is_facing_right)
 
 
 # define all input behaviors
@@ -54,6 +58,20 @@ func set_key(new_key: String) -> void:
 	active_sprite.visible = true
 
 
+# toggle which direction the player faces
+# this is the very lazy, hacky solution I meantioned earlier
+func set_direction(is_facing_right):
+	if is_facing_right:
+		_SK.flip_h = true
+		_TT.flip_h = true
+		_RM.flip_h = true
+	
+	else:
+		_SK.flip_h = false
+		_TT.flip_h = false
+		_RM.flip_h = false
+
+
 # basic physics movement, x-axis only
 func _physics_process(_delta):
 	var _input_axis = Input.get_axis("move_left", "move_right")
@@ -63,18 +81,16 @@ func _physics_process(_delta):
 	if _input_axis == 0.0:
 		active_sprite.set_animation("IDLE")
 	
-	else: # the very lazy, hacky solution I meantioned earlier
+	else:
 		active_sprite.set_animation("WALK")
 		
 		if _input_axis > 0.0:
-			_SK.flip_h = true
-			_TT.flip_h = true
-			_RM.flip_h = true
+			is_facing_right = true
+		else:
+			is_facing_right = false
 		
-		if _input_axis < 0.0:
-			_SK.flip_h = false
-			_TT.flip_h = false
-			_RM.flip_h = false
+		Global.player_facing_right = is_facing_right
+		set_direction(is_facing_right)
 	
 	move_and_slide()
 	active_sprite.play()

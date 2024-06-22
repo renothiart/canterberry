@@ -112,7 +112,7 @@ script = ExtResource("6_a3q3m")
 visible = false
 position = Vector2(0, 87)
 sprite_frames = SubResource("SpriteFrames_bcslk")
-animation = &"IDLE"
+animation = &"WALK"
 
 [node name="TT" type="AnimatedSprite2D" parent="."]
 visible = false

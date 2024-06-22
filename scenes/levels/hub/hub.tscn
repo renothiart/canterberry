@@ -51,7 +51,7 @@ layer = 2
 [node name="Player" parent="." instance=ExtResource("4_gkdv7")]
 unique_name_in_owner = true
 z_index = -4
-position = Vector2(150, 310)
+position = Vector2(419, 310)
 scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 0

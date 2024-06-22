@@ -102,3 +102,5 @@ func get_dialogue_name_from_npc(character_type: CharacterType):
 
 func get_dialogue_name_from_player(player_type: PlayerType):
 	return player_type_to_dialogue_name[player_type]
+
+var player_facing_right = true
