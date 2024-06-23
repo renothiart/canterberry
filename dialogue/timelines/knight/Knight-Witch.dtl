@@ -14,19 +14,20 @@ if {Knight.StartedWitchQuest} == true:
 		Witch: If you help me gather a [b]green egg[/b], a [b]delicious loaf of bread[/b], and a [b]red mushroom[/b], I’ll make a potion that the King will love! I promise, no funny business. Really.
 		[end_timeline]
 	else:
-		Witch: Oh you’ve got everything! Thanks so much, let me take those off your hands.
-		Narrator: The Knight hands the ingredients over to the Witch.
-		[signal arg="give_witch_ingredients"]
-		Narrator: The Witch heads off into another room and you hear the sizzling of oil and the flipping of a spatula. She returns with her mouth full.
-		Witch: Om nom…that was delicious…
-		Knight: ...
-		Witch: What? I can’t do magic on an empty stomach!
-		Narrator: The Witch pours some mysterious vials into her cauldron and whispers something indiscernible as she waves her wand over it. She ladles some of the mixture into an empty bottle and hands it to you.
-		[signal arg="collect_potion"]
-		Witch: Ta-da! I’m sure the King will love it.
-		set {Knight.CollectedPotion} = true
-		set {Knight.CompletedWitchQuest} = true
-		[end_timeline]
+		if {Knight.CollectedPotion} == false:
+			Witch: Oh you’ve got everything! Thanks so much, let me take those off your hands.
+			Narrator: The Knight hands the ingredients over to the Witch.
+			[signal arg="give_witch_ingredients"]
+			Narrator: The Witch heads off into another room and you hear the sizzling of oil and the flipping of a spatula. She returns with her mouth full.
+			Witch: Om nom…that was delicious…
+			Knight: ...
+			Witch: What? I can’t do magic on an empty stomach!
+			Narrator: The Witch pours some mysterious vials into her cauldron and whispers something indiscernible as she waves her wand over it. She ladles some of the mixture into an empty bottle and hands it to you.
+			[signal arg="collect_potion"]
+			Witch: Ta-da! I’m sure the King will love it.
+			set {Knight.CollectedPotion} = true
+			set {Knight.CompletedWitchQuest} = true
+			[end_timeline]
 if {Knight.CollectedPotion} == true:
 	if {Knight.CompletedKnightQuest} == false:
 		Witch: Thanks again for lunch! I’m sure the King will love the potion.
