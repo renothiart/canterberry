@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c8aj0rb0ppo0t"]
+[gd_scene load_steps=10 format=3 uid="uid://c8aj0rb0ppo0t"]
 
 [ext_resource type="Script" path="res://scenes/levels/castle/c4.gd" id="1_8hibj"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="2_1hn1f"]
@@ -7,13 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://ctu8emnawblmp" path="res://assets/settings/castle/c1-fg.png" id="4_omvfs"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="5_0umja"]
 [ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="5_q3jvr"]
-[ext_resource type="PackedScene" uid="uid://c1wxtrftkrfyl" path="res://nodes/portkeys/left_fg_portkey.tscn" id="7_1fklk"]
 [ext_resource type="PackedScene" uid="uid://dwxr13m0esn7h" path="res://scenes/characters/treasure.tscn" id="7_gbb5u"]
 [ext_resource type="PackedScene" uid="uid://n40ubmic6oeb" path="res://nodes/activatable_portkeys/fg_activatable_portkey.tscn" id="8_68758"]
 
 [node name="Castle4" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey")]
 script = ExtResource("1_8hibj")
-fg_left_portkey = NodePath("LeftFGOutPortkey")
+fg_left_portkey = NodePath("")
 fg_right_portkey = NodePath("FGActivatablePortkey")
 
 [node name="PlayerInventory" parent="." instance=ExtResource("2_l7g3w")]
@@ -38,6 +37,9 @@ centered = false
 [node name="Wall" parent="." instance=ExtResource("5_q3jvr")]
 position = Vector2(558, 347)
 
+[node name="LeftWall" parent="." instance=ExtResource("5_q3jvr")]
+position = Vector2(-80, 347)
+
 [node name="Treasure" parent="." instance=ExtResource("7_gbb5u")]
 position = Vector2(594, 319)
 
@@ -49,11 +51,6 @@ scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 0
 layer = 2
-
-[node name="LeftFGOutPortkey" parent="." instance=ExtResource("7_1fklk")]
-position = Vector2(-85, 230)
-paired_portkey_location = 8
-linked_level_name = "res://scenes/levels/castle/c2.tscn"
 
 [node name="FGActivatablePortkey" parent="." instance=ExtResource("8_68758")]
 position = Vector2(250, 230)

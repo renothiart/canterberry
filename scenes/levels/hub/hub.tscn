@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://w0eswg4cvckf"]
+[gd_scene load_steps=16 format=3 uid="uid://w0eswg4cvckf"]
 
 [ext_resource type="Script" path="res://scenes/levels/hub/hub.gd" id="1_1d8nx"]
 [ext_resource type="PackedScene" uid="uid://c32uqyp4i5dk8" path="res://nodes/UX/player_inventory.tscn" id="2_7e5u4"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://kd20uc2ky57v" path="res://assets/settings/hub/campfire_2.png" id="4_87u8c"]
 [ext_resource type="PackedScene" uid="uid://cpn4yc2sasibl" path="res://nodes/portkeys/portkey.tscn" id="4_fxi3g"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="4_gkdv7"]
+[ext_resource type="Texture2D" uid="uid://btlrhy2s8yfil" path="res://assets/settings/hub/daytime_glow.png" id="5_kcnyq"]
 [ext_resource type="PackedScene" uid="uid://ccwnjw11r2gkn" path="res://scenes/characters/playable_character_container.tscn" id="5_tpysb"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="7_wqinb"]
 [ext_resource type="PackedScene" uid="uid://dxk07tnsm1436" path="res://scenes/characters/bard.tscn" id="9_axg1r"]
@@ -43,6 +44,11 @@ z_index = -7
 texture = ExtResource("2_cw5oh")
 centered = false
 
+[node name="Glow" type="Sprite2D" parent="."]
+z_index = -3
+texture = ExtResource("5_kcnyq")
+centered = false
+
 [node name="Campfire" type="AnimatedSprite2D" parent="."]
 z_index = -3
 position = Vector2(471, 400)
@@ -51,7 +57,7 @@ autoplay = "default"
 frame_progress = 0.936414
 
 [node name="Bard" parent="." instance=ExtResource("9_axg1r")]
-position = Vector2(175, 380)
+position = Vector2(130, 380)
 new_scale = 0.9
 
 [node name="PCC1" parent="." instance=ExtResource("5_tpysb")]
@@ -60,10 +66,10 @@ layer = 2
 new_scale = 0.9
 
 [node name="PCC2" parent="." instance=ExtResource("5_tpysb")]
-position = Vector2(395, 300)
-layer = 2
-new_scale = 0.9
+position = Vector2(250, 275)
+new_scale = 0.6
 pcc_number = 1
+flipped = true
 
 [node name="LeftWall" parent="." instance=ExtResource("9_mmhyf")]
 position = Vector2(78, 312)

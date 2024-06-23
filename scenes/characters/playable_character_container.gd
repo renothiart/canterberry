@@ -14,6 +14,7 @@ extends CharacterBody2D # PCC (PLAYABLE CHARACTER CONTAINER)
 @export var key: String
 @export var active_sprite: AnimatedSprite2D
 @export var pcc_number: Global.PCCNumber = Global.PCCNumber.PCC_1
+@export var flipped: bool = false
 
 # render PCC into scene
 func _ready():
@@ -40,6 +41,10 @@ func set_key(new_key: String):
 	active_sprite.visible = true
 	active_sprite.set_animation("IDLE")
 	active_sprite.play()
+	
+	# flip if needed
+	if flipped:
+		active_sprite.flip_h = true
 
 func get_player_type():
 	if pcc_number == Global.PCCNumber.PCC_1:

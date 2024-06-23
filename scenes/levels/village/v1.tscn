@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bsh87yusuapvi"]
+[gd_scene load_steps=15 format=3 uid="uid://bsh87yusuapvi"]
 
 [ext_resource type="Script" path="res://scenes/levels/village/v1.gd" id="1_4wcxn"]
 [ext_resource type="PackedScene" uid="uid://c32uqyp4i5dk8" path="res://nodes/UX/player_inventory.tscn" id="2_1x230"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://e0vornp8uxl" path="res://scenes/characters/maid.tscn" id="6_exxud"]
 [ext_resource type="PackedScene" uid="uid://dqgk4tayohoec" path="res://nodes/portkeys/right_bg_portkey.tscn" id="6_try8y"]
 [ext_resource type="PackedScene" uid="uid://bjofqpqrlv024" path="res://nodes/activatable_teleporters/bg_activatable_teleporter.tscn" id="7_eub1b"]
+[ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="8_q2bbs"]
 [ext_resource type="PackedScene" uid="uid://cddw37o31e2ff" path="res://nodes/portkeys/left_bg_portkey.tscn" id="8_u20vl"]
 [ext_resource type="PackedScene" uid="uid://dmshb3ep1l0gp" path="res://nodes/activatable_teleporters/fg_activatable_teleporter.tscn" id="10_p7ktv"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="11_r4ajw"]
@@ -43,6 +44,9 @@ centered = false
 [node name="Maid" parent="." instance=ExtResource("6_exxud")]
 position = Vector2(96, 395)
 new_scale = 0.9
+
+[node name="Wall" parent="." instance=ExtResource("8_q2bbs")]
+position = Vector2(94, 436)
 
 [node name="Player" parent="." instance=ExtResource("5_3y5h0")]
 unique_name_in_owner = true
