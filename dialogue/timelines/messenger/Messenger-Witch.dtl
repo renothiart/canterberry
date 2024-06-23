@@ -1,7 +1,10 @@
 if {Messenger.MetWitch} == false:
-	if {Messenger.ReceivedQuest} == true:
-		if {Knight.MetWitch} == false:
-			set {Messenger.HasFlyeredWitch} = true
-		else:
-	else:
+	set {Messenger.MetWitch} = true
+	Witch: Hello!
 else:
+	Witch: Hi again!
+if {Messenger.ReceivedQuest} == true:
+	if {Messenger.HasFlyeredWitch} == false:
+		Narrator: The Messenger reaches accross the Witch's bubbling cauldron to hand her a flyer.
+		set {Messenger.HasFlyeredWitch} = true
+		set {Messenger.FlyersDelivered} += 1

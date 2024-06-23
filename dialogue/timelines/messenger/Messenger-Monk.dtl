@@ -1,3 +1,9 @@
+if {Messenger.MetMonk} == false:
+	set {Messenger.MetMonk} = true
+	if {Messenger.ReceivedQuest} == false:
+		Monk: What troubles you, young Raspberry?
+		Messenger: WHat? Oh, nothing. Just looking for an adventure!
+		Monk: Perhaps you should seek out the Knight. I hear he's quite the adventurer.
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredMonk} == false:
 		Monk: Come to hear the tale of the First Planting?
@@ -13,11 +19,7 @@ if {Messenger.ReceivedQuest} == true:
 		set {Messenger.FlyersDelivered} += 1
 		Narrator: The Monk sighs.
 	else:
-	Messenger: Hey, you should -
-	Messenger: Wait a sec, I can't remember if I -
-	Monk: A lesson learned is a lesson forgotten indeed, young Raspberry.
-	Messenger: Yeah yeah, just be there, okay?
-else:
-	Monk: What troubles you, young Raspberry?
-	Messenger: WHat? Oh, nothing. Just looking for an adventure!
-	Monk: Perhaps you should seek out the Knight. I hear he's quite the adventurer.
+		Messenger: Hey, you should -
+		Messenger: Wait a sec, I can't remember if I -
+		Monk: A lesson learned is a lesson forgotten indeed, young Raspberry.
+		Messenger: Yeah yeah, just be there, okay?

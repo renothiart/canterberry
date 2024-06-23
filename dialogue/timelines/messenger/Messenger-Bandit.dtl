@@ -1,8 +1,16 @@
 if {Messenger.MetBandit} == false:
 	set {Messenger.MetBandit} = true
-	if {Messenger.ReceivedQuest} == true:
+	Bandit: Hello!
+else:
+	Bandit: Hi again!
+if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredBandit} == false:
+		Messenger: Did you hear the Bard is putting on a special performance tonight?
+		Messenger: You can read all about it right -
+		Messenger: Hey, wait a minute, you're not gonna [b]steal[/b] this from me, are you?
+		Bandit: How could it be stealing if you're already giving it to me?
+		Narrator: The Bandit makes a good point.
 		set {Messenger.HasFlyeredBandit} = true
 		set {Messenger.FlyersDelivered} += 1
-	else:
-else:
+		Messenger: Alright, just stay out of trouble. This show is a [b]big deal[/b].
+

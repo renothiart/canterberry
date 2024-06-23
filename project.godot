@@ -155,6 +155,7 @@ variables={
 "MetJester": false,
 "MetJesterCount": 0,
 "MetMaid": false,
+"MetMonk": false,
 "MetPrincess": false,
 "ReceivedQuest": false
 },

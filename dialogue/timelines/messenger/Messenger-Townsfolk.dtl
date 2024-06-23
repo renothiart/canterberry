@@ -1,1 +1,12 @@
-Townsfolk: Test
+if {Messenger.MetCherries} == false:
+	set {Messenger.MetCherries} = true
+	Jerry: Hello!
+else:
+	Cherie: Hi!
+	Jerry: Again!
+if {Messenger.ReceivedQuest} == true:
+	if {Messenger.HasFlyeredTownsfolk} == false:
+		Narrator: The Messenger gives flyers to Jerry and Cherie.
+		Narrator: It is unlikely the Bard will count them as two separate attendees.
+		set {Messenger.HasFlyeredTownsfolk} = true
+		set {Messenger.FlyersDelivered} += 1

@@ -1,6 +1,17 @@
+if {Messenger.MetKing} == false:
+	set {Messenger.MetKing} = true
+	King: Hello!
+else:
+	King: Hi again!
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredKing} == false:
+		Narrator: The messenger reaches out to hand the King a flyer.
+		Jester: OOh, let me take a look!
+		if {Messenger.HasFlyeredJester} == true:
+			Messenger: Hey, you already got one of these!
+		else:
+			Messenger: I'm not so sure I want to invite you...
+		Jester: Guess I should make like a banana and [b]split[/b]
+		Narrator: The King contemplates sending the Jester to the dungeon.
 		set {Messenger.HasFlyeredKing} = true
 		set {Messenger.FlyersDelivered} += 1
-	else:
-else:
