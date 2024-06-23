@@ -2,7 +2,6 @@ extends InteractionManager # PLAYER CONTAINER 1
 
 # so the action cue knows it lives in a PCC
 func _ready():
-	super()
 	is_pcc = true
 
 # overwrite with interaction behavior for each interactable object

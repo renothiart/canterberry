@@ -12,11 +12,6 @@ signal exit_interaction
 var is_pcc = false
 
 @export var layer: int = 12
-@export var width_scale: float = 1
-
-
-func _ready():
-	$CollisionShape2D.shape.radius *= width_scale
 
 
 # call this on interaction controller input
