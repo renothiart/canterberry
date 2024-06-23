@@ -32,9 +32,11 @@ func _init():
 	elif Global.pcc2_player_type == Global.PlayerType.NULL \
 			and not Global.is_princess_in_castle \
 			and not Global.is_messenger_in_port:
-		if Global.pcc1_player_type == Global.PlayerType.THIEF:
+		if Global.pcc1_player_type == Global.PlayerType.THIEF \
+				or Global.current_player_type == Global.PlayerType.THIEF:
 			Global.pcc2_player_type = Global.PlayerType.MESSENGER
-		elif Global.pcc1_player_type == Global.PlayerType.MESSENGER:
+		elif Global.pcc1_player_type == Global.PlayerType.MESSENGER \
+				or Global.current_player_type == Global.PlayerType.MESSENGER:
 			Global.pcc2_player_type = Global.PlayerType.THIEF
 
 func _ready():
