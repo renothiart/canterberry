@@ -9,6 +9,9 @@ var portkey_map
 @export var bg_left_portkey: Area2D
 @export var bg_right_portkey: Area2D
 
+# credits scene filepath
+var credits_filepath = "res://credits.tscn"
+
 # required variables enabling teleporting
 var teleport_buffer_time: float = 0.05
 var teleport_buffer_time_remaining: float = 0
@@ -103,6 +106,9 @@ func process_dialogic_signal(argument: String):
 	if argument == "found_treasure":
 		$FGActivatablePortkey.set_layer(2)
 		$Player.start_teleport_buffer($Player.layer)
+		$PlayerInventory.refresh_inventory()
 	elif argument == "collect_flyer":
 		Global.messenger_has_flyer = true
-	$PlayerInventory.refresh_inventory()
+		$PlayerInventory.refresh_inventory()
+	elif argument == "end_show":
+		get_tree().change_scene_to_file(credits_filepath)
