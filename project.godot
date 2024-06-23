@@ -133,10 +133,14 @@ variables={
 "HasFlyeredTownsfolk": false,
 "HasFlyeredToy": false,
 "HasFlyeredWitch": false,
+"MetBaker": false,
+"MetJester": false,
+"MetJesterCount": 0,
+"MetPrincess": false,
 "ReceivedQuest": false
 },
 "Thief": {
-"CompletedThiefQuest": false,
+"CompletedThiefQuest": false
 "FoundTreasure": false
 }
 }

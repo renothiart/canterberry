@@ -1,6 +1,66 @@
+if {Knight.MetJester} == false:
+	jump 0_Meets
+	set {Messenger.MetJester} = true
+	set {Messenger.MetJesterCount} += 1
+elif {Messenger.MetJesterCount} == 1:
+	jump 1_Meets
+	set {Messenger.MetJesterCount} += 1
+elif {Messenger.MetJesterCount} == 2:
+	jump 2_Meets
+	set {Messenger.MetJesterCount} += 1
+elif {Messenger.MetJesterCount} == 3:
+	jump 3_Meets
+	set {Messenger.MetJesterCount} += 1
+else:
+	if {Messenger.HasFlyeredJester} == false:
+		Narrator: The Jester stares off into space, deep in thought.
+	else:
+		Narrator: The Jester chuckles to himself. Clearly he's thought of some jokes for the Bard's show.
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredJester} == false:
+		Jester: Hey I don't think you're very funny -
+		Jester: Oh yeah? But I think you're pretty funny.
+		Jester: Funny-looking!
+		Jester: HA!
+		Narrator: The Messenger clenches his teeth and tosses a flyer at the Jester's feet.
 		set {Messenger.HasFlyeredJester} = true
 		set {Messenger.FlyersDelivered} += 1
-	else:
+		Messenger: Just go to the Bard's show. But no jokes! This isn't an open mic!
+		Jester: Well that's not very appealing...
+		Jester: a[b]peel[/b]ing!
+		Narrator: The Jester laughs by himself.
 else:
+[end_timeline]
+label 0_Meets
+Jester: Hey you! Raspberry!
+Narrator: The Messenger looks at the Jester quizzically.
+Jester: What are you, a carpenter? Get it? [b]rasp[/b]berry?
+Jester: HA!
+Messenger: Hey what's the big idea? Are you some kind of wise guy?
+Jester: Me?
+Jester: A [b]wise[/b] guy?
+Jester: What do I look like? An [b]elder[/b]berry?
+Jester: HAHA!
+Narrator: The Jester laughs at his own joke, perhaps a bit too hard.
+set {Knight.MetJester} = true
+return
+label 1_Meets
+Jester: [b]Rasp[/b]berry! [b]Elder[/b]berry!
+Jester: This is [b]berry[/b] amusing!
+Narrator: The King slouches even deeper in his throne. He's heard this one before.
+label 2_Meets
+Jester: Oh you again! I'm still cracking up from the last time we [b]spoke[/b]!
+Jester: HAHAHA!
+Jester: Get it? [b]spoke[/b]?
+Jester: 'Cause you're a [b]rasp[/b]berry!
+Narrator: The King sighs, loudly, while the Messenger grumbles and the Jester continues to laugh.
+return
+label 3_Meets
+Alright, alright, I think I'm a bit [b]tapped[/b] out.
+HAHAHAHA!
+Get it? [b]tapped[/b] out?
+Because -
+Wait a minute -
+That doesn't actually make any sense, does it?
+I think I need new material...
+return

@@ -1,6 +1,30 @@
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredBaker} == false:
+		if {Messenger.MetBaker} == "true":
+			Baker: Back for more bread already?
+			Messenger: Not this time -
+		else:
+			Baker: Fresh bread! Git yer fresh bread here!
+			Baker: Would you like a sample sir?
+			Messenger: No time!
+		Messenger: I've got an important quest!
+		Messenger: But maybe some bread wouldn't hurt ...
+		Narrator: The Messenger eats a piece of bread.
+		Messenger: The Bard is putting on a [b]big show[/b] tonight by the big campfire in the woods! Come check it out!
+		Narrator: The Baker happily takes a flyer from the Messenger.
 		set {Messenger.HasFlyeredBaker} = true
 		set {Messenger.FlyersDelivered} += 1
-	else:
 else:
+	if {Messenger.MetBaker} == "false":
+		Baker: Fresh bread! Git yer fresh bread here!
+		Baker: Would you like a sample sir?
+		Messenger: Me? Say no to a [b]free sample[/b]? Ridiculous!
+		Narrator: The Messenger has a taste of the Baker's fresh bread.
+		Messenger: Amazing! Thanks!
+		Baker: We don't get many visitors here. Are you lost?
+		Messenger: I'm looking for an adventure!
+		Baker: Well then you should go see the Knight, best adventurer in the whole kingdom!
+		set {Messenger.MetBaker} = true
+	else:
+		Messenger: Thanks again for the bread!
+		Baker: Of course! Hope you enjoy our village!
