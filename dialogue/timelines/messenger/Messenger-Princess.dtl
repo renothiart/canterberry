@@ -1,4 +1,14 @@
 if {Knight.MetPrincess} == false:
 	if {Messenger.MetPrincess} == false:
-		Princess: Hi nice to meet you (TODO)
 		set {Messenger.MetPrincess} = true
+		Narrator: The Princess curtsies politely.
+		if {Messenger.MetBandit} == true:
+			Oh, Your Highness, someone's looking for you down by the docks.
+			Or wait - was that someone else?
+	else:
+		Narrator: The princess is distracted, and doesn’t seem to notice you. She appears to be daydreaming.
+if {Messenger.ReceivedQuest} == true:
+	if {Messenger.HasFlyeredPrincess} == false:
+		Messenger: Oh, by the way, the Bard is putting on a big show tonight, you should go check it out!
+		Narrator: The Messenger hands the Princess one of the Bard's invitations. But something about her seems different from the other townsfolk he has met.
+		set {Messenger.HasFlyeredPrincess} = true

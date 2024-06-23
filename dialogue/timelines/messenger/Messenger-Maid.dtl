@@ -3,11 +3,15 @@ if {Messenger.MetMaid} == false:
 	Messenger: Oh, I've been looking for you!
 	Maid: Oh hello! Has there been any news from my cousin across the sea?
 	Narrator: The Messenger looks through his bag and hands her a letter. The Maid opens the letter and scans through it.
-	 Me oh my, she’s had the cutest baby clementine! Thanks for the letter, sir!
+	Maid: Me oh my, she’s had the cutest baby clementine! Thanks for the letter, sir!
 else:
+	Maid: Thanks again for delivering the letter from my cousin!
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredMaid} == false:
+		Messenger: Anytime! Hey, by the way, the Bard is putting on a special performance of The Canterberry Tales tonight.
+		Narrator: The Bard hands a flyer to the Maid.
 		set {Messenger.HasFlyeredMaid} = true
 		set {Messenger.FlyersDelivered} += 1
+		Maid: I just love shows! And the Canterberry Tales? I haven’t heard this one before. You can count on me being there!
 	else:
-else:
+	Maid: I can’t wait for the show tonight, it’s been ages since the last one!
