@@ -1,5 +1,8 @@
-Narrator: The Thief marvels at her fathe- the king's hoard. With so much wealth, surely no one would miss a bit of treasure.
-Narrator: ... and the townsfolk would certainly appreciate it!
-Narrator: The Thief loads up on loot and continues her tale.
-set {Thief.CollectTreasure} = true
-[signal arg="collect_treasure"]
+if {Thief.CollectTreasure} == false:
+	Narrator: The Thief marvels at her fathe- the king's hoard. With so much wealth, surely no one would miss a bit of treasure.
+	Narrator: ... and the townsfolk would certainly appreciate it!
+	Narrator: The Thief loads up on loot and continues her tale.
+	set {Thief.CollectTreasure} = true
+	[signal arg="collect_treasure"]
+else:
+	Narrator: There's still plenty of gold left. The Thief doesn't think she'll need to take any more.

@@ -1,1 +1,8 @@
-Squire: Test
+if {Thief.CollectTreasure} == false:
+	Squire: Don't think you can pull one over on me! My dad is training me to be a great knight! I'm watching you...
+else:
+	if {Thief.CompletedThiefQuest} == false:
+		Narrator: The Thief offers a portion of the treasure to the young Squire.
+		Squire: Um...I think this is for adults. No thank you!
+	else:
+		Squire: ...I'm still a little suspicious of you, but I guess you're alright.
