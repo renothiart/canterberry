@@ -147,6 +147,7 @@ variables={
 "HasFlyeredToy": false,
 "HasFlyeredWitch": false,
 "MetBaker": false,
+"MetBandit": false,
 "MetBird": false,
 "MetCherries": false,
 "MetJester": false,

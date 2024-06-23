@@ -1,4 +1,6 @@
-if {Messenger.ReceivedQuest} == true:
+if {Messenger.MetBandit} == false:
+	set {Messenger.MetBandit} = true
+	if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredBandit} == false:
 		set {Messenger.HasFlyeredBandit} = true
 		set {Messenger.FlyersDelivered} += 1

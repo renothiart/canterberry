@@ -1,5 +1,7 @@
-if {Messenger.ReceivedQuest} == true:
-	if {Knight.MetWitch} == false:
-		set {Messenger.HasFlyeredWitch} = true
+if {Messenger.MetWitch} == false:
+	if {Messenger.ReceivedQuest} == true:
+		if {Knight.MetWitch} == false:
+			set {Messenger.HasFlyeredWitch} = true
+		else:
 	else:
 else:

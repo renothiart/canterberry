@@ -1,4 +1,4 @@
-if {Knight.MetJester} == false:
+if {Messenger.MetJester} == false:
 	jump 0_Meets
 	set {Messenger.MetJester} = true
 	set {Messenger.MetJesterCount} += 1
@@ -48,6 +48,7 @@ label 1_Meets
 Jester: [b]Rasp[/b]berry! [b]Elder[/b]berry!
 Jester: This is [b]berry[/b] amusing!
 Narrator: The King slouches even deeper in his throne. He's heard this one before.
+return
 label 2_Meets
 Jester: Oh you again! I'm still cracking up from the last time we [b]spoke[/b]!
 Jester: HAHAHA!
