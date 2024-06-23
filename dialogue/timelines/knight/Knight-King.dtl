@@ -1,23 +1,30 @@
 if {Knight.MetKing} == false:
 	King: Ah yes, my loyal subject. I require some assistance from you. I’ve heard troubling reports of a vicious dragon in the Forest to the west. Your task is to slay it and return peace and prosperity to the kingdom.
 	set {Knight.MetKing} = true
+	[end_timeline]
 else:
-	if {Knight.MetPrincess} == true:
-		King: Ah, you've met my daughter. The family resemblance is uncanny, no?
-		[wait time="2.0" hide_text="false"]
-		King: What?
 	if {Knight.MetWitch} == false:
 		King: Have you slain the [b]dragon[/b] in the [b]Forest[/b] yet? We have no further business to discuss until you do.
 	else:
-		if {Knight.hasPotion} == false:
+		if {Knight.CollectedPotion} == false:
 			King: A dragonfruit?! I’ve got to get better information sources. Harumph…
 		else:
-			King: A magic potion? For me? Well, I’ll be!
-			[signal arg="giveKingPotion"]
-			Narrator: Without any hesitation, the King uncorks the bottle and drinks it all in one gulp.
-			King: I feel…tingly…
-			Narrator: The King’s luscious leaves grow a centimeter taller.
-			King: BWAHAHA! Lovely, lovely. Send my thanks to the dragonfruit.
-			Narrator: And so the Knight completed his valiant quest. The kingdom will rest easy knowing there’s no villainous dragon in the forest and that their king grows ever more beautiful.
-			set {Knight.CompletedKnightQuest} = true
+			if {Knight.CompletedKnightQuest} == false:
+				King: A magic potion? For me? Well, I’ll be!
+				[signal arg="giveKingPotion"]
+				Narrator: Without any hesitation, the King uncorks the bottle and drinks it all in one gulp.
+				King: I feel…tingly…
+				Narrator: The King’s luscious leaves grow a centimeter taller.
+				King: BWAHAHA! Lovely, lovely. Send my thanks to the dragonfruit.
+				Narrator: And so the Knight completed his valiant quest. The kingdom will rest easy knowing there’s no villainous dragon in the forest and that their king grows ever more beautiful.
+				set {Knight.CompletedKnightQuest} = true
+				[end_timeline]
+if {Knight.MetKing} == true:
+	if {Knight.MetPrincess} == true:
+		King: Ah, you've met my daughter. The family resemblance is uncanny, no?
+		[wait time="1.5" hide_text="false"]
+		King: What?
+		[end_timeline]
+	if {Knight.CompletedKnightQuest} == true:
+		Narrator: The King snoozes peacefully in his regal throne. All is well.
 [end_timeline]

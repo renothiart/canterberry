@@ -1,1 +1,6 @@
-Thief: Test
+if {Knight.MetPrincess} == true:
+	Thief: Oh hey, it's you again!
+	Thief: I mean uh..hello, nice to meet you!
+	Narrator: The Knight squints at the Thief. She definitely looks familiar.
+else:
+	Thief: Nice to meet you!

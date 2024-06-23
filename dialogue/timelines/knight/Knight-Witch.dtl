@@ -3,12 +3,16 @@ if {Knight.MetWitch} == false:
 	Narrator: The Knight explains his quest to the Witch.
 	Witch: What? A DRAGON? Well I sure haven’t seen one around.
 	Witch: ...
-	Witch: Oh I see. Well this has been a silly misunderstanding! But here, you don’t have to return empty-handed. If you help me gather a [b]green egg[/b], a [b]delicious loaf of bread[/b], and a [b]red mushroom[/b], I’ll make a potion that the King will love! I promise, no funny business.
+	Witch: Oh I see. Well this has been a silly misunderstanding! But here, you don’t have to return empty-handed. If you help me gather a [b]green egg[/b], a [b]delicious loaf of bread[/b], and a [b]red mushroom[/b], I’ll make a potion that the King will love!
+	Witch: I promise, no funny business.
 	Narrator: The Knight had found the dragon that certainly didn’t need slaying. And thusly, he began the Witch’s Quest.
+	set {Knight.MetWitch} = true
 	set {Knight.StartedWitchQuest} = true
+	[end_timeline]
 if {Knight.StartedWitchQuest} == true:
 	if {Knight.CollectedIngredients} < 3:
 		Witch: If you help me gather a [b]green egg[/b], a [b]delicious loaf of bread[/b], and a [b]red mushroom[/b], I’ll make a potion that the King will love! I promise, no funny business. Really.
+		[end_timeline]
 	else:
 		Witch: Oh you’ve got everything! Thanks so much, let me take those off your hands.
 		Narrator: The Knight hands the ingredients over to the Witch.
@@ -26,4 +30,5 @@ if {Knight.CollectedPotion} == true:
 		Witch: Thanks again for lunch! I’m sure the King will love the potion.
 	else:
 		Witch: He loved it, right? I knew it. See, I told you - no funny business! Hopefully this brings some more business …and company… my way.
+	[end_timeline]
 Witch: Hum di dum...

@@ -1,6 +1,7 @@
 if {Knight.MetCherries} == false:
 	Cherie: Ah, brave knight! Always nice to see an-
 	Jerry: -upstanding citizen out and about!
+	set {Knight.MetCherries} = true
 else:
 	Jerry: Thank you for-
 	Cherie: -your service!

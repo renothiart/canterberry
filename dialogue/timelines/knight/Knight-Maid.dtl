@@ -1,5 +1,5 @@
-if {Knight.MetMaid} == "0":
+if {Knight.MetMaid} == false:
 	Maid: Oh, my son has been asking about your daughter. Could we organize another playdate? My son loves hearing all about your adventures from her.
-	set {Knight.MetMaid} += 1
-elif {Knight.MetMaid} == "1":
+	set {Knight.MetMaid} = true
+elif {Knight.MetMaid} == true:
 	Maid: Hope to see you and your daughter soon!

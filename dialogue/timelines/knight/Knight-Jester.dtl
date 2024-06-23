@@ -15,7 +15,7 @@ elif {Knight.MetJester} == 3:
 	Jester: Sir Tin!
 	set {Knight.MetJester} += 1
 elif {Knight.MetJester} == 4:
-	Narrator: The Jester is visibly sweating
+	Narrator: The Jester is visibly sweating.
 	Jester: What do you call the knight who hisses when he talks?
 	Jester: Sir Pent!
 	set {Knight.MetJester} += 1
