@@ -11,7 +11,7 @@ else:
 		else:
 			if {Knight.CompletedKnightQuest} == false:
 				King: A magic potion? For me? Well, I’ll be!
-				[signal arg="giveKingPotion"]
+				[signal arg="give_king_potion"]
 				Narrator: Without any hesitation, the King uncorks the bottle and drinks it all in one gulp.
 				King: I feel…tingly…
 				Narrator: The King’s luscious leaves grow a centimeter taller.

@@ -14,8 +14,6 @@ var teleport_buffer_time: float = 0.05
 var teleport_buffer_time_remaining: float = 0
 
 func _ready():
-	if not Dialogic.VAR.Knight.CompletedSquireQuest:
-		$Strawbaby.visible = false
 	Dialogic.signal_event.connect(process_dialogic_signal)
 	
 	portkey_map = {
@@ -74,11 +72,9 @@ func load_portkey():
 		
 		get_tree().paused = false
 
-func is_not_toy(n):
-	return n != "TOY"
+func is_not_potion(n):
+	return n != "POTION"
 
 func process_dialogic_signal(argument: String):
-	if argument == "give_squire_toy":
-		$Strawbaby.visible = true
-		Global.knight_inventory = Global.knight_inventory.filter(is_not_toy)
-	$PlayerInventory.refresh_inventory()
+	if argument == "give_king_potion":
+		Global.knight_inventory = Global.knight_inventory.filter(is_not_potion)
