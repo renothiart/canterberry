@@ -113,4 +113,7 @@ func process_dialogic_signal(argument: String):
 		Global.messenger_has_flyer = true
 		$PlayerInventory.refresh_inventory()
 	elif argument == "end_show":
+		await Dialogic.timeline_ended
+		$AnimationPlayer.queue("fade_out")
+		await $AnimationPlayer.animation_finished
 		get_tree().change_scene_to_file(credits_filepath)
