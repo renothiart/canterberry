@@ -1,0 +1,4 @@
+if {Knight.MetPainting} == false:
+	Narrator: The Knight stops in front of a glorious portrait of the king, drawn in by its regal aura. Every detail is captured perfectly.
+else:
+	Narrator: The Knight once again admires the accuracy of the royal portrait, marveling at its splendor.

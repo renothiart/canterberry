@@ -1,10 +1,12 @@
 if {Knight.MetWitch} == false:
 	Baker: Fresh bread! Git yer fresh bread here!
 else:
-	Baker: Good sir! Would you like a loaf of bread? It’s on the house.
-	Baker: No really, I insist! We need more chivalrous knights like you.
-	set {Knight.CollectedBread} = true
+	if {Knight.CollectedBread} == false:
+		Baker: Good sir! Would you like a loaf of bread? It’s on the house.
+		Baker: No really, I insist! We need more chivalrous knights like you.
+		set {Knight.CollectedBread} = true
 if {Knight.CollectedBread} == true:
 	Baker: Enjoy it while it’s piping hot!
 if {Knight.CompletedWitchQuest} == true:
 	Baker: I see you finished off the loaf! Best in the village, I know.
+Baker: Fresh bread! Git yer fresh bread here!
