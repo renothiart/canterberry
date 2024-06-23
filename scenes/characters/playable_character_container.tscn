@@ -166,6 +166,7 @@ disabled = true
 
 [node name="InteractionManager" parent="." instance=ExtResource("5_b1gjb")]
 position = Vector2(85, 124)
+scale = Vector2(1.76, 1)
 script = ExtResource("6_wbsjh")
 
 [node name="action_cue" parent="." instance=ExtResource("7_86qsa")]

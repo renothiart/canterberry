@@ -165,6 +165,5 @@ animation = &"WALK"
 position = Vector2(2.08165e-12, -100)
 
 [node name="BackwardArrow" parent="." instance=ExtResource("21_ve0bv")]
-z_as_relative = true
 position = Vector2(2.08165e-12, 300)
 is_forward = false
