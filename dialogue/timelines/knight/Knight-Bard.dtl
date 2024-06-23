@@ -42,27 +42,31 @@ if {Knight.CollectedPotion} == true:
 	if {Knight.CompletedKnightQuest} == false:
 		if {Knight.CompletedSquireQuest} == false:
 			if {Knight.CollectedToy} == true:
-				Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]? And what a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled…
+				Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]? And what a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled...
 			else:
 				Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]?
-if {Knight.CollectedToy} == true:
-	if {Knight.CompletedSquireQuest} == false:
-		Bard: What a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled...
-if {Knight.CompletedKnightQuest} == true:
-	if {Knight.CompletedKnightQuestBard} == false:
-		set {Knight.CompletedKnightQuestBard} = true
-		Bard: What an exciting day you’ve had!
-		Bard: Feel free to rest by the campfire until the show.
-		Bard: I’ll be sure to regale everyone with your adventures!
-		Bard: Actually, I could use the help babysitting while I write... this little grape is more trouble than he looks.
-		Baby: Plbfff!
-	if {Messenger.CompletedMessengerQuest} == true:
-		if {Thief.CompletedThiefQuest} == true:
-			start show option
 		else:
-			Bard: I think your Tomato friend isn't quite ready for the show...
-	else:
-		if {Thief.CompletedThiefQuest} == false:
-			Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
+			Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]?
+else:
+	if {Knight.CollectedToy} == true:
+		if {Knight.CompletedSquireQuest} == false:
+			Bard: What a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled...
+else:
+	if {Knight.CompletedKnightQuest} == true:
+		if {Knight.CompletedKnightQuestBard} == false:
+			set {Knight.CompletedKnightQuestBard} = true
+			Bard: What an exciting day you’ve had!
+			Bard: Feel free to rest by the campfire until the show.
+			Bard: I’ll be sure to regale everyone with your adventures!
+			Bard: Actually, I could use the help babysitting while I write... this little grape is more trouble than he looks.
+			Baby: Plbfff!
+		if {Messenger.CompletedMessengerQuest} == true:
+			if {Thief.CompletedThiefQuest} == true:
+				start show option
+			else:
+				Bard: I think your Tomato friend isn't quite ready for the show...
 		else:
-			Bard: I think your Raspberry friend isn't quite ready for the show...		
+			if {Thief.CompletedThiefQuest} == false:
+				Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
+			else:
+				Bard: I think your Raspberry friend isn't quite ready for the show...
