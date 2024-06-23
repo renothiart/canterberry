@@ -1,1 +1,8 @@
-Squire: Test
+if {Knight.MetSquire} == false:
+	if {Knight.CollectedToy} == false:
+		Squire: Dad, dad! Look at this new attack I learned!
+		Narrator: The young Squire waves her wooden sword wildly in the air. You bend down and gently correct her stance, and her next swings are more confident.
+else:
+	if {Knight.CollectedToy} == false:
+		Squire: Hi Dad! Off on another exciting quest, I bet? Tell me all about it when you get home tonight, okay? Quest bedtime stories are my favorite!
+		Narrator: The young Squire hugs your knees.

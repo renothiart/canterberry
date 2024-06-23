@@ -1,1 +1,7 @@
-Monk: Test
+if {Knight.MetMonk} == false:
+	Monk: Greetings, good sir. May your day be blessed.
+	set {Knight.MetMonk} = true
+else:
+	Narrator: The Monk heaves a heavy sigh.
+	Monk: Ah…hello again. My apologies, I was lost in prayer. There’s a lot to pray for.
+	Narrator: The Monk gazes off forlornly into the distance.

@@ -13,22 +13,23 @@ if {Knight.MetBard} == true:
 			Bard: Well who would’ve thought the monster would turn out to be a kind dragonfruit? Not quite as exciting though… I think I might’ve heard of what you’re looking for, maybe check in the [b]Red Forest[/b] and [b]Village[/b].
 		if {Knight.CollectedIngredients} == 0:
 			Bard: Still on the hunt for ingredients? I think the [b]Red Forest[/b] and the [b]Village[/b] still has what you seek.
-		if {Knight.hasIngredients} < 3:
-			if {Knight.hasBread} == true:
+		if {Knight.CollectedIngredients} < 3:
+			if {Knight.CollectedBread} == true:
 				Bard: Still on the hunt for ingredients? I think the [b]Red Forest[/b] still has what you seek.
-			if {Knight.hasEgg} == true:
-				if {Knight.hasMushroom} == true:
-					if {Knight.hasBread} == false:
+			if {Knight.CollectedEgg} == true:
+				if {Knight.CollectedMushroom} == true:
+					if {Knight.CollectedBread} == false:
 						Bard: Still on the hunt for ingredients? I think the [b]Village[/b] still has what you seek.
 		else:
 			if {Knight.CompletedWitchQuest} == false:
 				Bard: Looks like you’ve got everything! The [b]Witch[/b] will be chuffed to see those.
-	if {Knight.hasPotion} == true:
-		if {Knight.hasToy} == true:
-			Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]? And what a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled…
-		else:
-			Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]?
-	if {Knight.hasToy} == true:
+	if {Knight.CollectedPotion} == true:
+		if {Knight.CompletedKnightQuest} == false:
+			if {Knight.CollectedToy} == true:
+				Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]? And what a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled…
+			else:
+				Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]?
+	if {Knight.CollectedToy} == true:
 		Bard: What a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled…
 	if {Knight.CompletedKnightQuest} == true:
 		Bard: What an exciting day you’ve had! Feel free to rest by the campfire until the show. I’ll be sure to regale everyone with your adventures! Actually, I could use the help babysitting while I write…this little grape is more trouble than he looks.

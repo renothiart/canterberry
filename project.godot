@@ -103,7 +103,9 @@ variables={
 "MetJester": 0,
 "MetKing": false,
 "MetMaid": 0,
+"MetMonk": false,
 "MetPrincess": false,
+"MetSquire": false,
 "MetWitch": false,
 "SpeakBandit": 0
 },

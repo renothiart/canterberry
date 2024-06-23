@@ -1,1 +1,7 @@
-Princess: Test
+if {Knight.MetPrincess} == false:
+	Narrator: The princess curtsies politely.
+	Princess: Thank you ever so much for your continued service to the kingdom.
+	set {Knight.MetPrincess} = true
+else:
+	Narrator: The princess is distracted, and doesn’t seem to notice you. She appears to be daydreaming.
+	if :
