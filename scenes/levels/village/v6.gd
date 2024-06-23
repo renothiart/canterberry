@@ -14,9 +14,6 @@ var teleport_buffer_time: float = 0.05
 var teleport_buffer_time_remaining: float = 0
 
 func _ready():
-	if Dialogic.VAR.Knight.CollectedBread:
-		$Bread.queue_free()
-	
 	Dialogic.signal_event.connect(process_dialogic_signal)
 	
 	portkey_map = {
@@ -76,9 +73,6 @@ func load_portkey():
 		get_tree().paused = false
 
 func process_dialogic_signal(argument: String):
-	if argument == "collect_bread":
-		$Bread.queue_free()
-		Global.knight_inventory.append("BREAD")
 	if argument == "give_treasure":
 		Global.thief_has_treasure = false
 	$PlayerInventory.refresh_inventory()
