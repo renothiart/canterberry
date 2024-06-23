@@ -26,3 +26,5 @@ else:
 		Narrator: The Bandit and the Thief share a sweet kiss.
 		Narrator: And so the Thief completed her quest of giving back to the fruit of the kingdom...her way, of course.
 		set {Thief.CompletedThiefQuest} = true
+if {Thief.CompletedThiefQuest} == true:
+	Bandit: Always a pleasure to see you again, my lovely Princess.
