@@ -35,47 +35,63 @@ if {Knight.CollectedIngredients} < 3:
 		else:
 			Bard: Still on the hunt for ingredients? I think the [b]Red Forest[/b] still has what you seek.
 	[end_timeline]
-if {Knight.CompletedWitchQuest} == false:
-	Bard: Looks like you’ve got everything! The [b]Witch[/b] will be chuffed to see those.
-	[end_timeline]
+else:
+	if {Knight.CompletedWitchQuest} == false:
+		Bard: Looks like you’ve got everything! The [b]Witch[/b] will be chuffed to see those.
+		[end_timeline]
 if {Knight.CollectedPotion} == true:
 	if {Knight.CompletedKnightQuest} == false:
 		if {Knight.CompletedSquireQuest} == false:
 			if {Knight.CollectedToy} == true:
 				Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]? And what a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled...
+				[end_timeline]
 			else:
 				Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]?
+				[end_timeline]
 		else:
 			Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]?
-	[end_timeline]
+			[end_timeline]
 else:
 	if {Knight.CollectedToy} == true:
 		if {Knight.CompletedSquireQuest} == false:
 			Bard: What a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled...
-else:
-	if {Knight.CompletedKnightQuest} == true:
-		if {Knight.CompletedKnightQuestBard} == false:
-			set {Knight.CompletedKnightQuestBard} = true
-			Bard: What an exciting day you’ve had!
-			Bard: Feel free to rest by the campfire until the show.
-			Bard: I’ll be sure to regale everyone with your adventures!
-			Bard: Actually, I could use the help babysitting while I write... this little grape is more trouble than he looks.
-			Baby: Plbfff!
-		if {Messenger.CompletedMessengerQuest} == true:
-			if {Thief.CompletedThiefQuest} == true:
-				start show option
-			else:
-				Bard: I think your Tomato friend isn't quite ready for the show...
+if {Knight.CompletedKnightQuest} == true:
+	if {Knight.CompletedKnightQuestBard} == false:
+		set {Knight.CompletedKnightQuestBard} = true
+		Bard: What an exciting day you’ve had!
+		Bard: Feel free to rest by the campfire until the show.
+		Bard: I’ll be sure to regale everyone with your adventures!
+		Bard: Actually, I could use the help babysitting while I write... this little grape is more trouble than he looks.
+		Baby: Plbfff!
+	if {Messenger.CompletedMessengerQuest} == true:
+		if {Thief.CompletedThiefQuest} == true:
+			start show option
 		else:
+			if {Knight.MetPrincess} == true:
+				Bard: I think your Tomato friend isn't quite ready for the show...
+			elif {Messenger.MetPrincess} == true:
+				Bard: I think your Tomato friend isn't quite ready for the show...
+	else:
+		if {Knight.MetPrincess} == true:
+			if {Knight.MetMessenger} == true:
+				if {Thief.CompletedThiefQuest} == false:
+					Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
+			elif {Thief.MetMessenger} == true:
+				if {Thief.CompletedThiefQuest} == false:
+					Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
+			else:
+				if {Thief.CompletedThiefQuest} == false:
+					Bard: I think your Tomato friend isn't quite ready for the show...
+		elif {Messenger.MetPrincess} == true:
 			if {Thief.CompletedThiefQuest} == false:
 				Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
-			else:
+		else:
+			if {Knight.MetMessenger} == true:
 				Bard: I think your Raspberry friend isn't quite ready for the show...
-if {Knight.MetThief} == false:
-	if {Messenger.MetThief} == false:
-		Bard: Oh, and have you met the Princess yet?
-		Bard: She lives in the castle...
+if {Knight.MetPrincess} == false:
+	if {Messenger.MetPrincess} == false:
+		Bard: Oh, and have you met the Princess yet? She lives in the [b]Castle[/b].
 if {Knight.MetMessenger} == false:
 	if {Thief.MetMessenger} == false:
-		Bard: And you should go down to the docks when you get the chance!
+		Bard: You should go west to the [b]Docks[/b] when you get the chance!
 		Bard: There's a messenger arriving by ship today...
