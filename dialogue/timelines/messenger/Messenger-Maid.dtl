@@ -1,5 +1,5 @@
 if {Messenger.MetMaid} == false:
-	set {Knight.MetMaid} = true
+	set {Messenger.MetMaid} = true
 	Messenger: Oh, I've been looking for you!
 	Maid: Oh hello! Has there been any news from my cousin across the sea?
 	Narrator: The Messenger looks through his bag and hands her a letter. The Maid opens the letter and scans through it.

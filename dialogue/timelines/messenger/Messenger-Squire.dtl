@@ -1,1 +1,16 @@
-Squire: Test
+if {Messenger.MetSquire} == false:
+	set {Messenger.MetSquire} = true
+	Messenger: Hey kid, you must be the Squire -
+	Messenger: I know your dad, you look just like him!
+	Messenger: He doesn't talk much, does he?
+	Squire: He told me not to talk to strangers...
+	Messenger: Who are you calling [b]strange[/b]!?
+Squire: ...
+if {Messenger.ReceivedQuest} == true:
+	if {Messenger.HasFlyeredSquire} == false:
+		Messenger: Well, you don't have to talk to me I guess -
+		Messenger: But the Bard is playing some music tonight, and I know your dad will be there!
+		Narrator: The Messenger hands the Squire a flyer from his bag.
+		set {Messenger.HasFlyeredSquire} = true
+		set {Messenger.FlyersDelivered} += 1
+	Messenger: See you at the party!

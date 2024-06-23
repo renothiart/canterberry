@@ -15,7 +15,7 @@ if {Messenger.ReceivedQuest} == true:
 		set {Messenger.HasFlyeredBaker} = true
 		set {Messenger.FlyersDelivered} += 1
 else:
-	if {Messenger.MetBaker} == "false":
+	if {Messenger.MetBaker} == true:
 		Baker: Fresh bread! Git yer fresh bread here!
 		Baker: Would you like a sample sir?
 		Messenger: Me? Say no to a [b]free sample[/b]? Ridiculous!
