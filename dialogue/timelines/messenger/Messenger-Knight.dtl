@@ -13,3 +13,6 @@ if {Messenger.ReceivedQuest} == true:
 		Narrator: The Bard sighs.
 		Bard: Really?
 else:
+	Knight: ...
+	Messenger: Y'know, I used to be an adventurer like you until I -
+	Bard: Hey, did you say you're looking for an [b]adventure[/b]?
