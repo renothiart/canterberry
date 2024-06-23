@@ -7,7 +7,6 @@ if {Knight.CollectedMushroom} == false:
 	Narrator: The Messenger laughs to himself as he imagines a world where mushrooms could talk.
 	if {Messenger.ReceivedQuest} == true:
 		if {Messenger.HasFlyeredMushroom} == false:
-			jump Mushroom
 			Messenger: Well, in any case -
 			Narrator: For some reason, the Messenger places a flyer next to the mushroom, though he knows the Bard probably wouldn't count this as a proper delivery.
 			set {Messenger.HasFlyeredMushroom} = true
