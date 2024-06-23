@@ -11,7 +11,7 @@ else:
 		Bandit: My darling princess! It’s always lovely to see you. Let me know when you’ve got the [b]treasure[/b] from the [b]Castle[/b].
 		[end_timeline]
 	else:
-		if {Thief.DonateCount} < 3:
+		if {Thief.DonateCount} <= 3:
 			Bandit: My precious princess, you’ve returned! And you got the treasure?
 			Narrator: The Thief splits the treasure with the Bandit.
 			set {Thief.DonateBandit} = true
@@ -22,4 +22,5 @@ else:
 			[end_timeline]
 	if {Thief.DonateCount} == 4:
 		Bandit: My rosy princess, you gave the treasure to all the townspeople? You're amazing, I love you.
+		Narrator: And so the Thief completed her quest of giving back to the fruit of the kingdom...her way, of course.
 		set {Thief.CompletedThiefQuest} = true

@@ -1,1 +1,26 @@
-King: Test
+if {Thief.MetKing} == false:
+	King: Hey you!
+	King: Yeah, you. Are you a guard?
+	King: No, you look too sneaky to be a guard.. Well whoever you are, as your [b]King[/b], I order you to find my [b]daughter[/b]!
+	King: Order is a little bit harsh I guess, just send her this way if you see her.
+	Narrator: The King grumbles to himself under his breath.
+	King: Where could she have gone? She’s always disappearing. Why can’t she just give me a heads up?
+	set {Thief.MetKing} = true
+	[end_timeline]
+else:
+	if {Thief.FoundTreasure} == false:
+		King: There you are! I’ve been worr-
+		King: Oh. Sorry, I mixed you up with my daughter for a second. I should really get my eyes checked.
+		King: [b]Jester[/b], make an appointment with my optometrist.
+		Jester: That’s not my job.
+		King: Oh yeah.
+		Jester: Also you don’t have an optometrist.
+		King: Well [b]Jester[/b], find me an optometrist.
+		Jester: That’s not my job either.
+		Narrator: The King sighs loudly.
+		King: I suppose you're right. Harrumph...
+	else:
+		King: You again! Haven’t you heard the news? The royal treasury has been raided!
+		King: Reports say a hooded figure somehow discovered the entrance. I thought hiding it behind that pai - or wherever I hid it - was foolproof! 
+		Narrator: The King lets out a disappointed sigh.
+		King: Oh well, you should get out of here - the guards might confuse you with the thief, given your hood and all. We need them focused on the real culprit!

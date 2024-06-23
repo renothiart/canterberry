@@ -168,6 +168,8 @@ variables={
 "FoundTreasure": false,
 "MetBandit": false,
 "MetMessenger": false
+"MetBard": false,
+"MetKing": false
 }
 }
 text/letter_speed=0.01
