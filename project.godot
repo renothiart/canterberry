@@ -158,7 +158,11 @@ variables={
 "Thief": {
 "CompletedThiefQuest": false,
 "DonateBaker": false,
-"FoundTreasure": false
+"DonateBandit": false,
+"DonateCherries": false,
+"DonateMaid": false,
+"FoundTreasure": false,
+"MetBandit": ""
 }
 }
 text/letter_speed=0.01
