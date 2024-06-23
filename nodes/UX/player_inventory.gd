@@ -15,7 +15,6 @@ func refresh_inventory():
 	
 	# target the current player
 	var player_type = Global.get_animation_name(Global.current_player_type)
-	print("Updating player inventory:" + player_type)
 	
 	if player_type == "SK":
 		inventory_knight()

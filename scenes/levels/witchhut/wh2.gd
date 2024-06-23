@@ -78,7 +78,7 @@ func process_dialogic_signal(argument: String):
 	if argument == "collect_toy":
 		$Toy.queue_free()
 		Global.knight_inventory.append("TOY")
-	elif argument == "give_witch_items":
+	elif argument == "give_witch_ingredients":
 		Global.knight_inventory = Global.knight_inventory.filter(func(n): return n == "TOY")
 	elif argument == "collect_potion":
 		Global.knight_inventory.append("POTION")

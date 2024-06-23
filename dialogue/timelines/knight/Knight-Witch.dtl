@@ -16,7 +16,7 @@ if {Knight.StartedWitchQuest} == true:
 	else:
 		Witch: Oh you’ve got everything! Thanks so much, let me take those off your hands.
 		Narrator: The Knight hands the ingredients over to the Witch.
-		[signal arg="giveWitchIngredients"]
+		[signal arg="give_witch_ingredients"]
 		Narrator: The Witch heads off into another room and you hear the sizzling of oil and the flipping of a spatula. She returns with her mouth full.
 		Witch: Om nom…that was delicious…
 		Knight: ...

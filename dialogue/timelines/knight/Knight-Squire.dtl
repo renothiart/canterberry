@@ -5,7 +5,7 @@ if {Knight.MetSquire} == false:
 		set {Knight.MetSquire} = true
 	else:
 		Squire: Hi Dad! Wow, is that for me? I love it!!
-		[signal arg="giveSquireToy"]
+		[signal arg="give_squire_toy"]
 		Narrator: The young Squire throws the toy high up into the air and catches it. She holds it closely to her chest and whispers to the toy.
 		Squire: Sir Strawb Jr, you’re going to be the bestest knight there ever was. After me and my dad, of course.
 		set {Knight.CompletedSquireQuest} = true
@@ -18,7 +18,7 @@ else:
 	else:
 		if {Knight.CompletedSquireQuest} == false:
 			Squire: Wow, is that for me? I love it!!
-			[signal arg="giveSquireToy"]
+			[signal arg="give_squire_toy"]
 			Narrator: The young Squire throws the toy high up into the air and catches it. She holds it closely to her chest. She whispers to the toy.
 			Squire: Sir Strawb Jr, you’re going to be the bestest knight there ever was. After me and my dad, of course.
 			set {Knight.CompletedSquireQuest} = true
