@@ -140,7 +140,7 @@ variables={
 "ReceivedQuest": false
 },
 "Thief": {
-"CompletedThiefQuest": false
+"CompletedThiefQuest": false,
 "FoundTreasure": false
 }
 }
