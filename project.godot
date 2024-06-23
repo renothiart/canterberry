@@ -157,6 +157,7 @@ variables={
 },
 "Thief": {
 "CompletedThiefQuest": false,
+"DonateBaker": false,
 "FoundTreasure": false
 }
 }

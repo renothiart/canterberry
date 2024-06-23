@@ -1,1 +1,11 @@
-Baker: Test
+if {Thief.FoundTreasure} == true:
+	if {Thief.DonateBaker} == false:
+		Narrator: The Thief hands some of the coins from the stolen treasure to the Baker.
+		Baker: Oh wow, is this for me? Thank you so much! Please, have some bread, milady. And you're welcome around here any time.
+		set {Thief.DonateBaker} = true
+		[end_timeline]
+	else:
+		Baker: Welcome back, dear!
+else:
+	Narrator: The Baker eyes you suspiciously.
+	Baker: I'm giving out free samples, but don't go sneakily taking anything more! Unless you pay, of course.
