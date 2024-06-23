@@ -1,3 +1,10 @@
+if {Messenger.MetMaid} == false:
+	set {Knight.MetMaid} = true
+	Messenger: Oh, I've been looking for you!
+	Maid: Oh hello! Has there been any news from my cousin across the sea?
+	Narrator: The Messenger looks through his bag and hands her a letter. The Maid opens the letter and scans through it.
+	 Me oh my, she’s had the cutest baby clementine! Thanks for the letter, sir!
+else:
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredMaid} == false:
 		set {Messenger.HasFlyeredMaid} = true

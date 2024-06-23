@@ -134,6 +134,7 @@ variables={
 "FlyersDelivered": 0,
 "HasFlyeredBaker": false,
 "HasFlyeredBandit": false,
+"HasFlyeredBird": false,
 "HasFlyeredJester": false,
 "HasFlyeredKing": false,
 "HasFlyeredKnight": false,
@@ -152,6 +153,7 @@ variables={
 "MetCherries": false,
 "MetJester": false,
 "MetJesterCount": 0,
+"MetMaid": false,
 "MetPrincess": false,
 "ReceivedQuest": false
 },

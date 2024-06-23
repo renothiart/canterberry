@@ -32,6 +32,7 @@ if {Messenger.ReceivedQuest} == true:
 else:
 [end_timeline]
 label 0_Meets
+set {Knight.MetJester} = true
 Jester: Hey you! Raspberry!
 Narrator: The Messenger looks at the Jester quizzically.
 Jester: What are you, a carpenter? Get it? [b]rasp[/b]berry?
@@ -42,7 +43,6 @@ Jester: A [b]wise[/b] guy?
 Jester: What do I look like? An [b]elder[/b]berry?
 Jester: HAHA!
 Narrator: The Jester laughs at his own joke, perhaps a bit too hard.
-set {Knight.MetJester} = true
 return
 label 1_Meets
 Jester: [b]Rasp[/b]berry! [b]Elder[/b]berry!

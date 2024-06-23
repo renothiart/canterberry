@@ -1,0 +1,12 @@
+if {Messenger.MetBird} == false:
+	set {Messenger.MetBird} = true
+	Messenger: Hey there!
+else:
+	Messenger: Psst -
+	Messenger: Are you still sleeping?
+Bird: Zzz...
+if {Messenger.ReceivedQuest} == true:
+	if {Messenger.HasFlyeredBird} == false:
+		Messenger: Hey, take this, for when you wake up.
+		Narrator: But the Messenger knows the bird is sound asleep, and will not attend the Bard's show.
+		set {Messenger.HasFlyeredBird} = true
