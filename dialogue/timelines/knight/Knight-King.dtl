@@ -9,7 +9,7 @@ if {Knight.CompletedKnightQuest} == false:
 					King: Your task is to slay it and return peace and prosperity to the kingdom.
 				if {Knight.MetKing} == true:
 					King: Have you slain the dragon in the Forest yet? We have no further business to discuss until you do.
-			if {Knight.MetWitch} == true;
+			if {Knight.MetWitch} == true:
 				Narrator: The Knight explains the dragon misunderstanding.
 				set {Knight.ToldKing} = true
 				King: A dragonfruit?! I’ve got to get better information sources. Harumph...
