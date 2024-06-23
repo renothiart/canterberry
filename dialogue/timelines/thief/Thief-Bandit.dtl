@@ -19,6 +19,8 @@ else:
 		Narrator: The Thief splits the last of the treasure with the Bandit.
 		set {Thief.DonateBandit} = true
 		set {Thief.DonateCount} += 1
+		if {Thief.DonateCount} == 3:
+			[signal arg="distribute_treasure"]
 		if {Thief.DonateCount} == 4:
 			[signal arg="give_treasure"]
 		Bandit: I appreciate this, I’ll be sure to share it with the fruit across the sea on my next journey.

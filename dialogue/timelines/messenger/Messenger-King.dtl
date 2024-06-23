@@ -20,3 +20,5 @@ if {Messenger.ReceivedQuest} == true:
 		Narrator: The King contemplates sending the Jester to the dungeon.
 		set {Messenger.HasFlyeredKing} = true
 		set {Messenger.FlyersDelivered} += 1
+		if {Messenger.FlyersDelivered} == 5:
+			[signal arg="distribute_flyer"]

@@ -75,4 +75,9 @@ func load_portkey():
 func process_dialogic_signal(argument: String):
 	if argument == "give_treasure":
 		Global.thief_has_treasure = false
+		Global.thief_distributed_treasure = false
+	if argument == "distribute_treasure":
+		Global.thief_distributed_treasure = true
+	if argument == "distribute_flyer":
+		Global.messenger_distributed_flyer = true
 	$PlayerInventory.refresh_inventory()

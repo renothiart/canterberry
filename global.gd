@@ -6,7 +6,9 @@ var player_facing_right = false
 # player inventory
 var knight_inventory = []
 var thief_has_treasure = false
+var thief_distributed_treasure = false
 var messenger_has_flyer = false
+var messenger_distributed_flyer = false
 
 # PCC Number
 enum PCCNumber {
@@ -172,7 +174,9 @@ func reset_game():
 	player_facing_right = false
 	knight_inventory = []
 	thief_has_treasure = false
+	thief_distributed_treasure = false
 	messenger_has_flyer = false
+	messenger_distributed_flyer = false
 	is_princess_in_castle = true
 	is_messenger_in_port = true
 	first_knight = true

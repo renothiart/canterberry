@@ -12,7 +12,7 @@ if {Messenger.CompletedMessengerQuest} == false:
 		Bard: How goes the flyering? There’s plenty of people in the Village and Castle to the east. Please help me get people to this show, I think it’s my best work yet.
 	elif {Messenger.FlyersDelivered} >= 5:
 		Bard: You’ve got five people invited?
-		Bard: Great, thanks so much! If you still have some time, feel free to flyer more people.
+		Bard: Great, thanks so much! If you still have some time, feel free to flyer more people. Talk to me when you're ready for the show!
 		set {Messenger.CompletedMessengerQuest} = true
 else:
 	if {Knight.CompletedKnightQuest} == true:

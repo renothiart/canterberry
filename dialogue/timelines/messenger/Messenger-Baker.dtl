@@ -14,6 +14,8 @@ if {Messenger.ReceivedQuest} == true:
 		Narrator: The Baker happily takes a flyer from the Messenger.
 		set {Messenger.HasFlyeredBaker} = true
 		set {Messenger.FlyersDelivered} += 1
+		if {Messenger.FlyersDelivered} == 5:
+			[signal arg="distribute_flyer"]
 	Baker: I'll see you there!
 else:
 	if {Messenger.MetBaker} == false:

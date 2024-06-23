@@ -5,6 +5,8 @@ else:
 		Maid: For me?? Oh thank you, kind stranger!
 		set {Thief.DonateMaid} = true
 		set {Thief.DonateCount} += 1
+		if {Thief.DonateCount} == 3:
+			[signal arg="distribute_treasure"]
 		if {Thief.DonateCount} == 4:
 			[signal arg="give_treasure"]
 	else:

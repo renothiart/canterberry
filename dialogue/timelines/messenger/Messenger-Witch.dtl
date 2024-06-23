@@ -8,3 +8,5 @@ if {Messenger.ReceivedQuest} == true:
 		Narrator: The Messenger reaches accross the Witch's bubbling cauldron to hand her a flyer.
 		set {Messenger.HasFlyeredWitch} = true
 		set {Messenger.FlyersDelivered} += 1
+		if {Messenger.FlyersDelivered} == 5:
+			[signal arg="distribute_flyer"]

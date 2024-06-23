@@ -8,6 +8,8 @@ else:
 		Jerry: -this'll really help us out a lot!
 		set {Thief.DonateCherries} = true
 		set {Thief.DonateCount} += 1
+		if {Thief.DonateCount} == 3:
+			[signal arg="distribute_treasure"]
 		if {Thief.DonateCount} == 4:
 			[signal arg="give_treasure"]
 	else:

@@ -12,6 +12,8 @@ if {Messenger.ReceivedQuest} == true:
 		Narrator: The Bard hands a flyer to the Maid.
 		set {Messenger.HasFlyeredMaid} = true
 		set {Messenger.FlyersDelivered} += 1
+		if {Messenger.FlyersDelivered} == 5:
+			[signal arg="distribute_flyer"]
 		Maid: I just love shows! And the Canterberry Tales? I haven’t heard this one before. You can count on me being there!
 	else:
 	Maid: I can’t wait for the show tonight, it’s been ages since the last one!

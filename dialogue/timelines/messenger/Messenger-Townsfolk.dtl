@@ -11,3 +11,5 @@ if {Messenger.ReceivedQuest} == true:
 		Narrator: It is unlikely the Bard will count them as two separate attendees.
 		set {Messenger.HasFlyeredTownsfolk} = true
 		set {Messenger.FlyersDelivered} += 1
+		if {Messenger.FlyersDelivered} == 5:
+			[signal arg="distribute_flyer"]

@@ -12,4 +12,6 @@ if {Messenger.ReceivedQuest} == true:
 		Narrator: The Bandit makes a good point.
 		set {Messenger.HasFlyeredBandit} = true
 		set {Messenger.FlyersDelivered} += 1
+		if {Messenger.FlyersDelivered} == 5:
+			[signal arg="distribute_flyer"]
 		Messenger: Alright, just stay out of trouble. This show is a [b]big deal[/b].

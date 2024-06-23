@@ -1,13 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://c32uqyp4i5dk8"]
+[gd_scene load_steps=12 format=3 uid="uid://c32uqyp4i5dk8"]
 
 [ext_resource type="Script" path="res://nodes/UX/player_inventory.gd" id="1_34mix"]
 [ext_resource type="Texture2D" uid="uid://dln2pysc57bit" path="res://assets/inventory/bread.png" id="1_qexdr"]
 [ext_resource type="Texture2D" uid="uid://d1gl15jjg8iep" path="res://assets/inventory/egg.png" id="2_wunq7"]
 [ext_resource type="Texture2D" uid="uid://yqeu2yifw6br" path="res://assets/inventory/bard-flyer.png" id="3_ennah"]
 [ext_resource type="Texture2D" uid="uid://b62sqsvv4fk58" path="res://assets/inventory/mushroom.png" id="4_da5ue"]
+[ext_resource type="Texture2D" uid="uid://d3asbmweat3ar" path="res://assets/inventory/bard-flyer-complete.png" id="5_b2l2u"]
 [ext_resource type="Texture2D" uid="uid://w1vlack5wg20" path="res://assets/inventory/witch-potion.png" id="5_uuqtt"]
 [ext_resource type="Texture2D" uid="uid://d35r23rwyye5r" path="res://assets/inventory/strawberry-toy.png" id="6_563am"]
 [ext_resource type="Texture2D" uid="uid://bnspmp7g07g1o" path="res://assets/inventory/coins.png" id="8_fiwsb"]
+[ext_resource type="Texture2D" uid="uid://djht2nr6jru0y" path="res://assets/inventory/coins-complete.png" id="10_4cowi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e4fae"]
 animations = [{
@@ -33,6 +35,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"FLYER",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_b2l2u")
+}],
+"loop": true,
+"name": &"FLYER_COMPLETE",
 "speed": 5.0
 }, {
 "frames": [{
@@ -74,6 +84,14 @@ animations = [{
 "loop": true,
 "name": &"TREASURE",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_4cowi")
+}],
+"loop": true,
+"name": &"TREASURE_COMPLETE",
+"speed": 5.0
 }]
 
 [node name="PlayerInventory" type="CanvasLayer"]
@@ -82,12 +100,12 @@ script = ExtResource("1_34mix")
 [node name="slot_3" type="AnimatedSprite2D" parent="."]
 position = Vector2(575, 55)
 sprite_frames = SubResource("SpriteFrames_e4fae")
-animation = &"TREASURE"
+animation = &"TREASURE_COMPLETE"
 
 [node name="slot_2" type="AnimatedSprite2D" parent="."]
 position = Vector2(685, 55)
 sprite_frames = SubResource("SpriteFrames_e4fae")
-animation = &"BREAD"
+animation = &"FLYER_COMPLETE"
 
 [node name="slot_1" type="AnimatedSprite2D" parent="."]
 position = Vector2(795, 55)

@@ -25,6 +25,8 @@ if {Messenger.ReceivedQuest} == true:
 		Narrator: The Messenger clenches his teeth and tosses a flyer at the Jester's feet.
 		set {Messenger.HasFlyeredJester} = true
 		set {Messenger.FlyersDelivered} += 1
+		if {Messenger.FlyersDelivered} == 5:
+			[signal arg="distribute_flyer"]
 		Messenger: Just go to the Bard's show. But no jokes! This isn't an open mic!
 		Jester: Well that's not very appealing...
 		Jester: a[b]peel[/b]ing!

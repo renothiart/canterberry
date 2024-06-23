@@ -40,14 +40,20 @@ func inventory_knight():
 func inventory_thief():
 	# render treasure if player has it
 	if Global.thief_has_treasure:
-		set_slot(inventory_slots[0], "TREASURE")
+		if Global.thief_distributed_treasure:
+			set_slot(inventory_slots[0], "TREASURE_COMPLETE")
+		else:
+			set_slot(inventory_slots[0], "TREASURE")
 
 
 # messenger's inventory
 func inventory_messenger():
 	# render flyer if player has it
 	if Global.messenger_has_flyer:
-		set_slot(inventory_slots[0], "FLYER")
+		if Global.messenger_distributed_flyer:
+			set_slot(inventory_slots[0], "FLYER_COMPLETE")
+		else:
+			set_slot(inventory_slots[0], "FLYER")
 
 
 # null inventory

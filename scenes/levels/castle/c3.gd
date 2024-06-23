@@ -78,4 +78,6 @@ func is_not_potion(n):
 func process_dialogic_signal(argument: String):
 	if argument == "give_king_potion":
 		Global.knight_inventory = Global.knight_inventory.filter(is_not_potion)
+	if argument == "distribute_flyer":
+		Global.messenger_distributed_flyer = true
 	$PlayerInventory.refresh_inventory()

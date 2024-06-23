@@ -17,6 +17,8 @@ if {Messenger.ReceivedQuest} == true:
 		Narrator: The Messenger hands the Monk one of the Bard's advertising flyers.
 		set {Messenger.HasFlyeredMonk} = true
 		set {Messenger.FlyersDelivered} += 1
+		if {Messenger.FlyersDelivered} == 5:
+			[signal arg="distribute_flyer"]
 		Narrator: The Monk sighs.
 	else:
 		Messenger: Hey, you should -
