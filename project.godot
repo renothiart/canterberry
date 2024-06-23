@@ -44,6 +44,7 @@ directories/dch_directory={
 "Witch": "res://dialogue/characters/Witch.dch"
 }
 directories/dtl_directory={
+"Bard-Show": "res://dialogue/timelines/Bard-Show.dtl",
 "Knight-Baker": "res://dialogue/timelines/knight/Knight-Baker.dtl",
 "Knight-Bandit": "res://dialogue/timelines/knight/Knight-Bandit.dtl",
 "Knight-Bard": "res://dialogue/timelines/knight/Knight-Bard.dtl",
