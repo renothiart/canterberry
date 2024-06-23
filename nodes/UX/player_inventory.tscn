@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c32uqyp4i5dk8"]
+[gd_scene load_steps=10 format=3 uid="uid://c32uqyp4i5dk8"]
 
 [ext_resource type="Script" path="res://nodes/UX/player_inventory.gd" id="1_34mix"]
 [ext_resource type="Texture2D" uid="uid://dln2pysc57bit" path="res://assets/inventory/bread.png" id="1_qexdr"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b62sqsvv4fk58" path="res://assets/inventory/mushroom.png" id="4_da5ue"]
 [ext_resource type="Texture2D" uid="uid://w1vlack5wg20" path="res://assets/inventory/witch-potion.png" id="5_uuqtt"]
 [ext_resource type="Texture2D" uid="uid://d35r23rwyye5r" path="res://assets/inventory/strawberry-toy.png" id="6_563am"]
+[ext_resource type="Texture2D" uid="uid://bnspmp7g07g1o" path="res://assets/inventory/coins.png" id="8_fiwsb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e4fae"]
 animations = [{
@@ -65,6 +66,14 @@ animations = [{
 "loop": true,
 "name": &"TOY",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_fiwsb")
+}],
+"loop": true,
+"name": &"TREASURE",
+"speed": 5.0
 }]
 
 [node name="PlayerInventory" type="CanvasLayer"]
@@ -73,7 +82,7 @@ script = ExtResource("1_34mix")
 [node name="slot_3" type="AnimatedSprite2D" parent="."]
 position = Vector2(575, 55)
 sprite_frames = SubResource("SpriteFrames_e4fae")
-animation = &"TOY"
+animation = &"TREASURE"
 
 [node name="slot_2" type="AnimatedSprite2D" parent="."]
 position = Vector2(685, 55)

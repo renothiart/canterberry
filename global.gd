@@ -68,6 +68,10 @@ enum CharacterType {
 	BAKER,
 	MAID,
 	BIRD,
+	TREASURE,
+	FRUIT_BOWL,
+	PAINTING,
+	REALISTIC_PAINTING,
 }
 
 # item functionality
@@ -81,7 +85,6 @@ enum ItemType {
 	TREASURE,
 	FLYER,
 }
-
 
 # player animation names
 var player_type_to_animation = {
@@ -133,6 +136,10 @@ var character_type_to_dialogue_name = {
 	CharacterType.BAKER: "Baker",
 	CharacterType.MAID: "Maid",
 	CharacterType.BIRD: "Bird",
+	CharacterType.TREASURE: "Treasure",
+	CharacterType.FRUIT_BOWL: "FruitBowl",
+	CharacterType.PAINTING: "Painting",
+	CharacterType.REALISTIC_PAINTING: "RealisticPainting",
 }
 
 # item dialogue names

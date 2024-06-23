@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_i8ay4"]
 [ext_resource type="PackedScene" uid="uid://701ngm4v8h3w" path="res://scenes/extras/title_screen.tscn" id="2_0p4u2"]
-[ext_resource type="Texture2D" uid="uid://dns7cob5n1eva" path="res://assets/fullscreens/titlescreen.png" id="3_0784s"]
-[ext_resource type="Texture2D" uid="uid://br14sfxwug23r" path="res://assets/fullscreens/splash.png" id="4_opsdt"]
+[ext_resource type="Texture2D" uid="uid://l3fp4v4d1eum" path="res://assets/fullscreens/titlescreen.png" id="3_0784s"]
+[ext_resource type="Texture2D" uid="uid://co1kgu0q38j3j" path="res://assets/fullscreens/splash.png" id="4_opsdt"]
 
 [sub_resource type="Animation" id="Animation_bkoxd"]
 resource_name = "splash_screen"

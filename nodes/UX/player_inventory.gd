@@ -14,17 +14,13 @@ func refresh_inventory():
 	inventory_null()
 	
 	# target the current player
-	var player_type = Global.get_animation_name(Global.current_player_type)
-	
-	if player_type == "SK":
+	var player_type = Global.current_player_type
+	if player_type == Global.PlayerType.KNIGHT:
 		inventory_knight()
-	
-	else: if player_type == "RM":
+	elif player_type == Global.PlayerType.MESSENGER:
 		inventory_messenger()
-	
-	else: if player_type == "TT":
+	elif player_type == Global.PlayerType.THIEF:
 		inventory_thief()
-		
 	else:
 		print("invalid player type; inventory hardcoded to null")
 
@@ -43,16 +39,14 @@ func inventory_knight():
 # thief's inventory
 func inventory_thief():
 	# render treasure if player has it
-	var thief_has_treasure = Global.thief_has_treasure
-	if thief_has_treasure:
+	if Global.thief_has_treasure:
 		set_slot(inventory_slots[0], "TREASURE")
 
 
 # messenger's inventory
 func inventory_messenger():
 	# render flyer if player has it
-	var messenger_has_flyer = Global.messenger_has_flyer
-	if messenger_has_flyer:
+	if Global.messenger_has_flyer:
 		set_slot(inventory_slots[0], "FLYER")
 
 

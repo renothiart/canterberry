@@ -100,6 +100,7 @@ directories/dtl_directory={
 "Thief-Squire": "res://dialogue/timelines/thief/Thief-Squire.dtl",
 "Thief-Townsfolk": "res://dialogue/timelines/thief/Thief-Townsfolk.dtl",
 "Thief-Toy": "res://dialogue/timelines/thief/Thief-Toy.dtl",
+"Thief-Treasure": "res://dialogue/timelines/thief/Thief-Treasure.dtl",
 "Thief-Witch": "res://dialogue/timelines/thief/Thief-Witch.dtl",
 "skyrim": "res://dialogue/timelines/skyrim.dtl"
 }
