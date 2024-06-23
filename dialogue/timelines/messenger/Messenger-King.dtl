@@ -1,8 +1,13 @@
 if {Messenger.MetKing} == false:
 	set {Messenger.MetKing} = true
-	King: Hello!
+	if {Knight.ToldKing} == true:
+		King: Hey! Were you the one that told me there was a dragon in the woods? I'll have you know, misinformation is a serious crime!
+		Narrator: The Messenger denies all charges.
+		King: Ah...must've been someone else then. Excuse me.
+	else:
+		King: Welcome to my royal court, Messenger! I have no news for you to deliver at the moment.
 else:
-	King: Hi again!
+	King: Still no news to deliver.
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredKing} == false:
 		Narrator: The messenger reaches out to hand the King a flyer.
