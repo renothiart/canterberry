@@ -5,4 +5,6 @@ if {Thief.MetBandit} == false:
 	Narrator: The Thief nods. She had been the one to tell the Bandit about it in the first place, after all.
 	Bandit: Great! Let me know when you’ve got it. I believe in you, Princess.
 	Narrator: The Bandit winks and blows a kiss.
+	set {Thief.MetBandit} = true
 else:
+	Bandit: My darling Princess! It’s always lovely to see you. Let me know when you’ve got the [b]treasure[/b] from the [b]Castle[/b].

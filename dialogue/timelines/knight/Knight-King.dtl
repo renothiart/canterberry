@@ -20,11 +20,12 @@ else:
 				set {Knight.CompletedKnightQuest} = true
 				[end_timeline]
 if {Knight.MetKing} == true:
-	if {Knight.MetPrincess} == true:
-		King: Ah, you've met my daughter. The family resemblance is uncanny, no?
-		[wait time="1.5" hide_text="false"]
-		King: What?
-		[end_timeline]
 	if {Knight.CompletedKnightQuest} == true:
 		Narrator: The King snoozes peacefully in his regal throne. All is well.
+		[end_timeline]
+	else:
+		if {Knight.MetPrincess} == true:
+			King: Ah, you've met my daughter. The family resemblance is uncanny, no?
+			[wait time="1.5" hide_text="false"]
+			King: What?
 [end_timeline]
