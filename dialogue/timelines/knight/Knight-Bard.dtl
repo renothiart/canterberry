@@ -40,15 +40,17 @@ else:
 				[end_timeline]
 	if {Knight.CollectedPotion} == true:
 		if {Knight.CompletedKnightQuest} == false:
-			if {Knight.CollectedToy} == true:
-				Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]? And what a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled…
-				[end_timeline]
-			else:
-				Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]?
-				[end_timeline]
+			if {Knight.CompletedSquireQuest} == false:
+				if {Knight.CollectedToy} == true:
+					Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]? And what a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled…
+					[end_timeline]
+				else:
+					Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]?
+					[end_timeline]
 	if {Knight.CollectedToy} == true:
-		Bard: What a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled…
-		[end_timeline]
+		if {Knight.CompletedSquireQuest} == false:
+			Bard: What a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled…
+			[end_timeline]
 	if {Knight.CompletedKnightQuest} == true:
 		Bard: What an exciting day you’ve had! Feel free to rest by the campfire until the show. I’ll be sure to regale everyone with your adventures! Actually, I could use the help babysitting while I write…this little grape is more trouble than he looks.
 		Baby: Plbfff!

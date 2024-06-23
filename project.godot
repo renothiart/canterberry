@@ -162,6 +162,7 @@ variables={
 "DonateBaker": false,
 "DonateBandit": false,
 "DonateCherries": false,
+"DonateCount": 0,
 "DonateMaid": false,
 "FoundTreasure": false,
 "MetBandit": false

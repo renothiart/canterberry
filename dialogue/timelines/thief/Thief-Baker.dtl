@@ -3,6 +3,7 @@ if {Thief.FoundTreasure} == true:
 		Narrator: The Thief hands some of the coins from the stolen treasure to the Baker.
 		Baker: Oh wow, is this for me? Thank you so much! Please, have some bread, milady. And you're welcome around here any time.
 		set {Thief.DonateBaker} = true
+		set {Thief.DonateCount} += 1
 		[end_timeline]
 	else:
 		Baker: Welcome back, dear!
