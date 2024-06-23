@@ -14,8 +14,6 @@ var teleport_buffer_time: float = 0.05
 var teleport_buffer_time_remaining: float = 0
 
 func _ready():
-	if Dialogic.VAR.Knight.CollectedToy:
-		$Toy.queue_free()
 	Dialogic.signal_event.connect(process_dialogic_signal)
 	
 	portkey_map = {
@@ -75,11 +73,6 @@ func load_portkey():
 		get_tree().paused = false
 
 func process_dialogic_signal(argument: String):
-	if argument == "collect_toy":
-		$Toy.queue_free()
-		Global.knight_inventory.append("TOY")
-	elif argument == "give_witch_items":
-		Global.knight_inventory = Global.knight_inventory.filter(func(n): return n == "TOY")
-	elif argument == "collect_potion":
-		Global.knight_inventory.append("POTION")
+	if argument == "collect_egg":
+		Global.knight_inventory.append("EGG")
 	$PlayerInventory.refresh_inventory()
