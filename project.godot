@@ -122,6 +122,7 @@ variables={
 "MetJester": 0,
 "MetKing": false,
 "MetMaid": false,
+"MetMessenger": "",
 "MetMonk": false,
 "MetPainting": false,
 "MetPrincess": false,
