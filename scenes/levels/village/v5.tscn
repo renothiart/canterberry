@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://creb1xia03wtb"]
+[gd_scene load_steps=13 format=3 uid="uid://creb1xia03wtb"]
 
-[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_0idor"]
+[ext_resource type="Script" path="res://scenes/levels/village/v5.gd" id="1_xy63g"]
 [ext_resource type="PackedScene" uid="uid://c32uqyp4i5dk8" path="res://nodes/UX/player_inventory.tscn" id="2_ga4r8"]
 [ext_resource type="Texture2D" uid="uid://b1yp80fm2luia" path="res://assets/settings/village/v5.png" id="2_ify30"]
 [ext_resource type="Texture2D" uid="uid://d0vi8opnt1mu2" path="res://assets/settings/village/v4-mg.png" id="3_452yu"]
@@ -9,11 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_vb15s"]
 [ext_resource type="PackedScene" uid="uid://5mxadhwg1gtb" path="res://nodes/portkeys/left_mg_portkey.tscn" id="8_dlo0c"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="8_u708a"]
+[ext_resource type="Texture2D" uid="uid://d35r23rwyye5r" path="res://assets/inventory/strawberry-toy.png" id="9_d0nxb"]
 [ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="9_i2iqy"]
 [ext_resource type="PackedScene" uid="uid://x0xthheioxpb" path="res://scenes/characters/squire.tscn" id="10_q25ky"]
 
 [node name="Village5" type="Node2D" node_paths=PackedStringArray("mg_left_portkey")]
-script = ExtResource("1_0idor")
+script = ExtResource("1_xy63g")
 mg_left_portkey = NodePath("LeftMGPortkey")
 
 [node name="PlayerInventory" parent="." instance=ExtResource("2_ga4r8")]
@@ -46,6 +47,11 @@ centered = false
 [node name="Wall" parent="." instance=ExtResource("9_i2iqy")]
 position = Vector2(790, 372)
 layer = 4
+
+[node name="Strawbaby" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(669, 424)
+texture = ExtResource("9_d0nxb")
 
 [node name="Squire" parent="." instance=ExtResource("10_q25ky")]
 position = Vector2(502, 390)
