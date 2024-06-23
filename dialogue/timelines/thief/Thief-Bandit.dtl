@@ -12,18 +12,17 @@ else:
 		Bandit: My darling princess! It’s always lovely to see you. Let me know when you’ve got the [b]treasure[/b] from the [b]Castle[/b].
 		[end_timeline]
 	else:
-		if {Thief.DonateCount} <= 3:
-			Bandit: My precious princess, you’ve returned! And you got the treasure?
-			Narrator: The Thief splits the treasure with the Bandit.
-			set {Thief.DonateBandit} = true
-			set {Thief.DonateCount} += 1
-			if {Thief.DonateCount} == 4:
-				[signal arg="give_treasure"]
-			Bandit: I appreciate this, I’ll be sure to share it with the fruit across the sea on my next journey.
-			Bandit: But I’m not leaving just yet, I’d love to spend more time with you while I can.
-			Narrator: The Bandit and the Thief share a sweet kiss.
-			[end_timeline]
-	if {Thief.DonateCount} == 4:
+		if {Thief.DonateCount} < 3:
+			Bandit: My precious princess, you’ve returned! And you got the treasure? There may be some [b]villagers[/b] you haven't given the gold to yet. Once you're done, I'll be here!
+	if {Thief.DonateCount} == 3:
 		Bandit: My rosy princess, you gave the treasure to all the townspeople? You're amazing, I love you.
+		Narrator: The Thief splits the last of the treasure with the Bandit.
+		set {Thief.DonateBandit} = true
+		set {Thief.DonateCount} += 1
+		if {Thief.DonateCount} == 4:
+			[signal arg="give_treasure"]
+		Bandit: I appreciate this, I’ll be sure to share it with the fruit across the sea on my next journey.
+		Bandit: But I’m not leaving just yet, I’d love to spend more time with you while I can.
+		Narrator: The Bandit and the Thief share a sweet kiss.
 		Narrator: And so the Thief completed her quest of giving back to the fruit of the kingdom...her way, of course.
 		set {Thief.CompletedThiefQuest} = true
