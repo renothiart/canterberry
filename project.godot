@@ -113,6 +113,7 @@ variables={
 "CollectedPotion": false,
 "CollectedToy": false,
 "CompletedKnightQuest": false,
+"CompletedKnightQuestBard": false,
 "CompletedSquireQuest": false,
 "CompletedWitchQuest": false,
 "MetBaker": false,
@@ -159,8 +160,10 @@ variables={
 "MetKing": false,
 "MetMaid": false,
 "MetMonk": false,
+"MetMushroom": false,
 "MetPrincess": false,
 "MetSquire": false,
+"MetToy": false,
 "MetWitch": false,
 "ReceivedQuest": false
 },
