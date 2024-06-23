@@ -15,6 +15,7 @@ texture = ExtResource("2_ewayp")
 
 [node name="InteractionManager" parent="." instance=ExtResource("2_e7ljf")]
 unique_name_in_owner = true
+scale = Vector2(1.96, 1)
 script = ExtResource("3_bphct")
 
 [node name="action_cue" parent="." instance=ExtResource("4_mat25")]

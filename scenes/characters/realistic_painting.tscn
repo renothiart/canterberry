@@ -13,6 +13,7 @@ character_type = 20
 
 [node name="InteractionManager" parent="." instance=ExtResource("2_8aeiw")]
 unique_name_in_owner = true
+scale = Vector2(0.68, 1)
 script = ExtResource("3_lg5p6")
 
 [node name="action_cue" parent="." instance=ExtResource("4_ofcyg")]

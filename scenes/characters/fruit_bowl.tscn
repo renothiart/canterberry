@@ -13,9 +13,10 @@ character_type = 18
 
 [node name="InteractionManager" parent="." instance=ExtResource("2_fu2rn")]
 unique_name_in_owner = true
+scale = Vector2(0.52, 1)
 script = ExtResource("3_284qu")
 
 [node name="action_cue" parent="." instance=ExtResource("4_mmquw")]
 unique_name_in_owner = true
-position = Vector2(100, -147)
+position = Vector2(2.08165e-12, -147)
 animation = &"NULL"

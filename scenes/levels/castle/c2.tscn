@@ -66,13 +66,12 @@ paired_portkey_location = 6
 linked_level_name = "res://scenes/levels/castle/c4.tscn"
 
 [node name="FruitBowl" parent="." instance=ExtResource("11_eukrp")]
-position = Vector2(78, 194)
-scale = Vector2(0.280001, 0.56)
+position = Vector2(175, 198)
 
 [node name="Painting" parent="." instance=ExtResource("12_i6sd8")]
-position = Vector2(450, 186)
+position = Vector2(508, 171)
 scale = Vector2(0.279998, 0.6)
 
 [node name="RealisticPainting" parent="." instance=ExtResource("13_ibxva")]
-position = Vector2(808, 208)
+position = Vector2(808, 180)
 scale = Vector2(0.279998, 0.519999)

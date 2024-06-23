@@ -140,7 +140,7 @@ shape = SubResource("RectangleShape2D_nh834")
 
 [node name="InteractionManager" parent="." instance=ExtResource("4_21hvw")]
 position = Vector2(0, 105)
-scale = Vector2(1.6, 0.6)
+scale = Vector2(0.84, 0.6)
 script = ExtResource("6_a3q3m")
 
 [node name="SK" type="AnimatedSprite2D" parent="."]
@@ -165,5 +165,6 @@ animation = &"WALK"
 position = Vector2(2.08165e-12, -100)
 
 [node name="BackwardArrow" parent="." instance=ExtResource("21_ve0bv")]
+z_as_relative = true
 position = Vector2(2.08165e-12, 300)
 is_forward = false
