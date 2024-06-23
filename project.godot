@@ -101,7 +101,23 @@ variables={
 "MetWitch": false,
 "ReceivedQuest": false
 },
-"Messenger": {},
+"Messenger": {
+"HasFlyeredBaker": false,
+"HasFlyeredBandit": false,
+"HasFlyeredJester": false,
+"HasFlyeredKing": false,
+"HasFlyeredKnight": false,
+"HasFlyeredMaid": false,
+"HasFlyeredMonk": false,
+"HasFlyeredMushroom": false,
+"HasFlyeredPrincess": false,
+"HasFlyeredSquire": false,
+"HasFlyeredThief": false,
+"HasFlyeredTownsfolk": false,
+"HasFlyeredToy": false,
+"HasFlyeredWitch": false,
+"ReceivedQuest": false
+},
 "Thief": {}
 }
 text/letter_speed=0.01
