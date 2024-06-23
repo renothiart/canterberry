@@ -127,9 +127,11 @@ variables={
 "MetPainting": false,
 "MetPrincess": false,
 "MetSquire": false,
+"MetThief": false,
 "MetWitch": false,
 "SpeakBandit": 0,
-"StartedWitchQuest": false
+"StartedWitchQuest": false,
+"ToldKing": false
 },
 "Messenger": {
 "CompletedMessengerQuest": false,
