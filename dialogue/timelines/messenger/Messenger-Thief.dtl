@@ -1,3 +1,13 @@
+if {Messenger.MetThief} == false:
+	set {Messenger.MetPrincess} = true
+	set {Messenger.MetThief} = true
+	set {Thief.MetMessenger} = true
+	Messenger: I don't think I've seen you around here before...
+	Thief: ...
+else:
+	if {Messenger.ReceivedQuest} == false:
+		Messenger: Fancy seeing you here!
+		Thief: ...
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredThief} == false:
 		if {Messenger.HasFlyeredKnight} == false:
