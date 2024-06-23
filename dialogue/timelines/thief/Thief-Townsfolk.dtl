@@ -1,1 +1,15 @@
-Townsfolk: Test
+if {Thief.CollectTreasure} == false:
+	Cherie: Hope you're not-
+	Jerry: -skulking about our property!
+else:
+	if {Thief.DonateCherries} == false:
+		Narrator: The Thief gives a portion of the treasure to Cherie and Jerry.
+		Cherie: Oh wow! Thank you milady-
+		Jerry: -this'll really help us out a lot!
+		set {Thief.DonateCherries} = true
+		set {Thief.DonateCount} += 1
+		if {Thief.DonateCount} == 4:
+			[signal arg="give_treasure"]
+	else:
+		Cherie: We really appreciate-
+		Jerry: -your generous nature, milady!
