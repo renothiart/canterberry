@@ -1,8 +1,8 @@
 if {Messenger.MetBandit} == false:
 	set {Messenger.MetBandit} = true
-	Bandit: Hello!
+	Bandit: Hey, keep it moving guy, or I'll turn you into jam!
 else:
-	Bandit: Hi again!
+	Bandit: What do you want?
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredBandit} == false:
 		Messenger: Did you hear the Bard is putting on a special performance tonight?
@@ -13,4 +13,3 @@ if {Messenger.ReceivedQuest} == true:
 		set {Messenger.HasFlyeredBandit} = true
 		set {Messenger.FlyersDelivered} += 1
 		Messenger: Alright, just stay out of trouble. This show is a [b]big deal[/b].
-
