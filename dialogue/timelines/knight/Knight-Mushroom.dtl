@@ -2,3 +2,4 @@ if {Knight.CollectedMushroom} == false:
 	Narrator: The Knight picks the large red mushroom from the forest floor. He stashes it away in his infinite pockets.
 	[signal arg="collect_mushroom"]
 	set {Knight.CollectedMushroom} = true
+	set {Knight.CollectedIngredients} += 1

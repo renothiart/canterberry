@@ -1,9 +1,10 @@
 if {Knight.CollectedEgg} == false:
-	Narrator: The Knight spies a green egg in the nest. 
+	Narrator: The Knight spies a green egg in the nest.
 	Knight: ...
 	Bird: Zzz...
 	Narrator: The Knight expertly maneuvers the egg out from under the sleeping bird.
 	[signal arg="collect_egg"]
 	set {Knight.CollectedEgg} = true
+	set {Knight.CollectedIngredients} += 1
 else:
 	Narrator: The bird sleeps on. Better not push your luck.

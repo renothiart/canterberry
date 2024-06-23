@@ -98,23 +98,28 @@ directories/dtl_directory={
 glossary/default_case_sensitive=true
 variables={
 "Knight": {
-"CollectedBread": false,
-"CollectedEgg": false,
-"CollectedIngredients": 0,
-"CollectedMushroom": false,
+"CollectedBread": true,
+"CollectedEgg": true,
+"CollectedIngredients": 3,
+"CollectedMushroom": true,
 "CollectedPotion": false,
 "CollectedToy": false,
 "CompletedKnightQuest": false,
+"CompletedSquireQuest": false,
 "CompletedWitchQuest": false,
+"MetBaker": false,
 "MetBard": false,
+"MetCherries": false,
 "MetJester": 0,
 "MetKing": false,
 "MetMaid": false,
 "MetMonk": false,
 "MetPainting": false,
 "MetPrincess": false,
-"MetWitch": false,
-"SpeakBandit": 0
+"MetSquire": false,
+"MetWitch": true,
+"SpeakBandit": 0,
+"StartedWitchQuest": true
 },
 "Messenger": {
 "CompletedMessengerQuest": false,
@@ -140,8 +145,7 @@ variables={
 "ReceivedQuest": false
 },
 "Thief": {
-"CompletedThiefQuest": false,
-"FoundTreasure": false
+"CompletedThiefQuest": false
 }
 }
 text/letter_speed=0.01

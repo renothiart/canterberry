@@ -7,6 +7,7 @@ else:
 		Baker: No really, I insist! We need more chivalrous knights like you.
 		[signal arg="collect_bread"]
 		set {Knight.CollectedBread} = true
+		set {Knight.CollectedIngredients} += 1
 		set {Knight.MetBaker} = true
 if {Knight.CompletedWitchQuest} == true:
 	Baker: I see you finished off the loaf! Best in the village, I know.
