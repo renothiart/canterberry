@@ -8,6 +8,7 @@ if {Thief.MetBard} == false:
 	else:
 		Bard: Ah, hello. Not skulking around the halls of the castle?
 		Narrator: The Bard winks at the Thief.
+		set {Thief.MetBard} = true
 else:
 	if {Thief.MetBandit} == false:
 		Bard: I believe a special someone was waiting for you up at the [b]Docks[/b] to the west.
