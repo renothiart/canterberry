@@ -23,6 +23,17 @@ else:
 					if {Knight.CollectedBread} == false:
 						Bard: Still on the hunt for ingredients? I think the [b]Village[/b] still has what you seek.
 						[end_timeline]
+				else:
+					if {Knight.CollectedBread} == false:
+						Bard: Still on the hunt for ingredients? I think the [b]Village[/b] and the [b]Red Forest[/b] still have what you seek.
+					else:
+						Bard: Still on the hunt for ingredients? I think the [b]Red Forest[/b] still has what you seek.
+					[end_timeline]
+			else:
+				if {Knight.CollectedBread} == false:
+					Bard: Still on the hunt for ingredients? I think the [b]Village[/b] and the [b]Red Forest[/b] still have what you seek.
+				else:
+					Bard: Still on the hunt for ingredients? I think the [b]Red Forest[/b] still has what you seek.
 		else:
 			if {Knight.CompletedWitchQuest} == false:
 				Bard: Looks like you’ve got everything! The [b]Witch[/b] will be chuffed to see those.

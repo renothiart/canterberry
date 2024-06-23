@@ -152,11 +152,7 @@ variables={
 "MetCherries": false,
 "MetJester": false,
 "MetJesterCount": 0,
-"MetKing": false,
-"MetMaid": false,
 "MetPrincess": false,
-"MetSquire": false,
-"MetWitch": false,
 "ReceivedQuest": false
 },
 "Thief": {
