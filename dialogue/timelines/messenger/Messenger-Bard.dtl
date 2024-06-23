@@ -1,0 +1,2 @@
+if {Messenger.ReceivedQuest} == false:
+	set {Messenger.ReceivedQuest} = true

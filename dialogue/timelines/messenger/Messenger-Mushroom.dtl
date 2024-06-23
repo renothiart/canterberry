@@ -1,16 +1,17 @@
 if {Knight.CollectedMushroom} == false:
 	if {Messenger.ReceivedQuest} == true:
 		if {Messenger.HasFlyeredMushroom} == false:
-			Narrator: The Messenger spots a peculiar little mushroom.
-			Messenger: Ha! Why would I talk to you?
-			Messenger: You're just a mushroom! You can't even talk!
-			Narrator: The Messenger laughs to himself as he imagines a world where mushrooms could talk.
-			Messenger: Better give you one of these, just to be safe!
 			set {Messenger.HasFlyeredMushroom} = true
+			jump Mushroom
+			Narrator: The Messenger laughs to himself as he imagines a world where mushrooms could talk.
 		else:
 			Messenger: Hold on, I'm pretty sure you already got one of these.
 	else:
-		Narrator: The Messenger spots a peculiar little mushroom.
-		Messenger: Ha! Why would I talk to you?
-		Messenger: You're just a mushroom! You can't even talk!
-		Narrator: The Messenger laughs to himself as he imagines a world where mushrooms could talk.
+		jump Mushroom
+[end_timeline]
+label Mushroom
+Narrator: The Messenger spots a peculiar little mushroom.
+Messenger: Ha! Why would I talk to you?
+Messenger: You're just a mushroom! You can't even talk!
+Narrator: The Messenger laughs to himself as he imagines a world where mushrooms could talk.
+return

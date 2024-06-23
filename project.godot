@@ -91,6 +91,12 @@ directories/dtl_directory={
 glossary/default_case_sensitive=true
 variables={
 "Knight": {
+"CollectedBread": false,
+"CollectedEgg": false,
+"CollectedIngredients": 0,
+"CollectedMushroom": false,
+"CollectedPotion": false,
+"CollectedToy": false,
 "CompletedKnightQuest": false,
 "CompletedWitchQuest": false,
 "MetBard": false,
@@ -98,13 +104,7 @@ variables={
 "MetKing": false,
 "MetPrincess": false,
 "MetWitch": false,
-"SpeakBandit": 0,
-"hasBread": false,
-"hasEgg": false,
-"hasIngredients": 0,
-"hasMushroom": false,
-"hasPotion": false,
-"hasToy": false
+"SpeakBandit": 0
 },
 "Messenger": {
 "HasFlyeredBaker": false,
