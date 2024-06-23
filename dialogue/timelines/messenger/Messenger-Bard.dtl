@@ -20,7 +20,12 @@ else:
 			Bard: I’m just about ready to start the show...
 			Bard: Are you ready?
 			Narrator: The Messenger considers whether or not he’s ready to end the day. Has he done everything he wants to do?
-			- EndGame [if {} == ""]
+				- Yes
+					[signal arg="end_show"]
+					Bard: Enjoy the show!
+				- No
+					Bard: No worries! Come back and talk to me when you're ready.
+				[end_timeline]
 		else:
 			if {Messenger.MetPrincess} == true:
 				Bard: I think your Tomato friend still has some work to do...

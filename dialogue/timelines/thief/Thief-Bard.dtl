@@ -29,7 +29,15 @@ else:
 	if {Messenger.CompletedMessengerQuest} == true:
 		if {Knight.CompletedKnightQuest} == true:
 			if {Thief.CompletedThiefQuest} == true:
-				Bard: (to do) Do you want to start the show?
+				Bard: I’m just about ready to start the show...
+				Bard: Are you ready?
+				Narrator: The Thief considers whether or not she’s ready to end the day. Has she done everything she wants to do?
+				- Yes
+					[signal arg="end_show"]
+					Bard: Enjoy the show!
+				- No
+					Bard: No worries! Come back and talk to me when you're ready.
+				[end_timeline]
 		else:
 			Bard: It seems like your Strawberry friend has some questing left...
 	else:
