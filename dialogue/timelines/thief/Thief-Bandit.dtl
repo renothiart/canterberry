@@ -6,6 +6,7 @@ if {Thief.MetBandit} == false:
 	Bandit: Great! And you can distribute it fairly amongst the townspeople when you're done. I believe in you, princess.
 	Narrator: The Bandit winks and blows a kiss.
 	set {Thief.MetBandit} = true
+	[end_timeline]
 else:
 	if {Thief.CollectTreasure} == false:
 		Bandit: My darling princess! It’s always lovely to see you. Let me know when you’ve got the [b]treasure[/b] from the [b]Castle[/b].
