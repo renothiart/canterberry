@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://w0eswg4cvckf"]
+[gd_scene load_steps=18 format=3 uid="uid://w0eswg4cvckf"]
 
 [ext_resource type="Script" path="res://scenes/levels/hub/hub.gd" id="1_1d8nx"]
 [ext_resource type="PackedScene" uid="uid://c32uqyp4i5dk8" path="res://nodes/UX/player_inventory.tscn" id="2_7e5u4"]
@@ -14,6 +14,27 @@
 [ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="9_mmhyf"]
 [ext_resource type="PackedScene" uid="uid://cvc1hqpk5swtw" path="res://nodes/activatable_teleporters/mg_to_fg_activatable_teleporter.tscn" id="11_qjx5e"]
 [ext_resource type="PackedScene" uid="uid://dmshb3ep1l0gp" path="res://nodes/activatable_teleporters/fg_activatable_teleporter.tscn" id="12_15e6i"]
+
+[sub_resource type="Animation" id="Animation_lt6ig"]
+resource_name = "fade_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s5ljj"]
+_data = {
+"fade_in": SubResource("Animation_lt6ig")
+}
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kw6cc"]
 animations = [{
@@ -33,6 +54,16 @@ animations = [{
 script = ExtResource("1_1d8nx")
 fg_left_portkey = NodePath("LeftPortkey")
 fg_right_portkey = NodePath("RightPortkey")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_s5ljj")
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0, 0, 0, 1)
 
 [node name="PlayerInventory" parent="." instance=ExtResource("2_7e5u4")]
 unique_name_in_owner = true

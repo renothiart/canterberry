@@ -18,6 +18,9 @@ enum PCCNumber {
 var is_princess_in_castle = true
 var is_messenger_in_port = true
 
+# for hub initial fade-in
+var first_load = true
+
 # Portkey locations
 var current_portkey_location: PortkeyLocation = PortkeyLocation.UNDEFINED
 enum PortkeyLocation {

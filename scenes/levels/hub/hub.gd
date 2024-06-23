@@ -35,25 +35,11 @@ func _init():
 			Global.pcc2_player_type = Global.PlayerType.THIEF
 
 func _ready():
-	if Global.is_princess_in_castle and \
-			(Dialogic.VAR.Knight.MetPrincess or Dialogic.VAR.Messenger.MetPrincess):
-		Global.is_princess_in_castle = false
-	if Global.is_messenger_in_port and \
-			(Dialogic.VAR.Knight.MetMessenger or Dialogic.VAR.Thief.MetMessenger):
-		Global.is_messenger_in_port = false
-	
-	if Global.pcc1_player_type == Global.PlayerType.NULL:
-		if not Global.is_princess_in_castle:
-			Global.pcc1_player_type = Global.PlayerType.THIEF
-		elif not Global.is_messenger_in_port:
-			Global.pcc1_player_type = Global.PlayerType.MESSENGER
-	elif Global.pcc2_player_type == Global.PlayerType.NULL \
-			and not Global.is_princess_in_castle \
-			and not Global.is_messenger_in_port:
-		if Global.pcc1_player_type == Global.PlayerType.THIEF:
-			Global.pcc2_player_type = Global.PlayerType.MESSENGER
-		elif Global.pcc1_player_type == Global.PlayerType.MESSENGER:
-			Global.pcc2_player_type = Global.PlayerType.THIEF
+	if Global.first_load:
+		$AnimationPlayer.queue("fade_in")
+		Global.first_load = false
+	else:
+		$ColorRect.visible = false
 
 	Dialogic.signal_event.connect(process_dialogic_signal)
 	

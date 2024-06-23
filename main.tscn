@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://2mt8m58b8llh"]
+[gd_scene load_steps=13 format=3 uid="uid://2mt8m58b8llh"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_i8ay4"]
 [ext_resource type="PackedScene" uid="uid://701ngm4v8h3w" path="res://scenes/extras/title_screen.tscn" id="2_0p4u2"]
-[ext_resource type="Texture2D" uid="uid://dns7cob5n1eva" path="res://assets/fullscreens/titlescreen.png" id="3_0784s"]
-[ext_resource type="Texture2D" uid="uid://br14sfxwug23r" path="res://assets/fullscreens/splash.png" id="4_opsdt"]
+[ext_resource type="Texture2D" uid="uid://d3vpq4p0rbrrr" path="res://assets/fullscreens/controls.png" id="3_1tstj"]
+[ext_resource type="Texture2D" uid="uid://l3fp4v4d1eum" path="res://assets/fullscreens/titlescreen.png" id="3_0784s"]
+[ext_resource type="Texture2D" uid="uid://co1kgu0q38j3j" path="res://assets/fullscreens/splash.png" id="4_opsdt"]
 
 [sub_resource type="Animation" id="Animation_bkoxd"]
 resource_name = "splash_screen"
@@ -22,7 +23,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_je3k2"]
-resource_name = "title_screen"
+resource_name = "title_screen_fade_in"
 length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -37,10 +38,90 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_dv8s2"]
+resource_name = "title_screen_fade_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TitleScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_y678v"]
+resource_name = "controls_screen_fade_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ControlsScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_47ydt"]
+resource_name = "controls_screen_fade_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ControlsScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_e4pm4"]
+resource_name = "title_screen_to_controls_screen"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ControlsScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TitleScreen:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eqxbh"]
 _data = {
+"controls_screen_fade_in": SubResource("Animation_y678v"),
+"controls_screen_fade_out": SubResource("Animation_47ydt"),
 "splash_screen": SubResource("Animation_bkoxd"),
-"title_screen": SubResource("Animation_je3k2")
+"title_screen_fade_in": SubResource("Animation_je3k2"),
+"title_screen_fade_out": SubResource("Animation_dv8s2"),
+"title_screen_to_controls_screen": SubResource("Animation_e4pm4")
 }
 
 [node name="Main" type="Node2D"]
@@ -60,13 +141,19 @@ color = Color(0, 0, 0, 1)
 
 [node name="SplashScreen" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0)
+modulate = Color(0, 0, 0, 1)
 texture = ExtResource("4_opsdt")
+centered = false
+
+[node name="ControlsScreen" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("3_1tstj")
 centered = false
 
 [node name="TitleScreen" parent="." instance=ExtResource("2_0p4u2")]
 unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0)
+modulate = Color(0, 0, 0, 0)
 texture = ExtResource("3_0784s")
 
 [node name="MarginContainer" type="MarginContainer" parent="TitleScreen"]
@@ -89,3 +176,5 @@ size_flags_vertical = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "Press any key to start"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

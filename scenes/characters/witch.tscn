@@ -16,7 +16,7 @@ flip_h = true
 
 [node name="InteractionManager" parent="." instance=ExtResource("2_t6bss")]
 unique_name_in_owner = true
-scale = Vector2(2.96, 1)
+scale = Vector2(2, 1)
 script = ExtResource("3_as6qq")
 
 [node name="action_cue" parent="." instance=ExtResource("4_4lmyd")]
