@@ -57,11 +57,11 @@ Jester: 'Cause you're a [b]rasp[/b]berry!
 Narrator: The King sighs, loudly, while the Messenger grumbles and the Jester continues to laugh.
 return
 label 3_Meets
-Alright, alright, I think I'm a bit [b]tapped[/b] out.
-HAHAHAHA!
-Get it? [b]tapped[/b] out?
-Because -
-Wait a minute -
-That doesn't actually make any sense, does it?
-I think I need new material...
+Jester: Alright, alright, I think I'm a bit [b]tapped[/b] out.
+Jester: HAHAHAHA!
+Jester: Get it? [b]tapped[/b] out?
+Jester: Because -
+Jester: Wait a minute -
+Jester: That doesn't actually make any sense, does it?
+Jester: I think I need new material...
 return

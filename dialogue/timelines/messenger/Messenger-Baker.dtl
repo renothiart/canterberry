@@ -1,6 +1,6 @@
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredBaker} == false:
-		if {Messenger.MetBaker} == "true":
+		if {Messenger.MetBaker} == true:
 			Baker: Back for more bread already?
 			Messenger: Not this time -
 		else:
