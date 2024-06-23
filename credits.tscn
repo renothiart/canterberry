@@ -1,40 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dpjncp57rl12i"]
+[gd_scene load_steps=8 format=3 uid="uid://dpjncp57rl12i"]
 
 [ext_resource type="Script" path="res://credits.gd" id="1_n7rv0"]
 [ext_resource type="Texture2D" uid="uid://bmg2o1uc7wwnt" path="res://assets/settings/hub/hub-bardshow.png" id="2_lykcj"]
 [ext_resource type="Texture2D" uid="uid://bllpkun61tdv" path="res://assets/fullscreens/credits.png" id="3_e2ggh"]
-
-[sub_resource type="Animation" id="Animation_bkoxd"]
-resource_name = "splash_screen"
-length = 6.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HubScene:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2, 5, 6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_je3k2"]
-resource_name = "title_screen"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TitleScreen:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_peas3"]
 resource_name = "bard_show_fade_in"
@@ -88,9 +56,7 @@ tracks/0/keys = {
 _data = {
 "bard_show_fade_in": SubResource("Animation_peas3"),
 "bard_show_fade_out": SubResource("Animation_7hul4"),
-"credits": SubResource("Animation_bu0ls"),
-"splash_screen": SubResource("Animation_bkoxd"),
-"title_screen": SubResource("Animation_je3k2")
+"credits": SubResource("Animation_bu0ls")
 }
 
 [node name="Credits" type="Node2D"]
@@ -110,6 +76,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="HubScene" type="Sprite2D" parent="."]
 unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
 texture = ExtResource("2_lykcj")
 centered = false
 

@@ -17,5 +17,5 @@ script = ExtResource("3_aycif")
 
 [node name="action_cue" parent="." instance=ExtResource("4_esvl3")]
 unique_name_in_owner = true
-position = Vector2(0, -113)
+position = Vector2(56, -113)
 animation = &"NULL"

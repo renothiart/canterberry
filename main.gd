@@ -5,6 +5,7 @@ const hub_path = "res://scenes/levels/hub/hub.tscn"
 @onready var _animation_player = $AnimationPlayer
 
 func _ready():
+	# TODO reset game
 	_animation_player.queue("splash_screen")
 	_animation_player.queue("title_screen")
 
