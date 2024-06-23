@@ -10,9 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://dwxr13m0esn7h" path="res://scenes/characters/treasure.tscn" id="7_gbb5u"]
 [ext_resource type="PackedScene" uid="uid://n40ubmic6oeb" path="res://nodes/activatable_portkeys/fg_activatable_portkey.tscn" id="8_68758"]
 
-[node name="Castle4" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey")]
+[node name="Castle4" type="Node2D" node_paths=PackedStringArray("fg_right_portkey")]
 script = ExtResource("1_8hibj")
-fg_left_portkey = NodePath("")
 fg_right_portkey = NodePath("FGActivatablePortkey")
 
 [node name="PlayerInventory" parent="." instance=ExtResource("2_l7g3w")]

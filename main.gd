@@ -12,7 +12,5 @@ func _input(event):
 	if event is InputEventKey && event.is_pressed():
 		if _animation_player.current_animation == "splash_screen":
 			_animation_player.seek(_animation_player.get_animation("splash_screen").length)
-		elif _animation_player.current_animation == "title_screen":
-			_animation_player.seek(_animation_player.get_animation("title_screen").length)
 		else:
 			get_tree().change_scene_to_file(HubPath)

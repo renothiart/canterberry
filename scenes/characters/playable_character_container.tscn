@@ -138,6 +138,23 @@ animations = [{
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_33run"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"IDLE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"WALK",
+"speed": 5.0
+}]
 
 [node name="PCC1" type="CharacterBody2D"]
 script = ExtResource("1_8iu5t")
@@ -176,3 +193,4 @@ animation = &"WALK"
 [node name="NULL" type="AnimatedSprite2D" parent="."]
 visible = false
 sprite_frames = SubResource("SpriteFrames_33run")
+animation = &"WALK"
