@@ -105,24 +105,17 @@ variables={
 "CollectedPotion": false,
 "CollectedToy": false,
 "CompletedKnightQuest": false,
-"CompletedSquireQuest": false,
 "CompletedWitchQuest": false,
-"MetBaker": false,
 "MetBard": false,
-"MetCherries": false,
 "MetJester": 0,
 "MetKing": false,
 "MetMaid": 0,
-"MetMonk": false,
-"MetPainting": false,
 "MetPrincess": false,
-"MetSquire": false,
 "MetWitch": false,
-"SpeakBandit": 0,
-"StartedWitchQuest": false
+"SpeakBandit": 0
 },
 "Messenger": {
-"CompletedMessengerQuest": true,
+"CompletedMessengerQuest": false,
 "FlyersDelivered": 0,
 "HasFlyeredBaker": false,
 "HasFlyeredBandit": false,
@@ -138,11 +131,11 @@ variables={
 "HasFlyeredTownsfolk": false,
 "HasFlyeredToy": false,
 "HasFlyeredWitch": false,
-"MetPrincess": false,
 "ReceivedQuest": false
 },
 "Thief": {
-"CompletedThiefQuest": true
+"CompletedThiefQuest": false,
+"FoundTreasure": false
 }
 }
 text/letter_speed=0.01

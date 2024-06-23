@@ -40,7 +40,7 @@ position = Vector2(558, 347)
 [node name="Player" parent="." instance=ExtResource("5_0umja")]
 unique_name_in_owner = true
 z_index = -4
-position = Vector2(5, 300)
+position = Vector2(115, 254)
 scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 0

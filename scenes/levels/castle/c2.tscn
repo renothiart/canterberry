@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dbou05i4apvny"]
 
-[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_k8bp2"]
+[ext_resource type="Script" path="res://scenes/levels/castle/c2.gd" id="1_hppsw"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="2_36v6d"]
 [ext_resource type="Texture2D" uid="uid://bmobhd8bs6685" path="res://assets/settings/castle/c2.png" id="3_2mo5d"]
 [ext_resource type="Texture2D" uid="uid://ctu8emnawblmp" path="res://assets/settings/castle/c1-fg.png" id="4_kboec"]
@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dt3itm06p1s0h" path="res://scenes/characters/princess.tscn" id="9_uxxx2"]
 
 [node name="Castle2" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey", "mg_right_portkey")]
-script = ExtResource("1_k8bp2")
+script = ExtResource("1_hppsw")
 fg_left_portkey = NodePath("LeftFGPortkey")
 fg_right_portkey = NodePath("RightFGPortkey")
 mg_right_portkey = NodePath("FGActivatablePortkey")
@@ -42,7 +42,7 @@ new_scale = 0.9
 [node name="Player" parent="." instance=ExtResource("5_a0s0c")]
 unique_name_in_owner = true
 z_index = -4
-position = Vector2(5, 300)
+position = Vector2(141, 286)
 scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 0
