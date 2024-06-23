@@ -9,8 +9,8 @@ else:
 		[end_timeline]
 	else:
 		if {Thief.CompletedThiefQuest} == false:
-			if {Thief.FoundTreasure} == false:
-				Bard: You found your boyfriend? Wonderful, we bards love a good love story. And what an exciting heist you've been sent on! A secret passageway in the castle? 
+			if {Thief.CollectTreasure} == false:
+				Bard: You found your boyfriend? Wonderful, we bards love a good love story. And what an exciting heist you've been sent on! A secret passageway in the castle?
 				Narrator: The Bard nudges you.
 				Bandit: I wonder how the Bandit found out about that?
 			else:

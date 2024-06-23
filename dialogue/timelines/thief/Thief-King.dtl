@@ -8,7 +8,7 @@ if {Thief.MetKing} == false:
 	set {Thief.MetKing} = true
 	[end_timeline]
 else:
-	if {Thief.FoundTreasure} == false:
+	if {Thief.CollectTreasure} == false:
 		King: There you are! I’ve been worr-
 		King: Oh. Sorry, I mixed you up with my daughter for a second. I should really get my eyes checked.
 		King: [b]Jester[/b], make an appointment with my optometrist.
@@ -21,6 +21,6 @@ else:
 		King: I suppose you're right. Harrumph...
 	else:
 		King: You again! Haven’t you heard the news? The royal treasury has been raided!
-		King: Reports say a hooded figure somehow discovered the entrance. I thought hiding it behind that pai - or wherever I hid it - was foolproof! 
+		King: Reports say a hooded figure somehow discovered the entrance. I thought hiding it behind that pai - or wherever I hid it - was foolproof!
 		Narrator: The King lets out a disappointed sigh.
 		King: Oh well, you should get out of here - the guards might confuse you with the thief, given your hood and all. We need them focused on the real culprit!

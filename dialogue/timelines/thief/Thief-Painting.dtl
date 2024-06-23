@@ -1,1 +1,7 @@
-Narrator: The Thief stops in front of a glorious portrait of the king, drawn in by its regal aura. Every detail is captured perfectly.
+if {Thief.MetPainting} == false:
+	Narrator: Slipping through the familiar halls, the Thief pauses at a large portrait of her father and - with a quick glance in either direction - pulls a hidden latch on the side of the frame. A secret hallway!
+	set {Thief.FoundTreasure} = true
+	[signal arg="found_treasure"]
+	set {Thief.MetPainting} = true
+else:
+	Narrator: A secret passage behind a very conspicuous painting, hidden in plain sight. “How was it found?” the King wonders. If only he could read this story!

@@ -7,7 +7,7 @@ if {Thief.MetBandit} == false:
 	Narrator: The Bandit winks and blows a kiss.
 	set {Thief.MetBandit} = true
 else:
-	if {Thief.FoundTreasure} == false:
+	if {Thief.CollectTreasure} == false:
 		Bandit: My darling princess! It’s always lovely to see you. Let me know when you’ve got the [b]treasure[/b] from the [b]Castle[/b].
 		[end_timeline]
 	else:
@@ -16,7 +16,7 @@ else:
 			Narrator: The Thief splits the treasure with the Bandit.
 			set {Thief.DonateBandit} = true
 			set {Thief.DonateCount} += 1
-			Bandit: I appreciate this, I’ll be sure to share it with the fruit across the sea on my next journey. 
+			Bandit: I appreciate this, I’ll be sure to share it with the fruit across the sea on my next journey.
 			Bandit: But I’m not leaving just yet, I’d love to spend more time with you while I can.
 			Narrator: The Bandit and the Thief share a sweet kiss.
 			[end_timeline]
