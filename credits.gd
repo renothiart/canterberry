@@ -7,7 +7,7 @@ const main_path = "res://main.tscn"
 func _ready():
 	_animation_player.queue("bard_show_fade_in")
 	await _animation_player.animation_finished
-	Dialogic.start("skyrim")
+	Dialogic.start("Bard-Show")
 	await Dialogic.timeline_ended
 	_animation_player.queue("bard_show_fade_out")
 	_animation_player.queue("credits")
