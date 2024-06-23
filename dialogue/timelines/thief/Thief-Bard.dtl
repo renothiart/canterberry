@@ -25,3 +25,14 @@ else:
 		if {Knight.CompletedKnightQuest} == true:
 			if {Thief.CompletedThiefQuest} == true:
 				Bard: (to do) Do you want to start the show?
+		else:
+			Bard: It seems like your Strawberry friend has some questing left...
+	else:
+		if {Knight.CompletedKnightQuest} == false:
+			Bard: It seems like your Strawberry and Raspberry friends have some questing left...
+		else:
+			Bard: It seems like your Raspberry friend has some questing left...
+if {Thief.MetMessenger} == false:
+	if {Knight.MetMessenger} == false:
+		Bard: And you should go down to the docks when you get the chance!
+		Bard: There's a messenger arriving by ship today...
