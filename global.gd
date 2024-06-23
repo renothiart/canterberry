@@ -1,7 +1,7 @@
 extends Node
 
 # required for treasure room entry bug
-var player_facing_right = true
+var player_facing_right = false
 
 # player inventory
 var knight_inventory = []

@@ -1,6 +1,6 @@
 extends Node2D
 
-const HubPath = "res://scenes/levels/hub/hub.tscn"
+const hub_path = "res://scenes/levels/hub/hub.tscn"
 
 @onready var _animation_player = $AnimationPlayer
 
@@ -13,4 +13,4 @@ func _input(event):
 		if _animation_player.current_animation == "splash_screen":
 			_animation_player.seek(_animation_player.get_animation("splash_screen").length)
 		else:
-			get_tree().change_scene_to_file(HubPath)
+			get_tree().change_scene_to_file(hub_path)
