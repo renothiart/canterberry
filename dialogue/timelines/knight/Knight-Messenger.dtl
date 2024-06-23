@@ -1,2 +1,11 @@
-Messenger: ...
-set {Knight.MetMessenger} = true
+if {Knight.MetMessenger} == false:
+	set {Knight.MetMessenger} = true
+	set {Messenger.MetKnight} = true
+	Messenger: Hey! Nice to meet ya!
+	Knight: ...
+	Messenger: Man of few words, huh?
+	Knight: ...
+	Messenger: Alright, well, see ya 'round I guess!
+else:
+	Knight: ...
+	Messenger: Still nothing, eh?
