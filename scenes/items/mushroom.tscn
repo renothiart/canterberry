@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://7pve3wlgqwcx" path="res://nodes/UX/action_cue.tscn" id="4_6pwkn"]
 [ext_resource type="Script" path="res://nodes/interaction/IM_item.gd" id="4_g1ldj"]
 
-[node name="mushroom" type="Node2D"]
+[node name="Mushroom" type="Node2D"]
 script = ExtResource("1_q0olm")
 item_type = 2
 
