@@ -1,6 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://co5ii2behri37"]
+[gd_scene load_steps=15 format=3 uid="uid://co5ii2behri37"]
 
-[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_h5bpv"]
+[ext_resource type="Script" path="res://scenes/levels/port/p1.gd" id="1_x53lu"]
 [ext_resource type="PackedScene" uid="uid://c32uqyp4i5dk8" path="res://nodes/UX/player_inventory.tscn" id="2_10fme"]
 [ext_resource type="Texture2D" uid="uid://bbg4iw8rpbbah" path="res://assets/settings/port/p1.png" id="3_g71gm"]
 [ext_resource type="Texture2D" uid="uid://d0vi8opnt1mu2" path="res://assets/settings/village/v4-mg.png" id="3_xxgy8"]
@@ -9,13 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="6_q4k2q"]
 [ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="7_a5w6c"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="7_y2onc"]
+[ext_resource type="PackedScene" uid="uid://bs6vw3opll74b" path="res://scenes/characters/messenger.tscn" id="9_d25b0"]
 [ext_resource type="PackedScene" uid="uid://cvc1hqpk5swtw" path="res://nodes/activatable_teleporters/mg_to_fg_activatable_teleporter.tscn" id="9_kvpcl"]
 [ext_resource type="PackedScene" uid="uid://dmshb3ep1l0gp" path="res://nodes/activatable_teleporters/fg_activatable_teleporter.tscn" id="10_oupe7"]
 [ext_resource type="PackedScene" uid="uid://c1wxtrftkrfyl" path="res://nodes/portkeys/left_fg_portkey.tscn" id="11_sdkus"]
 [ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="12_nexsb"]
 
 [node name="Port1" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey")]
-script = ExtResource("1_h5bpv")
+script = ExtResource("1_x53lu")
 fg_left_portkey = NodePath("LeftFGPortkey")
 fg_right_portkey = NodePath("RightFGPortkey")
 
@@ -53,6 +54,11 @@ layer = 4
 [node name="RightWall" parent="." instance=ExtResource("7_a5w6c")]
 position = Vector2(729, 304)
 layer = 4
+
+[node name="Messenger" parent="." instance=ExtResource("9_d25b0")]
+position = Vector2(480, 320)
+layer = 4
+new_scale = 0.45
 
 [node name="Player" parent="." instance=ExtResource("6_q4k2q")]
 unique_name_in_owner = true

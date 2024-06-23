@@ -14,8 +14,9 @@ enum PCCNumber {
 	PCC_2,
 }
 
-# remove princess from castle
+# move player characters
 var is_princess_in_castle = true
+var is_messenger_in_port = true
 
 # Portkey locations
 var current_portkey_location: PortkeyLocation = PortkeyLocation.UNDEFINED
