@@ -1,1 +1,10 @@
-Witch: Test
+if {Thief.MetWitch} == false:
+	set {Thief.MetWitch} = true
+	Witch: Oh hello!
+	Witch: Fancy seeing someone all the way out here, I rarely get visitors.
+	Witch: Better hurry away before I turn you into a toad!
+	Witch: ...
+	Witch: Just kidding, sorry, it’s really been a while. I miss the company.
+else:
+	Witch: ...
+	Witch: Sorry, I don't have anything for you.

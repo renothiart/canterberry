@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="7_ucdip"]
 [ext_resource type="PackedScene" uid="uid://n40ubmic6oeb" path="res://nodes/activatable_portkeys/fg_activatable_portkey.tscn" id="8_2s5ca"]
 [ext_resource type="PackedScene" uid="uid://dt3itm06p1s0h" path="res://scenes/characters/princess.tscn" id="9_uxxx2"]
-[ext_resource type="PackedScene" uid="uid://dpm1xhfj58sw1" path="res://scenes/characters/fruit_bowl.tscn" id="11_eukrp"]
-[ext_resource type="PackedScene" uid="uid://b0wp6c8dvk36b" path="res://scenes/characters/painting.tscn" id="12_i6sd8"]
-[ext_resource type="PackedScene" uid="uid://bvku5wbwat6aq" path="res://scenes/characters/realistic_painting.tscn" id="13_ibxva"]
+[ext_resource type="PackedScene" path="res://scenes/characters/fruit_bowl.tscn" id="11_eukrp"]
+[ext_resource type="PackedScene" path="res://scenes/characters/painting.tscn" id="12_i6sd8"]
+[ext_resource type="PackedScene" path="res://scenes/characters/realistic_painting.tscn" id="13_ibxva"]
 
 [node name="Castle2" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey", "mg_right_portkey")]
 script = ExtResource("1_hppsw")

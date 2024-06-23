@@ -175,8 +175,12 @@ variables={
 "MetBandit": false,
 "MetBard": false,
 "MetKing": false,
+"MetMaid": false,
 "MetMessenger": false,
-"MetPainting": false
+"MetMonk": false,
+"MetPainting": false,
+"MetSquire": false,
+"MetWitch": false
 }
 }
 text/letter_speed=0.01

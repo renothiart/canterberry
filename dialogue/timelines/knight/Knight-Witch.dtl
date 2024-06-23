@@ -1,4 +1,5 @@
 if {Knight.MetWitch} == false:
+	set {Knight.MetWitch} = true
 	Witch: Well, this is an unexpected visit! I rarely see anyone. Welcome!
 	Narrator: The Knight explains his quest to the Witch.
 	Witch: What? A DRAGON? Well I sure haven’t seen one around.
@@ -6,7 +7,6 @@ if {Knight.MetWitch} == false:
 	Witch: Oh I see. Well this has been a silly misunderstanding! But here, you don’t have to return empty-handed. If you help me gather a [b]green egg[/b], a [b]delicious loaf of bread[/b], and a [b]red mushroom[/b], I’ll make a potion that the King will love!
 	Witch: I promise, no funny business.
 	Narrator: The Knight had found the dragon that certainly didn’t need slaying. And thusly, he began the Witch’s Quest.
-	set {Knight.MetWitch} = true
 	set {Knight.StartedWitchQuest} = true
 	[end_timeline]
 if {Knight.StartedWitchQuest} == true:
