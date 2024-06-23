@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpg4p0ey3kfoq"]
+
+[ext_resource type="Script" path="res://scenes/characters/npc.gd" id="1_406cw"]
+[ext_resource type="PackedScene" uid="uid://dcf2fdr0kdl3k" path="res://nodes/interaction/interaction_manager.tscn" id="2_21ut1"]
+[ext_resource type="Script" path="res://nodes/interaction/IM_npc.gd" id="3_doy7d"]
+[ext_resource type="PackedScene" uid="uid://7pve3wlgqwcx" path="res://nodes/UX/action_cue.tscn" id="4_30h36"]
+
+[node name="Bird" type="Node2D"]
+script = ExtResource("1_406cw")
+character_type = 16
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="InteractionManager" parent="." instance=ExtResource("2_21ut1")]
+unique_name_in_owner = true
+script = ExtResource("3_doy7d")
+
+[node name="action_cue" parent="." instance=ExtResource("4_30h36")]
+unique_name_in_owner = true
+position = Vector2(0, -113)
+animation = &"NULL"

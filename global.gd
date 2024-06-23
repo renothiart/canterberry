@@ -67,6 +67,7 @@ enum CharacterType {
 	TOWNSFOLK,
 	BAKER,
 	MAID,
+	BIRD,
 }
 
 # item functionality
@@ -131,6 +132,7 @@ var character_type_to_dialogue_name = {
 	CharacterType.TOWNSFOLK: "Townsfolk",
 	CharacterType.BAKER: "Baker",
 	CharacterType.MAID: "Maid",
+	CharacterType.BIRD: "Bird",
 }
 
 # item dialogue names
