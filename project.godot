@@ -122,7 +122,7 @@ variables={
 "StartedWitchQuest": false
 },
 "Messenger": {
-"CompletedMessengerQuest": false,
+"CompletedMessengerQuest": true,
 "FlyersDelivered": 0,
 "HasFlyeredBaker": false,
 "HasFlyeredBandit": false,
@@ -138,10 +138,11 @@ variables={
 "HasFlyeredTownsfolk": false,
 "HasFlyeredToy": false,
 "HasFlyeredWitch": false,
+"MetPrincess": false,
 "ReceivedQuest": false
 },
 "Thief": {
-"CompletedThiefQuest": false
+"CompletedThiefQuest": true
 }
 }
 text/letter_speed=0.01

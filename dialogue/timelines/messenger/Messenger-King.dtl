@@ -1,5 +1,6 @@
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredKing} == false:
 		set {Messenger.HasFlyeredKing} = true
+		set {Messenger.FlyersDelivered} += 1
 	else:
 else:

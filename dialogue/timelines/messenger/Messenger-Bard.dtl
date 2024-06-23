@@ -8,6 +8,19 @@ if {Messenger.CompletedMessengerQuest} == false:
 	elif {Messenger.FlyersDelivered} >= 5:
 		jump MessengerQuestComplete
 		set {Messenger.CompletedMessengerQuest} = true
+else:
+	if {Knight.CompletedKnightQuest} == true:
+		if {Thief.CompletedThiefQuest} == true:
+			Bard: I’m just about ready to start the show…are you ready?
+			Narrator: The Messenger considers whether or not he’s ready to end the day. Has he done everything he wants to do?
+			- EndGame [if {} == ""]
+		else:
+			todo\: the thief needs to finish her quest
+	else:
+		if {Thief.CompletedThiefQuest} == false:
+			todo\: the thief and knight need to finish their quests
+		else:
+			todo\: the knight needs to finish his quest
 [end_timeline]
 label MessengerQuestComplete
 Bard: You’ve got five people invited? Great, thanks so much! If you still have some time, feel free to flyer more people.

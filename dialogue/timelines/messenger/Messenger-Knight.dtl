@@ -1,5 +1,15 @@
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredKnight} == false:
+		if {Messenger.HasFlyeredThief} == false:
+			Messenger: Hey you! Do you wanna -
+			Bard: No, not him! He's already here!
+			Messenger: Oh right, I knew that!
+		else:
+			Messenger: Hey you! Do you wanna -
+			Bard: No, not him either!
 		set {Messenger.HasFlyeredKnight} = true
 	else:
+		Messenger: Hold on, I think I already -
+		Narrator: The Bard sighs.
+		Bard: Really?
 else:

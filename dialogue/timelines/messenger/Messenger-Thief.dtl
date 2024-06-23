@@ -1,5 +1,16 @@
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredThief} == false:
+		if {Messenger.HasFlyeredKnight} == false:
+			Messenger: Hey there! Did you hear the Bard is -
+			Bard: I didn't mean her...
+			Messenger: Oh right, I knew that!
+		else:
+			Messenger: Hey there! Did you hear the Bard is -
+			Bard: No, she doesn't count either!
 		set {Messenger.HasFlyeredThief} = true
 	else:
+		Messenger: Hey, do you remember if I already -
+		Narrator: The Bard shakes his head.
+		Bard: Why must you torment me so!?
 else:
+<Empty Text Event>
