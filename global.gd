@@ -14,6 +14,9 @@ enum PCCNumber {
 	PCC_2,
 }
 
+# remove princess from castle
+var is_princess_in_castle = true
+
 # Portkey locations
 var current_portkey_location: PortkeyLocation = PortkeyLocation.UNDEFINED
 enum PortkeyLocation {

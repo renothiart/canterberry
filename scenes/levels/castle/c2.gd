@@ -16,6 +16,8 @@ var teleport_buffer_time_remaining: float = 0
 func _ready():
 	if not Dialogic.VAR.Thief.FoundTreasure:
 		$FGActivatablePortkey.set_layer(8)
+	if not Global.is_princess_in_castle:
+		$Princess.queue_free()
 	Dialogic.signal_event.connect(process_dialogic_signal)
 	
 	portkey_map = {
