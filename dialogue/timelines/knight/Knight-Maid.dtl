@@ -1,1 +1,5 @@
-Maid: Test
+if {Knight.metMaid} == 0:
+	Maid: Oh, my son has been asking about your daughter. Could we organize another playdate? My son loves hearing all about your adventures from her.
+	set {Knight.metMaid} += 1
+elif {Knight.metMaid} == 1:
+	Maid: Hope to see you and your daughter soon!

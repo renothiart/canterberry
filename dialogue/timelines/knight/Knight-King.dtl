@@ -14,10 +14,10 @@ else:
 		else:
 			King: A magic potion? For me? Well, I’ll be!
 			[signal arg="giveKingPotion"]
-			King: <Empty Text Event>
-elif {Knight.MetPrincess} == true:
-	Ah, you've met my daughter. The family resemblance is uncanny, no?
-elif {Knight.ReceivedWitchQuest} == true:
-elif {Knight.MetWitch} == true:
-else:
+			Narrator: Without any hesitation, the King uncorks the bottle and drinks it all in one gulp.
+			King: I feel…tingly…
+			Narrator: The King’s luscious leaves grow a centimeter taller.
+			King: BWAHAHA! Lovely, lovely. Send my thanks to the dragonfruit.
+			Narrator: And so the Knight completed his valiant quest. The kingdom will rest easy knowing there’s no villainous dragon in the forest and that their king grows ever more beautiful.
+			set {Knight.CompletedKnightQuest} = true
 [end_timeline]
