@@ -40,9 +40,11 @@ func _init():
 			Global.pcc2_player_type = Global.PlayerType.THIEF
 
 func _ready():
-	if Global.first_load:
+	if Global.first_knight:
 		$AnimationPlayer.queue("fade_in")
-		Global.first_load = false
+		Global.first_knight = false
+		await $AnimationPlayer.animation_finished
+		Dialogic.start("Knight-Intro")
 	else:
 		$ColorRect.visible = false
 

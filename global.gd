@@ -19,7 +19,9 @@ var is_princess_in_castle = true
 var is_messenger_in_port = true
 
 # for hub initial fade-in
-var first_load = true
+var first_knight = true
+var first_thief = true
+var first_messenger = true
 
 # Portkey locations
 var current_portkey_location: PortkeyLocation = PortkeyLocation.UNDEFINED
@@ -173,7 +175,9 @@ func reset_game():
 	messenger_has_flyer = false
 	is_princess_in_castle = true
 	is_messenger_in_port = true
-	first_load = true
+	first_knight = true
+	first_thief = true
+	first_messenger = true
 	current_portkey_location = PortkeyLocation.UNDEFINED
 	current_player_type = PlayerType.KNIGHT
 	pcc1_player_type = PlayerType.NULL

@@ -5,11 +5,6 @@ extends CharacterBody2D # PCC (PLAYABLE CHARACTER CONTAINER)
 @export var new_scale: float = 1
 @onready var _interaction_manager = $InteractionManager
 
-# stupid variables for a very lazy, hacky solution
-@onready var _SK = $SK
-@onready var _TT = $TT
-@onready var _RM = $RM
-
 # track contained PC
 @export var key: String
 @export var active_sprite: AnimatedSprite2D
@@ -24,6 +19,7 @@ func _ready():
 	var player_type = Global.get_animation_name(get_player_type())
 	active_sprite = get_node(player_type)
 	set_key(player_type)
+	play_first_dialogue()
 
 
 # swap characters with the player
@@ -57,6 +53,18 @@ func set_player_type(new_player_type: Global.PlayerType):
 		Global.pcc1_player_type = new_player_type
 	else:
 		Global.pcc2_player_type = new_player_type
+
+func play_first_dialogue():
+	if get_player_type() == Global.PlayerType.THIEF and Global.first_thief:
+		if Dialogic.current_timeline != null:
+			await Dialogic.timeline_ended
+		Dialogic.start("Thief-Intro")
+		Global.first_thief = false
+	elif get_player_type() == Global.PlayerType.MESSENGER and Global.first_messenger:
+		if Dialogic.current_timeline != null:
+			await Dialogic.timeline_ended
+		Dialogic.start("Messenger-Intro")
+		Global.first_messenger = false
 
 func remove_current_layer():
 	_interaction_manager.remove_current_layer()

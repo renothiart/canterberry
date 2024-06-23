@@ -29,8 +29,7 @@ func _ready():
 	active_sprite = get_node(player_type)
 	set_key(player_type)
 	
-	is_facing_right = Global.player_facing_right
-	set_direction(is_facing_right)
+	set_direction()
 
 
 # define all input behaviors
@@ -60,8 +59,8 @@ func set_key(new_key: String) -> void:
 
 # toggle which direction the player faces
 # this is the very lazy, hacky solution I meantioned earlier
-func set_direction(is_facing_right):
-	if is_facing_right:
+func set_direction():
+	if Global.player_facing_right:
 		_SK.flip_h = true
 		_TT.flip_h = true
 		_RM.flip_h = true
@@ -90,7 +89,7 @@ func _physics_process(_delta):
 			is_facing_right = false
 		
 		Global.player_facing_right = is_facing_right
-		set_direction(is_facing_right)
+		set_direction()
 	
 	move_and_slide()
 	active_sprite.play()

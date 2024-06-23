@@ -11,7 +11,7 @@ else:
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredKing} == false:
 		Narrator: The messenger reaches out to hand the King a flyer.
-		Jester: OOh, let me take a look!
+		Jester: Ooh, let me take a look!
 		if {Messenger.HasFlyeredJester} == true:
 			Messenger: Hey, you already got one of these!
 		else:

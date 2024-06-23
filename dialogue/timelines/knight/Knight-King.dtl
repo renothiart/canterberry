@@ -5,7 +5,7 @@ if {Knight.CompletedKnightQuest} == false:
 				if {Knight.MetKing} == false:
 					set {Knight.MetKing} = true
 					King: Ah yes, my loyal subject. I require some assistance from you.
-					King: I’ve heard troubling reports of a vicious dragon in the Forest to the west.
+					King: I’ve heard troubling reports of a vicious dragon in the Forest to the far west.
 					King: Your task is to slay it and return peace and prosperity to the kingdom.
 				else:
 					King: Have you slain the dragon in the Forest yet? We have no further business to discuss until you do.
