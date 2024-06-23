@@ -1,1 +1,7 @@
-Knight: Test
+if {Knight.MetPrincess} == false:
+	Knight: ...
+	Thief: ...
+	Narrator: The Knight and the Thief don't know what to say to each other. They're both rather quiet fruit.
+else:
+	Narrator: The Thief recognizes the Knight from their meeting at the palace.
+	Narrator: ...But she shouldn't tell him that, so as not to blow her cover.
