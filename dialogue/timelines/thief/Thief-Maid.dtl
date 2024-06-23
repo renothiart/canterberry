@@ -1,1 +1,11 @@
-Maid: Test
+if {Thief.CollectTreasure} == false:
+	Maid: I haven't seen you around these parts before.
+else:
+	if {Thief.DonateMaid} == false:
+		Maid: For me?? Oh thank you, kind stranger!
+		set {Thief.DonateMaid} = true
+		set {Thief.DonateCount} += 1
+		if {Thief.DonateCount} == 4:
+			[signal arg="give_treasure"]
+	else:
+		Maid: Thank you again!

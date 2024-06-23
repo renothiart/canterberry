@@ -16,6 +16,8 @@ else:
 			Narrator: The Thief splits the treasure with the Bandit.
 			set {Thief.DonateBandit} = true
 			set {Thief.DonateCount} += 1
+			if {Thief.DonateCount} == 4:
+				[signal arg="give_treasure"]
 			Bandit: I appreciate this, I’ll be sure to share it with the fruit across the sea on my next journey.
 			Bandit: But I’m not leaving just yet, I’d love to spend more time with you while I can.
 			Narrator: The Bandit and the Thief share a sweet kiss.

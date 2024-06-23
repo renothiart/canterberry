@@ -1,1 +1,8 @@
-Monk: Test
+if {Thief.CollectTreasure} == false:
+	Monk: Hm...I hope your occupation doesn't make you stray from the Bulb's quest.
+else:
+	if {Thief.CompletedThiefQuest} == false:
+		Narrator: The Thief offers the Monk a portion of the stolen treasure.
+		Monk: Ah...how generous. However, I cannot accept any offerings on principle. But the gesture is appreciated.
+	else:
+		Monk: Good day.

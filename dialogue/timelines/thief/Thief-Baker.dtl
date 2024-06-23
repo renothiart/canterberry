@@ -4,7 +4,8 @@ if {Thief.CollectTreasure} == true:
 		Baker: Oh wow, is this for me? Thank you so much! Please, have some bread, milady. And you're welcome around here any time.
 		set {Thief.DonateBaker} = true
 		set {Thief.DonateCount} += 1
-		[end_timeline]
+		if {Thief.DonateCount} == 4:
+			[signal arg="give_treasure"]
 	else:
 		Baker: Welcome back, dear!
 		[end_timeline]
