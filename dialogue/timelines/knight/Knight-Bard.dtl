@@ -1,8 +1,9 @@
 if {Knight.MetBard} == false:
-	Bard: Well hello sir! Haven’t seen you in this part of town before. I think I heard our [b]King[/b] in the [b]Castle[/b] to the east was in need of some assistance, maybe he could use some help from a brave knight such as you.
-	Narrator: And so the courageous strawberry knight set off on his quest - to aid the good King.
-	set {Knight.MetBard} = true
-	[end_timeline]
+	if {Knight.MetKing} == false:
+		Bard: Well hello sir! Haven’t seen you in this part of town before. I think I heard our [b]King[/b] in the [b]Castle[/b] to the east was in need of some assistance, maybe he could use some help from a brave knight such as you.
+		Narrator: And so the courageous strawberry knight set off on his quest - to aid the good King.
+		set {Knight.MetBard} = true
+		[end_timeline]
 if {Knight.MetKing} == false:
 	Bard: Hello again! Have you spoken to the [b]King[/b] in the [b]Castle[/b] to the east yet?
 	[end_timeline]
@@ -68,34 +69,34 @@ if {Knight.CompletedKnightQuest} == true:
 			Bard: I’m just about ready to start the show...
 			Bard: Are you ready?
 			Narrator: The Knight considers whether or not he’s ready to end the day. Has he done everything he wants to do?
-				- Yes
-					[signal arg="end_show"]
-					Bard: Enjoy the show!
-				- No
-					Bard: No worries! Come back and talk to me when you're ready.
-				[end_timeline]
-		else:
-			if {Knight.MetPrincess} == true:
-				Bard: I think your Tomato friend isn't quite ready for the show...
-			elif {Messenger.MetPrincess} == true:
-				Bard: I think your Tomato friend isn't quite ready for the show...
+			- Yes
+				[signal arg="end_show"]
+				Bard: Enjoy the show!
+			- No
+				Bard: No worries! Come back and talk to me when you're ready.
+			[end_timeline]
 	else:
 		if {Knight.MetPrincess} == true:
-			if {Knight.MetMessenger} == true:
-				if {Thief.CompletedThiefQuest} == false:
-					Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
-			elif {Thief.MetMessenger} == true:
-				if {Thief.CompletedThiefQuest} == false:
-					Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
-			else:
-				if {Thief.CompletedThiefQuest} == false:
-					Bard: I think your Tomato friend isn't quite ready for the show...
+			Bard: I think your Tomato friend isn't quite ready for the show...
 		elif {Messenger.MetPrincess} == true:
+			Bard: I think your Tomato friend isn't quite ready for the show...
+else:
+	if {Knight.MetPrincess} == true:
+		if {Knight.MetMessenger} == true:
+			if {Thief.CompletedThiefQuest} == false:
+				Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
+		elif {Thief.MetMessenger} == true:
 			if {Thief.CompletedThiefQuest} == false:
 				Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
 		else:
-			if {Knight.MetMessenger} == true:
-				Bard: I think your Raspberry friend isn't quite ready for the show...
+			if {Thief.CompletedThiefQuest} == false:
+				Bard: I think your Tomato friend isn't quite ready for the show...
+	elif {Messenger.MetPrincess} == true:
+		if {Thief.CompletedThiefQuest} == false:
+			Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
+	else:
+		if {Knight.MetMessenger} == true:
+			Bard: I think your Raspberry friend isn't quite ready for the show...
 if {Knight.MetPrincess} == false:
 	if {Messenger.MetPrincess} == false:
 		Bard: Oh, and have you met the Princess yet? She lives in the [b]Castle[/b].
