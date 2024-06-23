@@ -127,11 +127,9 @@ variables={
 "MetPainting": false,
 "MetPrincess": false,
 "MetSquire": false,
-"MetThief": false,
 "MetWitch": false,
 "SpeakBandit": 0,
-"StartedWitchQuest": false,
-"ToldKing": false
+"StartedWitchQuest": false
 },
 "Messenger": {
 "CompletedMessengerQuest": false,
@@ -170,6 +168,7 @@ variables={
 "Thief": {
 "CollectTreasure": false,
 "CompletedThiefQuest": false,
+"CompletedThiefQuestBard": false,
 "DonateBaker": false,
 "DonateBandit": false,
 "DonateCherries": false,

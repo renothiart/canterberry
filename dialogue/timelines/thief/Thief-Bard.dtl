@@ -1,26 +1,30 @@
-if {Knight.MetBard} == false:
+if {Thief.MetBard} == false:
+	set {Thief.MetBard} = true
 	Bard: Ah, hello. Not skulking around the halls of the castle?
 	Narrator: The Bard winks at the Thief.
 	Bard: I believe a special someone was waiting for you up at the [b]Docks[/b] to the west.
-	set {Thief.MetBard} = true
-else:
-	if {Thief.MetBandit} == false:
-		Bard: I believe a special someone was waiting for you up at the [b]Docks[/b] to the west.
-		[end_timeline]
+if {Thief.MetBandit} == false:
+	Bard: I believe a special someone was waiting for you up at the [b]Docks[/b] to the west.
+if {Thief.CompletedThiefQuest} == false:
+	if {Thief.CollectTreasure} == false:
+		Bard: You found your boyfriend? Wonderful, we bards love a good love story. And what an exciting heist you've been sent on! A secret passageway in the castle?
+		Narrator: The Bard nudges you.
+		Bandit: I wonder how the Bandit found out about that?
 	else:
-		if {Thief.CompletedThiefQuest} == false:
-			if {Thief.CollectTreasure} == false:
-				Bard: You found your boyfriend? Wonderful, we bards love a good love story. And what an exciting heist you've been sent on! A secret passageway in the castle?
-				Narrator: The Bard nudges you.
-				Bandit: I wonder how the Bandit found out about that?
-			else:
-				Bard: Wow, I don't think I've ever seen that much gold in my life. Glad it's going to worthy folks though!
-			[end_timeline]
-		else:
-			Narrator: The Thief regales the Bard with how she pulled off the heist and distributed the treasure amongst the townsfolk.
-			Bard: A heist! How exciting! And what a happy end for the townsfolk, you're truly a Prin- I mean [b]Thief[/b] of the people.
-			[end_timeline]
+		Bard: Wow, I don't think I've ever seen that much gold in my life. Glad it's going to worthy folks though!
+	[end_timeline]
+else:
+	if {Thief.CompletedThiefQuestBard} == false:
+		set {Thief.CompletedThiefQuestBard} = true
+		Narrator: The Thief regales the Bard with how she pulled off the heist and distributed the treasure amongst the townsfolk.
+		Bard: A heist! How exciting! And what a happy end for the townsfolk, you're truly a Prin- I mean [b]Thief[/b] of the people.
 	if {Messenger.CompletedMessengerQuest} == true:
 		if {Knight.CompletedKnightQuest} == true:
-			if {Thief.CompletedThiefQuest} == true:
-				Bard: (to do) Do you want to start the show?
+			Bard: (to do) Do you want to start the show?
+		else:
+			Bard: It seems like your Strawberry friend has some questing left...
+	else:
+		if {Knight.CompletedKnightQuest} == false:
+			Bard: It seems like your Strawberry and Raspberry friends have some questing left...
+		else:
+			Bard: It seems like your Raspberry friend has some questing left...
