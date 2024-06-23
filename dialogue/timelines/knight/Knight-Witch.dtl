@@ -25,6 +25,7 @@ if {Knight.StartedWitchQuest} == true:
 		[signal arg="collect_potion"]
 		Witch: Ta-da! I’m sure the King will love it.
 		set {Knight.CompletedWitchQuest} = true
+		[end_timeline]
 if {Knight.CollectedPotion} == true:
 	if {Knight.CompletedKnightQuest} == false:
 		Witch: Thanks again for lunch! I’m sure the King will love the potion.
