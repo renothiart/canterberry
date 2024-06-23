@@ -2,35 +2,43 @@ if {Knight.MetBard} == false:
 	Bard: Well hello sir! Haven’t seen you in this part of town before. I think I heard our [b]King[/b] up in the [b]Castle[/b] was in need of some assistance, maybe he could use some help from a brave knight such as you.
 	Narrator: And so the courageous strawberry knight set off on his quest - to aid the good King.
 	set {Knight.MetBard} = true
-if {Knight.MetBard} == true:
+	[end_timeline]
+else:
 	if {Knight.MetKing} == false:
 		Bard: Hello again! Have you spoken to the [b]King[/b] up in the [b]Castle[/b] yet?
-	if {Knight.MetKing} == true:
-		if {Knight.MetWitch} == false:
-			Bard: What a noble and exciting quest the King has set you on! Have you explored the [b]Forest[/b] to the west yet?
-	if {Knight.MetWitch} == true:
+		[end_timeline]
+	if {Knight.MetWitch} == false:
+		Bard: What a noble and exciting quest the King has set you on! Have you explored the [b]Forest[/b] to the west yet?
+		[end_timeline]
+	else:
 		if {Knight.CollectedIngredients} == 0:
 			Bard: Well who would’ve thought the monster would turn out to be a kind dragonfruit? Not quite as exciting though… I think I might’ve heard of what you’re looking for, maybe check in the [b]Red Forest[/b] and [b]Village[/b].
-		if {Knight.CollectedIngredients} == 0:
-			Bard: Still on the hunt for ingredients? I think the [b]Red Forest[/b] and the [b]Village[/b] still has what you seek.
-		if {Knight.CollectedIngredients} < 3:
+			[end_timeline]
+		elif {Knight.CollectedIngredients} < 3:
 			if {Knight.CollectedBread} == true:
 				Bard: Still on the hunt for ingredients? I think the [b]Red Forest[/b] still has what you seek.
+				[end_timeline]
 			if {Knight.CollectedEgg} == true:
 				if {Knight.CollectedMushroom} == true:
 					if {Knight.CollectedBread} == false:
 						Bard: Still on the hunt for ingredients? I think the [b]Village[/b] still has what you seek.
+						[end_timeline]
 		else:
 			if {Knight.CompletedWitchQuest} == false:
 				Bard: Looks like you’ve got everything! The [b]Witch[/b] will be chuffed to see those.
+				[end_timeline]
 	if {Knight.CollectedPotion} == true:
 		if {Knight.CompletedKnightQuest} == false:
 			if {Knight.CollectedToy} == true:
 				Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]? And what a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled…
+				[end_timeline]
 			else:
 				Bard: Wow, a magic potion! Never seen one of those before. Are you going to bring it back to the [b]King[/b]?
+				[end_timeline]
 	if {Knight.CollectedToy} == true:
 		Bard: What a cute toy you have! I bet someone in the [b]Village[/b] will be thrilled…
+		[end_timeline]
 	if {Knight.CompletedKnightQuest} == true:
 		Bard: What an exciting day you’ve had! Feel free to rest by the campfire until the show. I’ll be sure to regale everyone with your adventures! Actually, I could use the help babysitting while I write…this little grape is more trouble than he looks.
 		Baby: Plbfff!
+		[end_timeline]
