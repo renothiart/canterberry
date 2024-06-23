@@ -1,10 +1,10 @@
-if {Knight.MetPrincess} == false:
+if {Messenger.MetPrincess} == false:
 	if {Messenger.MetPrincess} == false:
 		set {Messenger.MetPrincess} = true
 		Narrator: The Princess curtsies politely.
 		if {Messenger.MetBandit} == true:
-			Oh, Your Highness, someone's looking for you down by the docks.
-			Or wait - was that someone else?
+			Messenger: Oh, Your Highness, someone's looking for you down by the docks.
+			Messenger: Or wait - was that someone else?
 	else:
 		Narrator: The princess is distracted, and doesn’t seem to notice you. She appears to be daydreaming.
 if {Messenger.ReceivedQuest} == true:
