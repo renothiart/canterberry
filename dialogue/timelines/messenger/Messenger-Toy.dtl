@@ -1,18 +1,19 @@
 if {Knight.CollectedToy} == false:
 	if {Messenger.ReceivedQuest} == true:
 		if {Messenger.HasFlyeredToy} == false:
-			Messenger: Hey little girl, do you -
-			Messenger: Wait a minute ...
-			Messenger: You're just a toy!
-			Messenger: Unbelievable!
-			Messenger: Well, a job's a job I guess
+			jump Toy
+			Messenger: Well, a job's a job I guess.
 			Narrator: Inexplicably, the Messenger hands a flyer to the toy.
 			set {Messenger.HasFlyeredToy} = true
 			Messenger: See you there kid!
 		else:
 			Messenger: Say, didn't I already give you one of these?
 	else:
-		Messenger: Hey little girl, do you -
-		Messenger: Wait a minute ...
-		Messenger: You're just a toy!
-		Messenger: Unbelievable!
+		jump Toy
+[end_timeline]
+label Toy
+Messenger: Hey little girl, do you -
+Messenger: Wait a minute ...
+Messenger: You're just a toy!
+Messenger: Unbelievable!
+return

@@ -1,1 +1,5 @@
-King: Test
+if {Messenger.ReceivedQuest} == true:
+	if {Messenger.HasFlyeredKing} == false:
+		set {Messenger.HasFlyeredKing} = true
+	else:
+else:

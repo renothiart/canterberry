@@ -1,1 +1,5 @@
-Jester: Test
+if {Messenger.ReceivedQuest} == true:
+	if {Messenger.HasFlyeredJester} == false:
+		set {Messenger.HasFlyeredJester} = true
+	else:
+else:

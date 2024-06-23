@@ -1,1 +1,5 @@
-Maid: Test
+if {Messenger.ReceivedQuest} == true:
+	if {Messenger.HasFlyeredMaid} == false:
+		set {Messenger.HasFlyeredMaid} = true
+	else:
+else:

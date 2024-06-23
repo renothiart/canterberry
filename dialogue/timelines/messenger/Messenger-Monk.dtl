@@ -1,10 +1,22 @@
-Messenger: Forgive me father, for I have singed.
-Monk: Ah, worry not my child, for we are all but seedlings in the Great Orchard. You are forgiven.
-Messenger: Ha! No, not [b]sinn[/b]ed
-Messenger: [b]Sing[/b]ed
-Monk: ...
-Monk: What?
-Messenger: The Bard is hosting a concert tonight! Come check it out!
-Narrator: The Monk sighs.
-Of course, my child. Merriment is a key tenant to the light -
-Messenger: The Messenger leaves while the Monk rambles on.
+if {Messenger.ReceivedQuest} == true:
+	if {Messenger.HasFlyeredMonk} == false:
+		Monk: Come to hear the tale of the First Planting?
+		Messenger: Forgive me father, for I have singed.
+		Monk: Ah, worry not my child, for we are all but seedlings in the Great Orchard. You are forgiven.
+		Messenger: Ha! No, not [b]sinn[/b]ed
+		Messenger: [b]Sing[/b]ed
+		Monk: ...
+		Monk: What?
+		Messenger: The Bard is hosting a concert tonight! Come check it out!
+		Narrator: The Messenger hands the Monk one of the Bard's advertising flyers.
+		set {Messenger.HasFlyeredMonk} = true
+		Narrator: The Monk sighs.
+	else:
+	Messenger: Hey, you should -
+	Messenger: Wait a sec, I can't remember if I -
+	Monk: A lesson learned is a lesson forgotten indeed, young Raspberry.
+	Messenger: Yeah yeah, just be there, okay?
+else:
+	Monk: What troubles you, young Raspberry?
+	Messenger: WHat? Oh, nothing. Just looking for an adventure!
+	Monk: Perhaps you should seek out the Knight. I hear he's quite the adventurer.
