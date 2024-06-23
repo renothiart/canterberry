@@ -1,1 +1,8 @@
-Bandit: Test
+if {Thief.MetBandit} == false:
+	Bandit: My sweet Princess! I’ve been waiting for you.
+	Narrator: The Bandit and the Thief embrace. It’s been a long time since she last saw her baddie boyfriend.
+	Bandit: Remember the heist we discussed? I think now would be the perfect time to pull it off. You remember that secret passageway in the castle, right?
+	Narrator: The Thief nods. She had been the one to tell the Bandit about it in the first place, after all.
+	Bandit: Great! Let me know when you’ve got it. I believe in you, Princess.
+	Narrator: The Bandit winks and blows a kiss.
+else:

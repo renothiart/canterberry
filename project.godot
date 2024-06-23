@@ -162,7 +162,7 @@ variables={
 "DonateCherries": false,
 "DonateMaid": false,
 "FoundTreasure": false,
-"MetBandit": ""
+"MetBandit": false
 }
 }
 text/letter_speed=0.01

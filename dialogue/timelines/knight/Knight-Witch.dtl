@@ -24,6 +24,7 @@ if {Knight.StartedWitchQuest} == true:
 		Narrator: The Witch pours some mysterious vials into her cauldron and whispers something indiscernible as she waves her wand over it. She ladles some of the mixture into an empty bottle and hands it to you.
 		[signal arg="collect_potion"]
 		Witch: Ta-da! I’m sure the King will love it.
+		set {Knight.CollectedPotion} = true
 		set {Knight.CompletedWitchQuest} = true
 		[end_timeline]
 if {Knight.CollectedPotion} == true:
