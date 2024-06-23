@@ -9,9 +9,13 @@ else:
 		if {Knight.CollectedPotion} == false:
 			King: A dragonfruit?! I’ve got to get better information sources. Harumph…
 			set {Knight.ToldKing} = true
+			[end_timeline]
 		else:
 			if {Knight.CompletedKnightQuest} == false:
-				set {Knight.ToldKing} = true
+				if {Knight.ToldKing} == false:
+					Narrator: The Knight explains the dragon misunderstanding.
+					King: A dragonfruit?! I’ve got to get better information sources. Harumph…
+					set {Knight.ToldKing} = true
 				King: A magic potion? For me? Well, I’ll be!
 				[signal arg="give_king_potion"]
 				Narrator: Without any hesitation, the King uncorks the bottle and drinks it all in one gulp.
