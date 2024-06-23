@@ -1,11 +1,11 @@
 if {Knight.MetBard} == false:
-	Bard: Well hello sir! Haven’t seen you in this part of town before. I think I heard our [b]King[/b] up in the [b]Castle[/b] was in need of some assistance, maybe he could use some help from a brave knight such as you.
+	Bard: Well hello sir! Haven’t seen you in this part of town before. I think I heard our [b]King[/b] in the [b]Castle[/b] to the east was in need of some assistance, maybe he could use some help from a brave knight such as you.
 	Narrator: And so the courageous strawberry knight set off on his quest - to aid the good King.
 	set {Knight.MetBard} = true
 	[end_timeline]
 else:
 	if {Knight.MetKing} == false:
-		Bard: Hello again! Have you spoken to the [b]King[/b] up in the [b]Castle[/b] yet?
+		Bard: Hello again! Have you spoken to the [b]King[/b] in the [b]Castle[/b] to the east yet?
 		[end_timeline]
 	if {Knight.MetWitch} == false:
 		Bard: What a noble and exciting quest the King has set you on! Have you explored the [b]Forest[/b] to the west yet?
