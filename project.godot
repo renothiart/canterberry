@@ -215,6 +215,7 @@ save/encryption_on_exports_only=true
 text/autopauses={}
 layout/style_list=[]
 layout/default_style="Default"
+text/autocolor_names=true
 
 [display]
 
