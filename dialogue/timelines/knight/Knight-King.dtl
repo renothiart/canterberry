@@ -7,15 +7,15 @@ if {Knight.CompletedKnightQuest} == false:
 					King: Ah yes, my loyal subject. I require some assistance from you.
 					King: I’ve heard troubling reports of a vicious dragon in the Forest to the west.
 					King: Your task is to slay it and return peace and prosperity to the kingdom.
-				if {Knight.MetKing} == true:
+				else:
 					King: Have you slain the dragon in the Forest yet? We have no further business to discuss until you do.
-			if {Knight.MetWitch} == true:
+			else:
 				Narrator: The Knight explains the dragon misunderstanding.
 				set {Knight.ToldKing} = true
 				King: A dragonfruit?! I’ve got to get better information sources. Harumph...
-		if {Knight.ToldKing} == true:
+		else:
 			King: A dragonfruit?! I’ve got to get better information sources. Harumph...
-	if {Knight.CollectedPotion} == true:
+	else:
 		Narrator: The Knight tells the King about the Witch's potion.
 		King: A magic potion? For me? Well, I’ll be!
 		[signal arg="give_king_potion"]
