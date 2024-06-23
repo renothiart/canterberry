@@ -165,3 +165,19 @@ func get_dialogue_name_from_npc(character_type: CharacterType):
 
 func get_dialogue_name_from_item(item_type: ItemType):
 	return item_type_to_dialogue_name[item_type]
+
+func reset_game():
+	player_facing_right = false
+	knight_inventory = []
+	thief_has_treasure = false
+	messenger_has_flyer = false
+	is_princess_in_castle = true
+	is_messenger_in_port = true
+	first_load = true
+	current_portkey_location = PortkeyLocation.UNDEFINED
+	current_player_type = PlayerType.KNIGHT
+	pcc1_player_type = PlayerType.NULL
+	pcc2_player_type = PlayerType.NULL
+	
+	# reset all Dialogic variables
+	Dialogic.VAR.reset()

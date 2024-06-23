@@ -8,7 +8,8 @@ var on_title = false
 var on_controls = false
 
 func _ready():
-	# TODO reset game
+	Global.reset_game()
+	
 	_animation_player.queue("splash_screen")
 	_animation_player.queue("title_screen_fade_in")
 
