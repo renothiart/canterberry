@@ -1,1 +1,15 @@
-Bandit: Test
+if {Knight.SpeakBandit} == 0:
+	Bandit: Oh shoot...
+	Narrator: The Bandit surreptitiously hides his sack behind his back. The sack is large and his frame is lean, however, so you can still see it pretty clearly.
+	Bandit: Look, I’m not doing anything! Please leave me alone…
+	set {Knight.SpeakBandit} += 1
+elif {Knight.SpeakBandit} == 1:
+	Narrator: The Bandit startles as you talk to him again.
+	Baker: I promise I’m not doing anything bad! Seriously, I’m just waiting for someone. I hope she hurries up…
+	set {Knight.SpeakBandit} += 1
+elif {Knight.SpeakBandit} == 2:
+	Baker: Look…if you keep hanging around here, I’m going to have to turn you into jam.
+	Baker: I mean, uh, please just let me be…
+	set {Knight.SpeakBandit} += 1
+else:
+	Narrator: The Bandit pointedly ignores you, looking up into the sky and loudly whistling.

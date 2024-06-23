@@ -1,5 +1,23 @@
-Jester: Test
-Knight: What is that supposed to mean?
-Baby: Hello
-if {Knight.MetBard} == false:
-	Bard: Hey!
+if {Knight.MetJester} == 0:
+	Jester: Hey, what do you call an extra knight?
+	Jester: Sir Plus!
+	set {Knight.MetJester} += 1
+elif {Knight.MetJester} == 1:
+	Jester: That was a good one, right? What do you call a knight who loves meat?
+	Jester: Sir Loin!
+	set {Knight.MetJester} += 1
+elif {Knight.MetJester} == 2:
+	Jester: You love these, don’t you? What do you call a knight who’s always angry?
+	Jester: Sir Lee!
+	set {Knight.MetJester} += 1
+elif {Knight.MetJester} == 3:
+	Jester: Uh…what do you call a knight who’s sure he’s always right?
+	Jester: Sir Tin!
+	set {Knight.MetJester} += 1
+elif {Knight.MetJester} == 4:
+	Narrator: The Jester is visibly sweating
+	Jester: What do you call the knight who hisses when he talks?
+	Jester: Sir Pent!
+	set {Knight.MetJester} += 1
+else:
+	Jester: Give a guy some time to come up with new material, why don’t you?
