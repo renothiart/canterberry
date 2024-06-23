@@ -1,1 +1,4 @@
-Narrator: The Messenger looks closely at a portrait done by a traveling artisan. The style is…disconcerting.
+Messenger: Magnificent, truly a masterful work of art!
+Messenger: It's so real it's almost scary!
+if {Messenger.MetJester} == true:
+	Jester: The only thing scary is that mustache-shaped mold spore on your face!

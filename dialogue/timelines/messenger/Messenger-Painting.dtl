@@ -1,1 +1,4 @@
-Narrator: The Messenger stops in front of a glorious portrait of the king, drawn in by its regal aura. Every detail is captured perfectly.
+Messenger: Wow! What an impressive portrait!
+Messenger: It really looks just like him!
+if {Messenger.MetJester} == true:
+	Jester: Hey, why don't you make like a pineapple and [b]can[/b] it!

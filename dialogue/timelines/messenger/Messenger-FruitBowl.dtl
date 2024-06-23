@@ -1,1 +1,3 @@
-Narrator: The Messenger appreciates the portrait of the townspeople. They look cozy together.
+Messenger: What a charming village!
+if {Messenger.MetJester} == true:
+	Jester: Maybe until you showed up!
