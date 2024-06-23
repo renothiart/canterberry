@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c5imx8y7j0sno"]
+[gd_scene load_steps=9 format=3 uid="uid://c32uqyp4i5dk8"]
 
 [ext_resource type="Script" path="res://nodes/UX/player_inventory.gd" id="1_34mix"]
 [ext_resource type="Texture2D" uid="uid://dln2pysc57bit" path="res://assets/inventory/bread.png" id="1_qexdr"]
@@ -67,25 +67,25 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="player_inventory" type="CanvasLayer"]
+[node name="PlayerInventory" type="CanvasLayer"]
 script = ExtResource("1_34mix")
 
-[node name="slot_0" type="AnimatedSprite2D" parent="."]
+[node name="slot_3" type="AnimatedSprite2D" parent="."]
 position = Vector2(575, 55)
 sprite_frames = SubResource("SpriteFrames_e4fae")
 animation = &"TOY"
-
-[node name="slot_1" type="AnimatedSprite2D" parent="."]
-position = Vector2(795, 55)
-sprite_frames = SubResource("SpriteFrames_e4fae")
-animation = &"EGG"
 
 [node name="slot_2" type="AnimatedSprite2D" parent="."]
 position = Vector2(685, 55)
 sprite_frames = SubResource("SpriteFrames_e4fae")
 animation = &"BREAD"
 
-[node name="slot_3" type="AnimatedSprite2D" parent="."]
+[node name="slot_1" type="AnimatedSprite2D" parent="."]
+position = Vector2(795, 55)
+sprite_frames = SubResource("SpriteFrames_e4fae")
+animation = &"EGG"
+
+[node name="slot_0" type="AnimatedSprite2D" parent="."]
 position = Vector2(905, 55)
 sprite_frames = SubResource("SpriteFrames_e4fae")
 animation = &"MUSHROOM"

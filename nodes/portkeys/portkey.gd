@@ -43,10 +43,10 @@ func start_teleport_buffer():
 	teleport_buffer_time_remaining = teleport_buffer_time
 
 func has_overlapping_player():
-	return get_overlapping_bodies().filter(func(n): return n.has_method("start_teleport_buffer"))
+	return get_overlapping_bodies().filter(func(n): return n.name == "Player")
 
-func _on_body_entered(_body):
-	if not disabled:
+func _on_body_entered(body):
+	if body.name == "Player" and not disabled:
 		Global.current_portkey_location = paired_portkey_location
 		call_deferred("change_level")
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbou05i4apvny"]
+[gd_scene load_steps=11 format=3 uid="uid://dbou05i4apvny"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_k8bp2"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="2_36v6d"]
 [ext_resource type="Texture2D" uid="uid://bmobhd8bs6685" path="res://assets/settings/castle/c2.png" id="3_2mo5d"]
 [ext_resource type="Texture2D" uid="uid://ctu8emnawblmp" path="res://assets/settings/castle/c1-fg.png" id="4_kboec"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="5_a0s0c"]
+[ext_resource type="PackedScene" uid="uid://c32uqyp4i5dk8" path="res://nodes/UX/player_inventory.tscn" id="5_lw1dj"]
 [ext_resource type="PackedScene" uid="uid://c1wxtrftkrfyl" path="res://nodes/portkeys/left_fg_portkey.tscn" id="6_k7xo6"]
 [ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="7_ucdip"]
 [ext_resource type="PackedScene" uid="uid://n40ubmic6oeb" path="res://nodes/activatable_portkeys/fg_activatable_portkey.tscn" id="8_2s5ca"]
@@ -15,6 +16,8 @@ script = ExtResource("1_k8bp2")
 fg_left_portkey = NodePath("LeftFGPortkey")
 fg_right_portkey = NodePath("RightFGPortkey")
 mg_right_portkey = NodePath("FGActivatablePortkey")
+
+[node name="PlayerInventory" parent="." instance=ExtResource("5_lw1dj")]
 
 [node name="OuterBounds" parent="." instance=ExtResource("2_36v6d")]
 

@@ -1,16 +1,12 @@
 extends CanvasLayer # player inventory
 
 # connect scene nodes
-@onready var _slot_0 = $slot_0
-@onready var _slot_1 = $slot_1
-@onready var _slot_2 = $slot_2
-@onready var _slot_3 = $slot_3
-@onready var inventory_slots = [_slot_0, _slot_1, _slot_2, _slot_3]
+var inventory_slots
 
 # render the player inventory into the scene
 func _ready():
+	inventory_slots = [$slot_0, $slot_1, $slot_2, $slot_3]
 	refresh_inventory()
-
 
 # call this from level to force an update
 func refresh_inventory():
@@ -38,10 +34,11 @@ func refresh_inventory():
 func inventory_knight():
 	# render the knight's inventory
 	var knight_inventory = Global.knight_inventory
+	var slot_index = 0
 	for slot in inventory_slots:
-		var slot_index = slot.get_index()
 		if slot_index < knight_inventory.size():
 			set_slot(slot, knight_inventory[slot_index])
+		slot_index += 1
 
 
 # thief's inventory
@@ -49,7 +46,7 @@ func inventory_thief():
 	# render treasure if player has it
 	var thief_has_treasure = Global.thief_has_treasure
 	if thief_has_treasure:
-		set_slot(_slot_0, "TREASURE")
+		set_slot(inventory_slots[0], "TREASURE")
 
 
 # messenger's inventory
@@ -57,7 +54,7 @@ func inventory_messenger():
 	# render flyer if player has it
 	var messenger_has_flyer = Global.messenger_has_flyer
 	if messenger_has_flyer:
-		set_slot(_slot_0, "FLYER")
+		set_slot(inventory_slots[0], "FLYER")
 
 
 # null inventory

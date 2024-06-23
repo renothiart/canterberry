@@ -48,8 +48,8 @@ func set_layer(new_layer: int):
 	
 	self.layer = new_layer
 
-func _on_body_entered(_body):
-	if not disabled:
+func _on_body_entered(body):
+	if body.name == "Player" and not disabled:
 		pairedTeleporter.teleport_player()
 
 func _on_body_exited(_body):

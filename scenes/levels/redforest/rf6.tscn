@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d2hclly3aeivo"]
+[gd_scene load_steps=10 format=3 uid="uid://d2hclly3aeivo"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_1d3fe"]
+[ext_resource type="PackedScene" uid="uid://c32uqyp4i5dk8" path="res://nodes/UX/player_inventory.tscn" id="2_66q20"]
 [ext_resource type="Texture2D" uid="uid://b76pu4yak3of1" path="res://assets/settings/redforest/rf6-bg.png" id="2_xlmci"]
 [ext_resource type="Texture2D" uid="uid://b3aom5bsphlcr" path="res://assets/settings/redforest/rf6-mg.png" id="3_fhpkm"]
 [ext_resource type="Texture2D" uid="uid://bcyuhottxdecf" path="res://assets/settings/redforest/rf5-fg.png" id="4_nsd60"]
@@ -12,6 +13,8 @@
 [node name="RedForest6" type="Node2D" node_paths=PackedStringArray("fg_right_portkey")]
 script = ExtResource("1_1d3fe")
 fg_right_portkey = NodePath("RightFGPortkey")
+
+[node name="PlayerInventory" parent="." instance=ExtResource("2_66q20")]
 
 [node name="OuterBounds" parent="." instance=ExtResource("7_f0vnx")]
 
@@ -34,10 +37,6 @@ centered = false
 [node name="Wall" parent="." instance=ExtResource("5_wqclm")]
 position = Vector2(-60, 414)
 
-[node name="RightFGPortkey" parent="." instance=ExtResource("5_xajih")]
-paired_portkey_location = 7
-linked_level_name = "res://scenes/levels/redforest/rf3.tscn"
-
 [node name="Player" parent="." instance=ExtResource("6_75w0w")]
 unique_name_in_owner = true
 z_index = -4
@@ -46,3 +45,7 @@ scale = Vector2(0.9, 0.9)
 collision_layer = 0
 collision_mask = 0
 layer = 2
+
+[node name="RightFGPortkey" parent="." instance=ExtResource("5_xajih")]
+paired_portkey_location = 7
+linked_level_name = "res://scenes/levels/redforest/rf3.tscn"

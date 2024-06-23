@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://clgmd1n0v43nk"]
+[gd_scene load_steps=13 format=3 uid="uid://clgmd1n0v43nk"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_52763"]
 [ext_resource type="Texture2D" uid="uid://ckbvxjkiemsh2" path="res://assets/settings/forest/f1-mg.png" id="2_m88a4"]
+[ext_resource type="PackedScene" uid="uid://c32uqyp4i5dk8" path="res://nodes/UX/player_inventory.tscn" id="2_wpieq"]
 [ext_resource type="Texture2D" uid="uid://cevgq1fandxxb" path="res://assets/settings/forest/f1-fg.png" id="3_2srqe"]
 [ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="4_bcj3a"]
 [ext_resource type="PackedScene" uid="uid://5mxadhwg1gtb" path="res://nodes/portkeys/left_mg_portkey.tscn" id="4_i81ct"]
@@ -17,6 +18,8 @@ script = ExtResource("1_52763")
 fg_left_portkey = NodePath("LeftFGPortkey")
 fg_right_portkey = NodePath("RightFGPortkey")
 mg_left_portkey = NodePath("LeftMGPortkey")
+
+[node name="PlayerInventory" parent="." instance=ExtResource("2_wpieq")]
 
 [node name="OuterBounds" parent="." instance=ExtResource("10_gca3g")]
 

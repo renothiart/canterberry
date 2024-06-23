@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dyfsn7vrb1w53"]
+[gd_scene load_steps=16 format=3 uid="uid://dyfsn7vrb1w53"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_0b1qg"]
 [ext_resource type="Texture2D" uid="uid://dncex1x8olqgl" path="res://assets/settings/redforest/rf5-bg.png" id="2_0upbn"]
+[ext_resource type="PackedScene" uid="uid://c32uqyp4i5dk8" path="res://nodes/UX/player_inventory.tscn" id="2_uh6dk"]
 [ext_resource type="Texture2D" uid="uid://cbre1n04tbdv6" path="res://assets/settings/redforest/rf5-mg.png" id="3_24j4y"]
 [ext_resource type="Texture2D" uid="uid://bcyuhottxdecf" path="res://assets/settings/redforest/rf5-fg.png" id="4_cbwxa"]
 [ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="5_nfa2m"]
@@ -20,6 +21,10 @@ script = ExtResource("1_0b1qg")
 fg_left_portkey = NodePath("LeftFGPortkey")
 mg_left_portkey = NodePath("LeftMGPortkey")
 bg_left_portkey = NodePath("LeftBGPortkey")
+
+[node name="PlayerInventory" parent="." instance=ExtResource("2_uh6dk")]
+
+[node name="OuterBounds" parent="." instance=ExtResource("13_xxksh")]
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -7
@@ -45,7 +50,7 @@ position = Vector2(818, 276)
 layer = 4
 
 [node name="FGWall" parent="." instance=ExtResource("5_nfa2m")]
-position = Vector2(1022, 440)
+position = Vector2(912, 438)
 
 [node name="Player" parent="." instance=ExtResource("5_xmabf")]
 unique_name_in_owner = true
@@ -79,5 +84,3 @@ pairedTeleporter = NodePath("../MGToFGActivatableTeleporter")
 [node name="LeftFGPortkey" parent="." instance=ExtResource("12_xwdut")]
 paired_portkey_location = 6
 linked_level_name = "res://scenes/levels/redforest/rf4.tscn"
-
-[node name="OuterBounds" parent="." instance=ExtResource("13_xxksh")]

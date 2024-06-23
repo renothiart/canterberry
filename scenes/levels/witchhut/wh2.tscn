@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://c065ekyvhgbg"]
+[gd_scene load_steps=12 format=3 uid="uid://c065ekyvhgbg"]
 
-[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_vvlys"]
+[ext_resource type="Script" path="res://scenes/levels/witchhut/wh2.gd" id="1_5dqay"]
 [ext_resource type="Texture2D" uid="uid://bbqpnvjotpcj6" path="res://assets/settings/village/v7.png" id="2_dvnj7"]
 [ext_resource type="Texture2D" uid="uid://cv3l4offpbfy6" path="res://assets/settings/forest/witchhut_int-mg.png" id="4_xtvc4"]
 [ext_resource type="Texture2D" uid="uid://b3j37hguom3eb" path="res://assets/settings/forest/witchhut_int-fg.png" id="5_xy2d3"]
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="6_7ltvj"]
+[ext_resource type="PackedScene" uid="uid://c32uqyp4i5dk8" path="res://nodes/UX/player_inventory.tscn" id="6_tmom8"]
 [ext_resource type="PackedScene" uid="uid://pl47x4a3o1qs" path="res://scenes/characters/witch.tscn" id="7_0w7ej"]
 [ext_resource type="PackedScene" uid="uid://ce2riagpagvsl" path="res://scenes/characters/player.tscn" id="7_w8d7h"]
 [ext_resource type="PackedScene" uid="uid://cn7hma86gvppi" path="res://nodes/portkeys/right_fg_portkey.tscn" id="8_af6k6"]
@@ -12,8 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://csh0m8s75ve7c" path="res://scenes/items/toy.tscn" id="11_w607f"]
 
 [node name="WitchHut2" type="Node2D" node_paths=PackedStringArray("fg_right_portkey")]
-script = ExtResource("1_vvlys")
+script = ExtResource("1_5dqay")
 fg_right_portkey = NodePath("RightFGPortkey")
+
+[node name="PlayerInventory" parent="." instance=ExtResource("6_tmom8")]
 
 [node name="OuterBounds" parent="." instance=ExtResource("6_7ltvj")]
 
@@ -43,7 +46,7 @@ centered = false
 position = Vector2(141, 314)
 new_scale = 1.1
 
-[node name="toy" parent="." instance=ExtResource("11_w607f")]
+[node name="Toy" parent="." instance=ExtResource("11_w607f")]
 position = Vector2(639, 184)
 
 [node name="Wall" parent="." instance=ExtResource("8_yv0vd")]

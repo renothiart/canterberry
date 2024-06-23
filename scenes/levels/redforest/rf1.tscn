@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dawtgtqrk0gp3"]
+[gd_scene load_steps=14 format=3 uid="uid://dawtgtqrk0gp3"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_jsawm"]
 [ext_resource type="Texture2D" uid="uid://bci60xr5crg7n" path="res://assets/settings/forest/f3-bg.png" id="2_7a367"]
+[ext_resource type="PackedScene" uid="uid://c32uqyp4i5dk8" path="res://nodes/UX/player_inventory.tscn" id="2_ykbfn"]
 [ext_resource type="Texture2D" uid="uid://dc5ckhnt2hvto" path="res://assets/settings/redforest/rf1-mg.png" id="3_7xobp"]
 [ext_resource type="Texture2D" uid="uid://xxkd7ppc5giw" path="res://assets/settings/redforest/rf1-fg.png" id="4_bd6iy"]
 [ext_resource type="PackedScene" uid="uid://cmvhnfu3ousn3" path="res://nodes/portkeys/right_mg_portkey.tscn" id="5_dlhn6"]
@@ -18,6 +19,10 @@ script = ExtResource("1_jsawm")
 fg_left_portkey = NodePath("LeftFGPortkey")
 fg_right_portkey = NodePath("RightFGPortkey")
 mg_right_portkey = NodePath("RightMGPortkey")
+
+[node name="PlayerInventory" parent="." instance=ExtResource("2_ykbfn")]
+
+[node name="OuterBounds" parent="." instance=ExtResource("11_38orh")]
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -7
@@ -38,6 +43,15 @@ centered = false
 position = Vector2(90, 296)
 layer = 4
 
+[node name="Player" parent="." instance=ExtResource("10_7ey74")]
+unique_name_in_owner = true
+z_index = -4
+position = Vector2(727, 266)
+scale = Vector2(0.9, 0.9)
+collision_layer = 0
+collision_mask = 0
+layer = 2
+
 [node name="RightMGPortkey" parent="." instance=ExtResource("5_dlhn6")]
 paired_portkey_location = 5
 linked_level_name = "res://scenes/levels/redforest/rf2.tscn"
@@ -55,14 +69,3 @@ pairedTeleporter = NodePath("../MGToFGActivatableTeleporter")
 [node name="LeftFGPortkey" parent="." instance=ExtResource("9_hpjxs")]
 paired_portkey_location = 6
 linked_level_name = "res://scenes/levels/hub/hub.tscn"
-
-[node name="Player" parent="." instance=ExtResource("10_7ey74")]
-unique_name_in_owner = true
-z_index = -4
-position = Vector2(727, 266)
-scale = Vector2(0.9, 0.9)
-collision_layer = 0
-collision_mask = 0
-layer = 2
-
-[node name="OuterBounds" parent="." instance=ExtResource("11_38orh")]

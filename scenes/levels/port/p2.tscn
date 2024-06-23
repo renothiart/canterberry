@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bgpsyuchqhk33"]
+[gd_scene load_steps=12 format=3 uid="uid://bgpsyuchqhk33"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_sh4d2"]
+[ext_resource type="PackedScene" uid="uid://c32uqyp4i5dk8" path="res://nodes/UX/player_inventory.tscn" id="2_pbl0c"]
 [ext_resource type="Texture2D" uid="uid://dvf6jhbs2s2vu" path="res://assets/settings/port/p2.png" id="3_uljre"]
 [ext_resource type="Texture2D" uid="uid://d0vi8opnt1mu2" path="res://assets/settings/village/v4-mg.png" id="3_x3nph"]
 [ext_resource type="Texture2D" uid="uid://dgltka2wrfobt" path="res://assets/settings/village/v4-fg.png" id="4_im617"]
@@ -14,6 +15,8 @@
 [node name="Port2" type="Node2D" node_paths=PackedStringArray("fg_right_portkey")]
 script = ExtResource("1_sh4d2")
 fg_right_portkey = NodePath("RightFGPortkey")
+
+[node name="PlayerInventory" parent="." instance=ExtResource("2_pbl0c")]
 
 [node name="OuterBounds" parent="." instance=ExtResource("7_oqivh")]
 
