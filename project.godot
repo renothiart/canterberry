@@ -169,9 +169,9 @@ variables={
 "DonateMaid": false,
 "FoundTreasure": false,
 "MetBandit": false,
-"MetMessenger": false
 "MetBard": false,
 "MetKing": false,
+"MetMessenger": false,
 "MetPainting": false
 }
 }
