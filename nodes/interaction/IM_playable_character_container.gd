@@ -33,6 +33,7 @@ func interact(input: String) -> void:
 			var new_key = interaction_partner.get_parent().key
 			interaction_partner.interact_echo(key)
 			get_parent().set_key(new_key)
+			$"../../PlayerInventory".refresh_inventory()
 	
 	# interaction type: undefined
 	else:

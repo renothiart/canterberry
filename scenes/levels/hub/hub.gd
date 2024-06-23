@@ -117,3 +117,6 @@ func process_dialogic_signal(argument: String):
 	if argument == "found_treasure":
 		$FGActivatablePortkey.set_layer(2)
 		$Player.start_teleport_buffer($Player.layer)
+	elif argument == "collect_flyer":
+		Global.messenger_has_flyer = true
+	$PlayerInventory.refresh_inventory()

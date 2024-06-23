@@ -34,6 +34,7 @@ fg_left_portkey = NodePath("LeftPortkey")
 fg_right_portkey = NodePath("RightPortkey")
 
 [node name="PlayerInventory" parent="." instance=ExtResource("2_7e5u4")]
+unique_name_in_owner = true
 
 [node name="OuterBounds" parent="." instance=ExtResource("7_wqinb")]
 
