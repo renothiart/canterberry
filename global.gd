@@ -40,8 +40,8 @@ enum PortkeyLocation {
 
 # player type functionality
 var current_player_type: PlayerType = PlayerType.KNIGHT
-var pcc1_player_type: PlayerType = PlayerType.THIEF
-var pcc2_player_type: PlayerType = PlayerType.MESSENGER
+var pcc1_player_type: PlayerType = PlayerType.NULL
+var pcc2_player_type: PlayerType = PlayerType.NULL
 enum PlayerType {
 	NULL,
 	KNIGHT,

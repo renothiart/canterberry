@@ -121,6 +121,7 @@ variables={
 "MetJester": 0,
 "MetKing": false,
 "MetMaid": false,
+"MetMessenger": false,
 "MetMonk": false,
 "MetPainting": false,
 "MetPrincess": false,
@@ -165,7 +166,8 @@ variables={
 "DonateCount": 0,
 "DonateMaid": false,
 "FoundTreasure": false,
-"MetBandit": false
+"MetBandit": false,
+"MetMessenger": false
 }
 }
 text/letter_speed=0.01

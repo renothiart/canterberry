@@ -1,1 +1,2 @@
 Messenger: Test
+set {Thief.MetMessenger} = true

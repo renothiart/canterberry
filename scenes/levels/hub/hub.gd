@@ -13,11 +13,48 @@ var portkey_map
 var teleport_buffer_time: float = 0.05
 var teleport_buffer_time_remaining: float = 0
 
+func _init():
+	if Global.is_princess_in_castle and \
+			(Dialogic.VAR.Knight.MetPrincess or Dialogic.VAR.Messenger.MetPrincess):
+		Global.is_princess_in_castle = false
+	if Global.is_messenger_in_port and \
+			(Dialogic.VAR.Knight.MetMessenger or Dialogic.VAR.Thief.MetMessenger):
+		Global.is_messenger_in_port = false
+	
+	if Global.pcc1_player_type == Global.PlayerType.NULL:
+		if not Global.is_princess_in_castle:
+			Global.pcc1_player_type = Global.PlayerType.THIEF
+		elif not Global.is_messenger_in_port:
+			Global.pcc1_player_type = Global.PlayerType.MESSENGER
+	elif Global.pcc2_player_type == Global.PlayerType.NULL \
+			and not Global.is_princess_in_castle \
+			and not Global.is_messenger_in_port:
+		if Global.pcc1_player_type == Global.PlayerType.THIEF:
+			Global.pcc2_player_type = Global.PlayerType.MESSENGER
+		elif Global.pcc1_player_type == Global.PlayerType.MESSENGER:
+			Global.pcc2_player_type = Global.PlayerType.THIEF
+
 func _ready():
-	if not Dialogic.VAR.Thief.FoundTreasure:
-		$FGActivatablePortkey.set_layer(8)
-	if not Global.is_princess_in_castle:
-		$Princess.queue_free()
+	if Global.is_princess_in_castle and \
+			(Dialogic.VAR.Knight.MetPrincess or Dialogic.VAR.Messenger.MetPrincess):
+		Global.is_princess_in_castle = false
+	if Global.is_messenger_in_port and \
+			(Dialogic.VAR.Knight.MetMessenger or Dialogic.VAR.Thief.MetMessenger):
+		Global.is_messenger_in_port = false
+	
+	if Global.pcc1_player_type == Global.PlayerType.NULL:
+		if not Global.is_princess_in_castle:
+			Global.pcc1_player_type = Global.PlayerType.THIEF
+		elif not Global.is_messenger_in_port:
+			Global.pcc1_player_type = Global.PlayerType.MESSENGER
+	elif Global.pcc2_player_type == Global.PlayerType.NULL \
+			and not Global.is_princess_in_castle \
+			and not Global.is_messenger_in_port:
+		if Global.pcc1_player_type == Global.PlayerType.THIEF:
+			Global.pcc2_player_type = Global.PlayerType.MESSENGER
+		elif Global.pcc1_player_type == Global.PlayerType.MESSENGER:
+			Global.pcc2_player_type = Global.PlayerType.THIEF
+
 	Dialogic.signal_event.connect(process_dialogic_signal)
 	
 	portkey_map = {
