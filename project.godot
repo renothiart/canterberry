@@ -95,7 +95,6 @@ directories/dtl_directory={
 "Thief-Monk": "res://dialogue/timelines/thief/Thief-Monk.dtl",
 "Thief-Mushroom": "res://dialogue/timelines/thief/Thief-Mushroom.dtl",
 "Thief-Painting": "res://dialogue/timelines/thief/Thief-Painting.dtl",
-"Thief-Princess": "res://dialogue/timelines/thief/Thief-Princess.dtl",
 "Thief-RealisticPainting": "res://dialogue/timelines/thief/Thief-RealisticPainting.dtl",
 "Thief-Squire": "res://dialogue/timelines/thief/Thief-Squire.dtl",
 "Thief-Townsfolk": "res://dialogue/timelines/thief/Thief-Townsfolk.dtl",
@@ -127,6 +126,7 @@ variables={
 "MetPainting": false,
 "MetPrincess": false,
 "MetSquire": false,
+"MetThief": false,
 "MetWitch": false,
 "SpeakBandit": 0,
 "StartedWitchQuest": false

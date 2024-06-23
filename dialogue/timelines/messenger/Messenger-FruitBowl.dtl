@@ -1,3 +1,4 @@
 Messenger: What a charming village!
 if {Messenger.MetJester} == true:
+	Narrator: The Messenger hears the Jester yell from the throne room.
 	Jester: Maybe until you showed up!

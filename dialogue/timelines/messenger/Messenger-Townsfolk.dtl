@@ -1,6 +1,7 @@
 if {Messenger.MetCherries} == false:
 	set {Messenger.MetCherries} = true
 	Jerry: Hello!
+	Cherie: Bonjour!
 else:
 	Cherie: Hi!
 	Jerry: Again!

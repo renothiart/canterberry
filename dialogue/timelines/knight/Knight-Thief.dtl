@@ -2,5 +2,12 @@ if {Knight.MetPrincess} == true:
 	Thief: Oh hey, it's you again!
 	Thief: I mean uh..hello, nice to meet you!
 	Narrator: The Knight squints at the Thief. She definitely looks familiar.
+	set {Knight.MetThief} = true
+	[end_timeline]
 else:
 	Thief: Nice to meet you!
+	set {Knight.MetThief} = true
+	[end_timeline]
+if {Knight.MetThief} == true:
+	Narrator: The Knight feels like he should be suspicious of the Thief, but something about her demeanor and innocent expression makes him feel like he can trust her. 
+	Narrator: ...He'll just let it go for now.

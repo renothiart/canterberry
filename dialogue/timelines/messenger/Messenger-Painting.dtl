@@ -1,4 +1,5 @@
 Messenger: Wow! What an impressive portrait!
 Messenger: It really looks just like him!
 if {Messenger.MetJester} == true:
+	Narrator: The Messenger hears the Jester yell from the throne room.
 	Jester: Hey, why don't you make like a pineapple and [b]can[/b] it!

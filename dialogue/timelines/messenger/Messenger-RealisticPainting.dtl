@@ -1,4 +1,5 @@
 Messenger: Magnificent, truly a masterful work of art!
 Messenger: It's so real it's almost scary!
 if {Messenger.MetJester} == true:
+	Narrator: The Messenger hears the Jester yell from the throne room.
 	Jester: The only thing scary is that mustache-shaped mold spore on your face!

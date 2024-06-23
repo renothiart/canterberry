@@ -10,5 +10,5 @@ if {Thief.CollectTreasure} == true:
 		Baker: Welcome back, dear!
 		[end_timeline]
 else:
-	Narrator: The Baker eyes you suspiciously.
+	Narrator: The Baker eyes the Thief suspiciously.
 	Baker: I'm giving out free samples, but don't go sneakily taking anything more! Unless you pay, of course.
