@@ -108,6 +108,8 @@ variables={
 "SpeakBandit": 0
 },
 "Messenger": {
+"CompletedMessengerQuest": false,
+"FlyersDelivered": 0,
 "HasFlyeredBaker": false,
 "HasFlyeredBandit": false,
 "HasFlyeredJester": false,
@@ -124,7 +126,9 @@ variables={
 "HasFlyeredWitch": false,
 "ReceivedQuest": false
 },
-"Thief": {}
+"Thief": {
+"CompletedThiefQuest": false
+}
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

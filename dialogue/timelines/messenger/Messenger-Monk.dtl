@@ -10,6 +10,7 @@ if {Messenger.ReceivedQuest} == true:
 		Messenger: The Bard is hosting a concert tonight! Come check it out!
 		Narrator: The Messenger hands the Monk one of the Bard's advertising flyers.
 		set {Messenger.HasFlyeredMonk} = true
+		set {Messenger.FlyersDelivered} += 1
 		Narrator: The Monk sighs.
 	else:
 	Messenger: Hey, you should -

@@ -1,2 +1,14 @@
-if {Messenger.ReceivedQuest} == false:
-	set {Messenger.ReceivedQuest} = true
+if {Messenger.CompletedMessengerQuest} == false:
+	if {Messenger.ReceivedQuest} == false:
+		Bard: Ah, just who I was looking for! I have an important job for you, good sir. I have a show planned for right here, at dusk, full of music and merriment and of course, storytelling! I’ve created these flyers, would you mind passing them out across the kingdom? The more the merrier! …At least five, though, please.
+		set {Messenger.ReceivedQuest} = true
+		Narrator: The Bard hands the Messenger a gigantic pile of flyers. There’s definitely not this many fruits in the kingdom.
+	elif {Messenger.FlyersDelivered} < 5:
+		Bard: How goes the flyering? There’s plenty of people in the Village and Castle to the east. Please help me get people to this show, I think it’s my best work yet.
+	elif {Messenger.FlyersDelivered} >= 5:
+		jump MessengerQuestComplete
+		set {Messenger.CompletedMessengerQuest} = true
+[end_timeline]
+label MessengerQuestComplete
+Bard: You’ve got five people invited? Great, thanks so much! If you still have some time, feel free to flyer more people.
+return
