@@ -18,7 +18,7 @@ else:
 		Narrator: The Jester chuckles to himself. Clearly he's thought of some jokes for the Bard's show.
 if {Messenger.ReceivedQuest} == true:
 	if {Messenger.HasFlyeredJester} == false:
-		Jester: Hey I don't think you're very funny -
+		Messenger: Hey I don't think you're very funny -
 		Jester: Oh yeah? But I think you're pretty funny.
 		Jester: Funny-looking!
 		Jester: HA!
