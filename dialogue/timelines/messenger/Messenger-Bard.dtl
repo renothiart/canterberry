@@ -31,14 +31,19 @@ else:
 				Bard: I think your Tomato friend still has some work to do...
 			elif {Knight.MetPrincess} == true:
 				Bard: I think your Tomato friend still has some work to do...
+			else:
+				Bard: Oh, and have you met the Princess yet? She lives in the [b]Castle[/b].
+			[end_timeline]
 	else:
-		if {Thief.CompletedThiefQuest} == false:
+		if {Thief.CompletedThiefQuest} == true:
+			Bard: I think your Strawberry friend still has some work to do...
+			[end_timeline]
+		else:
 			if {Messenger.MetPrincess} == true:
 				Bard: I think your Strawberry and Tomato friends still have some work to do...
 			elif {Knight.MetPrincess} == true:
 				Bard: I think your Strawberry and Tomato friends still have some work to do...
-		else:
-			Bard: I think your Strawberry friend still has some work to do...
-if {Knight.MetPrincess} == false:
-if {Messenger.MetPrincess} == false:
-	Bard: Oh, and have you met the Princess yet? She lives in the [b]Castle[/b].
+			else:
+				Bard: I think your Strawberry friend still has some work to do...
+				Bard: Oh, and have you met the Princess yet? She lives in the [b]Castle[/b].
+			[end_timeline]

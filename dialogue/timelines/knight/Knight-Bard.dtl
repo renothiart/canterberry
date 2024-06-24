@@ -66,41 +66,54 @@ if {Knight.CompletedKnightQuest} == true:
 		Baby: Plbfff!
 	if {Messenger.CompletedMessengerQuest} == true:
 		if {Thief.CompletedThiefQuest} == true:
-			Bard: I’m just about ready to start the show...
-			Bard: Are you ready?
-			Narrator: The Knight considers whether or not he’s ready to end the day. Has he done everything he wants to do?
-			- Yes
-				[signal arg="end_show"]
-				Bard: Enjoy the show!
-			- No
-				Bard: No worries! Come back and talk to me when you're ready.
-			[end_timeline]
-	else:
-		if {Knight.MetPrincess} == true:
-			Bard: I think your Tomato friend isn't quite ready for the show...
-		elif {Messenger.MetPrincess} == true:
-			Bard: I think your Tomato friend isn't quite ready for the show...
-else:
-	if {Knight.MetPrincess} == true:
-		if {Knight.MetMessenger} == true:
-			if {Thief.CompletedThiefQuest} == false:
-				Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
-		elif {Thief.MetMessenger} == true:
-			if {Thief.CompletedThiefQuest} == false:
-				Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
+			if {Messenger.CompletedMessengerQuest} == true:
+				Bard: I’m just about ready to start the show...
+				Bard: Are you ready?
+				Narrator: The Knight considers whether or not he’s ready to end the day. Has he done everything he wants to do?
+				- Yes
+					[signal arg="end_show"]
+					Bard: Enjoy the show!
+				- No
+					Bard: No worries! Come back and talk to me when you're ready.
+				[end_timeline]
+			else:
+				if {Knight.MetMessenger} == true:
+					Bard: I think your Raspberry friend isn't quite ready for the show...
+				elif {Thief.MetMessenger} == true:
+					Bard: I think your Raspberry friend isn't quite ready for the show...
+				else:
+					Bard: You should go west to the [b]Docks[/b] when you get the chance!
+					Bard: There's a messenger arriving by ship today...
+				[end_timeline]
 		else:
-			if {Thief.CompletedThiefQuest} == false:
-				Bard: I think your Tomato friend isn't quite ready for the show...
-	elif {Messenger.MetPrincess} == true:
-		if {Thief.CompletedThiefQuest} == false:
-			Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
-	else:
-		if {Knight.MetMessenger} == true:
-			Bard: I think your Raspberry friend isn't quite ready for the show...
-if {Knight.MetPrincess} == false:
-	if {Messenger.MetPrincess} == false:
-		Bard: Oh, and have you met the Princess yet? She lives in the [b]Castle[/b].
-if {Knight.MetMessenger} == false:
-	if {Thief.MetMessenger} == false:
-		Bard: You should go west to the [b]Docks[/b] when you get the chance!
-		Bard: There's a messenger arriving by ship today...
+			if {Messenger.CompletedMessengerQuest} == true:
+				if {Knight.MetPrincess} == true:
+					Bard: I think your Tomato friend isn't quite ready for the show...
+				elif {Messenger.MetPrincess} == true:
+					Bard: I think your Tomato friend isn't quite ready for the show...
+				else:
+					Bard: Oh, and have you met the Princess yet? She lives in the [b]Castle[/b].
+				[end_timeline]
+			else:
+				if {Knight.MetMessenger} == true:
+					if {Knight.MetPrincess} == true:
+						Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
+					elif {Messenger.MetPrincess} == true:
+						Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
+					else:
+						Bard: Oh, and have you met the Princess yet? She lives in the [b]Castle[/b].
+					[end_timeline]
+				elif {Knight.MetPrincess} == true:
+					if {Knight.MetMessenger} == true:
+						Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
+					elif {Thief.MetMessenger} == true:
+						Bard: I think your Tomato and Raspberry friends aren't quite ready for the show...
+					else:
+						Bard: You should go west to the [b]Docks[/b] when you get the chance!
+						Bard: There's a messenger arriving by ship today...
+					[end_timeline]
+				else:
+					Bard: You should go west to the [b]Docks[/b] when you get the chance!
+					Bard: There's a messenger arriving by ship today...
+					Bard: Oh, and have you met the Princess yet? She lives in the [b]Castle[/b].
+					[end_timeline]
