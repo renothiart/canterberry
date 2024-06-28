@@ -14,18 +14,8 @@ var teleport_buffer_time: float = 0.05
 var teleport_buffer_time_remaining: float = 0
 
 func _ready():
-	if not Global.is_princess_in_castle:
-		$Princess.queue_free()
-	else:
-		$RealisticPainting.queue_free()
-	
-	if not Dialogic.VAR.Thief.FoundTreasure \
-			or not Global.current_player_type == Global.PlayerType.THIEF:
-		$FGActivatablePortkey.set_layer(8)
-	Dialogic.signal_event.connect(process_dialogic_signal)
-	
-	if Audio.is_playing_main_music():
-		Audio.start_indoor_music()
+	if Audio.is_playing_indoor_music():
+		Audio.start_main_music()
 	
 	portkey_map = {
 		Global.PortkeyLocation.FG_LEFT: fg_left_portkey,
@@ -82,8 +72,3 @@ func load_portkey():
 		%Player.global_scale = Vector2(portkey.new_scale, portkey.new_scale)
 		
 		get_tree().paused = false
-
-func process_dialogic_signal(argument: String):
-	if argument == "found_treasure":
-		$FGActivatablePortkey.set_layer(2)
-		$Player.start_teleport_buffer($Player.layer)

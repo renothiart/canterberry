@@ -21,6 +21,9 @@ func _ready():
 		$Background.set_animation("DOOR_CLOSED")
 		$Wall.set_new_layer($Wall.layer)
 	
+	if Audio.is_playing_indoor_music():
+		Audio.start_main_music()
+	
 	portkey_map = {
 		Global.PortkeyLocation.FG_LEFT: fg_left_portkey,
 		Global.PortkeyLocation.FG_RIGHT: fg_right_portkey,

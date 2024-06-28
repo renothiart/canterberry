@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bgpehqhkettm8"]
 
-[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_i8kug"]
+[ext_resource type="Script" path="res://scenes/levels/castle/c1.gd" id="1_god4p"]
 [ext_resource type="Texture2D" uid="uid://bf75iy2b35ad0" path="res://assets/settings/castle/c1-mg.png" id="2_4ie86"]
 [ext_resource type="Texture2D" uid="uid://ctu8emnawblmp" path="res://assets/settings/castle/c1-fg.png" id="3_uebqe"]
 [ext_resource type="PackedScene" uid="uid://5mxadhwg1gtb" path="res://nodes/portkeys/left_mg_portkey.tscn" id="4_j1i27"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://3ordhnsjb3ip" path="res://nodes/obstacles/outer_bounds.tscn" id="10_wph2x"]
 
 [node name="Castle1" type="Node2D" node_paths=PackedStringArray("mg_left_portkey", "mg_right_portkey")]
-script = ExtResource("1_i8kug")
+script = ExtResource("1_god4p")
 mg_left_portkey = NodePath("LeftMGPortkey")
 mg_right_portkey = NodePath("RightMGPortkey")
 

@@ -18,6 +18,9 @@ func _ready():
 		$Toy.queue_free()
 	Dialogic.signal_event.connect(process_dialogic_signal)
 	
+	if Audio.is_playing_main_music():
+		Audio.start_indoor_music()
+	
 	portkey_map = {
 		Global.PortkeyLocation.FG_LEFT: fg_left_portkey,
 		Global.PortkeyLocation.FG_RIGHT: fg_right_portkey,

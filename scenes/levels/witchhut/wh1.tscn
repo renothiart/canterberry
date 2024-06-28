@@ -77,7 +77,7 @@ position = Vector2(258, 364)
 layer = 4
 
 [node name="Bound" parent="." instance=ExtResource("7_qaskj")]
-position = Vector2(142, 369)
+position = Vector2(163, 368)
 
 [node name="Player" parent="." instance=ExtResource("6_804tv")]
 unique_name_in_owner = true
@@ -88,7 +88,7 @@ collision_layer = 0
 collision_mask = 0
 
 [node name="LeftMGPortkey" parent="." instance=ExtResource("10_shr27")]
-position = Vector2(265, 310)
+position = Vector2(276, 311)
 paired_portkey_location = 6
 linked_level_name = "res://scenes/levels/witchhut/wh2.tscn"
 new_scale = 0.5
