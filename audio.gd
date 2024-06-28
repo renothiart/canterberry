@@ -26,3 +26,7 @@ func start_indoor_music():
 func stop_indoor_music():
 	latest_indoor_pos = $IndoorMusicPlayer.get_playback_position()
 	$IndoorMusicPlayer.stop()
+
+func _input(event):
+	if event.is_action_pressed("mute"):
+		AudioServer.set_bus_mute(1, not AudioServer.is_bus_mute(1))
