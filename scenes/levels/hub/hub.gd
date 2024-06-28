@@ -46,7 +46,7 @@ func _ready():
 		await $AnimationPlayer.animation_finished
 		Dialogic.start("Knight-Intro")
 	else:
-		$ColorRect.modulate = Color(0, 0, 0, 0)
+		$ColorRect.color = Color(0, 0, 0, 0)
 
 	Dialogic.signal_event.connect(process_dialogic_signal)
 	

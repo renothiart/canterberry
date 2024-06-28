@@ -166,7 +166,7 @@ pairedTeleporter = NodePath("../RightMGToFGActivatableTeleporter")
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 960.0
 offset_bottom = 540.0
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
 
 [connection signal="body_entered" from="LeftPortkey" to="LeftPortkey" method="_on_body_entered"]
 [connection signal="body_exited" from="LeftPortkey" to="LeftPortkey" method="_on_body_exited"]
