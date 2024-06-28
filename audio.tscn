@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfugvj6ibwxfy"]
+
+[ext_resource type="Script" path="res://audio.gd" id="1_kvhvg"]
+[ext_resource type="AudioStream" uid="uid://coebe6cd0d2cw" path="res://audio/alexander-nakarada-medieval-loop-one.mp3" id="2_gr3hl"]
+[ext_resource type="AudioStream" uid="uid://ko6a1neq38ej" path="res://audio/alexander-nakarada-tavern-loop-one.mp3" id="3_coch7"]
+
+[node name="Audio" type="Node2D"]
+script = ExtResource("1_kvhvg")
+
+[node name="MainMusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_gr3hl")
+volume_db = -30.0
+
+[node name="IndoorMusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_coch7")
+volume_db = -30.0

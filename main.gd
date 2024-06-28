@@ -18,6 +18,7 @@ func _input(event):
 		if _animation_player.current_animation == "splash_screen":
 			on_title = true
 			_animation_player.seek(_animation_player.get_animation("splash_screen").length)
+			Audio.start_main_music()
 		elif on_title:
 			on_title = false
 			on_controls = true
@@ -33,5 +34,6 @@ func _input(event):
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "title_screen_fade_in":
 		on_title = true
+		Audio.start_main_music()
 	elif anim_name == "control_screen_fade_in":
 		on_controls = true

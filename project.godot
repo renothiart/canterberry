@@ -19,6 +19,7 @@ config/icon="res://assets/icon.png"
 
 Global="*res://global.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Audio="*res://audio.tscn"
 
 [dialogic]
 
