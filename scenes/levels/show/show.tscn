@@ -1,0 +1,183 @@
+[gd_scene load_steps=25 format=3 uid="uid://bbs06ce175e8c"]
+
+[ext_resource type="Script" path="res://scenes/levels/show/show.gd" id="1_gjsv7"]
+[ext_resource type="Texture2D" uid="uid://cqxr1a3ro5ksa" path="res://assets/settings/hub/nighttime.png" id="2_0ltbc"]
+[ext_resource type="Texture2D" uid="uid://btlrhy2s8yfil" path="res://assets/settings/hub/daytime_glow.png" id="5_1pfac"]
+[ext_resource type="Texture2D" uid="uid://def8axyb4f0oi" path="res://assets/chars/apple_tp2.png" id="6_joh23"]
+[ext_resource type="Texture2D" uid="uid://bgjlbhd5j851r" path="res://assets/settings/hub/campfire_1.png" id="6_pfhgu"]
+[ext_resource type="Texture2D" uid="uid://kd20uc2ky57v" path="res://assets/settings/hub/campfire_2.png" id="7_mukke"]
+[ext_resource type="Texture2D" uid="uid://dggki1k3wwb4o" path="res://assets/chars/pineapple_king.png" id="7_vikva"]
+[ext_resource type="Texture2D" uid="uid://b5f5sglf4570e" path="res://assets/chars/banana_jester.png" id="8_7wdvh"]
+[ext_resource type="Texture2D" uid="uid://d4djdwnkeg0n8" path="res://assets/chars/cherry_tp1.png" id="9_m7e71"]
+[ext_resource type="Texture2D" uid="uid://b0fq5gu64upuh" path="res://assets/chars/chilipepper_bandit.png" id="10_jeo5g"]
+[ext_resource type="Texture2D" uid="uid://cipxddur47u14" path="res://assets/chars/orange_tp3.png" id="11_47avu"]
+[ext_resource type="Texture2D" uid="uid://b0loo8qw66cfy" path="res://assets/chars/strawberry_squire.png" id="12_06oym"]
+[ext_resource type="Texture2D" uid="uid://c4iu4j35alitm" path="res://assets/chars/bird.png" id="12_d28rw"]
+[ext_resource type="Texture2D" uid="uid://68c0od2u1k4h" path="res://assets/chars/dragonfruit_witch.png" id="13_lil3r"]
+[ext_resource type="Texture2D" uid="uid://dy00iptxe7uwu" path="res://assets/chars/pear_monk.png" id="14_lgt70"]
+[ext_resource type="Texture2D" uid="uid://b62sqsvv4fk58" path="res://assets/inventory/mushroom.png" id="15_ap6ch"]
+[ext_resource type="Texture2D" uid="uid://d12asd8ehk8w7" path="res://assets/chars/raspberry_messenger.png" id="15_dhimg"]
+[ext_resource type="Texture2D" uid="uid://bdwgjgti3uhsg" path="res://assets/chars/tomato_thief.png" id="16_6r5ps"]
+[ext_resource type="Texture2D" uid="uid://bk766gx7ysxwq" path="res://assets/chars/raisin_bard.png" id="17_ev8ay"]
+[ext_resource type="Texture2D" uid="uid://56lbyq3p03i1" path="res://assets/chars/knight_idle/idle1.png" id="18_qa653"]
+
+[sub_resource type="Animation" id="Animation_lt6ig"]
+resource_name = "fade_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mnc42"]
+resource_name = "fade_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s5ljj"]
+_data = {
+"fade_in": SubResource("Animation_lt6ig"),
+"fade_out": SubResource("Animation_mnc42")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kw6cc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_pfhgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mukke")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Show" type="Node2D"]
+script = ExtResource("1_gjsv7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_s5ljj")
+}
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("2_0ltbc")
+centered = false
+
+[node name="Bandit" type="Sprite2D" parent="."]
+position = Vector2(480, 280)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_jeo5g")
+
+[node name="Townsfolk" type="Sprite2D" parent="."]
+position = Vector2(385, 300)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("9_m7e71")
+flip_h = true
+
+[node name="Baker" type="Sprite2D" parent="."]
+position = Vector2(280, 286.76)
+scale = Vector2(0.514, 0.514)
+texture = ExtResource("6_joh23")
+flip_h = true
+
+[node name="Jester" type="Sprite2D" parent="."]
+position = Vector2(191, 271)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("8_7wdvh")
+flip_h = true
+
+[node name="King" type="Sprite2D" parent="."]
+position = Vector2(93, 254)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_vikva")
+flip_h = true
+
+[node name="Maid" type="Sprite2D" parent="."]
+position = Vector2(575, 290)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_47avu")
+
+[node name="Glow" type="Sprite2D" parent="."]
+texture = ExtResource("5_1pfac")
+centered = false
+
+[node name="Campfire" type="AnimatedSprite2D" parent="."]
+position = Vector2(471, 400)
+sprite_frames = SubResource("SpriteFrames_kw6cc")
+autoplay = "default"
+frame_progress = 0.936414
+
+[node name="Bird" type="Sprite2D" parent="."]
+position = Vector2(50, 418)
+scale = Vector2(1.28788, 1.28788)
+texture = ExtResource("12_d28rw")
+
+[node name="Squire" type="Sprite2D" parent="."]
+position = Vector2(710, 345)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("12_06oym")
+
+[node name="Witch" type="Sprite2D" parent="."]
+position = Vector2(815, 295)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("13_lil3r")
+
+[node name="Monk" type="Sprite2D" parent="."]
+position = Vector2(930, 340)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_lgt70")
+
+[node name="Mushroom" type="Sprite2D" parent="."]
+position = Vector2(53, 477)
+texture = ExtResource("15_ap6ch")
+
+[node name="Messenger" type="Sprite2D" parent="."]
+position = Vector2(150, 384)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("15_dhimg")
+flip_h = true
+
+[node name="Thief" type="Sprite2D" parent="."]
+position = Vector2(312, 387)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("16_6r5ps")
+flip_h = true
+
+[node name="Bard" type="Sprite2D" parent="."]
+position = Vector2(655, 383)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("17_ev8ay")
+
+[node name="Knight" type="Sprite2D" parent="."]
+position = Vector2(830, 394)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("18_qa653")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 960.0
+offset_bottom = 540.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
