@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://w0eswg4cvckf"]
+[gd_scene load_steps=20 format=3 uid="uid://w0eswg4cvckf"]
 
 [ext_resource type="Script" path="res://scenes/levels/hub/hub.gd" id="1_1d8nx"]
 [ext_resource type="PackedScene" uid="uid://c32uqyp4i5dk8" path="res://nodes/UX/player_inventory.tscn" id="2_7e5u4"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://d2vtwm0r7i8h7" path="res://nodes/obstacles/wall.tscn" id="9_mmhyf"]
 [ext_resource type="PackedScene" uid="uid://cvc1hqpk5swtw" path="res://nodes/activatable_teleporters/mg_to_fg_activatable_teleporter.tscn" id="11_qjx5e"]
 [ext_resource type="PackedScene" uid="uid://dmshb3ep1l0gp" path="res://nodes/activatable_teleporters/fg_activatable_teleporter.tscn" id="12_15e6i"]
+[ext_resource type="PackedScene" uid="uid://n40ubmic6oeb" path="res://nodes/activatable_portkeys/fg_activatable_portkey.tscn" id="15_hofh1"]
 
 [sub_resource type="Animation" id="Animation_lt6ig"]
 resource_name = "fade_in"
@@ -67,10 +68,11 @@ animations = [{
 "speed": 2.0
 }]
 
-[node name="Hub" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey")]
+[node name="Hub" type="Node2D" node_paths=PackedStringArray("fg_left_portkey", "fg_right_portkey", "mg_left_portkey")]
 script = ExtResource("1_1d8nx")
 fg_left_portkey = NodePath("LeftPortkey")
 fg_right_portkey = NodePath("RightPortkey")
+mg_left_portkey = NodePath("MGActivatablePortkey")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -162,6 +164,10 @@ pairedTeleporter = NodePath("../LeftMGToFGActivatableTeleporter")
 [node name="RightFGActivatableTeleporter" parent="." node_paths=PackedStringArray("pairedTeleporter") instance=ExtResource("12_15e6i")]
 position = Vector2(700, 300)
 pairedTeleporter = NodePath("../RightMGToFGActivatableTeleporter")
+
+[node name="MGActivatablePortkey" parent="." instance=ExtResource("15_hofh1")]
+portkey_location = 7
+action = ""
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 960.0

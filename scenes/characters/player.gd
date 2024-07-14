@@ -19,6 +19,7 @@ var is_facing_right
 @export var key: String
 @export var active_sprite: AnimatedSprite2D
 
+const hub_path = "res://scenes/levels/hub/hub.tscn"
 
 # render player into scene
 func _ready():
@@ -39,6 +40,9 @@ func _unhandled_input(_event_) -> void:
 	
 	if Input.is_action_just_pressed("swap_characters"):
 		_interaction_manager.attempt_interaction("swap_characters")
+	
+	if Input.is_action_just_pressed("warp"):
+		call_deferred("change_level")
 
 
 # define echo interaction behaviors
@@ -143,3 +147,7 @@ func disable_arrow(is_forward: bool):
 		$ForwardArrow.disable_arrow()
 	else:
 		$BackwardArrow.disable_arrow()
+
+func change_level():
+	Global.current_portkey_location = Global.PortkeyLocation.MG_LEFT
+	get_tree().change_scene_to_file(hub_path)
